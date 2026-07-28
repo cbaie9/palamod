@@ -2,7 +2,11 @@ package palamod.client.gui;
 
 import palamod.world.inventory.PalahelpJobsMenu;
 
+import palamod.network.PalahelpJobsButtonMessage;
+
 import palamod.init.PalamodModScreens;
+
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -10,6 +14,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import java.util.stream.Collectors;
@@ -22,6 +27,7 @@ public class PalahelpJobsScreen extends AbstractContainerScreen<PalahelpJobsMenu
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private Button button_xpgain;
 	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/template_livre.png");
 
 	public PalahelpJobsScreen(PalahelpJobsMenu container, Inventory inventory, Component text) {
@@ -86,5 +92,14 @@ public class PalahelpJobsScreen extends AbstractContainerScreen<PalahelpJobsMenu
 	@Override
 	public void init() {
 		super.init();
+		button_xpgain = Button.builder(Component.translatable("gui.palamod.palahelp_jobs.button_xpgain"), e -> {
+			int x = PalahelpJobsScreen.this.x;
+			int y = PalahelpJobsScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new PalahelpJobsButtonMessage(0, x, y, z));
+				PalahelpJobsButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
+		}).bounds(this.leftPos + 180, this.topPos + 138, 55, 20).build();
+		this.addRenderableWidget(button_xpgain);
 	}
 }

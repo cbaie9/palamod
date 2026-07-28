@@ -53,6 +53,20 @@
           "y": 59,
           "locked": false
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_xpgain",
+          "text": "xpGain",
+          "isUndecorated": false,
+          "onClick": "ConnectPalahelpJobsXpgain",
+          "width": 55,
+          "height": 20,
+          "x": 234,
+          "y": 168,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {

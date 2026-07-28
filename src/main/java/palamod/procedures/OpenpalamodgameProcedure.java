@@ -138,9 +138,9 @@ public class OpenpalamodgameProcedure {
 				exception.printStackTrace();
 			}
 			page_clicker = 1;
-			for (int index54 = 0; index54 < 6; index54++) {
+			for (int index463 = 0; index463 < 6; index463++) {
 				page_building = 1;
-				for (int index55 = 0; index55 < 6; index55++) {
+				for (int index464 = 0; index464 < 6; index464++) {
 					clicker_buidings.addProperty(("building_p" + Math.round(page_clicker) + "_n" + Math.round(page_building)), 0);
 					page_building = page_building + 1;
 				}

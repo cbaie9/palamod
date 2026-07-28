@@ -68,6 +68,7 @@
           "name": "button_grow",
           "text": "Grow",
           "isUndecorated": false,
+          "onClick": "FillSlotPalahelpXpGain",
           "width": 45,
           "height": 20,
           "x": 74,
@@ -129,7 +130,8 @@
         "data": {
           "name": "label_name_item0",
           "text": {
-            "fixedValue": "Name_item0"
+            "fixedValue": "Name_item0",
+            "name": "GetTextItemName0PalahelpXpGain"
           },
           "color": {
             "value": -12829636,
@@ -165,7 +167,8 @@
         "data": {
           "name": "label_name_item1",
           "text": {
-            "fixedValue": "Name_item1"
+            "fixedValue": "Name_item1",
+            "name": "GetTextItemName1PalahelpXpGain"
           },
           "color": {
             "value": -12829636,
@@ -201,7 +204,8 @@
         "data": {
           "name": "label_name_item2",
           "text": {
-            "fixedValue": "Name_item2"
+            "fixedValue": "Name_item2",
+            "name": "GetTextItemName2PalahelpXpGain"
           },
           "color": {
             "value": -12829636,
@@ -263,7 +267,8 @@
         "data": {
           "name": "label_name_item3",
           "text": {
-            "fixedValue": "Name_item3"
+            "fixedValue": "Name_item3",
+            "name": "GetTextItemName3PalahelpXpGain"
           },
           "color": {
             "value": -12829636,
@@ -299,7 +304,8 @@
         "data": {
           "name": "label_name_item4",
           "text": {
-            "fixedValue": "Name_item4"
+            "fixedValue": "Name_item4",
+            "name": "GetTextItemName4PalahelpXpGain"
           },
           "color": {
             "value": -12829636,
@@ -335,7 +341,8 @@
         "data": {
           "name": "label_name_item5",
           "text": {
-            "fixedValue": "Name_item5"
+            "fixedValue": "Name_item5",
+            "name": "GetTextItemName5PalahelpXpGain"
           },
           "color": {
             "value": -12829636,

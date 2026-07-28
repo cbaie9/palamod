@@ -29853,24 +29853,12 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "blockDep",
+            "type": "blockstate"
           },
           {
-            "name": "x",
+            "name": "level_alchimist",
             "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -46284,7 +46272,8 @@
       "metadata": {
         "files": [
           "src/main/java/palamod/world/inventory/PalahelpJobsMenu.java",
-          "src/main/java/palamod/client/gui/PalahelpJobsScreen.java"
+          "src/main/java/palamod/client/gui/PalahelpJobsScreen.java",
+          "src/main/java/palamod/network/PalahelpJobsButtonMessage.java"
         ]
       }
     },
@@ -46331,7 +46320,8 @@
       "metadata": {
         "files": [
           "src/main/java/palamod/client/gui/PalahelpJobsxpgainScreen.java",
-          "src/main/java/palamod/world/inventory/PalahelpJobsxpgainMenu.java"
+          "src/main/java/palamod/world/inventory/PalahelpJobsxpgainMenu.java",
+          "src/main/java/palamod/network/PalahelpJobsxpgainButtonMessage.java"
         ]
       }
     },
@@ -46453,16 +46443,165 @@
       }
     },
     {
-      "name": "IsExecuteOnServerThread",
+      "name": "FillSlotPalahelpXpGain",
       "type": "procedure",
       "compiles": true,
-      "locked_code": true,
-      "registry_name": "is_execute_on_server_thread",
+      "locked_code": false,
+      "registry_name": "fill_slot_palahelp_xp_gain",
       "metadata": {
-        "dependencies": [],
-        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
         "files": [
-          "src/main/java/palamod/procedures/IsExecuteOnServerThreadProcedure.java"
+          "src/main/java/palamod/procedures/FillSlotPalahelpXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GetItemPalahelpJobsXpgain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_item_palahelp_jobs_xpgain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "slot",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "itemstack",
+        "files": [
+          "src/main/java/palamod/procedures/GetItemPalahelpJobsXpgainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GetTextItemName0PalahelpXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_text_item_name_0_palahelp_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/GetTextItemName0PalahelpXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GetTextItemName1PalahelpXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_text_item_name_1_palahelp_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/GetTextItemName1PalahelpXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GetTextItemName2PalahelpXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_text_item_name_2_palahelp_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/GetTextItemName2PalahelpXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GetTextItemName3PalahelpXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_text_item_name_3_palahelp_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/GetTextItemName3PalahelpXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GetTextItemName4PalahelpXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_text_item_name_4_palahelp_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/GetTextItemName4PalahelpXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GetTextItemName5PalahelpXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_text_item_name_5_palahelp_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/GetTextItemName5PalahelpXpGainProcedure.java"
         ]
       }
     }
@@ -48430,16 +48569,6 @@
       "Blocks.TRAPPED_CHEST"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
-      "~Titaneoredeepslate@CUSTOM:Titaneoredeepslate",
-      "~Findiumoredeepslate@CUSTOM:Findiumoredeepslate",
-      "~Paladiumgreenoredeepslate@CUSTOM:Paladiumgreenoredeepslate",
-      "~Paladiumoredeepslate@CUSTOM:Paladiumoredeepslate",
-      "~Amethystoredeepslate@CUSTOM:Amethystoredeepslate",
-      "~PaladiumGreenore@CUSTOM:PaladiumGreenore",
-      "~FindiumOre@CUSTOM:FindiumOre",
-      "~AmethysteOre@CUSTOM:AmethysteOre",
-      "~PaladiumOre@CUSTOM:PaladiumOre",
-      "~TitaneOre@CUSTOM:TitaneOre",
       "~EndiumPortalAngleBlock@CUSTOM:EndiumPortalAngleBlock",
       "~CauldronCore@CUSTOM:CauldronCore",
       "~Cauldron@CUSTOM:Cauldron",
@@ -48536,8 +48665,13 @@
       "~Caveblock@CUSTOM:Caveblock",
       "~Trixiumblock@CUSTOM:Trixiumblock",
       "~Trixiumore@CUSTOM:Trixiumore",
+      "~Findiumoredeepslate@CUSTOM:Findiumoredeepslate",
       "~Endiumnuggetoredeepslate@CUSTOM:Endiumnuggetoredeepslate",
+      "~Paladiumgreenoredeepslate@CUSTOM:Paladiumgreenoredeepslate",
       "~Trixiumoredeepslate@CUSTOM:Trixiumoredeepslate",
+      "~Paladiumoredeepslate@CUSTOM:Paladiumoredeepslate",
+      "~Titaneoredeepslate@CUSTOM:Titaneoredeepslate",
+      "~Amethystoredeepslate@CUSTOM:Amethystoredeepslate",
       "~Alarmon@CUSTOM:Alarmon",
       "~Downloader@CUSTOM:Downloader",
       "~Endiumchest@CUSTOM:Endiumchest",
@@ -48601,22 +48735,22 @@
       "~Grindercasing@CUSTOM:Grindercasing",
       "~Alchimet1@CUSTOM:Alchimet1",
       "~PaladiumGreenblock@CUSTOM:PaladiumGreenblock",
+      "~PaladiumGreenore@CUSTOM:PaladiumGreenore",
       "~Slimepad@CUSTOM:Slimepad",
       "~Findiumslab@CUSTOM:Findiumslab",
       "~Findiumstairs@CUSTOM:Findiumstairs",
       "~FindiumBlock@CUSTOM:FindiumBlock",
+      "~FindiumOre@CUSTOM:FindiumOre",
       "~EndiumBlock@CUSTOM:EndiumBlock",
       "~Paladiumcrusher@CUSTOM:Paladiumcrusher",
       "~AmethysteBlock@CUSTOM:AmethysteBlock",
+      "~AmethysteOre@CUSTOM:AmethysteOre",
       "~TitaneBlock@CUSTOM:TitaneBlock",
-      "~PaladiumBlock@CUSTOM:PaladiumBlock"
+      "~TitaneOre@CUSTOM:TitaneOre",
+      "~PaladiumBlock@CUSTOM:PaladiumBlock",
+      "~PaladiumOre@CUSTOM:PaladiumOre"
     ],
     "BLOCKS:minecraft:needs_diamond_tool": [
-      "~Paladiumgreenoredeepslate@CUSTOM:Paladiumgreenoredeepslate",
-      "~Paladiumoredeepslate@CUSTOM:Paladiumoredeepslate",
-      "~PaladiumGreenore@CUSTOM:PaladiumGreenore",
-      "~PaladiumOre@CUSTOM:PaladiumOre",
-      "~TitaneOre@CUSTOM:TitaneOre",
       "~EndiumPortalAngleBlock@CUSTOM:EndiumPortalAngleBlock",
       "~PaladiumTank@CUSTOM:PaladiumTank",
       "~Titanetank@CUSTOM:Titanetank",
@@ -48655,13 +48789,18 @@
       "~Goldenobsidianspike@CUSTOM:Goldenobsidianspike",
       "~Ironobsidianspike@CUSTOM:Ironobsidianspike",
       "~Spikeobsidianwood@CUSTOM:Spikeobsidianwood",
+      "~Paladiumgreenoredeepslate@CUSTOM:Paladiumgreenoredeepslate",
+      "~Paladiumoredeepslate@CUSTOM:Paladiumoredeepslate",
       "~Trixiumnbtblock@CUSTOM:Trixiumnbtblock",
       "~Lavaobsidian@CUSTOM:Lavaobsidian",
       "~Fakewaterobsidian@CUSTOM:Fakewaterobsidian",
       "~Compactedobsidian@CUSTOM:Compactedobsidian",
       "~Obsidiandoor@CUSTOM:Obsidiandoor",
       "~Obsidiantrapdoor@CUSTOM:Obsidiantrapdoor",
-      "~Findiumstairs@CUSTOM:Findiumstairs"
+      "~PaladiumGreenore@CUSTOM:PaladiumGreenore",
+      "~Findiumstairs@CUSTOM:Findiumstairs",
+      "~TitaneOre@CUSTOM:TitaneOre",
+      "~PaladiumOre@CUSTOM:PaladiumOre"
     ],
     "BLOCKS:minecraft:needs_stone_tool": [
       "~Shinyjacarandawood@CUSTOM:Shinyjacarandawood",
@@ -48956,9 +49095,6 @@
       "~PaladiumArmor@CUSTOM:PaladiumArmor.boots"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
-      "~Findiumoredeepslate@CUSTOM:Findiumoredeepslate",
-      "~FindiumOre@CUSTOM:FindiumOre",
-      "~AmethysteOre@CUSTOM:AmethysteOre",
       "~CauldronCore@CUSTOM:CauldronCore",
       "~Cauldron@CUSTOM:Cauldron",
       "~Moneyanvil@CUSTOM:Moneyanvil",
@@ -48969,6 +49105,7 @@
       "~Softenedamethystore@CUSTOM:Softenedamethystore",
       "~Exctractor@CUSTOM:Exctractor",
       "~Trixiumore@CUSTOM:Trixiumore",
+      "~Findiumoredeepslate@CUSTOM:Findiumoredeepslate",
       "~Amethystslab@CUSTOM:Amethystslab",
       "~Amethyststairs@CUSTOM:Amethyststairs",
       "~Paladiumforge@CUSTOM:Paladiumforge",
@@ -48978,13 +49115,11 @@
       "~Ironspike@CUSTOM:Ironspike",
       "~PaladiumGreenblock@CUSTOM:PaladiumGreenblock",
       "~FindiumBlock@CUSTOM:FindiumBlock",
-      "~AmethysteBlock@CUSTOM:AmethysteBlock"
+      "~FindiumOre@CUSTOM:FindiumOre",
+      "~AmethysteBlock@CUSTOM:AmethysteBlock",
+      "~AmethysteOre@CUSTOM:AmethysteOre"
     ],
     "BLOCKS:minecraft:mineable/axe": [
-      "~Erable_Wood@CUSTOM:Erable_Wood",
-      "~Judeecercis_Wood@CUSTOM:Judeecercis_Wood",
-      "~Jacaranda_Wood@CUSTOM:Jacaranda_Wood",
-      "~Ostrya_woodWood@CUSTOM:Ostrya_woodWood",
       "~EndiumPortalBlock@CUSTOM:EndiumPortalBlock",
       "~PaladiumPortalBlock@CUSTOM:PaladiumPortalBlock",
       "~TitanePortalBlock@CUSTOM:TitanePortalBlock",
@@ -49019,24 +49154,28 @@
       "~Erable_Stairs@CUSTOM:Erable_Stairs",
       "~Erable_Planks@CUSTOM:Erable_Planks",
       "~Erable_Log@CUSTOM:Erable_Log",
+      "~Erable_Wood@CUSTOM:Erable_Wood",
       "~Judeecercis_FenceGate@CUSTOM:Judeecercis_FenceGate",
       "~Judeecercis_Fence@CUSTOM:Judeecercis_Fence",
       "~Judeecercis_Slab@CUSTOM:Judeecercis_Slab",
       "~Judeecercis_Stairs@CUSTOM:Judeecercis_Stairs",
       "~Judeecercis_Planks@CUSTOM:Judeecercis_Planks",
       "~Judeecercis_Log@CUSTOM:Judeecercis_Log",
+      "~Judeecercis_Wood@CUSTOM:Judeecercis_Wood",
       "~Jacaranda_FenceGate@CUSTOM:Jacaranda_FenceGate",
       "~Jacaranda_Fence@CUSTOM:Jacaranda_Fence",
       "~Jacaranda_Slab@CUSTOM:Jacaranda_Slab",
       "~Jacaranda_Stairs@CUSTOM:Jacaranda_Stairs",
       "~Jacaranda_Planks@CUSTOM:Jacaranda_Planks",
       "~Jacaranda_Log@CUSTOM:Jacaranda_Log",
+      "~Jacaranda_Wood@CUSTOM:Jacaranda_Wood",
       "~Ostrya_woodFenceGate@CUSTOM:Ostrya_woodFenceGate",
       "~Ostrya_woodFence@CUSTOM:Ostrya_woodFence",
       "~Ostrya_woodSlab@CUSTOM:Ostrya_woodSlab",
       "~Ostrya_woodStairs@CUSTOM:Ostrya_woodStairs",
       "~Ostrya_woodPlanks@CUSTOM:Ostrya_woodPlanks",
-      "~Ostrya_woodLog@CUSTOM:Ostrya_woodLog"
+      "~Ostrya_woodLog@CUSTOM:Ostrya_woodLog",
+      "~Ostrya_woodWood@CUSTOM:Ostrya_woodWood"
     ],
     "BLOCKS:minecraft:stairs": [
       "~DeadStairs@CUSTOM:DeadStairs",
@@ -51681,7 +51820,13 @@
       "gui.palamod.palahelp_jobsxpgain.button_down": "Down",
       "gui.palamod.palahelp_jobsxpgain.button_miner": "Miner",
       "gui.palamod.palahelp_jobsxpgain.button_up": "Up",
-      "palamod.procedure.palahelp.jobs.gain": "Gain : %1"
+      "palamod.procedure.palahelp.jobs.gain": "Gain : %1",
+      "palamod.procedure.jobsxpgain.variant": "Any variant of %1",
+      "palamod.procedure.jobsxpgain.smeltvariant": "%1 via smeting any variant of %2",
+      "palamod.procedure.jobsxpgain.smeltvariantore": "%1 via smelting any variant of %2/%3",
+      "palamod.procedure.jobsxpgain.t1glueball": "Tier 1 Glueball",
+      "palamod.procedure.jobsxpgain.t2glueball": "Tier 2 Glueball",
+      "gui.palamod.palahelp_jobs.button_xpgain": "xpGain"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -53500,7 +53645,13 @@
       "gui.palamod.palahelp_jobsxpgain.button_down": "Down",
       "gui.palamod.palahelp_jobsxpgain.button_miner": "Miner",
       "gui.palamod.palahelp_jobsxpgain.button_up": "Up",
-      "palamod.procedure.palahelp.jobs.gain": ""
+      "palamod.procedure.palahelp.jobs.gain": "",
+      "palamod.procedure.jobsxpgain.variant": "",
+      "palamod.procedure.jobsxpgain.smeltvariant": "",
+      "palamod.procedure.jobsxpgain.smeltvariantore": "",
+      "palamod.procedure.jobsxpgain.t1glueball": "",
+      "palamod.procedure.jobsxpgain.t2glueball": "",
+      "gui.palamod.palahelp_jobs.button_xpgain": "xpGain"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -55319,7 +55470,13 @@
       "gui.palamod.palahelp_jobsxpgain.button_down": "Down",
       "gui.palamod.palahelp_jobsxpgain.button_miner": "Miner",
       "gui.palamod.palahelp_jobsxpgain.button_up": "Up",
-      "palamod.procedure.palahelp.jobs.gain": ""
+      "palamod.procedure.palahelp.jobs.gain": "",
+      "palamod.procedure.jobsxpgain.variant": "",
+      "palamod.procedure.jobsxpgain.smeltvariant": "",
+      "palamod.procedure.jobsxpgain.smeltvariantore": "",
+      "palamod.procedure.jobsxpgain.t1glueball": "",
+      "palamod.procedure.jobsxpgain.t2glueball": "",
+      "gui.palamod.palahelp_jobs.button_xpgain": "xpGain"
     }
   },
   "metadata": {

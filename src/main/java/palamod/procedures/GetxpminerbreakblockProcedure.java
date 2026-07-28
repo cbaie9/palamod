@@ -43,7 +43,7 @@ public class GetxpminerbreakblockProcedure {
 					bufferedReader.close();
 					cache_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt"))) && !palahelpOverride) {
-						for (int index284 = 0; index284 < 9; index284++) {
+						for (int index498 = 0; index498 < 9; index498++) {
 							block = BuiltInRegistries.BLOCK.get(ResourceLocation.parse((cache_main.get((8 == nloop ? "block" : "block_hammer_cache_" + nloop)).getAsString()).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState();
 							if (block.getBlock() == Blocks.DEEPSLATE || block.getBlock() == Blocks.STONE) {
 								output = output + 0.5;
@@ -53,7 +53,7 @@ public class GetxpminerbreakblockProcedure {
 								output = output + 3;
 							} else if (block.getBlock() == Blocks.ANDESITE) {
 								output = output + 3;
-							} else if (block.getBlock() == Blocks.COAL_ORE || block.getBlock() == Blocks.DEEPSLATE_COAL_ORE) {
+							} else if (block.getBlock() == Blocks.COAL_ORE || block.getBlock() == Blocks.COAL_ORE || block.getBlock() == PalamodModBlocks.SOFTENED_COAL_ORE.get()) {
 								output = output + 4;
 							} else if (block.getBlock() == Blocks.NETHER_QUARTZ_ORE) {
 								output = output + 6;
@@ -63,7 +63,7 @@ public class GetxpminerbreakblockProcedure {
 								output = output + 15;
 							} else if (block.getBlock() == Blocks.EMERALD_ORE || block.getBlock() == Blocks.DEEPSLATE_EMERALD_ORE) {
 								output = output + 50;
-							} else if (block.getBlock() == Blocks.DIAMOND_ORE || block.getBlock() == Blocks.DEEPSLATE_DIAMOND_ORE) {
+							} else if (block.getBlock() == Blocks.DIAMOND_ORE || block.getBlock() == PalamodModBlocks.SOFTENED_DIAMOND_ORE.get() || block.getBlock() == Blocks.DEEPSLATE_DIAMOND_ORE) {
 								if (10 < lvl) {
 									output = output + 25;
 								}
@@ -84,7 +84,7 @@ public class GetxpminerbreakblockProcedure {
 							output = output + 3;
 						} else if (block.getBlock() == Blocks.ANDESITE) {
 							output = output + 3;
-						} else if (block.getBlock() == Blocks.COAL_ORE || block.getBlock() == Blocks.DEEPSLATE_COAL_ORE) {
+						} else if (block.getBlock() == Blocks.COAL_ORE || block.getBlock() == PalamodModBlocks.SOFTENED_COAL_ORE.get() || block.getBlock() == Blocks.DEEPSLATE_COAL_ORE) {
 							output = output + 4;
 						} else if (block.getBlock() == Blocks.NETHER_QUARTZ_ORE) {
 							output = output + 6;
@@ -94,7 +94,7 @@ public class GetxpminerbreakblockProcedure {
 							output = output + 15;
 						} else if (block.getBlock() == Blocks.EMERALD_ORE || block.getBlock() == Blocks.DEEPSLATE_EMERALD_ORE) {
 							output = output + 50;
-						} else if (block.getBlock() == Blocks.DIAMOND_ORE || block.getBlock() == Blocks.DEEPSLATE_DIAMOND_ORE) {
+						} else if (block.getBlock() == Blocks.DIAMOND_ORE || block.getBlock() == PalamodModBlocks.SOFTENED_DIAMOND_ORE.get() || block.getBlock() == Blocks.DEEPSLATE_DIAMOND_ORE) {
 							if (10 < lvl) {
 								output = output + 25;
 							}

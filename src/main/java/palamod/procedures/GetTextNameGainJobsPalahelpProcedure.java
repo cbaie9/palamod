@@ -31,12 +31,16 @@ public class GetTextNameGainJobsPalahelpProcedure {
 		} else if ((entity.getPersistentData().getString("jobs_mode")).equals("hunter")) {
 			if ((entity.getPersistentData().getString("xp_mode")).equals("kill")) {
 				xpGain = GetXpcraftjobsentityProcedure.execute(entity, 199, 199, 199, 199);
+			} else if ((entity.getPersistentData().getString("xp_mode")).equals("smelt")) {
+				xpGain = GetXpcraftjobsProcedure.execute(item, 199, 199, 199, 199, "smelt");
 			}
 		} else if ((entity.getPersistentData().getString("jobs_mode")).equals("alchi")) {
 			if ((entity.getPersistentData().getString("xp_mode")).equals("craft")) {
 				xpGain = GetXpcraftjobsProcedure.execute(item, 199, 199, 199, 199, "craft");
+			} else if ((entity.getPersistentData().getString("xp_mode")).equals("break")) {
+				xpGain = GetxpalchibreakblockProcedure.execute(item.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState(), 199);
 			}
 		}
-		return item.getDisplayName().getString() + "\n" + (Component.translatable("palamod.procedure.palahelp.jobs.gain").getString()).replace("%1", "" + Math.round(xpGain));
+		return ((item.getDisplayName().getString()).replace("]", "")).replace("[", "") + "\\n" + (Component.translatable("palamod.procedure.palahelp.jobs.gain").getString()).replace("%1", "" + Math.round(xpGain));
 	}
 }

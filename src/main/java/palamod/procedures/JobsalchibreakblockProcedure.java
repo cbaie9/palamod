@@ -74,7 +74,7 @@ public class JobsalchibreakblockProcedure {
 							main.addProperty("xpstreak_alchi", 0);
 						}
 						if (GetalchibreakblocklogicProcedure.execute(world, x, y, z, entity)) {
-							xp_block = GetxpalchibreakblockProcedure.execute(world, x, y, z, entity);
+							xp_block = GetxpalchibreakblockProcedure.execute(world.getBlockState(BlockPos.containing(x, y, z)), main.get("lvl_alchi").getAsDouble());
 							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
 									&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type")

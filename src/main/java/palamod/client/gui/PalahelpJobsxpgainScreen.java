@@ -2,7 +2,13 @@ package palamod.client.gui;
 
 import palamod.world.inventory.PalahelpJobsxpgainMenu;
 
+import palamod.procedures.*;
+
+import palamod.network.PalahelpJobsxpgainButtonMessage;
+
 import palamod.init.PalamodModScreens;
+
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -97,37 +103,37 @@ public class PalahelpJobsxpgainScreen extends AbstractContainerScreen<PalahelpJo
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelp_jobsxpgain.label_name_item0").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+		for (Component actualComponent : Arrays.stream(GetTextItemName0PalahelpXpGainProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 148, 45 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelp_jobsxpgain.label_name_item1").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+		for (Component actualComponent : Arrays.stream(GetTextItemName1PalahelpXpGainProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 148, 63 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelp_jobsxpgain.label_name_item2").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+		for (Component actualComponent : Arrays.stream(GetTextItemName2PalahelpXpGainProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 148, 86 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelp_jobsxpgain.label_name_item3").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+		for (Component actualComponent : Arrays.stream(GetTextItemName3PalahelpXpGainProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 148, 107 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelp_jobsxpgain.label_name_item4").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+		for (Component actualComponent : Arrays.stream(GetTextItemName4PalahelpXpGainProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 148, 129 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelp_jobsxpgain.label_name_item5").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+		for (Component actualComponent : Arrays.stream(GetTextItemName5PalahelpXpGainProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 148, 150 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
@@ -156,6 +162,12 @@ public class PalahelpJobsxpgainScreen extends AbstractContainerScreen<PalahelpJo
 		}).bounds(this.leftPos + 223, this.topPos + -13, 70, 20).build();
 		this.addRenderableWidget(button_alchimist);
 		button_grow = Button.builder(Component.translatable("gui.palamod.palahelp_jobsxpgain.button_grow"), e -> {
+			int x = PalahelpJobsxpgainScreen.this.x;
+			int y = PalahelpJobsxpgainScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new PalahelpJobsxpgainButtonMessage(4, x, y, z));
+				PalahelpJobsxpgainButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
 		}).bounds(this.leftPos + 10, this.topPos + 15, 45, 20).build();
 		this.addRenderableWidget(button_grow);
 		button_craft = Button.builder(Component.translatable("gui.palamod.palahelp_jobsxpgain.button_craft"), e -> {

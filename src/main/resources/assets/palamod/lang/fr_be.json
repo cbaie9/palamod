@@ -1815,5 +1815,11 @@
   "gui.palamod.palahelp_jobsxpgain.button_down": "Down",
   "gui.palamod.palahelp_jobsxpgain.button_miner": "Miner",
   "gui.palamod.palahelp_jobsxpgain.button_up": "Up",
-  "palamod.procedure.palahelp.jobs.gain": ""
+  "palamod.procedure.palahelp.jobs.gain": "",
+  "palamod.procedure.jobsxpgain.variant": "",
+  "palamod.procedure.jobsxpgain.smeltvariant": "",
+  "palamod.procedure.jobsxpgain.smeltvariantore": "",
+  "palamod.procedure.jobsxpgain.t1glueball": "",
+  "palamod.procedure.jobsxpgain.t2glueball": "",
+  "gui.palamod.palahelp_jobs.button_xpgain": "xpGain"
 }

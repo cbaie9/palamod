@@ -84,11 +84,11 @@ public class BackpackwriteitemProcedure {
 					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:backpack")))) {
 						i2 = GetslotbackpackProcedure.execute(entity);
 						i_backup = 1;
-						for (int index62 = 0; index62 < 4; index62++) {
+						for (int index502 = 0; index502 < 4; index502++) {
 							main_backup.addProperty(("backpack_backup" + Math.round(i_backup)), 0);
 							i_backup = i_backup + 1;
 						}
-						for (int index63 = 0; index63 < (int) i2; index63++) {
+						for (int index503 = 0; index503 < (int) i2; index503++) {
 							if (i >= 0 && i <= 8) {
 								main_backpack.addProperty(("backpack_inv_" + i),
 										(BuiltInRegistries.ITEM

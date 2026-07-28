@@ -2,48 +2,24 @@ package palamod.procedures;
 
 import palamod.init.PalamodModBlocks;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.core.BlockPos;
-
-import java.io.IOException;
-import java.io.FileReader;
-import java.io.File;
-import java.io.BufferedReader;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
 
 public class GetxpalchibreakblockProcedure {
-	public static double execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
-			return 0;
+	public static double execute(BlockState blockDep, double level_alchimist) {
 		double output = 0;
 		double lvl = 0;
-		File jobs = new File("");
-		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
-		jobs = GetjobsfileProcedure.execute(entity);
-		{
-			try {
-				BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
-				StringBuilder jsonstringbuilder = new StringBuilder();
-				String line;
-				while ((line = bufferedReader.readLine()) != null) {
-					jsonstringbuilder.append(line);
-				}
-				bufferedReader.close();
-				main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-				lvl = main.get("lvl_alchi").getAsDouble();
-				if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.OSTRYA_WOOD_WOOD.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.OSTRYA_WOOD_LOG.get())
-						&& lvl >= 50) {
-					output = 50;
-				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.JACARANDA_LOG.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.JACARANDA_WOOD.get()) {
-					output = 10;
-				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.JUDEECERCIS_WOOD.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.JUDEECERCIS_LOG.get()) {
-					output = 10;
-				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.ERABLE_LOG.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.ERABLE_WOOD.get()) {
-					output = 10;
-				}
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+		BlockState block = Blocks.AIR.defaultBlockState();
+		lvl = level_alchimist;
+		block = blockDep;
+		if ((block.getBlock() == PalamodModBlocks.OSTRYA_WOOD_WOOD.get() || block.getBlock() == PalamodModBlocks.OSTRYA_WOOD_LOG.get()) && lvl >= 50) {
+			output = 50;
+		} else if (block.getBlock() == PalamodModBlocks.JACARANDA_LOG.get() || block.getBlock() == PalamodModBlocks.JACARANDA_WOOD.get()) {
+			output = 10;
+		} else if (block.getBlock() == PalamodModBlocks.JUDEECERCIS_WOOD.get() || block.getBlock() == PalamodModBlocks.JUDEECERCIS_LOG.get()) {
+			output = 10;
+		} else if (block.getBlock() == PalamodModBlocks.ERABLE_LOG.get() || block.getBlock() == PalamodModBlocks.ERABLE_WOOD.get()) {
+			output = 10;
 		}
 		return output;
 	}

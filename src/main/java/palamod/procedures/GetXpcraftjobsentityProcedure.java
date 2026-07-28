@@ -35,17 +35,17 @@ public class GetXpcraftjobsentityProcedure {
 			output = 1000;
 		} else if (entity instanceof SnowGolem) {
 			output = 1;
-		} else if (entity instanceof Zombie && lvl_alchi >= 7) {
+		} else if (entity instanceof Zombie && lvl_hunter >= 7) {
 			output = 15;
-		} else if (entity instanceof Skeleton && lvl_alchi >= 11) {
+		} else if (entity instanceof Skeleton && lvl_hunter >= 11) {
 			output = 20;
-		} else if (entity instanceof Spider && !(entity instanceof CaveSpider) && lvl_alchi >= 13) {
+		} else if (entity instanceof Spider && lvl_hunter >= 13) {
 			output = 8;
-		} else if (entity instanceof Blaze && lvl_alchi >= 14) {
+		} else if (entity instanceof Blaze && lvl_hunter >= 14) {
 			output = 25;
-		} else if (entity instanceof Witch && lvl_alchi >= 14) {
+		} else if (entity instanceof Witch && lvl_hunter >= 14) {
 			output = 8;
-		} else if (entity instanceof CaveSpider && lvl_alchi >= 14) {
+		} else if (entity instanceof CaveSpider && lvl_hunter >= 18) {
 			output = 15;
 		}
 		PalamodMod.LOGGER.info(("[Palamod] [GetXpCraftJobs] return : " + output + " | " + BuiltInRegistries.ENTITY_TYPE.getKey(entity.getType()).toString()));
