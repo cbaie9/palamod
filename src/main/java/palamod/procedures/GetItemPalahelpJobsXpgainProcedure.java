@@ -6,7 +6,6 @@ import palamod.init.PalamodModBlocks;
 import palamod.PalamodMod;
 
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
@@ -14,7 +13,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.core.component.DataComponents;
 
 public class GetItemPalahelpJobsXpgainProcedure {
-	public static ItemStack execute(LevelAccessor world, Entity entity, double slot) {
+	public static ItemStack execute(Entity entity, boolean disableErrorDump, double slot) {
 		if (entity == null)
 			return ItemStack.EMPTY;
 		double index = 0;
@@ -24,7 +23,7 @@ public class GetItemPalahelpJobsXpgainProcedure {
 		ItemStack output = ItemStack.EMPTY;
 		boolean errorDump = false;
 		output = new ItemStack(PalamodModItems.LUCKY_BETA.get()).copy();
-		if (!world.isClientSide()) {
+		if (true) {
 			index = slot + entity.getPersistentData().getDouble("indexSlider");
 			xp_mode = entity.getPersistentData().getString("xp_mode");
 			jobs = entity.getPersistentData().getString("jobs_mode");
@@ -236,7 +235,7 @@ public class GetItemPalahelpJobsXpgainProcedure {
 				errorDump = true;
 				errorReason = "Wrong jobs argument";
 			}
-			if (errorDump) {
+			if (errorDump && !disableErrorDump) {
 				PalamodMod.LOGGER.error((((("[GetItemPalahelpJobsXpGain] : Reason %4 ; dump -> slot : %1, jobs_mode -> %2, xp_mode -> %3".replace("%4", errorReason)).replace("%3", xp_mode)).replace("%2", jobs)).replace("%1", "" + index)));
 			}
 		} else {

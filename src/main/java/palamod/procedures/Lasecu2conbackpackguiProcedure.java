@@ -76,7 +76,7 @@ public class Lasecu2conbackpackguiProcedure {
 				}
 				i = 0;
 				if (i2 >= 0) {
-					for (int index193 = 0; index193 < 9; index193++) {
+					for (int index314 = 0; index314 < 9; index314++) {
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu45 ? _menu45.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount(getAmountInGUISlot(entity, (int) i));
@@ -90,7 +90,7 @@ public class Lasecu2conbackpackguiProcedure {
 					}
 				}
 				if (i2 >= 9) {
-					for (int index194 = 0; index194 < 18; index194++) {
+					for (int index315 = 0; index315 < 18; index315++) {
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu49 ? _menu49.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount(getAmountInGUISlot(entity, (int) i));
@@ -104,7 +104,7 @@ public class Lasecu2conbackpackguiProcedure {
 					}
 				}
 				if (i2 >= 27) {
-					for (int index195 = 0; index195 < 18; index195++) {
+					for (int index316 = 0; index316 < 18; index316++) {
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu53 ? _menu53.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount(getAmountInGUISlot(entity, (int) i));
@@ -118,7 +118,7 @@ public class Lasecu2conbackpackguiProcedure {
 					}
 				}
 				if (i2 >= 55) {
-					for (int index196 = 0; index196 < 18; index196++) {
+					for (int index317 = 0; index317 < 18; index317++) {
 						i = i + 1;
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							_menu.getSlots().get((int) i).set(ItemStack.EMPTY);

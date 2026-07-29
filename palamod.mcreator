@@ -46453,10 +46453,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ],
         "files": [
@@ -46477,12 +46473,12 @@
             "type": "entity"
           },
           {
-            "name": "slot",
-            "type": "number"
+            "name": "disableErrorDump",
+            "type": "logic"
           },
           {
-            "name": "world",
-            "type": "world"
+            "name": "slot",
+            "type": "number"
           }
         ],
         "return_type": "itemstack",
@@ -46602,6 +46598,80 @@
         "return_type": "string",
         "files": [
           "src/main/java/palamod/procedures/GetTextItemName5PalahelpXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "PageUpPalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "page_up_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PageUpPalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "PageDownPalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "page_down_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PageDownPalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "PageUpPalahelpJobsXpGainLogic",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "page_up_palahelp_jobs_xp_gain_logic",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/PageUpPalahelpJobsXpGainLogicProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "PageDownPalahelpJobsXpGainLogic",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "page_down_palahelp_jobs_xp_gain_logic",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/PageDownPalahelpJobsXpGainLogicProcedure.java"
         ]
       }
     }

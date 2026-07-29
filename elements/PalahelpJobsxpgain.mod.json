@@ -102,7 +102,7 @@
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 158,
           "y": 71,
           "locked": true
@@ -156,7 +156,7 @@
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 158,
           "y": 92,
           "locked": true
@@ -193,7 +193,7 @@
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 158,
           "y": 113,
           "locked": true
@@ -223,6 +223,8 @@
           "name": "button_up",
           "text": "Up",
           "isUndecorated": false,
+          "onClick": "PageUpPalahelpJobsXpGain",
+          "displayCondition": "PageUpPalahelpJobsXpGainLogic",
           "width": 35,
           "height": 20,
           "x": 117,
@@ -236,6 +238,8 @@
           "name": "button_down",
           "text": "Down",
           "isUndecorated": false,
+          "onClick": "PageDownPalahelpJobsXpGain",
+          "displayCondition": "PageDownPalahelpJobsXpGainLogic",
           "width": 35,
           "height": 20,
           "x": 117,
@@ -256,7 +260,7 @@
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 158,
           "y": 134,
           "locked": true
@@ -293,7 +297,7 @@
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 158,
           "y": 156,
           "locked": true
@@ -330,7 +334,7 @@
           "disablePickup": {
             "fixedValue": true
           },
-          "dropItemsWhenNotBound": true,
+          "dropItemsWhenNotBound": false,
           "x": 158,
           "y": 177,
           "locked": true

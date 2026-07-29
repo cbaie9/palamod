@@ -17,9 +17,9 @@ public class HammernormalProcedure {
 		String tag = "";
 		tag = "mineable/pickaxe";
 		i = -1;
-		for (int index123 = 0; index123 < 3; index123++) {
+		for (int index244 = 0; index244 < 3; index244++) {
 			j = -1;
-			for (int index124 = 0; index124 < 3; index124++) {
+			for (int index245 = 0; index245 < 3; index245++) {
 				if (i != 0 || j != 0) {
 					if (entity.getXRot() > 40 || entity.getXRot() < -40) {
 						if ((world.getBlockState(BlockPos.containing(x + i, y, z + j))).is(BlockTags.create(ResourceLocation.parse((tag).toLowerCase(java.util.Locale.ENGLISH))))) {
