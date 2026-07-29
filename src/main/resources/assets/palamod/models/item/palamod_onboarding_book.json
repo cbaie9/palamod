@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "palamod:item/palamod_book"
+    "layer0": "palamod:item/palahelp_book"
   }
 }
