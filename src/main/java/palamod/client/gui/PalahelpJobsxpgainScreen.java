@@ -171,6 +171,12 @@ public class PalahelpJobsxpgainScreen extends AbstractContainerScreen<PalahelpJo
 		}).bounds(this.leftPos + 10, this.topPos + 15, 45, 20).build();
 		this.addRenderableWidget(button_grow);
 		button_craft = Button.builder(Component.translatable("gui.palamod.palahelp_jobsxpgain.button_craft"), e -> {
+			int x = PalahelpJobsxpgainScreen.this.x;
+			int y = PalahelpJobsxpgainScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new PalahelpJobsxpgainButtonMessage(5, x, y, z));
+				PalahelpJobsxpgainButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
 		}).bounds(this.leftPos + 10, this.topPos + 35, 50, 20).build();
 		this.addRenderableWidget(button_craft);
 		button_up = Button.builder(Component.translatable("gui.palamod.palahelp_jobsxpgain.button_up"), e -> {

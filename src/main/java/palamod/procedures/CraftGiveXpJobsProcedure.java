@@ -109,8 +109,6 @@ public class CraftGiveXpJobsProcedure {
 							PalamodMod.LOGGER.debug(
 									((((("[PalaMod] [CraftGiveXp] Giving %1 Xp In %2 to %3, source %4 %5".replace("%4", "" + item.getCount())).replace("%5", item.getDisplayName().getString())).replace("%3", entity.getDisplayName().getString()))
 											.replace("%2", jobs_string)).replace("%1", "" + (xp_receive * main.get("multi_exp").getAsDouble() * item.getCount() + main.get(("xpstreak_" + jobs_string)).getAsDouble()))));
-							PalamodMod.LOGGER.debug(((((("[Palamod] [CraftGiveXp:details] : xp receive base %1 | multi experience : %2 | num item : %3 | xpstreak_%4 : %5".replace("%5", "" + main.get(("xpstreak_" + jobs_string)).getAsDouble()))
-									.replace("%4", jobs_string)).replace("%3", "" + item.getCount())).replace("%2", "" + main.get("multi_exp").getAsDouble())).replace("%1", "" + xp_receive)));
 							if (entity instanceof Player _player && !_player.level().isClientSide())
 								_player.displayClientMessage(
 										Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + ""

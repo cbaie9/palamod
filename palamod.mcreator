@@ -46674,6 +46674,65 @@
           "src/main/java/palamod/procedures/PageDownPalahelpJobsXpGainLogicProcedure.java"
         ]
       }
+    },
+    {
+      "name": "LoadFarmerGrowPalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "load_farmer_grow_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/LoadFarmerGrowPalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "LoadFarmerCraftPalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "load_farmer_craft_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/LoadFarmerCraftPalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "ShowSlotPalahelpJobsXpGainLogic",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_slot_palahelp_jobs_xp_gain_logic",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "slot",
+            "type": "number"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/ShowSlotPalahelpJobsXpGainLogicProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

@@ -22,7 +22,7 @@ public class GetItemPalahelpJobsXpgainProcedure {
 		String errorReason = "";
 		ItemStack output = ItemStack.EMPTY;
 		boolean errorDump = false;
-		output = new ItemStack(PalamodModItems.LUCKY_BETA.get()).copy();
+		output = new ItemStack(Blocks.AIR).copy();
 		if (true) {
 			index = slot + entity.getPersistentData().getDouble("indexSlider");
 			xp_mode = entity.getPersistentData().getString("xp_mode");
@@ -58,7 +58,7 @@ public class GetItemPalahelpJobsXpgainProcedure {
 					} else if (index == 1) {
 						output = new ItemStack(Items.PUMPKIN_PIE).copy();
 					} else if (index <= 5 && index >= 2) {
-						output = new ItemStack(PalamodModItems.LUCKY_BETA.get()).copy();
+						output = new ItemStack(Blocks.AIR).copy();
 					} else {
 						errorDump = true;
 						errorReason = "Out of limit index";
@@ -207,7 +207,7 @@ public class GetItemPalahelpJobsXpgainProcedure {
 						output = new ItemStack(PalamodModBlocks.GLUEBALL_RED.get()).copy();
 						output.set(DataComponents.CUSTOM_NAME, Component.literal((Component.translatable("palamod.procedure.jobsxpgain.t2glueball").getString())));
 					} else if (index == 4 || index == 5) {
-						output = new ItemStack(PalamodModItems.LUCKY_BETA.get()).copy();
+						output = new ItemStack(Blocks.AIR).copy();
 					} else {
 						errorDump = true;
 						errorReason = "Out of limit index";
@@ -222,7 +222,7 @@ public class GetItemPalahelpJobsXpgainProcedure {
 					} else if (index == 3) {
 						output = new ItemStack(PalamodModBlocks.OSTRYA_WOOD_LOG.get()).copy();
 					} else if (index == 4 || index == 5) {
-						output = new ItemStack(PalamodModItems.LUCKY_BETA.get()).copy();
+						output = new ItemStack(Blocks.AIR).copy();
 					} else {
 						errorDump = true;
 						errorReason = "Out of limit index";

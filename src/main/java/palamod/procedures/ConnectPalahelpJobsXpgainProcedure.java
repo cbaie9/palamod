@@ -38,8 +38,6 @@ public class ConnectPalahelpJobsXpgainProcedure {
 				}
 			}, _bpos);
 		}
-		entity.getPersistentData().putString("jobs_mode", "farmer");
-		entity.getPersistentData().putString("xp_mode", "grow");
-		entity.getPersistentData().putDouble("indexSlider", 0);
+		LoadFarmerGrowPalahelpJobsXpGainProcedure.execute(entity);
 	}
 }

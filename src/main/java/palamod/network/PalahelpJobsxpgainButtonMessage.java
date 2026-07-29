@@ -2,7 +2,8 @@ package palamod.network;
 
 import palamod.procedures.PageUpPalahelpJobsXpGainProcedure;
 import palamod.procedures.PageDownPalahelpJobsXpGainProcedure;
-import palamod.procedures.FillSlotPalahelpXpGainProcedure;
+import palamod.procedures.LoadFarmerGrowPalahelpJobsXpGainProcedure;
+import palamod.procedures.LoadFarmerCraftPalahelpJobsXpGainProcedure;
 
 import palamod.PalamodMod;
 
@@ -52,7 +53,11 @@ public record PalahelpJobsxpgainButtonMessage(int buttonID, int x, int y, int z)
 			return;
 		if (buttonID == 4) {
 
-			FillSlotPalahelpXpGainProcedure.execute(entity);
+			LoadFarmerGrowPalahelpJobsXpGainProcedure.execute(entity);
+		}
+		if (buttonID == 5) {
+
+			LoadFarmerCraftPalahelpJobsXpGainProcedure.execute(entity);
 		}
 		if (buttonID == 6) {
 
