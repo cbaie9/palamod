@@ -11,7 +11,7 @@ import net.minecraft.core.BlockPos;
 
 public class TotemdestroyProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		for (int index516 = 0; index516 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "totem_stock"); index516++) {
+		for (int index197 = 0; index197 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "totem_stock"); index197++) {
 			if (world instanceof ServerLevel _level) {
 				ItemEntity entityToSpawn = new ItemEntity(_level, x, (y + 1.5), z, new ItemStack(PalamodModItems.PALADIUM_INGOT.get()));
 				entityToSpawn.setPickUpDelay(10);

@@ -31,13 +31,13 @@ public class RingchestprocessProcedure {
 		loop2 = false;
 		loop3 = false;
 		if (version == 3) {
-			for (int index469 = 0; index469 < 4; index469++) {
+			for (int index150 = 0; index150 < 4; index150++) {
 				if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu1 ? _menu1.getSlots().get((int) nloop2).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.SMALL_RING.get()
 						|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu3 ? _menu3.getSlots().get((int) nloop2).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.MEDIUM_RING
 								.get()
 						|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu5 ? _menu5.getSlots().get((int) nloop2).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.BIG_RING
 								.get()) {
-					for (int index470 = 0; index470 < 11; index470++) {
+					for (int index151 = 0; index151 < 11; index151++) {
 						if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu7 ? _menu7.getSlots().get((int) nloop).getItem() : ItemStack.EMPTY)
 								.is(ItemTags.create(ResourceLocation.parse("palamod:repairable")))
 								&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu9 ? _menu9.getSlots().get((int) nloop).getItem() : ItemStack.EMPTY).getDamageValue() > 0) {
@@ -57,7 +57,7 @@ public class RingchestprocessProcedure {
 								.getItem() == PalamodModItems.ENDIUM_MEDIUM_RING.get()
 						|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu21 ? _menu21.getSlots().get((int) nloop2).getItem() : ItemStack.EMPTY)
 								.getItem() == PalamodModItems.ENDIUM_BIG_RING.get()) {
-					for (int index471 = 0; index471 < 11; index471++) {
+					for (int index152 = 0; index152 < 11; index152++) {
 						if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu23 ? _menu23.getSlots().get((int) nloop).getItem() : ItemStack.EMPTY)
 								.is(ItemTags.create(ResourceLocation.parse("palamod:repairable_endium")))
 								&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu25 ? _menu25.getSlots().get((int) nloop).getItem() : ItemStack.EMPTY).getDamageValue() > 0) {
@@ -77,7 +77,7 @@ public class RingchestprocessProcedure {
 								.getItem() == PalamodModItems.GREEN_PALADIUM_MEDIUM_RING.get()
 						|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu37 ? _menu37.getSlots().get((int) nloop2).getItem() : ItemStack.EMPTY)
 								.getItem() == PalamodModItems.GREEN_PALADIUM_BIG_RING.get()) {
-					for (int index472 = 0; index472 < 11; index472++) {
+					for (int index153 = 0; index153 < 11; index153++) {
 						if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu39 ? _menu39.getSlots().get((int) nloop).getItem() : ItemStack.EMPTY)
 								.is(ItemTags.create(ResourceLocation.parse("palamod:repairable_green")))
 								&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu41 ? _menu41.getSlots().get((int) nloop).getItem() : ItemStack.EMPTY).getDamageValue() > 0) {
@@ -110,13 +110,13 @@ public class RingchestprocessProcedure {
 				}
 			}
 		} else if (version == 2) {
-			for (int index473 = 0; index473 < 2; index473++) {
+			for (int index154 = 0; index154 < 2; index154++) {
 				if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu49 ? _menu49.getSlots().get((int) nloop2).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.SMALL_RING.get()
 						|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu51 ? _menu51.getSlots().get((int) nloop2).getItem() : ItemStack.EMPTY)
 								.getItem() == PalamodModItems.MEDIUM_RING.get()
 						|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu53 ? _menu53.getSlots().get((int) nloop2).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.BIG_RING
 								.get()) {
-					for (int index474 = 0; index474 < 11; index474++) {
+					for (int index155 = 0; index155 < 11; index155++) {
 						if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu55 ? _menu55.getSlots().get((int) nloop).getItem() : ItemStack.EMPTY)
 								.is(ItemTags.create(ResourceLocation.parse("palamod:repairable")))
 								&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu57 ? _menu57.getSlots().get((int) nloop).getItem() : ItemStack.EMPTY).getDamageValue() > 0) {
@@ -136,7 +136,7 @@ public class RingchestprocessProcedure {
 								.getItem() == PalamodModItems.ENDIUM_MEDIUM_RING.get()
 						|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu69 ? _menu69.getSlots().get((int) nloop2).getItem() : ItemStack.EMPTY)
 								.getItem() == PalamodModItems.ENDIUM_BIG_RING.get()) {
-					for (int index475 = 0; index475 < 11; index475++) {
+					for (int index156 = 0; index156 < 11; index156++) {
 						if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu71 ? _menu71.getSlots().get((int) nloop).getItem() : ItemStack.EMPTY)
 								.is(ItemTags.create(ResourceLocation.parse("palamod:repairable_endium")))
 								&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu73 ? _menu73.getSlots().get((int) nloop).getItem() : ItemStack.EMPTY).getDamageValue() > 0) {
@@ -156,7 +156,7 @@ public class RingchestprocessProcedure {
 								.getItem() == PalamodModItems.GREEN_PALADIUM_MEDIUM_RING.get()
 						|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu85 ? _menu85.getSlots().get((int) nloop2).getItem() : ItemStack.EMPTY)
 								.getItem() == PalamodModItems.GREEN_PALADIUM_BIG_RING.get()) {
-					for (int index476 = 0; index476 < 11; index476++) {
+					for (int index157 = 0; index157 < 11; index157++) {
 						if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu87 ? _menu87.getSlots().get((int) nloop).getItem() : ItemStack.EMPTY)
 								.is(ItemTags.create(ResourceLocation.parse("palamod:repairable_green")))
 								&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu89 ? _menu89.getSlots().get((int) nloop).getItem() : ItemStack.EMPTY).getDamageValue() > 0) {
@@ -179,7 +179,7 @@ public class RingchestprocessProcedure {
 							.get()
 					|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu101 ? _menu101.getSlots().get((int) nloop2).getItem() : ItemStack.EMPTY).getItem() == PalamodModItems.BIG_RING
 							.get()) {
-				for (int index477 = 0; index477 < 11; index477++) {
+				for (int index158 = 0; index158 < 11; index158++) {
 					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu103 ? _menu103.getSlots().get((int) nloop).getItem() : ItemStack.EMPTY)
 							.is(ItemTags.create(ResourceLocation.parse("palamod:repairable")))
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu105 ? _menu105.getSlots().get((int) nloop).getItem() : ItemStack.EMPTY).getDamageValue() > 0) {
@@ -199,7 +199,7 @@ public class RingchestprocessProcedure {
 							.getItem() == PalamodModItems.ENDIUM_MEDIUM_RING.get()
 					|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu117 ? _menu117.getSlots().get((int) nloop2).getItem() : ItemStack.EMPTY)
 							.getItem() == PalamodModItems.ENDIUM_BIG_RING.get()) {
-				for (int index478 = 0; index478 < 11; index478++) {
+				for (int index159 = 0; index159 < 11; index159++) {
 					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu119 ? _menu119.getSlots().get((int) nloop).getItem() : ItemStack.EMPTY)
 							.is(ItemTags.create(ResourceLocation.parse("palamod:repairable_endium")))
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu121 ? _menu121.getSlots().get((int) nloop).getItem() : ItemStack.EMPTY).getDamageValue() > 0) {
@@ -219,7 +219,7 @@ public class RingchestprocessProcedure {
 							.getItem() == PalamodModItems.GREEN_PALADIUM_MEDIUM_RING.get()
 					|| (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu133 ? _menu133.getSlots().get((int) nloop2).getItem() : ItemStack.EMPTY)
 							.getItem() == PalamodModItems.GREEN_PALADIUM_BIG_RING.get()) {
-				for (int index479 = 0; index479 < 11; index479++) {
+				for (int index160 = 0; index160 < 11; index160++) {
 					if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu135 ? _menu135.getSlots().get((int) nloop).getItem() : ItemStack.EMPTY)
 							.is(ItemTags.create(ResourceLocation.parse("palamod:repairable_green")))
 							&& (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu137 ? _menu137.getSlots().get((int) nloop).getItem() : ItemStack.EMPTY).getDamageValue() > 0) {

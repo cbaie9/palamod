@@ -17,7 +17,7 @@ public class MvprocessProcedure {
 	public static void execute(Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		for (int index460 = 0; index460 < 64; index460++) {
+		for (int index141 = 0; index141 < 64; index141++) {
 			if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getBoolean("powered") == true) {
 				if (hasEntityInInventory(entity, new ItemStack(PalamodModBlocks.SOFT_STONE.get()))) {
 					{

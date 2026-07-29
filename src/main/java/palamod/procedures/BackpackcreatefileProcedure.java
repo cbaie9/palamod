@@ -73,7 +73,7 @@ public class BackpackcreatefileProcedure {
 		} catch (IOException exception) {
 			exception.printStackTrace();
 		}
-		for (int index517 = 0; index517 < 81; index517++) {
+		for (int index198 = 0; index198 < 81; index198++) {
 			if (i >= 0 && i <= 8) {
 				main_backpack_ame.addProperty(("backpack_inv_" + i), (BuiltInRegistries.ITEM.getKey(Blocks.AIR.asItem()).toString()));
 				main_backpack_ame.addProperty(("backpack_num_" + i), 0);

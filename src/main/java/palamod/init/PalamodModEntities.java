@@ -80,8 +80,8 @@ public class PalamodModEntities {
 
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerEntity(Capabilities.ItemHandler.ENTITY, GODVILLAGER.get(), (living, context) -> living.getCombinedInventory());
 		event.registerEntity(Capabilities.ItemHandler.ENTITY, PALADIUM_GOLEM.get(), (living, context) -> living.getCombinedInventory());
+		event.registerEntity(Capabilities.ItemHandler.ENTITY, GODVILLAGER.get(), (living, context) -> living.getCombinedInventory());
 	}
 
 	@SubscribeEvent

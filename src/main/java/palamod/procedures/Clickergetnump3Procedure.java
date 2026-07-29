@@ -41,7 +41,7 @@ public class Clickergetnump3Procedure {
 					e.printStackTrace();
 				}
 			}
-			for (int index520 = 0; index520 < 10; index520++) {
+			for (int index201 = 0; index201 < 10; index201++) {
 				if (9 >= input) {
 					break;
 				} else {
