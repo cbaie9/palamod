@@ -26,7 +26,7 @@ public class GetxpfarmerbreakblockProcedure {
 			output = 2.5;
 		} else if (block.getBlock() == Blocks.MELON && 15 <= lvl) {
 			output = 4;
-		} else if (block.getBlock() == Blocks.CARVED_PUMPKIN && 30 <= lvl) {
+		} else if (block.getBlock() == Blocks.PUMPKIN && 30 <= lvl) {
 			output = 5;
 		} else if (block.getBlock() == PalamodModBlocks.EGGPLANT_3.get() && 40 <= lvl) {
 			output = 10;

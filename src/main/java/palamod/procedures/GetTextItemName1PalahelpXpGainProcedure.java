@@ -6,6 +6,6 @@ public class GetTextItemName1PalahelpXpGainProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return GetTextNameGainJobsPalahelpProcedure.execute(entity, 0);
+		return GetTextNameGainJobsPalahelpProcedure.execute(entity, 1);
 	}
 }

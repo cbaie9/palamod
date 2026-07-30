@@ -1802,7 +1802,7 @@
   "gui.palamod.palahelp_jobs.label_the_jobs_is_a_level_basednsyste": "The jobs is a level based\\nsystem to unlock item and\\nfeature in the mod.\\nWays to gain experience\\nare available in the jobs\\nInterface.\\nThe jobs G.U.I can be opened\\nwith /jobs gui or with [J] ",
   "gui.palamod.palahelp_jobsxpgain.button_farmer": "Farmer",
   "gui.palamod.palahelp_jobsxpgain.button_grow": "Grow",
-  "gui.palamod.palahelp_jobsxpgain.label_can_gain_xp_now": "Can Gain xp now",
+  "gui.palamod.palahelp_jobsxpgain.label_can_gain_xp_now": "Can Gain xp now cnoir mtn",
   "gui.palamod.palahelp_jobsxpgain.button_hunyer": "Hunter",
   "gui.palamod.palahelp_jobsxpgain.label_item": "Item / Gain ",
   "gui.palamod.palahelp_jobsxpgain.label_name_item2": "Name_item2",

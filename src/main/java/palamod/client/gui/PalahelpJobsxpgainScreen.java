@@ -13,6 +13,7 @@ import net.neoforged.neoforge.network.PacketDistributor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -38,12 +39,12 @@ public class PalahelpJobsxpgainScreen extends AbstractContainerScreen<PalahelpJo
 	private Button button_up;
 	private Button button_down;
 	private static final ResourceLocation BACKGROUND = ResourceLocation.parse("palamod:textures/screens/palahelp_jobsxpgain.png");
-	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png");
-	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png");
-	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png");
-	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png");
-	private static final ResourceLocation IMAGE_4 = ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png");
-	private static final ResourceLocation IMAGE_5 = ResourceLocation.parse("palamod:textures/screens/pointed_cross_no_button.png");
+	private static final ResourceLocation SPRITE_0 = ResourceLocation.parse("palamod:textures/screens/sprite_xpgain.png");
+	private static final ResourceLocation SPRITE_1 = ResourceLocation.parse("palamod:textures/screens/sprite_xpgain.png");
+	private static final ResourceLocation SPRITE_2 = ResourceLocation.parse("palamod:textures/screens/sprite_xpgain.png");
+	private static final ResourceLocation SPRITE_3 = ResourceLocation.parse("palamod:textures/screens/sprite_xpgain.png");
+	private static final ResourceLocation SPRITE_4 = ResourceLocation.parse("palamod:textures/screens/sprite_xpgain.png");
+	private static final ResourceLocation SPRITE_5 = ResourceLocation.parse("palamod:textures/screens/sprite_xpgain.png");
 
 	public PalahelpJobsxpgainScreen(PalahelpJobsxpgainMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -74,12 +75,24 @@ public class PalahelpJobsxpgainScreen extends AbstractContainerScreen<PalahelpJo
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(BACKGROUND, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-		guiGraphics.blit(IMAGE_0, this.leftPos + 247, this.topPos + 41, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_1, this.leftPos + 247, this.topPos + 63, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_2, this.leftPos + 247, this.topPos + 84, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_3, this.leftPos + 247, this.topPos + 105, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_4, this.leftPos + 247, this.topPos + 127, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_5, this.leftPos + 247, this.topPos + 148, 0, 0, 16, 16, 16, 16);
+		if (ShowFromSlot0PalahelpJobsXpGainProcedure.execute(entity)) {
+			guiGraphics.blit(SPRITE_0, this.leftPos + 247, this.topPos + 41, Mth.clamp((int) GetSprite0PalahelpJobsXpGainProcedure.execute(entity) * 16, 0, 16), 0, 16, 16, 32, 16);
+		}
+		if (ShowFromSlot1PalahelpJobsXpGainProcedure.execute(entity)) {
+			guiGraphics.blit(SPRITE_1, this.leftPos + 247, this.topPos + 63, Mth.clamp((int) GetSprite1PalahelpJobsXpGainProcedure.execute(entity) * 16, 0, 16), 0, 16, 16, 32, 16);
+		}
+		if (ShowFromSlot2PalahelpJobsXpGainProcedure.execute(entity)) {
+			guiGraphics.blit(SPRITE_2, this.leftPos + 247, this.topPos + 84, Mth.clamp((int) GetSprite2PalahelpJobsXpGainProcedure.execute(entity) * 16, 0, 16), 0, 16, 16, 32, 16);
+		}
+		if (ShowFromSlot3PalahelpJobsXpGainProcedure.execute(entity)) {
+			guiGraphics.blit(SPRITE_3, this.leftPos + 247, this.topPos + 105, Mth.clamp((int) GetSprite3PalahelpJobsXpGainProcedure.execute(entity) * 16, 0, 16), 0, 16, 16, 32, 16);
+		}
+		if (ShowFromSlot4PalahelpJobsXpGainProcedure.execute(entity)) {
+			guiGraphics.blit(SPRITE_4, this.leftPos + 247, this.topPos + 127, Mth.clamp((int) GetSprite4PalahelpJobsXpGainProcedure.execute(entity) * 16, 0, 16), 0, 16, 16, 32, 16);
+		}
+		if (ShowFromSlot5PalahelpJobsXpGainProcedure.execute(entity)) {
+			guiGraphics.blit(SPRITE_5, this.leftPos + 247, this.topPos + 148, Mth.clamp((int) GetSprite5PalahelpJobsXpGainProcedure.execute(entity) * 16, 0, 16), 0, 16, 16, 32, 16);
+		}
 		RenderSystem.disableBlend();
 	}
 
@@ -102,37 +115,43 @@ public class PalahelpJobsxpgainScreen extends AbstractContainerScreen<PalahelpJo
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
-		yOffset = 0;
+		if (ShowFromSlot0PalahelpJobsXpGainProcedure.execute(entity))
+			yOffset = 0;
 		for (Component actualComponent : Arrays.stream(GetTextItemName0PalahelpXpGainProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 148, 45 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
-		yOffset = 0;
+		if (ShowFromSlot1PalahelpJobsXpGainProcedure.execute(entity))
+			yOffset = 0;
 		for (Component actualComponent : Arrays.stream(GetTextItemName1PalahelpXpGainProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 148, 63 + yOffset, -12829636, false);
+			guiGraphics.drawString(this.font, actualComponent, 148, 65 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
-		yOffset = 0;
+		if (ShowFromSlot2PalahelpJobsXpGainProcedure.execute(entity))
+			yOffset = 0;
 		for (Component actualComponent : Arrays.stream(GetTextItemName2PalahelpXpGainProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 148, 86 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
-		yOffset = 0;
+		if (ShowFromSlot3PalahelpJobsXpGainProcedure.execute(entity))
+			yOffset = 0;
 		for (Component actualComponent : Arrays.stream(GetTextItemName3PalahelpXpGainProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 148, 107 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
-		yOffset = 0;
+		if (ShowFromSlot4PalahelpJobsXpGainProcedure.execute(entity))
+			yOffset = 0;
 		for (Component actualComponent : Arrays.stream(GetTextItemName4PalahelpXpGainProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 148, 129 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
-		yOffset = 0;
+		if (ShowFromSlot5PalahelpJobsXpGainProcedure.execute(entity))
+			yOffset = 0;
 		for (Component actualComponent : Arrays.stream(GetTextItemName5PalahelpXpGainProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 148, 150 + yOffset, -12829636, false);
 			heightPadding = 2;
@@ -140,7 +159,7 @@ public class PalahelpJobsxpgainScreen extends AbstractContainerScreen<PalahelpJo
 		}
 		yOffset = 0;
 		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelp_jobsxpgain.label_can_gain_xp_now").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 212, 25 + yOffset, -13261, false);
+			guiGraphics.drawString(this.font, actualComponent, 212, 25 + yOffset, -16777216, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}

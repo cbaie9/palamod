@@ -139,6 +139,7 @@
             "falpha": 0.0
           },
           "hasShadow": false,
+          "displayCondition": "ShowFromSlot0PalahelpJobsXpGain",
           "x": 212,
           "y": 75,
           "locked": true
@@ -176,8 +177,9 @@
             "falpha": 0.0
           },
           "hasShadow": false,
+          "displayCondition": "ShowFromSlot1PalahelpJobsXpGain",
           "x": 212,
-          "y": 93,
+          "y": 95,
           "locked": true
         }
       },
@@ -213,6 +215,7 @@
             "falpha": 0.0
           },
           "hasShadow": false,
+          "displayCondition": "ShowFromSlot2PalahelpJobsXpGain",
           "x": 212,
           "y": 116,
           "locked": true
@@ -280,6 +283,7 @@
             "falpha": 0.0
           },
           "hasShadow": false,
+          "displayCondition": "ShowFromSlot3PalahelpJobsXpGain",
           "x": 212,
           "y": 137,
           "locked": true
@@ -317,6 +321,7 @@
             "falpha": 0.0
           },
           "hasShadow": false,
+          "displayCondition": "ShowFromSlot4PalahelpJobsXpGain",
           "x": 212,
           "y": 159,
           "locked": true
@@ -354,6 +359,7 @@
             "falpha": 0.0
           },
           "hasShadow": false,
+          "displayCondition": "ShowFromSlot5PalahelpJobsXpGain",
           "x": 212,
           "y": 180,
           "locked": true
@@ -364,10 +370,10 @@
         "data": {
           "name": "label_can_gain_xp_now",
           "text": {
-            "fixedValue": "Can Gain xp now"
+            "fixedValue": "Can Gain xp now cnoir mtn"
           },
           "color": {
-            "value": -13261,
+            "value": -16777216,
             "falpha": 0.0
           },
           "hasShadow": false,
@@ -377,60 +383,90 @@
         }
       },
       {
-        "type": "image",
+        "type": "sprite",
         "data": {
-          "image": "pointed_cross_no_button.png",
-          "use1Xscale": false,
+          "sprite": "sprite_xpgain.png",
+          "spritesCount": 2,
+          "displayCondition": "ShowFromSlot0PalahelpJobsXpGain",
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "GetSprite0PalahelpJobsXpGain"
+          },
           "x": 311,
           "y": 71,
           "locked": true
         }
       },
       {
-        "type": "image",
+        "type": "sprite",
         "data": {
-          "image": "pointed_cross_no_button.png",
-          "use1Xscale": false,
+          "sprite": "sprite_xpgain.png",
+          "spritesCount": 2,
+          "displayCondition": "ShowFromSlot1PalahelpJobsXpGain",
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "GetSprite1PalahelpJobsXpGain"
+          },
           "x": 311,
           "y": 93,
           "locked": true
         }
       },
       {
-        "type": "image",
+        "type": "sprite",
         "data": {
-          "image": "pointed_cross_no_button.png",
-          "use1Xscale": false,
+          "sprite": "sprite_xpgain.png",
+          "spritesCount": 2,
+          "displayCondition": "ShowFromSlot2PalahelpJobsXpGain",
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "GetSprite2PalahelpJobsXpGain"
+          },
           "x": 311,
           "y": 114,
           "locked": true
         }
       },
       {
-        "type": "image",
+        "type": "sprite",
         "data": {
-          "image": "pointed_cross_no_button.png",
-          "use1Xscale": false,
+          "sprite": "sprite_xpgain.png",
+          "spritesCount": 2,
+          "displayCondition": "ShowFromSlot3PalahelpJobsXpGain",
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "GetSprite3PalahelpJobsXpGain"
+          },
           "x": 311,
           "y": 135,
           "locked": true
         }
       },
       {
-        "type": "image",
+        "type": "sprite",
         "data": {
-          "image": "pointed_cross_no_button.png",
-          "use1Xscale": false,
+          "sprite": "sprite_xpgain.png",
+          "spritesCount": 2,
+          "displayCondition": "ShowFromSlot4PalahelpJobsXpGain",
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "GetSprite4PalahelpJobsXpGain"
+          },
           "x": 311,
           "y": 157,
           "locked": true
         }
       },
       {
-        "type": "image",
+        "type": "sprite",
         "data": {
-          "image": "pointed_cross_no_button.png",
-          "use1Xscale": false,
+          "sprite": "sprite_xpgain.png",
+          "spritesCount": 2,
+          "displayCondition": "ShowFromSlot5PalahelpJobsXpGain",
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "GetSprite5PalahelpJobsXpGain"
+          },
           "x": 311,
           "y": 178,
           "locked": true

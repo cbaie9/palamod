@@ -31,7 +31,7 @@ public class GetItemPalahelpJobsXpgainProcedure {
 			if ((jobs).equals("farmer")) {
 				if ((xp_mode).equals("grow")) {
 					if (index == 0) {
-						output = new ItemStack(Items.WHEAT).copy();
+						output = (new ItemStack(Blocks.WHEAT)).copy();
 					} else if (index == 1) {
 						output = new ItemStack(Items.POTATO).copy();
 					} else if (index == 2) {

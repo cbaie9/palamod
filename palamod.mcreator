@@ -46733,6 +46733,257 @@
           "src/main/java/palamod/procedures/ShowSlotPalahelpJobsXpGainLogicProcedure.java"
         ]
       }
+    },
+    {
+      "name": "GetSpriteNumGainJobsPalahelp",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_sprite_num_gain_jobs_palahelp",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "slotNum",
+            "type": "number"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/GetSpriteNumGainJobsPalahelpProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GetSprite1PalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_sprite_1_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/GetSprite1PalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GetSprite0PalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_sprite_0_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/GetSprite0PalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GetSprite2PalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_sprite_2_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/GetSprite2PalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GetSprite3PalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_sprite_3_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/GetSprite3PalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GetSprite4PalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_sprite_4_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/GetSprite4PalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GetSprite5PalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_sprite_5_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/GetSprite5PalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "ShowFromSlot0PalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_from_slot_0_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/ShowFromSlot0PalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "ShowFromSlot1PalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_from_slot_1_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/ShowFromSlot1PalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "ShowFromSlot2PalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_from_slot_2_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/ShowFromSlot2PalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "ShowFromSlot3PalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_from_slot_3_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/ShowFromSlot3PalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "ShowFromSlot4PalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_from_slot_4_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/ShowFromSlot4PalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "ShowFromSlot5PalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_from_slot_5_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/ShowFromSlot5PalahelpJobsXpGainProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -51935,7 +52186,7 @@
       "gui.palamod.palahelp_jobs.label_the_jobs_is_a_level_basednsyste": "The jobs is a level based\\nsystem to unlock item and\\nfeature in the mod.\\nWays to gain experience\\nare available in the jobs\\nInterface.\\nThe jobs G.U.I can be opened\\nwith /jobs gui or with [J] ",
       "gui.palamod.palahelp_jobsxpgain.button_farmer": "Farmer",
       "gui.palamod.palahelp_jobsxpgain.button_grow": "Grow",
-      "gui.palamod.palahelp_jobsxpgain.label_can_gain_xp_now": "Can Gain xp now",
+      "gui.palamod.palahelp_jobsxpgain.label_can_gain_xp_now": "Can Gain xp now cnoir mtn",
       "gui.palamod.palahelp_jobsxpgain.button_hunyer": "Hunter",
       "gui.palamod.palahelp_jobsxpgain.label_item": "Item / Gain ",
       "gui.palamod.palahelp_jobsxpgain.label_name_item2": "Name_item2",
