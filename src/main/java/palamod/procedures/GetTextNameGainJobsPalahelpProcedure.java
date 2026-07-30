@@ -21,33 +21,33 @@ public class GetTextNameGainJobsPalahelpProcedure {
 		BlockState age_up = Blocks.AIR.defaultBlockState();
 		String outputText = "";
 		item = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0 ? _menu0.getSlots().get((int) slotNum).getItem() : ItemStack.EMPTY).copy();
-		if ((entity.getPersistentData().getString("jobs_mode")).equals("farmer")) {
-			if ((entity.getPersistentData().getString("xp_mode")).equals("grow")) {
-				age_up = (blockStateWithInt((item.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState()), "age", 7));
-				xpGain = GetxpfarmerbreakblockProcedure.execute(age_up, 199);
-			} else if ((entity.getPersistentData().getString("xp_mode")).equals("craft")) {
-				xpGain = GetXpcraftjobsProcedure.execute(item, 199, 199, 199, 199, "craft");
-			}
-		} else if ((entity.getPersistentData().getString("jobs_mode")).equals("miner")) {
-			if ((entity.getPersistentData().getString("xp_mode")).equals("mine")) {
-				xpGain = GetxpminerbreakblockProcedure.execute(item.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState(), entity, true, 199);
-			} else if ((entity.getPersistentData().getString("xp_mode")).equals("smelt")) {
-				xpGain = GetXpcraftjobsProcedure.execute(item, 199, 199, 199, 199, "smelt");
-			}
-		} else if ((entity.getPersistentData().getString("jobs_mode")).equals("hunter")) {
-			if ((entity.getPersistentData().getString("xp_mode")).equals("kill")) {
-				xpGain = GetXpcraftjobsentityProcedure.execute(entity, 199, 199, 199, 199);
-			} else if ((entity.getPersistentData().getString("xp_mode")).equals("smelt")) {
-				xpGain = GetXpcraftjobsProcedure.execute(item, 199, 199, 199, 199, "smelt");
-			}
-		} else if ((entity.getPersistentData().getString("jobs_mode")).equals("alchi")) {
-			if ((entity.getPersistentData().getString("xp_mode")).equals("craft")) {
-				xpGain = GetXpcraftjobsProcedure.execute(item, 199, 199, 199, 199, "craft");
-			} else if ((entity.getPersistentData().getString("xp_mode")).equals("break")) {
-				xpGain = GetxpalchibreakblockProcedure.execute(item.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState(), 199);
-			}
-		}
 		if (!(Blocks.AIR.asItem() == item.getItem())) {
+			if ((entity.getPersistentData().getString("jobs_mode")).equals("farmer")) {
+				if ((entity.getPersistentData().getString("xp_mode")).equals("grow")) {
+					age_up = (blockStateWithInt((item.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState()), "age", 7));
+					xpGain = GetxpfarmerbreakblockProcedure.execute(age_up, 199);
+				} else if ((entity.getPersistentData().getString("xp_mode")).equals("craft")) {
+					xpGain = GetXpcraftjobsProcedure.execute(item, 199, 199, 199, 199, "craft");
+				}
+			} else if ((entity.getPersistentData().getString("jobs_mode")).equals("miner")) {
+				if ((entity.getPersistentData().getString("xp_mode")).equals("mine")) {
+					xpGain = GetxpminerbreakblockProcedure.execute(item.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState(), entity, true, 199);
+				} else if ((entity.getPersistentData().getString("xp_mode")).equals("smelt")) {
+					xpGain = GetXpcraftjobsProcedure.execute(item, 199, 199, 199, 199, "smelt");
+				}
+			} else if ((entity.getPersistentData().getString("jobs_mode")).equals("hunter")) {
+				if ((entity.getPersistentData().getString("xp_mode")).equals("kill")) {
+					xpGain = GetXpcraftjobsentityProcedure.execute(entity, 199, 199, 199, 199);
+				} else if ((entity.getPersistentData().getString("xp_mode")).equals("smelt")) {
+					xpGain = GetXpcraftjobsProcedure.execute(item, 199, 199, 199, 199, "smelt");
+				}
+			} else if ((entity.getPersistentData().getString("jobs_mode")).equals("alchi")) {
+				if ((entity.getPersistentData().getString("xp_mode")).equals("craft")) {
+					xpGain = GetXpcraftjobsProcedure.execute(item, 199, 199, 199, 199, "craft");
+				} else if ((entity.getPersistentData().getString("xp_mode")).equals("break")) {
+					xpGain = GetxpalchibreakblockProcedure.execute(item.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState(), 199);
+				}
+			}
 			outputText = ((item.getDisplayName().getString()).replace("]", "")).replace("[", "") + "\\n" + (Component.translatable("palamod.procedure.palahelp.jobs.gain").getString()).replace("%1", "" + Math.round(xpGain));
 		} else {
 			outputText = " ";

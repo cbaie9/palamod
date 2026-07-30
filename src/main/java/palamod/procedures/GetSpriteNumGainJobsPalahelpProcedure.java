@@ -29,60 +29,62 @@ public class GetSpriteNumGainJobsPalahelpProcedure {
 		File jobs = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		BlockState age_up = Blocks.AIR.defaultBlockState();
-		jobs = GetjobsfileProcedure.execute(entity);
-		if (jobs.exists()) {
-			{
-				try {
-					BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
-					StringBuilder jsonstringbuilder = new StringBuilder();
-					String line;
-					while ((line = bufferedReader.readLine()) != null) {
-						jsonstringbuilder.append(line);
+		item = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0 ? _menu0.getSlots().get((int) slotNum).getItem() : ItemStack.EMPTY).copy();
+		if (!(Blocks.AIR.asItem() == item.getItem())) {
+			jobs = GetjobsfileProcedure.execute(entity);
+			if (jobs.exists()) {
+				{
+					try {
+						BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));
+						StringBuilder jsonstringbuilder = new StringBuilder();
+						String line;
+						while ((line = bufferedReader.readLine()) != null) {
+							jsonstringbuilder.append(line);
+						}
+						bufferedReader.close();
+						main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+						if (main.has("lvl_miner")) {
+							lvl_miner = main.get("lvl_miner").getAsDouble();
+						}
+						if (main.has("lvl_farmer")) {
+							lvl_farmer = main.get("lvl_farmer").getAsDouble();
+						}
+						if (main.has("lvl_hunter")) {
+							lvl_hunter = main.get("lvl_hunter").getAsDouble();
+						}
+						if (main.has("lvl_alchi")) {
+							lvl_alchi = main.get("lvl_alchi").getAsDouble();
+						}
+					} catch (IOException e) {
+						e.printStackTrace();
 					}
-					bufferedReader.close();
-					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-					if (main.has("lvl_miner")) {
-						lvl_miner = main.get("lvl_miner").getAsDouble();
-					}
-					if (main.has("lvl_farmer")) {
-						lvl_farmer = main.get("lvl_farmer").getAsDouble();
-					}
-					if (main.has("lvl_hunter")) {
-						lvl_hunter = main.get("lvl_hunter").getAsDouble();
-					}
-					if (main.has("lvl_alchi")) {
-						lvl_alchi = main.get("lvl_alchi").getAsDouble();
-					}
-				} catch (IOException e) {
-					e.printStackTrace();
 				}
 			}
-		}
-		item = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu10 ? _menu10.getSlots().get((int) slotNum).getItem() : ItemStack.EMPTY).copy();
-		if ((entity.getPersistentData().getString("jobs_mode")).equals("farmer")) {
-			if ((entity.getPersistentData().getString("xp_mode")).equals("grow")) {
-				age_up = (blockStateWithInt((item.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState()), "age", 7));
-				xpGain = GetxpfarmerbreakblockProcedure.execute(age_up, lvl_farmer);
-			} else if ((entity.getPersistentData().getString("xp_mode")).equals("craft")) {
-				xpGain = GetXpcraftjobsProcedure.execute(item, lvl_alchi, lvl_farmer, lvl_hunter, lvl_miner, "craft");
-			}
-		} else if ((entity.getPersistentData().getString("jobs_mode")).equals("miner")) {
-			if ((entity.getPersistentData().getString("xp_mode")).equals("mine")) {
-				xpGain = GetxpminerbreakblockProcedure.execute(item.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState(), entity, true, lvl_miner);
-			} else if ((entity.getPersistentData().getString("xp_mode")).equals("smelt")) {
-				xpGain = GetXpcraftjobsProcedure.execute(item, lvl_alchi, lvl_farmer, lvl_hunter, lvl_miner, "smelt");
-			}
-		} else if ((entity.getPersistentData().getString("jobs_mode")).equals("hunter")) {
-			if ((entity.getPersistentData().getString("xp_mode")).equals("kill")) {
-				xpGain = GetXpcraftjobsentityProcedure.execute(entity, lvl_alchi, lvl_farmer, lvl_hunter, lvl_miner);
-			} else if ((entity.getPersistentData().getString("xp_mode")).equals("smelt")) {
-				xpGain = GetXpcraftjobsProcedure.execute(item, lvl_alchi, lvl_farmer, lvl_hunter, lvl_miner, "smelt");
-			}
-		} else if ((entity.getPersistentData().getString("jobs_mode")).equals("alchi")) {
-			if ((entity.getPersistentData().getString("xp_mode")).equals("craft")) {
-				xpGain = GetXpcraftjobsProcedure.execute(item, lvl_alchi, lvl_farmer, lvl_hunter, lvl_miner, "craft");
-			} else if ((entity.getPersistentData().getString("xp_mode")).equals("break")) {
-				xpGain = GetxpalchibreakblockProcedure.execute(item.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState(), lvl_alchi);
+			if ((entity.getPersistentData().getString("jobs_mode")).equals("farmer")) {
+				if ((entity.getPersistentData().getString("xp_mode")).equals("grow")) {
+					age_up = (blockStateWithInt((item.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState()), "age", 7));
+					xpGain = GetxpfarmerbreakblockProcedure.execute(age_up, lvl_farmer);
+				} else if ((entity.getPersistentData().getString("xp_mode")).equals("craft")) {
+					xpGain = GetXpcraftjobsProcedure.execute(item, lvl_alchi, lvl_farmer, lvl_hunter, lvl_miner, "craft");
+				}
+			} else if ((entity.getPersistentData().getString("jobs_mode")).equals("miner")) {
+				if ((entity.getPersistentData().getString("xp_mode")).equals("mine")) {
+					xpGain = GetxpminerbreakblockProcedure.execute(item.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState(), entity, true, lvl_miner);
+				} else if ((entity.getPersistentData().getString("xp_mode")).equals("smelt")) {
+					xpGain = GetXpcraftjobsProcedure.execute(item, lvl_alchi, lvl_farmer, lvl_hunter, lvl_miner, "smelt");
+				}
+			} else if ((entity.getPersistentData().getString("jobs_mode")).equals("hunter")) {
+				if ((entity.getPersistentData().getString("xp_mode")).equals("kill")) {
+					xpGain = GetXpcraftjobsentityProcedure.execute(entity, lvl_alchi, lvl_farmer, lvl_hunter, lvl_miner);
+				} else if ((entity.getPersistentData().getString("xp_mode")).equals("smelt")) {
+					xpGain = GetXpcraftjobsProcedure.execute(item, lvl_alchi, lvl_farmer, lvl_hunter, lvl_miner, "smelt");
+				}
+			} else if ((entity.getPersistentData().getString("jobs_mode")).equals("alchi")) {
+				if ((entity.getPersistentData().getString("xp_mode")).equals("craft")) {
+					xpGain = GetXpcraftjobsProcedure.execute(item, lvl_alchi, lvl_farmer, lvl_hunter, lvl_miner, "craft");
+				} else if ((entity.getPersistentData().getString("xp_mode")).equals("break")) {
+					xpGain = GetxpalchibreakblockProcedure.execute(item.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState(), lvl_alchi);
+				}
 			}
 		}
 		if (0 < xpGain) {
