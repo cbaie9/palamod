@@ -1821,5 +1821,10 @@
   "palamod.procedure.jobsxpgain.smeltvariantore": "",
   "palamod.procedure.jobsxpgain.t1glueball": "",
   "palamod.procedure.jobsxpgain.t2glueball": "",
-  "gui.palamod.palahelp_jobs.button_xpgain": "xpGain"
+  "gui.palamod.palahelp_jobs.button_xpgain": "xpGain",
+  "gui.palamod.palahelp_jobsxpgain.button_minersmelt": "Miner/smelt",
+  "gui.palamod.palahelp_jobsxpgain.button_minermine": "Miner/mine",
+  "gui.palamod.palahelp_jobsxpgain.button_hunterkill": "Hunter/kill",
+  "gui.palamod.palahelp_jobsxpgain.button_alchibreak": "alchi/break",
+  "gui.palamod.palahelp_jobsxpgain.button_alchicraft": "alchi/craft"
 }

@@ -1,9 +1,6 @@
 package palamod.network;
 
-import palamod.procedures.PageUpPalahelpJobsXpGainProcedure;
-import palamod.procedures.PageDownPalahelpJobsXpGainProcedure;
-import palamod.procedures.LoadFarmerGrowPalahelpJobsXpGainProcedure;
-import palamod.procedures.LoadFarmerCraftPalahelpJobsXpGainProcedure;
+import palamod.procedures.*;
 
 import palamod.PalamodMod;
 
@@ -66,6 +63,26 @@ public record PalahelpJobsxpgainButtonMessage(int buttonID, int x, int y, int z)
 		if (buttonID == 7) {
 
 			PageDownPalahelpJobsXpGainProcedure.execute(entity);
+		}
+		if (buttonID == 8) {
+
+			LoadMinerMinePalahelpJobsXpGainProcedure.execute(entity);
+		}
+		if (buttonID == 9) {
+
+			LoadMinerSmeltPalahelpJobsXpGainProcedure.execute(entity);
+		}
+		if (buttonID == 10) {
+
+			LoadHunterKillPalahelpJobsXpGainProcedure.execute(entity);
+		}
+		if (buttonID == 11) {
+
+			LoadAlchiCraftPalahelpJobsXpGainProcedure.execute(entity);
+		}
+		if (buttonID == 12) {
+
+			LoadAlchibreakPalahelpJobsXpGainProcedure.execute(entity);
 		}
 	}
 

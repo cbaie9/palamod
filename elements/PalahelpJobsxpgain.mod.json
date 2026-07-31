@@ -471,6 +471,76 @@
           "y": 178,
           "locked": true
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_minermine",
+          "text": "Miner/mine",
+          "isUndecorated": false,
+          "onClick": "LoadMinerMinePalahelpJobsXpGain",
+          "width": 75,
+          "height": 20,
+          "x": 74,
+          "y": 84,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_minersmelt",
+          "text": "Miner/smelt",
+          "isUndecorated": false,
+          "onClick": "LoadMinerSmeltPalahelpJobsXpGain",
+          "width": 80,
+          "height": 20,
+          "x": 74,
+          "y": 104,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_hunterkill",
+          "text": "Hunter/kill",
+          "isUndecorated": false,
+          "onClick": "LoadHunterKillPalahelpJobsXpGain",
+          "width": 80,
+          "height": 20,
+          "x": 74,
+          "y": 124,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_alchicraft",
+          "text": "alchi/craft",
+          "isUndecorated": false,
+          "onClick": "LoadAlchiCraftPalahelpJobsXpGain",
+          "width": 80,
+          "height": 20,
+          "x": 74,
+          "y": 144,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_alchibreak",
+          "text": "alchi/break",
+          "isUndecorated": false,
+          "onClick": "LoadAlchibreakPalahelpJobsXpGain",
+          "width": 80,
+          "height": 20,
+          "x": 74,
+          "y": 164,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {

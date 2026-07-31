@@ -38,6 +38,11 @@ public class PalahelpJobsxpgainScreen extends AbstractContainerScreen<PalahelpJo
 	private Button button_craft;
 	private Button button_up;
 	private Button button_down;
+	private Button button_minermine;
+	private Button button_minersmelt;
+	private Button button_hunterkill;
+	private Button button_alchicraft;
+	private Button button_alchibreak;
 	private static final ResourceLocation BACKGROUND = ResourceLocation.parse("palamod:textures/screens/palahelp_jobsxpgain.png");
 	private static final ResourceLocation SPRITE_0 = ResourceLocation.parse("palamod:textures/screens/sprite_xpgain.png");
 	private static final ResourceLocation SPRITE_1 = ResourceLocation.parse("palamod:textures/screens/sprite_xpgain.png");
@@ -216,6 +221,51 @@ public class PalahelpJobsxpgainScreen extends AbstractContainerScreen<PalahelpJo
 			}
 		}).bounds(this.leftPos + 53, this.topPos + 151, 35, 20).build();
 		this.addRenderableWidget(button_down);
+		button_minermine = Button.builder(Component.translatable("gui.palamod.palahelp_jobsxpgain.button_minermine"), e -> {
+			int x = PalahelpJobsxpgainScreen.this.x;
+			int y = PalahelpJobsxpgainScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new PalahelpJobsxpgainButtonMessage(8, x, y, z));
+				PalahelpJobsxpgainButtonMessage.handleButtonAction(entity, 8, x, y, z);
+			}
+		}).bounds(this.leftPos + 10, this.topPos + 54, 75, 20).build();
+		this.addRenderableWidget(button_minermine);
+		button_minersmelt = Button.builder(Component.translatable("gui.palamod.palahelp_jobsxpgain.button_minersmelt"), e -> {
+			int x = PalahelpJobsxpgainScreen.this.x;
+			int y = PalahelpJobsxpgainScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new PalahelpJobsxpgainButtonMessage(9, x, y, z));
+				PalahelpJobsxpgainButtonMessage.handleButtonAction(entity, 9, x, y, z);
+			}
+		}).bounds(this.leftPos + 10, this.topPos + 74, 80, 20).build();
+		this.addRenderableWidget(button_minersmelt);
+		button_hunterkill = Button.builder(Component.translatable("gui.palamod.palahelp_jobsxpgain.button_hunterkill"), e -> {
+			int x = PalahelpJobsxpgainScreen.this.x;
+			int y = PalahelpJobsxpgainScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new PalahelpJobsxpgainButtonMessage(10, x, y, z));
+				PalahelpJobsxpgainButtonMessage.handleButtonAction(entity, 10, x, y, z);
+			}
+		}).bounds(this.leftPos + 10, this.topPos + 94, 80, 20).build();
+		this.addRenderableWidget(button_hunterkill);
+		button_alchicraft = Button.builder(Component.translatable("gui.palamod.palahelp_jobsxpgain.button_alchicraft"), e -> {
+			int x = PalahelpJobsxpgainScreen.this.x;
+			int y = PalahelpJobsxpgainScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new PalahelpJobsxpgainButtonMessage(11, x, y, z));
+				PalahelpJobsxpgainButtonMessage.handleButtonAction(entity, 11, x, y, z);
+			}
+		}).bounds(this.leftPos + 10, this.topPos + 114, 80, 20).build();
+		this.addRenderableWidget(button_alchicraft);
+		button_alchibreak = Button.builder(Component.translatable("gui.palamod.palahelp_jobsxpgain.button_alchibreak"), e -> {
+			int x = PalahelpJobsxpgainScreen.this.x;
+			int y = PalahelpJobsxpgainScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new PalahelpJobsxpgainButtonMessage(12, x, y, z));
+				PalahelpJobsxpgainButtonMessage.handleButtonAction(entity, 12, x, y, z);
+			}
+		}).bounds(this.leftPos + 10, this.topPos + 134, 80, 20).build();
+		this.addRenderableWidget(button_alchibreak);
 	}
 
 	@Override

@@ -1822,5 +1822,10 @@
   "palamod.procedure.jobsxpgain.smeltvariantore": "%1 via smelting any variant of %2/%3",
   "palamod.procedure.jobsxpgain.t1glueball": "Tier 1 Glueball",
   "palamod.procedure.jobsxpgain.t2glueball": "Tier 2 Glueball",
-  "gui.palamod.palahelp_jobs.button_xpgain": "xpGain"
+  "gui.palamod.palahelp_jobs.button_xpgain": "xpGain",
+  "gui.palamod.palahelp_jobsxpgain.button_minersmelt": "Miner/smelt",
+  "gui.palamod.palahelp_jobsxpgain.button_minermine": "Miner/mine",
+  "gui.palamod.palahelp_jobsxpgain.button_hunterkill": "Hunter/kill",
+  "gui.palamod.palahelp_jobsxpgain.button_alchibreak": "alchi/break",
+  "gui.palamod.palahelp_jobsxpgain.button_alchicraft": "alchi/craft"
 }

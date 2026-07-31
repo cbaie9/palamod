@@ -46984,6 +46984,114 @@
           "src/main/java/palamod/procedures/ShowFromSlot5PalahelpJobsXpGainProcedure.java"
         ]
       }
+    },
+    {
+      "name": "LoadMinerMinePalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "load_miner_mine_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/LoadMinerMinePalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "LoadMinerSmeltPalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "load_miner_smelt_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/LoadMinerSmeltPalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "LoadHunterSmeltPalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "load_hunter_smelt_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/LoadHunterSmeltPalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "LoadHunterKillPalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "load_hunter_kill_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/LoadHunterKillPalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "LoadAlchiCraftPalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "load_alchi_craft_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/LoadAlchiCraftPalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "LoadAlchibreakPalahelpJobsXpGain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "load_alchibreak_palahelp_jobs_xp_gain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/LoadAlchibreakPalahelpJobsXpGainProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -52206,7 +52314,12 @@
       "palamod.procedure.jobsxpgain.smeltvariantore": "%1 via smelting any variant of %2/%3",
       "palamod.procedure.jobsxpgain.t1glueball": "Tier 1 Glueball",
       "palamod.procedure.jobsxpgain.t2glueball": "Tier 2 Glueball",
-      "gui.palamod.palahelp_jobs.button_xpgain": "xpGain"
+      "gui.palamod.palahelp_jobs.button_xpgain": "xpGain",
+      "gui.palamod.palahelp_jobsxpgain.button_minersmelt": "Miner/smelt",
+      "gui.palamod.palahelp_jobsxpgain.button_minermine": "Miner/mine",
+      "gui.palamod.palahelp_jobsxpgain.button_hunterkill": "Hunter/kill",
+      "gui.palamod.palahelp_jobsxpgain.button_alchibreak": "alchi/break",
+      "gui.palamod.palahelp_jobsxpgain.button_alchicraft": "alchi/craft"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54031,7 +54144,12 @@
       "palamod.procedure.jobsxpgain.smeltvariantore": "",
       "palamod.procedure.jobsxpgain.t1glueball": "",
       "palamod.procedure.jobsxpgain.t2glueball": "",
-      "gui.palamod.palahelp_jobs.button_xpgain": "xpGain"
+      "gui.palamod.palahelp_jobs.button_xpgain": "xpGain",
+      "gui.palamod.palahelp_jobsxpgain.button_minersmelt": "Miner/smelt",
+      "gui.palamod.palahelp_jobsxpgain.button_minermine": "Miner/mine",
+      "gui.palamod.palahelp_jobsxpgain.button_hunterkill": "Hunter/kill",
+      "gui.palamod.palahelp_jobsxpgain.button_alchibreak": "alchi/break",
+      "gui.palamod.palahelp_jobsxpgain.button_alchicraft": "alchi/craft"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -55856,7 +55974,12 @@
       "palamod.procedure.jobsxpgain.smeltvariantore": "",
       "palamod.procedure.jobsxpgain.t1glueball": "",
       "palamod.procedure.jobsxpgain.t2glueball": "",
-      "gui.palamod.palahelp_jobs.button_xpgain": "xpGain"
+      "gui.palamod.palahelp_jobs.button_xpgain": "xpGain",
+      "gui.palamod.palahelp_jobsxpgain.button_minersmelt": "Miner/smelt",
+      "gui.palamod.palahelp_jobsxpgain.button_minermine": "Miner/mine",
+      "gui.palamod.palahelp_jobsxpgain.button_hunterkill": "Hunter/kill",
+      "gui.palamod.palahelp_jobsxpgain.button_alchibreak": "alchi/break",
+      "gui.palamod.palahelp_jobsxpgain.button_alchicraft": "alchi/craft"
     }
   },
   "metadata": {
