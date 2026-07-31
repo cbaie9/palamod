@@ -537,8 +537,8 @@
           "onClick": "LoadAlchibreakPalahelpJobsXpGain",
           "width": 80,
           "height": 20,
-          "x": 74,
-          "y": 164,
+          "x": 28,
+          "y": 174,
           "locked": false
         }
       }

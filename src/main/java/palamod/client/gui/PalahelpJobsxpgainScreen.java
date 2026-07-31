@@ -264,7 +264,7 @@ public class PalahelpJobsxpgainScreen extends AbstractContainerScreen<PalahelpJo
 				PacketDistributor.sendToServer(new PalahelpJobsxpgainButtonMessage(12, x, y, z));
 				PalahelpJobsxpgainButtonMessage.handleButtonAction(entity, 12, x, y, z);
 			}
-		}).bounds(this.leftPos + 10, this.topPos + 134, 80, 20).build();
+		}).bounds(this.leftPos + -36, this.topPos + 144, 80, 20).build();
 		this.addRenderableWidget(button_alchibreak);
 	}
 

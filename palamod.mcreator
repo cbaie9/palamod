@@ -43954,10 +43954,6 @@
         "return_type": "number",
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "level_alchimist",
             "type": "number"
           },
@@ -43972,6 +43968,10 @@
           {
             "name": "level_miner",
             "type": "number"
+          },
+          {
+            "name": "entity_registry",
+            "type": "string"
           }
         ],
         "files": [

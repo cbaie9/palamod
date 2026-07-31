@@ -60,7 +60,7 @@ public class CraftGiveXpJobskillEntityProcedure {
 		String jobs_string = "";
 		String type_of_recipe = "";
 		Entity entity_xp = null;
-		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)) {
+		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE) && !world.isClientSide()) {
 			jobs = ReadjobsserverProcedure.execute(sourceentity);
 			money = ReadMoneyFileProcedure.execute(sourceentity);
 			if (jobs.exists() && !(getEntityGameType(entity) == GameType.CREATIVE) && money.exists() && (sourceentity instanceof Player || sourceentity instanceof ServerPlayer)) {
@@ -86,7 +86,8 @@ public class CraftGiveXpJobskillEntityProcedure {
 						if (world.dayTime() > main.get("xpstreak_time_alchi").getAsDouble()) {
 							main.addProperty("xpstreak_alchi", 0);
 						}
-						xp_receive = GetXpcraftjobsentityProcedure.execute(entity, main.get("lvl_alchi").getAsDouble(), main.get("lvl_farmer").getAsDouble(), main.get("lvl_hunter").getAsDouble(), main.get("lvl_miner").getAsDouble());
+						xp_receive = GetXpcraftjobsentityProcedure.execute(main.get("lvl_alchi").getAsDouble(), main.get("lvl_farmer").getAsDouble(), main.get("lvl_hunter").getAsDouble(), main.get("lvl_miner").getAsDouble(),
+								BuiltInRegistries.ENTITY_TYPE.getKey(entity.getType()).toString());
 						if (0 < xp_receive) {
 							if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("palamod:farmer_jobs")))) {
 								jobs_string = "farmer";
@@ -99,15 +100,13 @@ public class CraftGiveXpJobskillEntityProcedure {
 								jobs_type_xpbottle = 1;
 							} else if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("palamod:hunter_jobs_entity")))) {/*hunter*/
 								jobs_string = "hunter";
-								PalamodMod.LOGGER.info("M2");
 								jobs_type_xpbottle = 3;
 							} else {
 								jobs_string = "alchi";
-								PalamodMod.LOGGER.info("M2err");
+								PalamodMod.LOGGER.error("M2err");
 								PalamodMod.LOGGER.error(("[ Palamod ][ from craftgivejobs.java] : error -> Craft with approved xp amount but no attribued jobs | item :  '" + BuiltInRegistries.ENTITY_TYPE.getKey(entity.getType()).toString()
 										+ "' , fallback to alchimist"));
 							}
-							PalamodMod.LOGGER.debug(jobs_string);
 							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
 									&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type")
