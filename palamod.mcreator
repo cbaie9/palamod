@@ -29258,6 +29258,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -47090,6 +47094,25 @@
         ],
         "files": [
           "src/main/java/palamod/procedures/LoadAlchibreakPalahelpJobsXpGainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "ConvertSpawnEggToEntityRegistry",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "convert_spawn_egg_to_entity_registry",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/ConvertSpawnEggToEntityRegistryProcedure.java"
         ]
       }
     }

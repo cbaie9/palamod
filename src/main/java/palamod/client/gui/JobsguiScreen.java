@@ -124,7 +124,7 @@ public class JobsguiScreen extends AbstractContainerScreen<JobsguiMenu> implemen
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(GetlevelminerProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+		for (Component actualComponent : Arrays.stream(GetlevelminerProcedure.execute(world, entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 44, 99 + yOffset, -1, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;

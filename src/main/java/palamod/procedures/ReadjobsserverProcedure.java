@@ -10,7 +10,6 @@ public class ReadjobsserverProcedure {
 	public static File execute(Entity entity) {
 		if (entity == null)
 			return new File("");
-		File money = new File("");
 		File jobs = new File("");
 		return new File((FMLPaths.GAMEDIR.get().toString() + "/serverconfig/palamod/" + entity.getStringUUID()), File.separator + "jobs.json");
 	}

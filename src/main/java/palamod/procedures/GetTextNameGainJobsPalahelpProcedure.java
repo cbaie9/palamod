@@ -37,7 +37,7 @@ public class GetTextNameGainJobsPalahelpProcedure {
 				}
 			} else if ((entity.getPersistentData().getString("jobs_mode")).equals("hunter")) {
 				if ((entity.getPersistentData().getString("xp_mode")).equals("kill")) {
-					xpGain = GetXpcraftjobsentityProcedure.execute(199, 199, 199, 199, "minecraft:player");
+					xpGain = GetXpcraftjobsentityProcedure.execute(199, 199, 199, 199, ConvertSpawnEggToEntityRegistryProcedure.execute(item));
 				} else if ((entity.getPersistentData().getString("xp_mode")).equals("smelt")) {
 					xpGain = GetXpcraftjobsProcedure.execute(item, 199, 199, 199, 199, "smelt");
 				}

@@ -75,7 +75,7 @@ public class GetSpriteNumGainJobsPalahelpProcedure {
 				}
 			} else if ((entity.getPersistentData().getString("jobs_mode")).equals("hunter")) {
 				if ((entity.getPersistentData().getString("xp_mode")).equals("kill")) {
-					xpGain = GetXpcraftjobsentityProcedure.execute(lvl_alchi, lvl_farmer, lvl_hunter, lvl_miner, "minecraft:player");
+					xpGain = GetXpcraftjobsentityProcedure.execute(lvl_alchi, lvl_farmer, lvl_hunter, lvl_miner, ConvertSpawnEggToEntityRegistryProcedure.execute(item));
 				} else if ((entity.getPersistentData().getString("xp_mode")).equals("smelt")) {
 					xpGain = GetXpcraftjobsProcedure.execute(item, lvl_alchi, lvl_farmer, lvl_hunter, lvl_miner, "smelt");
 				}
