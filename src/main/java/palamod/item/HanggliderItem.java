@@ -1,5 +1,6 @@
 package palamod.item;
 
+import palamod.procedures.HanggliderItemInHandTickProcedure;
 import palamod.procedures.HangboostProcedure;
 import palamod.procedures.ClearhanggliderProcedure;
 
@@ -11,7 +12,6 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
@@ -39,15 +39,10 @@ public class HanggliderItem extends Item {
 	}
 
 	@Override
-	public boolean onEntitySwing(ItemStack itemstack, LivingEntity entity, InteractionHand hand) {
-		boolean retval = super.onEntitySwing(itemstack, entity, hand);
-		HangboostProcedure.execute(entity, itemstack);
-		return retval;
-	}
-
-	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
+		if (selected)
+			HanggliderItemInHandTickProcedure.execute(entity, itemstack);
 		ClearhanggliderProcedure.execute(entity);
 	}
 

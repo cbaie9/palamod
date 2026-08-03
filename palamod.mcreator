@@ -47115,6 +47115,28 @@
           "src/main/java/palamod/procedures/ConvertSpawnEggToEntityRegistryProcedure.java"
         ]
       }
+    },
+    {
+      "name": "HanggliderItemInHandTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hangglider_item_in_hand_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/HanggliderItemInHandTickProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

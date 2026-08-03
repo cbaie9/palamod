@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "hangglider",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "animations": [],
@@ -33,6 +34,9 @@
         "i m flying"
       ]
     },
+    "glowCondition": {
+      "fixedValue": false
+    },
     "openGUIOnRightClick": {
       "fixedValue": false
     },
@@ -40,11 +44,12 @@
     "inventoryStackSize": 64,
     "onRightClickedInAir": "Hangboost",
     "onItemInInventoryTick": "Clearhangglider",
-    "onEntitySwing": "Hangboost",
+    "onItemInUseTick": "HanggliderItemInHandTick",
     "onDroppedByPlayer": "Clearhangglider",
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
+    "projectile": "CUSTOM:Switcharrow",
     "projectileDisableAmmoCheck": false,
     "isFood": false,
     "nutritionalValue": 4,
@@ -54,6 +59,8 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": "",
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 100,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": [],
