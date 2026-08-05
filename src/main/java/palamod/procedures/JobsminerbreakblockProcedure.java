@@ -79,8 +79,8 @@ public class JobsminerbreakblockProcedure {
 						if (world.dayTime() > main.get("xpstreak_time_miner").getAsDouble()) {
 							main.addProperty("xpstreak_miner", 0);
 						}
-						if (GetxpminerbreakblocklogicProcedure.execute(world, x, y, z, entity)) {
-							xp_bloc = GetxpminerbreakblockProcedure.execute(Blocks.AIR.defaultBlockState(), entity, false, main.get("lvl_miner").getAsDouble());
+						xp_bloc = GetxpminerbreakblockProcedure.execute(Blocks.AIR.defaultBlockState(), entity, false, main.get("lvl_miner").getAsDouble());
+						if (xp_bloc > 0) {
 							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
 									&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type")

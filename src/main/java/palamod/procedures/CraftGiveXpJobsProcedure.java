@@ -35,6 +35,8 @@ public class CraftGiveXpJobsProcedure {
 		File money = new File("");
 		double xp_receive = 0;
 		double jobs_type_xpbottle = 0;
+		double multi_exp = 0;
+		double xpstreak = 0;
 		String jobs_string = "";
 		String type_of_recipe = "";
 		type_of_recipe = recipe;
@@ -67,6 +69,7 @@ public class CraftGiveXpJobsProcedure {
 								main.addProperty("xpstreak_alchi", 0);
 							}
 							xp_receive = GetXpcraftjobsProcedure.execute(item, main.get("lvl_alchi").getAsDouble(), main.get("lvl_farmer").getAsDouble(), main.get("lvl_hunter").getAsDouble(), main.get("lvl_miner").getAsDouble(), type_of_recipe);
+							multi_exp = main.get("multi_exp").getAsDouble();
 							if (0 < xp_receive) {
 								if (item.is(ItemTags.create(ResourceLocation.parse("palamod:farmer_jobs")))) {
 									jobs_string = "farmer";
@@ -84,6 +87,7 @@ public class CraftGiveXpJobsProcedure {
 									jobs_string = "alchi";
 									PalamodMod.LOGGER.error(("[ Palamod ][ from craftgivejobs.java] : error -> Craft with approved xp amount but no attribued jobs | item :  '" + item + "' , fallback to alchimist"));
 								}
+								xpstreak = main.get(("xpstreak_" + jobs_string)).getAsDouble();
 								if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 										.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
 										&& (0 == (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("jobs_type")
@@ -91,7 +95,7 @@ public class CraftGiveXpJobsProcedure {
 										&& (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.XP_BOTTLE.get()) {
 									{
 										final String _tagName = "xp_jobs";
-										final double _tagValue = (xp_receive * main.get("multi_exp").getAsDouble() * item.getCount()
+										final double _tagValue = (xp_receive * multi_exp * item.getCount()
 												+ (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("xp_jobs"));
 										CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 									}
@@ -101,20 +105,20 @@ public class CraftGiveXpJobsProcedure {
 										CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 									}
 								} else {
-									main.addProperty(("xp_" + jobs_string), (xp_receive * main.get("multi_exp").getAsDouble() * item.getCount() + main.get(("xp_" + jobs_string)).getAsDouble()));
+									main.addProperty(("xp_" + jobs_string), (xp_receive * multi_exp * item.getCount() + main.get(("xp_" + jobs_string)).getAsDouble()));
 								}
-								main.addProperty(("xpstreak_" + jobs_string), (xp_receive * main.get("multi_exp").getAsDouble() * item.getCount() + main.get(("xpstreak_" + jobs_string)).getAsDouble()));
+								main.addProperty(("xpstreak_" + jobs_string), (xp_receive * multi_exp * item.getCount() + main.get(("xpstreak_" + jobs_string)).getAsDouble()));
 								main.addProperty(("xpstreak_time_" + jobs_string), (world.dayTime() + 80));
+								PalamodMod.LOGGER.debug(
+										((((("[PalaMod] [CraftGiveXp] Giving %1 Xp In %2 to %3, source %4 %5".replace("%4", "" + item.getCount())).replace("%5", item.getDisplayName().getString())).replace("%3", entity.getDisplayName().getString()))
+												.replace("%2", jobs_string)).replace("%1", "" + (xp_receive * multi_exp * item.getCount() + xpstreak))));
+								if (entity instanceof Player _player && !_player.level().isClientSide())
+									_player.displayClientMessage(
+											Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + "" + (xp_receive * multi_exp * item.getCount() + xpstreak)
+													+ Component.translatable(("palamod.procedure.jobswin2" + recipe)).getString() + " "
+													+ Component.translatable(((BuiltInRegistries.ITEM.getKey(item.getItem()).toString()).replace("minecraft:", ("" + item).contains("palamod") ? "item.palamod." : "item.minecraft."))).getString())),
+											true);
 							}
-							PalamodMod.LOGGER.debug(
-									((((("[PalaMod] [CraftGiveXp] Giving %1 Xp In %2 to %3, source %4 %5".replace("%4", "" + item.getCount())).replace("%5", item.getDisplayName().getString())).replace("%3", entity.getDisplayName().getString()))
-											.replace("%2", jobs_string)).replace("%1", "" + (xp_receive * main.get("multi_exp").getAsDouble() * item.getCount() + main.get(("xpstreak_" + jobs_string)).getAsDouble()))));
-							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(
-										Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + ""
-												+ (xp_receive * main.get("multi_exp").getAsDouble() * item.getCount() + main.get(("xpstreak_" + jobs_string)).getAsDouble()) + Component.translatable(("palamod.procedure.jobswin2" + recipe)).getString()
-												+ " " + Component.translatable(((BuiltInRegistries.ITEM.getKey(item.getItem()).toString()).replace("minecraft:", ("" + item).contains("palamod") ? "item.palamod." : "item.minecraft."))).getString())),
-										true);
 						} catch (IOException e) {
 							e.printStackTrace();
 						}
