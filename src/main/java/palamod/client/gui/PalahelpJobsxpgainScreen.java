@@ -81,22 +81,22 @@ public class PalahelpJobsxpgainScreen extends AbstractContainerScreen<PalahelpJo
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(BACKGROUND, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 		if (ShowFromSlot0PalahelpJobsXpGainProcedure.execute(entity)) {
-			guiGraphics.blit(SPRITE_0, this.leftPos + 247, this.topPos + 41, Mth.clamp((int) GetSprite0PalahelpJobsXpGainProcedure.execute(entity) * 16, 0, 16), 0, 16, 16, 32, 16);
+			guiGraphics.blit(SPRITE_0, this.leftPos + 247, this.topPos + 41, Mth.clamp((int) GetSprite0PalahelpJobsXpGainProcedure.execute(world, entity) * 16, 0, 16), 0, 16, 16, 32, 16);
 		}
 		if (ShowFromSlot1PalahelpJobsXpGainProcedure.execute(entity)) {
-			guiGraphics.blit(SPRITE_1, this.leftPos + 247, this.topPos + 63, Mth.clamp((int) GetSprite1PalahelpJobsXpGainProcedure.execute(entity) * 16, 0, 16), 0, 16, 16, 32, 16);
+			guiGraphics.blit(SPRITE_1, this.leftPos + 247, this.topPos + 63, Mth.clamp((int) GetSprite1PalahelpJobsXpGainProcedure.execute(world, entity) * 16, 0, 16), 0, 16, 16, 32, 16);
 		}
 		if (ShowFromSlot2PalahelpJobsXpGainProcedure.execute(entity)) {
-			guiGraphics.blit(SPRITE_2, this.leftPos + 247, this.topPos + 84, Mth.clamp((int) GetSprite2PalahelpJobsXpGainProcedure.execute(entity) * 16, 0, 16), 0, 16, 16, 32, 16);
+			guiGraphics.blit(SPRITE_2, this.leftPos + 247, this.topPos + 84, Mth.clamp((int) GetSprite2PalahelpJobsXpGainProcedure.execute(world, entity) * 16, 0, 16), 0, 16, 16, 32, 16);
 		}
 		if (ShowFromSlot3PalahelpJobsXpGainProcedure.execute(entity)) {
-			guiGraphics.blit(SPRITE_3, this.leftPos + 247, this.topPos + 105, Mth.clamp((int) GetSprite3PalahelpJobsXpGainProcedure.execute(entity) * 16, 0, 16), 0, 16, 16, 32, 16);
+			guiGraphics.blit(SPRITE_3, this.leftPos + 247, this.topPos + 105, Mth.clamp((int) GetSprite3PalahelpJobsXpGainProcedure.execute(world, entity) * 16, 0, 16), 0, 16, 16, 32, 16);
 		}
 		if (ShowFromSlot4PalahelpJobsXpGainProcedure.execute(entity)) {
-			guiGraphics.blit(SPRITE_4, this.leftPos + 247, this.topPos + 127, Mth.clamp((int) GetSprite4PalahelpJobsXpGainProcedure.execute(entity) * 16, 0, 16), 0, 16, 16, 32, 16);
+			guiGraphics.blit(SPRITE_4, this.leftPos + 247, this.topPos + 127, Mth.clamp((int) GetSprite4PalahelpJobsXpGainProcedure.execute(world, entity) * 16, 0, 16), 0, 16, 16, 32, 16);
 		}
 		if (ShowFromSlot5PalahelpJobsXpGainProcedure.execute(entity)) {
-			guiGraphics.blit(SPRITE_5, this.leftPos + 247, this.topPos + 148, Mth.clamp((int) GetSprite5PalahelpJobsXpGainProcedure.execute(entity) * 16, 0, 16), 0, 16, 16, 32, 16);
+			guiGraphics.blit(SPRITE_5, this.leftPos + 247, this.topPos + 148, Mth.clamp((int) GetSprite5PalahelpJobsXpGainProcedure.execute(world, entity) * 16, 0, 16), 0, 16, 16, 32, 16);
 		}
 		RenderSystem.disableBlend();
 	}
@@ -122,42 +122,42 @@ public class PalahelpJobsxpgainScreen extends AbstractContainerScreen<PalahelpJo
 		}
 		if (ShowFromSlot0PalahelpJobsXpGainProcedure.execute(entity))
 			yOffset = 0;
-		for (Component actualComponent : Arrays.stream(GetTextItemName0PalahelpXpGainProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+		for (Component actualComponent : Arrays.stream(GetTextItemName0PalahelpXpGainProcedure.execute(world, entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 148, 45 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		if (ShowFromSlot1PalahelpJobsXpGainProcedure.execute(entity))
 			yOffset = 0;
-		for (Component actualComponent : Arrays.stream(GetTextItemName1PalahelpXpGainProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+		for (Component actualComponent : Arrays.stream(GetTextItemName1PalahelpXpGainProcedure.execute(world, entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 148, 65 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		if (ShowFromSlot2PalahelpJobsXpGainProcedure.execute(entity))
 			yOffset = 0;
-		for (Component actualComponent : Arrays.stream(GetTextItemName2PalahelpXpGainProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+		for (Component actualComponent : Arrays.stream(GetTextItemName2PalahelpXpGainProcedure.execute(world, entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 148, 86 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		if (ShowFromSlot3PalahelpJobsXpGainProcedure.execute(entity))
 			yOffset = 0;
-		for (Component actualComponent : Arrays.stream(GetTextItemName3PalahelpXpGainProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+		for (Component actualComponent : Arrays.stream(GetTextItemName3PalahelpXpGainProcedure.execute(world, entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 148, 107 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		if (ShowFromSlot4PalahelpJobsXpGainProcedure.execute(entity))
 			yOffset = 0;
-		for (Component actualComponent : Arrays.stream(GetTextItemName4PalahelpXpGainProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+		for (Component actualComponent : Arrays.stream(GetTextItemName4PalahelpXpGainProcedure.execute(world, entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 148, 129 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		if (ShowFromSlot5PalahelpJobsXpGainProcedure.execute(entity))
 			yOffset = 0;
-		for (Component actualComponent : Arrays.stream(GetTextItemName5PalahelpXpGainProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+		for (Component actualComponent : Arrays.stream(GetTextItemName5PalahelpXpGainProcedure.execute(world, entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 148, 150 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;

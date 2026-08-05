@@ -56,6 +56,8 @@ public class JobsfarmerbreakblockProcedure {
 		File money = new File("");
 		double money_add = 0;
 		double xpGain = 0;
+		double multi_exp = 0;
+		double xpstreak = 0;
 		boolean money_getadd = false;
 		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)) {
 			jobs = GetjobsfileProcedure.execute(entity);
@@ -75,7 +77,8 @@ public class JobsfarmerbreakblockProcedure {
 							main.addProperty("xpstreak_farmer", 0);
 						}
 						xpGain = GetxpfarmerbreakblockProcedure.execute(world.getBlockState(BlockPos.containing(x, y, z)), main.get("lvl_farmer").getAsDouble());
-						PalamodMod.LOGGER.debug(("[Jobsfarlerbreakblock] xp gain --" + xpGain));
+						multi_exp = main.get("multi_exp").getAsDouble();
+						xpstreak = main.get("xpstreak_farmer").getAsDouble();
 						if (xpGain > 0) {
 							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
@@ -84,7 +87,7 @@ public class JobsfarmerbreakblockProcedure {
 									&& (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.XP_BOTTLE.get()) {
 								{
 									final String _tagName = "xp_jobs";
-									final double _tagValue = (xpGain * main.get("multi_exp").getAsDouble()
+									final double _tagValue = (xpGain * multi_exp
 											+ (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("xp_jobs"));
 									CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 								}
@@ -94,17 +97,22 @@ public class JobsfarmerbreakblockProcedure {
 									CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 								}
 							} else {
-								main.addProperty("xp_farmer", (xpGain * main.get("multi_exp").getAsDouble() + main.get("xp_farmer").getAsDouble()));
+								main.addProperty("xp_farmer", (xpGain * multi_exp + main.get("xp_farmer").getAsDouble()));
 							}
-							main.addProperty("xpstreak_farmer", (xpGain * main.get("multi_exp").getAsDouble() + main.get("xpstreak_farmer").getAsDouble()));
+							main.addProperty("xpstreak_farmer", (xpGain * multi_exp + main.get("xpstreak_farmer").getAsDouble()));
 							main.addProperty("xpstreak_time_farmer", (world.dayTime() + 80));
-							PalamodMod.LOGGER.info("Message");
+							PalamodMod.LOGGER
+									.debug(((("[PalaMod] [Jobsfarmerbreakblock] Giving %1 Xp In farmer to %3, source %2".replace("%2",
+											Component.translatable(
+													(((BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString()).replace("minecraft:", "block.minecraft.")).replace("minecraft:", "block.palamod.")))
+													.getString()))
+											.replace("%3", entity.getDisplayName().getString())).replace("%1", "" + (xpGain * multi_exp + xpstreak))));
+							PalamodMod.LOGGER.debug(("[PalaMod] [Jobsfarmerbreakblock] extend: xpgain -> %1".replace("%1", "" + xpGain)));
 							if (entity instanceof Player _player && !_player.level().isClientSide())
 								_player.displayClientMessage(
-										Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + "" + (xpGain * main.get("multi_exp").getAsDouble() + main.get("xpstreak_farmer").getAsDouble())
-												+ Component.translatable("palamod.procedure.jobswin2").getString() + " "
+										Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + "" + (xpGain * multi_exp + xpstreak) + Component.translatable("palamod.procedure.jobswin2").getString() + " "
 												+ Component.translatable(
-														(((BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString()).replace("minecraft:", "block.minecraft.")).replace("minecraft:", "block.palamod.")))
+														(((BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString()).replace("minecraft:", "block.minecraft.")).replace("palamod:", "block.palamod.")))
 														.getString())),
 										true);
 						}

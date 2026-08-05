@@ -3,6 +3,8 @@ package palamod.procedures;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModGameRules;
 
+import palamod.PalamodMod;
+
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -60,6 +62,8 @@ public class JobsminerbreakblockProcedure {
 		com.google.gson.JsonObject cache_main = new com.google.gson.JsonObject();
 		double money_add = 0;
 		double xp_bloc = 0;
+		double multi_exp = 0;
+		double xpstreak = 0;
 		if (!world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)) {
 			jobs = GetjobsfileProcedure.execute(entity);
 			money = ReadMoneyFileProcedure.execute(entity);
@@ -79,7 +83,9 @@ public class JobsminerbreakblockProcedure {
 						if (world.dayTime() > main.get("xpstreak_time_miner").getAsDouble()) {
 							main.addProperty("xpstreak_miner", 0);
 						}
-						xp_bloc = GetxpminerbreakblockProcedure.execute(Blocks.AIR.defaultBlockState(), entity, false, main.get("lvl_miner").getAsDouble());
+						xp_bloc = GetxpminerbreakblockProcedure.execute(world, Blocks.AIR.defaultBlockState(), entity, false, main.get("lvl_miner").getAsDouble());
+						multi_exp = main.get("multi_exp").getAsDouble();
+						xpstreak = main.get("xpstreak_miner").getAsDouble();
 						if (xp_bloc > 0) {
 							if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:botteled")))) != 0
@@ -88,7 +94,7 @@ public class JobsminerbreakblockProcedure {
 									&& (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PalamodModItems.XP_BOTTLE.get()) {
 								{
 									final String _tagName = "xp_jobs";
-									final double _tagValue = (xp_bloc * main.get("multi_exp").getAsDouble()
+									final double _tagValue = (xp_bloc * multi_exp
 											+ (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("xp_jobs"));
 									CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 								}
@@ -98,16 +104,26 @@ public class JobsminerbreakblockProcedure {
 									CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 								}
 							} else {
-								main.addProperty("xp_miner", (xp_bloc * main.get("multi_exp").getAsDouble() + main.get("xp_miner").getAsDouble()));
+								main.addProperty("xp_miner", (xp_bloc * multi_exp + main.get("xp_miner").getAsDouble()));
 							}
-							main.addProperty("xpstreak_miner", (xp_bloc * main.get("multi_exp").getAsDouble() + main.get("xpstreak_miner").getAsDouble()));
+							main.addProperty("xpstreak_miner", (xp_bloc * multi_exp + xpstreak));
 							main.addProperty("xpstreak_time_miner", (world.dayTime() + 80));
-							if (entity instanceof Player _player && !_player.level().isClientSide())
-								_player.displayClientMessage(Component.literal((Component.translatable("palamod.procedure.jobswin1").getString() + "" + (xp_bloc * main.get("multi_exp").getAsDouble() + main.get("xpstreak_miner").getAsDouble())
-										+ Component.translatable("palamod.procedure.jobswin2").getString() + " " + Component.translatable(((BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString())
-												.replace("minecraft:", (world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:palablocks"))) ? "block.palamod." : "block.minecraft."))).getString())),
-										true);
 						}
+						PalamodMod.LOGGER.debug(((("[PalaMod] [Jobsminerbreakblock] Giving %1 Xp In miner to %3, source %2".replace("%2",
+								Component.translatable((((BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString()).replace("minecraft:", "block.minecraft.")).replace("minecraft:", "block.palamod.")))
+										.getString()))
+								.replace("%3", entity.getDisplayName().getString())).replace("%1", "" + (xp_bloc * multi_exp + xpstreak))));
+						PalamodMod.LOGGER.debug(("[PalaMod] [Jobsminerbreakblock] extend: xpgain -> %1".replace("%1", "" + xp_bloc)));
+						if (entity instanceof Player _player && !_player.level().isClientSide())
+							_player.displayClientMessage(
+									Component
+											.literal(
+													(Component.translatable("palamod.procedure.jobswin1").getString() + "" + (xp_bloc * multi_exp + xpstreak) + Component.translatable("palamod.procedure.jobswin2").getString() + " "
+															+ Component
+																	.translatable(((BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString()).replace("minecraft:",
+																			(world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(ResourceLocation.parse("palamod:palablocks"))) ? "block.palamod." : "block.minecraft.")))
+																	.getString())),
+									true);
 					} catch (IOException e) {
 						e.printStackTrace();
 					}

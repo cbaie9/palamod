@@ -29440,6 +29440,10 @@
           {
             "name": "level_miner",
             "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -46378,6 +46382,10 @@
           {
             "name": "slotNum",
             "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "return_type": "string",
@@ -46502,6 +46510,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "return_type": "string",
@@ -46521,6 +46533,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "return_type": "string",
@@ -46540,6 +46556,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "return_type": "string",
@@ -46559,6 +46579,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "return_type": "string",
@@ -46578,6 +46602,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "return_type": "string",
@@ -46597,6 +46625,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "return_type": "string",
@@ -46753,6 +46785,10 @@
           {
             "name": "slotNum",
             "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "return_type": "number",
@@ -46772,6 +46808,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "return_type": "number",
@@ -46791,6 +46831,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "return_type": "number",
@@ -46810,6 +46854,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "return_type": "number",
@@ -46829,6 +46877,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "return_type": "number",
@@ -46848,6 +46900,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "return_type": "number",
@@ -46867,6 +46923,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "return_type": "number",
@@ -47137,6 +47197,64 @@
           "src/main/java/palamod/procedures/HanggliderItemInHandTickProcedure.java"
         ]
       }
+    },
+    {
+      "name": "MaxJobsOxmod",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "max_jobs_oxmod",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/MaxJobsOxmodProcedure.java"
+        ]
+      },
+      "path": "~/oxylib"
+    },
+    {
+      "name": "ResetJobsFile",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reset_jobs_file",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/ResetJobsFileProcedure.java"
+        ]
+      },
+      "path": "~/oxylib"
     }
   ],
   "variable_elements": [

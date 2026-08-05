@@ -2,6 +2,7 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
@@ -26,853 +27,146 @@ public class HammersmeltProcedure {
 		double i = 0;
 		double j = 0;
 		double nloop = 0;
-		if (entity.getXRot() > 40 || entity.getXRot() < -40) {
-			if ((world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x + 1, y, z)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
+		double block_x = 0;
+		double block_y = 0;
+		double block_z = 0;
+		ItemStack smelting_result = ItemStack.EMPTY;
+		BlockState block = Blocks.AIR.defaultBlockState();
+		tag = "mineable/pickaxe";
+		i = -1;
+		for (int index1684 = 0; index1684 < 3; index1684++) {
+			j = -1;
+			for (int index1685 = 0; index1685 < 3; index1685++) {
+				if (i != 0 || j != 0) {
+					if (entity.getXRot() > 40 || entity.getXRot() < -40) {
+						block_x = x + i;
+						block_y = y;
+						block_z = z + j;
+						block = (world.getBlockState(BlockPos.containing(block_x, block_y, block_z)));
+						if (block.is(BlockTags.create(ResourceLocation.parse((tag).toLowerCase(java.util.Locale.ENGLISH))))) {
+							if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops(block) == true) {
+								smelting_result = (world instanceof Level _lvlSmeltResult
+										? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack(block.getBlock()))), _lvlSmeltResult)
+												.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
+										: ItemStack.EMPTY).copy();
+								if (!(smelting_result.getItem() == Blocks.AIR.asItem())) {
+									if (world instanceof ServerLevel _level) {
+										ItemEntity entityToSpawn = new ItemEntity(_level, (block_x + 0.5), (block_y + 0.5), (block_z + 0.5), smelting_result);
+										entityToSpawn.setPickUpDelay(10);
+										_level.addFreshEntity(entityToSpawn);
+									}
+								} else {
+									removeBlock = false;
+								}
+								if (removeBlock == true) {
+									world.destroyBlock(BlockPos.containing(block_x, block_y, block_z), false);
+								} else {
+									{
+										BlockPos _pos = BlockPos.containing(block_x, block_y, block_z);
+										Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(block_x, block_y, block_z), null);
+										world.destroyBlock(_pos, false);
+									}
+								}
+							}
 						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x + 1, y, z), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x + 1, y, z);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 1, y, z), null);
-							world.destroyBlock(_pos, false);
+					} else if ((entity.getDirection()).getAxis() == Direction.Axis.Z) {
+						block_x = x + i;
+						block_y = y + j;
+						block_z = z;
+						block = (world.getBlockState(BlockPos.containing(block_x, block_y, block_z)));
+						if (block.is(BlockTags.create(ResourceLocation.parse((tag).toLowerCase(java.util.Locale.ENGLISH))))) {
+							if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops(block) == true) {
+								smelting_result = (world instanceof Level _lvlSmeltResult
+										? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack(block.getBlock()))), _lvlSmeltResult)
+												.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
+										: ItemStack.EMPTY).copy();
+								if (!(smelting_result.getItem() == Blocks.AIR.asItem())) {
+									if (world instanceof ServerLevel _level) {
+										ItemEntity entityToSpawn = new ItemEntity(_level, (block_x + 0.5), (block_y + 0.5), (block_z + 0.5), smelting_result);
+										entityToSpawn.setPickUpDelay(10);
+										_level.addFreshEntity(entityToSpawn);
+									}
+								} else {
+									removeBlock = false;
+								}
+								if (removeBlock == true) {
+									world.destroyBlock(BlockPos.containing(block_x, block_y, block_z), false);
+								} else {
+									{
+										BlockPos _pos = BlockPos.containing(block_x, block_y, block_z);
+										Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(block_x, block_y, block_z), null);
+										world.destroyBlock(_pos, false);
+									}
+								}
+							}
 						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x - 1, y, z)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x - 1, y, z), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x - 1, y, z);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x - 1, y, z), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x + 1, y, z + 1))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x + 1, y, z + 1))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x + 1, y, z + 1)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 1, y, z + 1))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 1, y, z + 1))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x + 1, y, z + 1), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x + 1, y, z + 1);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 1, y, z + 1), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x + 1, y, z - 1))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x + 1, y, z - 1))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x + 1, y, z - 1)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 1, y, z - 1))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 1, y, z - 1))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x + 1, y, z - 1), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x + 1, y, z - 1);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 1, y, z - 1), null);
-							world.destroyBlock(_pos, false);
+					} else if ((entity.getDirection()).getAxis() == Direction.Axis.X) {
+						block_x = x;
+						block_y = y + j;
+						block_z = z + i;
+						block = (world.getBlockState(BlockPos.containing(block_x, block_y, block_z)));
+						if (block.is(BlockTags.create(ResourceLocation.parse((tag).toLowerCase(java.util.Locale.ENGLISH))))) {
+							if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops(block) == true) {
+								smelting_result = (world instanceof Level _lvlSmeltResult
+										? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack(block.getBlock()))), _lvlSmeltResult)
+												.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
+										: ItemStack.EMPTY).copy();
+								if (!(smelting_result.getItem() == Blocks.AIR.asItem())) {
+									if (world instanceof ServerLevel _level) {
+										ItemEntity entityToSpawn = new ItemEntity(_level, (block_x + 0.5), (block_y + 0.5), (block_z + 0.5), smelting_result);
+										entityToSpawn.setPickUpDelay(10);
+										_level.addFreshEntity(entityToSpawn);
+									}
+								} else {
+									removeBlock = false;
+								}
+								if (removeBlock == true) {
+									world.destroyBlock(BlockPos.containing(block_x, block_y, block_z), false);
+								} else {
+									{
+										BlockPos _pos = BlockPos.containing(block_x, block_y, block_z);
+										Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(block_x, block_y, block_z), null);
+										world.destroyBlock(_pos, false);
+									}
+								}
+							}
 						}
 					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x - 1, y, z - 1))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x - 1, y, z - 1))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x - 1, y, z - 1)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 1, y, z - 1))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 1, y, z - 1))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x - 1, y, z - 1), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x - 1, y, z - 1);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x - 1, y, z - 1), null);
-							world.destroyBlock(_pos, false);
+				} else {
+					block_x = x;
+					block_y = y;
+					block_z = z + i;
+					block = (world.getBlockState(BlockPos.containing(block_x, block_y, block_z)));
+					if (block.is(BlockTags.create(ResourceLocation.parse((tag).toLowerCase(java.util.Locale.ENGLISH))))) {
+						if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops(block) == true) {
+							smelting_result = (world instanceof Level _lvlSmeltResult
+									? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack(block.getBlock()))), _lvlSmeltResult)
+											.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
+									: ItemStack.EMPTY).copy();
+							if (!(smelting_result.getItem() == Blocks.AIR.asItem())) {
+								if (world instanceof ServerLevel _level) {
+									ItemEntity entityToSpawn = new ItemEntity(_level, (block_x + 0.5), (block_y + 0.5), (block_z + 0.5), smelting_result);
+									entityToSpawn.setPickUpDelay(10);
+									_level.addFreshEntity(entityToSpawn);
+								}
+							} else {
+								removeBlock = false;
+							}
+							if (removeBlock == true) {
+								world.destroyBlock(BlockPos.containing(block_x, block_y, block_z), false);
+							} else {
+								{
+									BlockPos _pos = BlockPos.containing(block_x, block_y, block_z);
+									Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(block_x, block_y, block_z), null);
+									world.destroyBlock(_pos, false);
+								}
+							}
 						}
 					}
 				}
+				j = j + 1;
 			}
-			if ((world.getBlockState(BlockPos.containing(x - 1, y, z + 1))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x - 1, y, z + 1))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x - 1, y, z + 1)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 1, y, z + 1))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 1, y, z + 1))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x - 1, y, z + 1), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x - 1, y, z + 1);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x - 1, y, z + 1), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x - 0, y, z + 1)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 0, y, z + 1))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 0, y, z + 1))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x - 0, y, z + 1), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x - 0, y, z + 1);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x - 0, y, z + 1), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x - 0, y, z + 1)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 0, y, z + 1))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 0, y, z + 1))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x - 0, y, z + 1), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x - 0, y, z + 1);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x - 0, y, z + 1), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x - 0, y, z + 1)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 0, y, z + 1))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 0, y, z + 1))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x - 0, y, z + 1), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x - 0, y, z + 1);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x - 0, y, z + 1), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x - 0, y, z - 1)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 0, y, z - 1))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 0, y, z - 1))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x - 0, y, z - 1), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x - 0, y, z - 1);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x - 0, y, z - 1), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-		} else if ((entity.getDirection()) == Direction.NORTH || (entity.getDirection()) == Direction.SOUTH) {
-			if ((world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x + 1, y, z)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x + 1, y, z), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x + 1, y, z);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 1, y, z), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x - 1, y, z)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x - 1, y, z), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x - 1, y, z);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x - 1, y, z), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x + 1, y + 1, z))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x + 1, y + 1, z))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x + 1, y + 1, z)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 1, y + 1, z))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 1, y + 1, z))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x + 1, y + 1, z), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x + 1, y + 1, z);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 1, y + 1, z), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x + 1, y - 1, z))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe")))
-					&& !((world.getBlockState(BlockPos.containing(x + 1, y - 1, z - 0))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x + 1, y - 1, z)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 1, y - 1, z))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 1, y - 1, z))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x + 1, y - 1, z - 0), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x + 1, y - 1, z - 0);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 1, y - 1, z - 0), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x - 0, y + 1, z - 0))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe")))
-					&& !((world.getBlockState(BlockPos.containing(x - 0, y + 1, z - 0))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x - 0, y + 1, z - 0)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 0, y + 1, z - 0))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 0, y + 1, z - 0))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x - 0, y + 1, z - 0), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x - 0, y + 1, z - 0);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x - 0, y + 1, z - 0), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x - 1, y, z + 0))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x - 1, y, z + 1))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x - 1, y, z + 0)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 1, y, z + 0))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 1, y, z + 0))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x - 1, y + 1, z + 0), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x - 1, y + 1, z + 0);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x - 1, y + 1, z + 0), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x - 1, y + 1, z))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe")))
-					&& !((world.getBlockState(BlockPos.containing(x - 1, y + 1, z - 0))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x - 1, y + 1, z)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 1, y + 1, z))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 1, y + 1, z))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x - 1, y + 1, z - 0), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x - 1, y + 1, z - 0);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x - 1, y + 1, z - 0), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x - 1, y - 1, z + 0))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe")))
-					&& !((world.getBlockState(BlockPos.containing(x - 1, y - 1, z + 0))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x - 1, y - 1, z + 0)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 1, y - 1, z + 0))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 1, y - 1, z + 0))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x - 1, y - 1, z), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x - 1, y - 1, z);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x - 0, y, z), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x - 0, y - 1, z))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x - 0, y - 1, z))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x - 0, y - 1, z)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 0, y - 1, z))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 0, y - 1, z))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x - 0, y - 1, z), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x - 0, y - 1, z);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x - 0, y, z), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x - 1, y - 1, z))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x - 0, y - 1, z))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x - 1, y - 1, z)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 1, y - 1, z))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 1, y - 1, z))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x - 1, y - 1, z), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x - 1, y - 1, z);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x - 0, y, z), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-		} else if ((entity.getDirection()) == Direction.WEST || (entity.getDirection()) == Direction.EAST) {
-			if ((world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x - 0, y, z + 1)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 0, y, z + 1))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 0, y, z + 1))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x - 0, y, z + 1), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x - 0, y, z + 1);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x - 0, y, z + 1), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x - 0, y, z - 1)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 0, y, z - 1))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 0, y, z - 1))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x - 0, y, z - 1), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x - 0, y, z - 1);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x - 0, y, z - 1), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x, y + 1, z + 1))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x, y + 1, z + 1))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x - 0, y + 1, z + 1)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 0, y + 1, z + 1))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 0, y + 1, z + 1))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x + 0, y + 1, z + 1), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x - 0, y + 1, z + 1);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 0, y + 1, z + 1), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x, y - 1, z + 1))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x, y - 1, z + 1))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x + 0, y - 1, z + 1)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 0, y - 1, z + 1))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 0, y - 1, z + 1))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x + 0, y - 1, z + 1), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x + 0, y - 1, z + 1);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 1, y - 1, z + 1), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x, y - 1, z - 1))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x, y - 1, z - 1))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x - 0, y - 1, z - 1)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 0, y - 1, z - 1))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x - 0, y - 1, z - 1))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x - 0, y - 1, z - 1), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x - 0, y - 1, z - 1);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x - 0, y - 1, z - 1), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x, y + 1, z - 1))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x, y + 1, z - 1))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x + 0, y + 1, z - 1)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 0, y + 1, z - 1))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 0, y + 1, z - 1))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x + 0, y + 1, z - 1), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x + 0, y + 1, z - 1);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 1, y + 1, z - 1), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x, y + 1, z))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x, y + 1, z))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x + 0, y + 1, z - 0)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 0, y + 1, z - 0))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 0, y + 1, z - 0))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x + 0, y + 1, z - 0), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x + 0, y + 1, z - 0);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 1, y + 1, z - 0), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
-			if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe"))) && !((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.BEDROCK)) {
-				if (new ItemStack(PalamodModItems.PALADIUM_HAMMER.get()).isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x + 0, y - 1, z - 0)))) == true) {
-					if (!((world instanceof Level _lvlSmeltResult
-							? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 0, y - 1, z - 0))).getBlock()))), _lvlSmeltResult)
-									.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-							: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5),
-									(world instanceof Level _lvlSmeltResult
-											? _lvlSmeltResult.getRecipeManager().getRecipeFor(RecipeType.SMELTING, new SingleRecipeInput((new ItemStack((world.getBlockState(BlockPos.containing(x + 0, y - 1, z - 0))).getBlock()))), _lvlSmeltResult)
-													.map(recipe -> recipe.value().getResultItem(_lvlSmeltResult.registryAccess()).copy()).orElse(ItemStack.EMPTY)
-											: ItemStack.EMPTY));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-						removeBlock = true;
-					} else {
-						removeBlock = false;
-					}
-					if (removeBlock == true) {
-						world.destroyBlock(BlockPos.containing(x + 0, y - 1, z - 0), false);
-					} else {
-						{
-							BlockPos _pos = BlockPos.containing(x + 0, y - 1, z - 0);
-							Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x + 1, y - 1, z - 0), null);
-							world.destroyBlock(_pos, false);
-						}
-					}
-				}
-			}
+			i = i + 1;
 		}
 	}
 }

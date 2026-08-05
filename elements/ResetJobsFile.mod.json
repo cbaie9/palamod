@@ -1,0 +1,8 @@
+{
+  "_fv": 89,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><variables><variable type=\"File\" id=\"jobs\">jobs</variable></variables><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"variables_set_file\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" is_player_var=\"false\" has_entity=\"false\"></mutation><field name=\"VAR\">local:jobs</field><value name=\"VAL\"><block type=\"procedure_retval_file\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"undefined\"></mutation><field name=\"procedure\">Getjobsfile</field></block></value><next><block type=\"delete_file\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" is_player_var=\"false\" has_entity=\"false\"></mutation><field name=\"VAR\">local:jobs</field><next><block type=\"call_procedure\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"0\"></mutation><field name=\"procedure\">Jobsfilecreateautorepair</field></block></next></block></next></block></next></block></xml>",
+    "skipDependencyNullCheck": false
+  }
+}

@@ -6,6 +6,7 @@ import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.entity.player.Player;
@@ -13,7 +14,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 
 public class GetTextNameGainJobsPalahelpProcedure {
-	public static String execute(Entity entity, double slotNum) {
+	public static String execute(LevelAccessor world, Entity entity, double slotNum) {
 		if (entity == null)
 			return "";
 		ItemStack item = ItemStack.EMPTY;
@@ -31,7 +32,7 @@ public class GetTextNameGainJobsPalahelpProcedure {
 				}
 			} else if ((entity.getPersistentData().getString("jobs_mode")).equals("miner")) {
 				if ((entity.getPersistentData().getString("xp_mode")).equals("mine")) {
-					xpGain = GetxpminerbreakblockProcedure.execute(item.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState(), entity, true, 199);
+					xpGain = GetxpminerbreakblockProcedure.execute(world, item.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState(), entity, true, 199);
 				} else if ((entity.getPersistentData().getString("xp_mode")).equals("smelt")) {
 					xpGain = GetXpcraftjobsProcedure.execute(item, 199, 199, 199, 199, "smelt");
 				}
