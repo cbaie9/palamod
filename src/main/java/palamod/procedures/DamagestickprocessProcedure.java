@@ -27,7 +27,7 @@ public class DamagestickprocessProcedure {
 		if (entity == null)
 			return;
 		if (itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("cooldown") == 0 || getEntityGameType(entity) == GameType.CREATIVE) {
-			for (int index242 = 0; index242 < 25; index242++) {
+			for (int index0 = 0; index0 < 25; index0++) {
 				{
 					Entity _shootFrom = entity;
 					Level projectileLevel = _shootFrom.level();

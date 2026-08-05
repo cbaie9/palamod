@@ -11,7 +11,7 @@ public class CheckstructurespawnercontrollerProcedure {
 		double num = 0;
 		double output = 0;
 		num = 1;
-		for (int index341 = 0; index341 < 2; index341++) {
+		for (int index99 = 0; index99 < 2; index99++) {
 			if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == PalamodModBlocks.PALADIUM_BLOCK.get() && (world.getBlockState(BlockPos.containing(x, y - 2, z))).getBlock() == PalamodModBlocks.PALADIUM_BLOCK.get()
 					&& (world.getBlockState(BlockPos.containing(x - 1 * num, y - 2, z))).getBlock() == Blocks.OBSIDIAN && (world.getBlockState(BlockPos.containing(x - 2 * num, y - 2, z))).getBlock() == Blocks.OBSIDIAN
 					&& (world.getBlockState(BlockPos.containing(x - 3 * num, y - 2, z))).getBlock() == PalamodModBlocks.DIAMOND_INFUSED_OBSIDIAN.get() && (world.getBlockState(BlockPos.containing(x - 4 * num, y - 2, z))).getBlock() == Blocks.OBSIDIAN

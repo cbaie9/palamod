@@ -51,7 +51,7 @@ public class BackpackdropdeathnolockProcedure {
 			i2 = slot_num;
 			i = 0;
 			if (i2 >= 0) {
-				for (int index310 = 0; index310 < 9; index310++) {
+				for (int index68 = 0; index68 < 9; index68++) {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu21 ? _menu21.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
 						_setstack.setCount(getAmountInGUISlot(entity, (int) i));
@@ -61,7 +61,7 @@ public class BackpackdropdeathnolockProcedure {
 				}
 			}
 			if (i2 >= 9) {
-				for (int index311 = 0; index311 < 18; index311++) {
+				for (int index69 = 0; index69 < 18; index69++) {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu24 ? _menu24.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
 						_setstack.setCount(getAmountInGUISlot(entity, (int) i));
@@ -71,7 +71,7 @@ public class BackpackdropdeathnolockProcedure {
 				}
 			}
 			if (i2 >= 27) {
-				for (int index312 = 0; index312 < 18; index312++) {
+				for (int index70 = 0; index70 < 18; index70++) {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu27 ? _menu27.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
 						_setstack.setCount(getAmountInGUISlot(entity, (int) i));
@@ -81,7 +81,7 @@ public class BackpackdropdeathnolockProcedure {
 				}
 			}
 			if (i2 >= 55) {
-				for (int index313 = 0; index313 < 18; index313++) {
+				for (int index71 = 0; index71 < 18; index71++) {
 					i = i + 1;
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu30 ? _menu30.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
