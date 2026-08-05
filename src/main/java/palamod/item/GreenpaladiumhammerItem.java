@@ -58,7 +58,7 @@ public class GreenpaladiumhammerItem extends PickaxeItem {
 	@Override
 	public boolean mineBlock(ItemStack itemstack, Level world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
 		boolean retval = super.mineBlock(itemstack, world, blockstate, pos, entity);
-		Hammer1Procedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity, itemstack);
+		Hammer1Procedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 		return retval;
 	}
 

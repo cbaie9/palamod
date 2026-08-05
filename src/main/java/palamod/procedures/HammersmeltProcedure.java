@@ -34,9 +34,9 @@ public class HammersmeltProcedure {
 		BlockState block = Blocks.AIR.defaultBlockState();
 		tag = "mineable/pickaxe";
 		i = -1;
-		for (int index1684 = 0; index1684 < 3; index1684++) {
+		for (int index1688 = 0; index1688 < 3; index1688++) {
 			j = -1;
-			for (int index1685 = 0; index1685 < 3; index1685++) {
+			for (int index1689 = 0; index1689 < 3; index1689++) {
 				if (i != 0 || j != 0) {
 					if (entity.getXRot() > 40 || entity.getXRot() < -40) {
 						block_x = x + i;

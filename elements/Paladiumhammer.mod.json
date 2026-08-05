@@ -8,6 +8,7 @@
     "texture": "paladium_hammer16",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Paladium hammer",
     "rarity": "COMMON",
     "specialInformation": {
@@ -21,6 +22,9 @@
     "enchantability": 1,
     "damageVsEntity": 1.0,
     "usageCount": 3999,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [],
     "immuneToFire": false,
     "blockDropsTier": "NETHERITE",
@@ -28,7 +32,6 @@
     "attributeModifiers": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
-    "onItemInInventoryTick": "PaladiumhammerToolInInventoryTick",
-    "onBlockDestroyedWithTool": "Hammer1"
+    "onItemInInventoryTick": "PaladiumhammerToolInInventoryTick"
   }
 }

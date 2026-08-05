@@ -6004,10 +6004,6 @@
             "type": "entity"
           },
           {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -49528,6 +49524,9 @@
       "~PaladiumBlock@CUSTOM:PaladiumBlock"
     ],
     "ITEMS:minecraft:pickaxes": [
+      "~Endiumhammer@CUSTOM:Endiumhammer",
+      "~Paladiumhammer@CUSTOM:Paladiumhammer",
+      "~Greenpaladiumhammer@CUSTOM:Greenpaladiumhammer",
       "~Endiumseedplanter@CUSTOM:Endiumseedplanter",
       "~Greenpaladiumseedplanter@CUSTOM:Greenpaladiumseedplanter",
       "~Paladiumseedplanter@CUSTOM:Paladiumseedplanter",
@@ -49535,7 +49534,6 @@
       "~Amethystseedplanter@CUSTOM:Amethystseedplanter",
       "~Obsidianpickaxe@CUSTOM:Obsidianpickaxe",
       "~Creativehammer@CUSTOM:Creativehammer",
-      "~Greenpaladiumhammer@CUSTOM:Greenpaladiumhammer",
       "~Creativepotg@CUSTOM:Creativepotg",
       "~Pickaxeofthegodslv13@CUSTOM:Pickaxeofthegodslv13",
       "~Pickaxeofthegodslv20@CUSTOM:Pickaxeofthegodslv20",
@@ -49557,8 +49555,6 @@
       "~Pickaxeofthegodslv3@CUSTOM:Pickaxeofthegodslv3",
       "~Pickaxeofthegodslv2@CUSTOM:Pickaxeofthegodslv2",
       "~Pickaxeofthegodslv1@CUSTOM:Pickaxeofthegodslv1",
-      "~Endiumhammer@CUSTOM:Endiumhammer",
-      "~Paladiumhammer@CUSTOM:Paladiumhammer",
       "~Titanehammer@CUSTOM:Titanehammer",
       "~Amethystehammer@CUSTOM:Amethystehammer",
       "~Paladiumgreenpickaxe@CUSTOM:Paladiumgreenpickaxe",
