@@ -56,7 +56,6 @@ public class PortaldropprocessProcedure {
 		String type = "";
 		String type_input = "";
 		String stock_name = "";
-		PalamodMod.LOGGER.debug("Drop portal --------");
 		level_alchi = GetleveljobsProcedure.execute(world, entity, "alchi");
 		if (itemstack.getItem() == PalamodModItems.TANKITEM.get() || itemstack.getItem() == PalamodModItems.FLASK.get()) {
 			if (itemstack.getItem() == PalamodModItems.TANKITEM.get()) {
@@ -74,7 +73,7 @@ public class PortaldropprocessProcedure {
 					type_input = "erable";
 				}
 			}
-			for (int index119 = 0; index119 < 4; index119++) {
+			for (int index516 = 0; index516 < 4; index516++) {
 				if (loop == 0) {
 					active = PalamodModBlocks.AMETHYST_PORTALBLOCK.get().defaultBlockState();
 					type = "jacaranda";

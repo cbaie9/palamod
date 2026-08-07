@@ -5989,40 +5989,6 @@
       }
     },
     {
-      "name": "Hammer1",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "hammer_1",
-      "metadata": {
-        "files": [
-          "src/main/java/palamod/procedures/Hammer1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "Hammersmelt",
       "type": "procedure",
       "compiles": true,
@@ -47251,6 +47217,41 @@
         ]
       },
       "path": "~/oxylib"
+    },
+    {
+      "name": "Elevatorcraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elevatorcraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/elevatorcraft.json"
+        ]
+      }
+    },
+    {
+      "name": "GetFortuneBonusAmount",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_fortune_bonus_amount",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/GetFortuneBonusAmountProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -49525,8 +49526,8 @@
     ],
     "ITEMS:minecraft:pickaxes": [
       "~Endiumhammer@CUSTOM:Endiumhammer",
-      "~Paladiumhammer@CUSTOM:Paladiumhammer",
       "~Greenpaladiumhammer@CUSTOM:Greenpaladiumhammer",
+      "~Paladiumhammer@CUSTOM:Paladiumhammer",
       "~Endiumseedplanter@CUSTOM:Endiumseedplanter",
       "~Greenpaladiumseedplanter@CUSTOM:Greenpaladiumseedplanter",
       "~Paladiumseedplanter@CUSTOM:Paladiumseedplanter",
@@ -56208,7 +56209,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.21.1.010",
+    "version": "1.21.1.011",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some textures )",
     "author": "cb9, FufuBS1,Gelyce ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",

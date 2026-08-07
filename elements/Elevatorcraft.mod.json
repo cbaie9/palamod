@@ -1,0 +1,29 @@
+{
+  "_fv": 89,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      "Blocks.WOOL",
+      "Blocks.WOOL",
+      "Blocks.WOOL",
+      "CUSTOM:Furnaceupgrade",
+      "Blocks.PISTON",
+      "CUSTOM:Furnaceupgrade",
+      "Blocks.PLANKS",
+      "Items.REDSTONE",
+      "Blocks.PLANKS"
+    ],
+    "recipeReturnStack": "CUSTOM:Elevatorwhite",
+    "name": "elevatorcraft",
+    "namespace": "mod"
+  }
+}

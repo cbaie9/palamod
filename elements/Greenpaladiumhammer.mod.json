@@ -8,6 +8,7 @@
     "texture": "green_paladium_hammer_v2",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "Green paladium hammer",
     "rarity": "COMMON",
     "specialInformation": {
@@ -31,7 +32,6 @@
     "attributeModifiers": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
-    "onItemInInventoryTick": "PaladiumhammerToolInInventoryTick",
-    "onBlockDestroyedWithTool": "Hammer1"
+    "onItemInInventoryTick": "PaladiumhammerToolInInventoryTick"
   }
 }
