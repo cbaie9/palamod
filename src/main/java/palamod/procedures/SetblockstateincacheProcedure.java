@@ -55,9 +55,9 @@ public class SetblockstateincacheProcedure {
 				}
 				main_chs.addProperty("block", (BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x, y, z))).getBlock()).toString()));
 				i = -1;
-				for (int index60 = 0; index60 < 3; index60++) {
+				for (int index255 = 0; index255 < 3; index255++) {
 					j = -1;
-					for (int index61 = 0; index61 < 3; index61++) {
+					for (int index256 = 0; index256 < 3; index256++) {
 						if (i != 0 || j != 0) {
 							if (entity.getXRot() > 40 || entity.getXRot() < -40) {
 								block_to_set = (world.getBlockState(BlockPos.containing(x + i, y, z + j)));

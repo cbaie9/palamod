@@ -11,6 +11,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
+import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
 import com.mojang.brigadier.arguments.StringArgumentType;
@@ -93,7 +94,7 @@ public class OxmodsCommand {
 
 					OxdebugdonotshowtrueProcedure.execute(world, arguments, entity);
 					return 0;
-				}))).then(Commands.literal("open").executes(arguments -> {
+				}))).then(Commands.literal("testpipeline").executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -105,7 +106,7 @@ public class OxmodsCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					OpenProcedure.execute(entity);
+					PgetminerProcedure.execute(world, x, y, z, entity);
 					return 0;
 				})).then(Commands.literal("nbt").then(Commands.argument("nbt", StringArgumentType.word()).then(Commands.argument("nbt_value", DoubleArgumentType.doubleArg()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
@@ -163,7 +164,21 @@ public class OxmodsCommand {
 
 					ResetJobsFileProcedure.execute(world, entity);
 					return 0;
-				}))).then(Commands.literal("backup").then(Commands.literal("load").executes(arguments -> {
+				})).then(Commands.literal("get").then(Commands.literal("level").then(Commands.literal("miner").then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					GetLevelCommandJobsCommandVerProcedure.execute(world, x, y, z, arguments);
+					return 0;
+				})))))).then(Commands.literal("backup").then(Commands.literal("load").executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();

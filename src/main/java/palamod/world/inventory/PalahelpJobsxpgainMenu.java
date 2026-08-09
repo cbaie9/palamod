@@ -32,7 +32,7 @@ public class PalahelpJobsxpgainMenu extends AbstractContainerMenu implements Pal
 	public final Map<String, Object> menuState = new HashMap<>() {
 		@Override
 		public Object put(String key, Object value) {
-			if (!this.containsKey(key) && this.size() >= 33)
+			if (!this.containsKey(key) && this.size() >= 34)
 				return null;
 			return super.put(key, value);
 		}

@@ -52,7 +52,7 @@ public class GetxpminerbreakblockProcedure {
 					bufferedReader.close();
 					cache_main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt"))) && !palahelpOverride) {
-						for (int index781 = 0; index781 < 9; index781++) {
+						for (int index253 = 0; index253 < 9; index253++) {
 							block = BuiltInRegistries.BLOCK.get(ResourceLocation.parse((cache_main.get((8 == nloop ? "block" : "block_hammer_cache_" + nloop)).getAsString()).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState();
 							if (block.getBlock() == Blocks.DEEPSLATE || block.getBlock() == Blocks.STONE) {
 								output = output + 0.5;

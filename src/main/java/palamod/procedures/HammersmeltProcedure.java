@@ -2,12 +2,9 @@ package palamod.procedures;
 
 import palamod.init.PalamodModItems;
 
-import palamod.PalamodMod;
-
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.bus.api.ICancellableEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.block.state.BlockState;
@@ -57,18 +54,11 @@ public class HammersmeltProcedure {
 		ItemStack smelting_result = ItemStack.EMPTY;
 		BlockState block = Blocks.AIR.defaultBlockState();
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt")))) {
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-					.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:smelt")))) != 0) {
-				PalamodMod.LOGGER.debug("[hammerpros] : cancel break block");
-				if (event instanceof ICancellableEvent _cancellable) {
-					_cancellable.setCanceled(true);
-				}
-			}
 			tag = "mineable/pickaxe";
 			i = -1;
-			for (int index845 = 0; index845 < 3; index845++) {
+			for (int index337 = 0; index337 < 3; index337++) {
 				j = -1;
-				for (int index846 = 0; index846 < 3; index846++) {
+				for (int index338 = 0; index338 < 3; index338++) {
 					if (i != 0 || j != 0) {
 						if (entity.getXRot() > 40 || entity.getXRot() < -40) {
 							block_x = x + i;
@@ -97,7 +87,7 @@ public class HammersmeltProcedure {
 									: ItemStack.EMPTY).copy();
 							if (!(smelting_result.getItem() == Blocks.AIR.asItem()) && (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:smelt")))) != 0) {
-								for (int index847 = 0; index847 < (int) GetFortuneBonusAmountProcedure.execute(world, entity); index847++) {
+								for (int index339 = 0; index339 < (int) GetFortuneBonusAmountProcedure.execute(world, entity); index339++) {
 									if (world instanceof ServerLevel _level) {
 										ItemEntity entityToSpawn = new ItemEntity(_level, (block_x + 0.5), (block_y + 0.5), (block_z + 0.5), smelting_result);
 										entityToSpawn.setPickUpDelay(10);
@@ -124,5 +114,6 @@ public class HammersmeltProcedure {
 				i = i + 1;
 			}
 		}
+		return;
 	}
 }

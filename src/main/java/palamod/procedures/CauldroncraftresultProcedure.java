@@ -43,7 +43,7 @@ public class CauldroncraftresultProcedure {
 				_level.addFreshEntity(entityToSpawn);
 			}
 		} else if (itemstack.is(ItemTags.create(ResourceLocation.parse("palamod:vanilla_flowers")))) {
-			for (int index111 = 0; index111 < (int) nb_items; index111++) {
+			for (int index306 = 0; index306 < (int) nb_items; index306++) {
 				if (Math.random() < 0.25) {
 					random = Mth.nextInt(RandomSource.create(), 1, 3);
 					if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.PALAMODDEBUGLOG)) {
@@ -74,7 +74,7 @@ public class CauldroncraftresultProcedure {
 				}
 			}
 		} else if (Blocks.GLOWSTONE.asItem() == itemstack.getItem()) {
-			for (int index112 = 0; index112 < (int) nb_items; index112++) {
+			for (int index307 = 0; index307 < (int) nb_items; index307++) {
 				if (Math.random() < 0.25) {
 					if (world instanceof ServerLevel _level) {
 						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Items.GOLD_INGOT));
@@ -85,7 +85,7 @@ public class CauldroncraftresultProcedure {
 			}
 		} else if (PalamodModBlocks.ERABLE_LOG.get().asItem() == itemstack.getItem()) {
 			cmp_respawn = 0;
-			for (int index113 = 0; index113 < (int) nb_items; index113++) {
+			for (int index308 = 0; index308 < (int) nb_items; index308++) {
 				if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.LIGHTNING_POTION.get()))) {
 					if (entity instanceof Player _player) {
 						ItemStack _stktoremove = new ItemStack(PalamodModItems.LIGHTNING_POTION.get());
@@ -108,7 +108,7 @@ public class CauldroncraftresultProcedure {
 			}
 		} else if (PalamodModBlocks.OSTRYA_WOOD_LOG.get().asItem() == itemstack.getItem()) {
 			cmp_respawn = 0;
-			for (int index114 = 0; index114 < (int) nb_items; index114++) {
+			for (int index309 = 0; index309 < (int) nb_items; index309++) {
 				if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.LIGHTNING_POTION.get()))) {
 					if (entity instanceof Player _player) {
 						ItemStack _stktoremove = new ItemStack(PalamodModItems.LIGHTNING_POTION.get());
@@ -131,7 +131,7 @@ public class CauldroncraftresultProcedure {
 			}
 		} else if (PalamodModBlocks.JUDEECERCIS_LOG.get().asItem() == itemstack.getItem()) {
 			cmp_respawn = 0;
-			for (int index115 = 0; index115 < (int) nb_items; index115++) {
+			for (int index310 = 0; index310 < (int) nb_items; index310++) {
 				if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.LIGHTNING_POTION.get()))) {
 					if (entity instanceof Player _player) {
 						ItemStack _stktoremove = new ItemStack(PalamodModItems.LIGHTNING_POTION.get());
@@ -154,7 +154,7 @@ public class CauldroncraftresultProcedure {
 			}
 		} else if (PalamodModBlocks.JACARANDA_LOG.get().asItem() == itemstack.getItem()) {
 			cmp_respawn = 0;
-			for (int index116 = 0; index116 < (int) nb_items; index116++) {
+			for (int index311 = 0; index311 < (int) nb_items; index311++) {
 				if (hasEntityInInventory(entity, new ItemStack(PalamodModItems.LIGHTNING_POTION.get()))) {
 					if (entity instanceof Player _player) {
 						ItemStack _stktoremove = new ItemStack(PalamodModItems.LIGHTNING_POTION.get());
@@ -182,7 +182,7 @@ public class CauldroncraftresultProcedure {
 				_level.addFreshEntity(entityToSpawn);
 			}
 		} else if (PalamodModBlocks.ENDIUM_FLOWER.get().asItem() == itemstack.getItem() || PalamodModBlocks.ENDIUM_FLOWER_ON.get().asItem() == itemstack.getItem()) {
-			for (int index117 = 0; index117 < (int) nb_items; index117++) {
+			for (int index312 = 0; index312 < (int) nb_items; index312++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.ENDIUM_POLLEN.get()));
 					entityToSpawn.setPickUpDelay(10);

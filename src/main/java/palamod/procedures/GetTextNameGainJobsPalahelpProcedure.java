@@ -11,7 +11,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 public class GetTextNameGainJobsPalahelpProcedure {
 	public static String execute(LevelAccessor world, Entity entity, double slotNum) {
@@ -21,7 +23,10 @@ public class GetTextNameGainJobsPalahelpProcedure {
 		double xpGain = 0;
 		BlockState age_up = Blocks.AIR.defaultBlockState();
 		String outputText = "";
-		item = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0 ? _menu0.getSlots().get((int) slotNum).getItem() : ItemStack.EMPTY).copy();
+		item = new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation
+				.parse(((BuiltInRegistries.ITEM.getKey((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu0 ? _menu0.getSlots().get((int) slotNum).getItem() : ItemStack.EMPTY).getItem())
+						.toString())).toLowerCase(java.util.Locale.ENGLISH))))
+				.copy();
 		if (!(Blocks.AIR.asItem() == item.getItem())) {
 			if ((entity.getPersistentData().getString("jobs_mode")).equals("farmer")) {
 				if ((entity.getPersistentData().getString("xp_mode")).equals("grow")) {
@@ -49,7 +54,8 @@ public class GetTextNameGainJobsPalahelpProcedure {
 					xpGain = GetxpalchibreakblockProcedure.execute(item.getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState(), 199);
 				}
 			}
-			outputText = ((item.getDisplayName().getString()).replace("]", "")).replace("[", "") + "\\n" + (Component.translatable("palamod.procedure.palahelp.jobs.gain").getString()).replace("%1", "" + Math.round(xpGain));
+			outputText = ((((item.getDisplayName().getString()).replace("]", "")).replace("[", "")).replace("Oeuf d'apparition", "")).replace("Spawn Egg", "") + "\\n"
+					+ (Component.translatable("palamod.procedure.palahelp.jobs.gain").getString()).replace("%1", "" + Math.round(xpGain));
 		} else {
 			outputText = " ";
 		}

@@ -15,7 +15,7 @@ public class ToolresetopenProcedure {
 	public static void execute(LevelAccessor world) {
 		double nloop = 0;
 		nloop = 0;
-		for (int index28 = 0; index28 < 100; index28++) {
+		for (int index223 = 0; index223 < 100; index223++) {
 			if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, new BlockPos(0, 10, 0), null) instanceof IItemHandlerModifiable _itemHandlerModifiable)
 				_itemHandlerModifiable.setStackInSlot((int) nloop, ItemStack.EMPTY);
 			if (!world.isClientSide()) {

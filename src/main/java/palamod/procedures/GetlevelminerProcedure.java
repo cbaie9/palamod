@@ -1,6 +1,5 @@
 package palamod.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 
@@ -10,14 +9,14 @@ import java.io.File;
 import java.io.BufferedReader;
 
 public class GetlevelminerProcedure {
-	public static String execute(LevelAccessor world, Entity entity) {
+	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
 		double lvl = 0;
 		File jobs = new File("");
 		com.google.gson.JsonObject jobs_main = new com.google.gson.JsonObject();
 		jobs = GetjobsfileProcedure.execute(entity);
-		if (jobs.exists() && !world.isClientSide()) {
+		if (jobs.exists()) {
 			{
 				try {
 					BufferedReader bufferedReader = new BufferedReader(new FileReader(jobs));

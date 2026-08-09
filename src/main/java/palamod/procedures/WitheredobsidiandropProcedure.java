@@ -17,7 +17,7 @@ public class WitheredobsidiandropProcedure {
 				_level.addFreshEntity(entityToSpawn);
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_2.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index84 = 0; index84 < 2; index84++) {
+			for (int index279 = 0; index279 < 2; index279++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -25,7 +25,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_3.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index85 = 0; index85 < 3; index85++) {
+			for (int index280 = 0; index280 < 3; index280++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -33,7 +33,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_4.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index86 = 0; index86 < 4; index86++) {
+			for (int index281 = 0; index281 < 4; index281++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -41,7 +41,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_5.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index87 = 0; index87 < 5; index87++) {
+			for (int index282 = 0; index282 < 5; index282++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -49,7 +49,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_6.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index88 = 0; index88 < 6; index88++) {
+			for (int index283 = 0; index283 < 6; index283++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -57,7 +57,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_7.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index89 = 0; index89 < 7; index89++) {
+			for (int index284 = 0; index284 < 7; index284++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -65,7 +65,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_8.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index90 = 0; index90 < 8; index90++) {
+			for (int index285 = 0; index285 < 8; index285++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -73,7 +73,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_9.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index91 = 0; index91 < 9; index91++) {
+			for (int index286 = 0; index286 < 9; index286++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -81,7 +81,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_10.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index92 = 0; index92 < 10; index92++) {
+			for (int index287 = 0; index287 < 10; index287++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -89,7 +89,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_11.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index93 = 0; index93 < 11; index93++) {
+			for (int index288 = 0; index288 < 11; index288++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -97,7 +97,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_12.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index94 = 0; index94 < 12; index94++) {
+			for (int index289 = 0; index289 < 12; index289++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -105,7 +105,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_13.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index95 = 0; index95 < 13; index95++) {
+			for (int index290 = 0; index290 < 13; index290++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);

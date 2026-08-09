@@ -462,7 +462,7 @@ public class Luckyprocessv2Procedure {
 				_menu.getSlots().get(5).set(_setstack121);
 				_player.containerMenu.broadcastChanges();
 			}
-			for (int index14 = 0; index14 < 64; index14++) {
+			for (int index209 = 0; index209 < 64; index209++) {
 				PalamodMod.queueServerWork(6, () -> {
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 5, 3, 3, 3, 1);

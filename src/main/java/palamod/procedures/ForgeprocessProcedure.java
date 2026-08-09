@@ -994,7 +994,7 @@ public class ForgeprocessProcedure {
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
-				for (int index4 = 0; index4 < 100; index4++) {
+				for (int index199 = 0; index199 < 100; index199++) {
 					if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "fuel") > 0 && getBlockNBTNumber(world, BlockPos.containing(x, y, z), "timer") < 20) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);

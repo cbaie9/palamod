@@ -134,7 +134,7 @@
           "name": "label_proc_getlevelminer",
           "text": {
             "fixedValue": "",
-            "name": "Getlevelminer"
+            "name": "ClientSideGetLevelJobs"
           },
           "color": {
             "value": -1,

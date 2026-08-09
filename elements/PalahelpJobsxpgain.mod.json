@@ -63,34 +63,6 @@
         }
       },
       {
-        "type": "button",
-        "data": {
-          "name": "button_grow",
-          "text": "Grow",
-          "isUndecorated": false,
-          "onClick": "LoadFarmerGrowPalahelpJobsXpGain",
-          "width": 45,
-          "height": 20,
-          "x": 74,
-          "y": 45,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_craft",
-          "text": "Craft",
-          "isUndecorated": false,
-          "onClick": "LoadFarmerCraftPalahelpJobsXpGain",
-          "width": 50,
-          "height": 20,
-          "x": 74,
-          "y": 65,
-          "locked": false
-        }
-      },
-      {
         "type": "inputslot",
         "data": {
           "inputLimit": {
@@ -222,36 +194,6 @@
         }
       },
       {
-        "type": "button",
-        "data": {
-          "name": "button_up",
-          "text": "Up",
-          "isUndecorated": false,
-          "onClick": "PageUpPalahelpJobsXpGain",
-          "displayCondition": "PageUpPalahelpJobsXpGainLogic",
-          "width": 35,
-          "height": 20,
-          "x": 117,
-          "y": 160,
-          "locked": true
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_down",
-          "text": "Down",
-          "isUndecorated": false,
-          "onClick": "PageDownPalahelpJobsXpGain",
-          "displayCondition": "PageDownPalahelpJobsXpGainLogic",
-          "width": 35,
-          "height": 20,
-          "x": 117,
-          "y": 181,
-          "locked": true
-        }
-      },
-      {
         "type": "inputslot",
         "data": {
           "inputLimit": {
@@ -370,7 +312,7 @@
         "data": {
           "name": "label_can_gain_xp_now",
           "text": {
-            "fixedValue": "Can Gain xp now cnoir mtn"
+            "fixedValue": "Can Gain xp now "
           },
           "color": {
             "value": -16777216,
@@ -473,72 +415,124 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_minermine",
-          "text": "Miner/mine",
-          "isUndecorated": false,
+          "name": "imagebutton_jobs_xpgain_arrow_up",
+          "image": "jobs_xpgain_arrow_down.png",
+          "hoveredImage": "jobs_xpgain_arrow_down_hover.png",
+          "onClick": "PageUpPalahelpJobsXpGain",
+          "displayCondition": "PageUpPalahelpJobsXpGainLogic",
+          "x": 159,
+          "y": 195,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_jobs_xpgain_arrow_down",
+          "image": "jobs_xpgain_arrow_up.png",
+          "hoveredImage": "jobs_xpgain_arrow_up_hover.png",
+          "onClick": "PageDownPalahelpJobsXpGain",
+          "displayCondition": "PageDownPalahelpJobsXpGainLogic",
+          "x": 159,
+          "y": 59,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_jobs_xpgain_farmer_break",
+          "image": "jobs_xpgain_farmer_break.png",
+          "hoveredImage": "jobs_xpgain_farmer_break_hover.png",
+          "onClick": "LoadFarmerGrowPalahelpJobsXpGain",
+          "x": 104,
+          "y": 46,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_jobs_xpgain_farmer_craft",
+          "image": "jobs_xpgain_farmer_craft.png",
+          "hoveredImage": "jobs_xpgain_farmer_craft_hover.png",
+          "onClick": "LoadFarmerCraftPalahelpJobsXpGain",
+          "x": 104,
+          "y": 70,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_jobs_xpgain_miner_break",
+          "image": "jobs_xpgain_miner_break.png",
+          "hoveredImage": "jobs_xpgain_miner_break_hover.png",
           "onClick": "LoadMinerMinePalahelpJobsXpGain",
-          "width": 75,
-          "height": 20,
-          "x": 74,
-          "y": 84,
+          "x": 80,
+          "y": 46,
           "locked": false
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_minersmelt",
-          "text": "Miner/smelt",
-          "isUndecorated": false,
+          "name": "imagebutton_jobs_xpgain_miner_smelt",
+          "image": "jobs_xpgain_miner_smelt.png",
+          "hoveredImage": "jobs_xpgain_miner_smelt_hover.png",
           "onClick": "LoadMinerSmeltPalahelpJobsXpGain",
-          "width": 80,
-          "height": 20,
-          "x": 74,
-          "y": 104,
+          "x": 80,
+          "y": 70,
           "locked": false
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_hunterkill",
-          "text": "Hunter/kill",
-          "isUndecorated": false,
-          "onClick": "LoadHunterKillPalahelpJobsXpGain",
-          "width": 80,
-          "height": 20,
-          "x": 74,
-          "y": 124,
+          "name": "imagebutton_jobs_xpgain_hunter_smelt",
+          "image": "jobs_xpgain_hunter_smelt.png",
+          "hoveredImage": "jobs_xpgain_hunter_smelt_hover.png",
+          "onClick": "LoadHunterSmeltPalahelpJobsXpGain",
+          "x": 104,
+          "y": 94,
           "locked": false
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_alchicraft",
-          "text": "alchi/craft",
-          "isUndecorated": false,
+          "name": "imagebutton_jobs_xpgain_alchi_craft",
+          "image": "jobs_xpgain_alchi_craft.png",
+          "hoveredImage": "jobs_xpgain_alchi_craft_hover.png",
           "onClick": "LoadAlchiCraftPalahelpJobsXpGain",
-          "width": 80,
-          "height": 20,
-          "x": 74,
-          "y": 144,
+          "x": 80,
+          "y": 94,
           "locked": false
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_alchibreak",
-          "text": "alchi/break",
-          "isUndecorated": false,
+          "name": "imagebutton_jobs_xpgain_alchi_break",
+          "image": "jobs_xpgain_alchi_break.png",
+          "hoveredImage": "jobs_xpgain_alchi_break_hover.png",
           "onClick": "LoadAlchibreakPalahelpJobsXpGain",
-          "width": 80,
-          "height": 20,
-          "x": 28,
-          "y": 174,
+          "x": 80,
+          "y": 118,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_jobs_xpgain_hunter_kill",
+          "image": "jobs_xpgain_hunter_kill.png",
+          "hoveredImage": "jobs_xpgain_hunter_kill_hover.png",
+          "onClick": "LoadHunterKillPalahelpJobsXpGain",
+          "x": 104,
+          "y": 118,
           "locked": false
         }
       }
