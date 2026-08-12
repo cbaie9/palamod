@@ -16,6 +16,7 @@
           "name": "button_farmer",
           "text": "Farmer",
           "isUndecorated": false,
+          "onClick": "SetModeFarmerJobsXpgain",
           "width": 55,
           "height": 20,
           "x": 127,
@@ -29,6 +30,7 @@
           "name": "button_miner",
           "text": "Miner",
           "isUndecorated": false,
+          "onClick": "SetModeMinerJobsXpgain",
           "width": 50,
           "height": 20,
           "x": 182,
@@ -42,6 +44,7 @@
           "name": "button_hunyer",
           "text": "Hunter",
           "isUndecorated": false,
+          "onClick": "SetModeHunterJobsXpgain",
           "width": 55,
           "height": 20,
           "x": 232,
@@ -55,6 +58,7 @@
           "name": "button_alchimist",
           "text": "Alchimist",
           "isUndecorated": false,
+          "onClick": "SetModeAlchiJobsXpgain",
           "width": 70,
           "height": 20,
           "x": 287,
@@ -447,8 +451,9 @@
           "image": "jobs_xpgain_farmer_break.png",
           "hoveredImage": "jobs_xpgain_farmer_break_hover.png",
           "onClick": "LoadFarmerGrowPalahelpJobsXpGain",
+          "displayCondition": "IsModeFarmerJobsXpgain",
           "x": 104,
-          "y": 46,
+          "y": 48,
           "locked": false
         }
       },
@@ -459,8 +464,9 @@
           "image": "jobs_xpgain_farmer_craft.png",
           "hoveredImage": "jobs_xpgain_farmer_craft_hover.png",
           "onClick": "LoadFarmerCraftPalahelpJobsXpGain",
+          "displayCondition": "IsModeFarmerJobsXpgain",
           "x": 104,
-          "y": 70,
+          "y": 72,
           "locked": false
         }
       },
@@ -471,8 +477,9 @@
           "image": "jobs_xpgain_miner_break.png",
           "hoveredImage": "jobs_xpgain_miner_break_hover.png",
           "onClick": "LoadMinerMinePalahelpJobsXpGain",
+          "displayCondition": "IsModeMinerJobsXpgain",
           "x": 80,
-          "y": 46,
+          "y": 48,
           "locked": false
         }
       },
@@ -483,8 +490,9 @@
           "image": "jobs_xpgain_miner_smelt.png",
           "hoveredImage": "jobs_xpgain_miner_smelt_hover.png",
           "onClick": "LoadMinerSmeltPalahelpJobsXpGain",
+          "displayCondition": "IsModeMinerJobsXpgain",
           "x": 80,
-          "y": 70,
+          "y": 72,
           "locked": false
         }
       },
@@ -495,8 +503,9 @@
           "image": "jobs_xpgain_hunter_smelt.png",
           "hoveredImage": "jobs_xpgain_hunter_smelt_hover.png",
           "onClick": "LoadHunterSmeltPalahelpJobsXpGain",
+          "displayCondition": "IsModeHunterJobsXpgain",
           "x": 104,
-          "y": 94,
+          "y": 120,
           "locked": false
         }
       },
@@ -507,8 +516,9 @@
           "image": "jobs_xpgain_alchi_craft.png",
           "hoveredImage": "jobs_xpgain_alchi_craft_hover.png",
           "onClick": "LoadAlchiCraftPalahelpJobsXpGain",
+          "displayCondition": "IsModeAlchiJobsXpgain",
           "x": 80,
-          "y": 94,
+          "y": 120,
           "locked": false
         }
       },
@@ -519,8 +529,9 @@
           "image": "jobs_xpgain_alchi_break.png",
           "hoveredImage": "jobs_xpgain_alchi_break_hover.png",
           "onClick": "LoadAlchibreakPalahelpJobsXpGain",
+          "displayCondition": "IsModeAlchiJobsXpgain",
           "x": 80,
-          "y": 118,
+          "y": 96,
           "locked": false
         }
       },
@@ -531,8 +542,9 @@
           "image": "jobs_xpgain_hunter_kill.png",
           "hoveredImage": "jobs_xpgain_hunter_kill_hover.png",
           "onClick": "LoadHunterKillPalahelpJobsXpGain",
+          "displayCondition": "IsModeHunterJobsXpgain",
           "x": 104,
-          "y": 118,
+          "y": 96,
           "locked": false
         }
       }

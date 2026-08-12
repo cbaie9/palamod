@@ -1,7 +1,7 @@
 package palamod.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.Vec2;
+import palamod.init.PalamodModGameRules;
+
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
@@ -22,7 +22,6 @@ import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.CommandSource;
 
 import java.io.IOException;
 import java.io.FileReader;
@@ -55,7 +54,7 @@ public class RtpnetherProcedure {
 					bufferedReader.close();
 					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					lvl = main.get("lvl_miner").getAsDouble();
-					if (lvl >= 12) {
+					if (lvl >= 12 || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)) {
 						xrandom = Math.abs(Mth.nextInt(RandomSource.create(), 1, 1000000));
 						zrandom = Math.abs(Mth.nextInt(RandomSource.create(), 1, 1000000));
 						if (!((entity.level().dimension()) == Level.NETHER)) {
@@ -237,9 +236,7 @@ public class RtpnetherProcedure {
 								_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 						}
 					} else {
-						if (world instanceof ServerLevel _level)
-							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-									("tellraw @s [\"\",{\"text\":\"[ Palamod ]\",\"color\":\"dark_red\"},{\"text\":\" : " + "" + Component.translatable("palamod.procedure.jobs_miner_err_nel").getString() + "\",\"color\":\"gold\"}]"));
+						MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.jobs_miner_err_nel").getString());
 					}
 				} catch (IOException e) {
 					e.printStackTrace();

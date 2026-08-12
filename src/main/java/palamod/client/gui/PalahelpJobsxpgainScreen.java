@@ -177,15 +177,39 @@ public class PalahelpJobsxpgainScreen extends AbstractContainerScreen<PalahelpJo
 	public void init() {
 		super.init();
 		button_farmer = Button.builder(Component.translatable("gui.palamod.palahelp_jobsxpgain.button_farmer"), e -> {
+			int x = PalahelpJobsxpgainScreen.this.x;
+			int y = PalahelpJobsxpgainScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new PalahelpJobsxpgainButtonMessage(0, x, y, z));
+				PalahelpJobsxpgainButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		}).bounds(this.leftPos + 63, this.topPos + -13, 55, 20).build();
 		this.addRenderableWidget(button_farmer);
 		button_miner = Button.builder(Component.translatable("gui.palamod.palahelp_jobsxpgain.button_miner"), e -> {
+			int x = PalahelpJobsxpgainScreen.this.x;
+			int y = PalahelpJobsxpgainScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new PalahelpJobsxpgainButtonMessage(1, x, y, z));
+				PalahelpJobsxpgainButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
 		}).bounds(this.leftPos + 118, this.topPos + -13, 50, 20).build();
 		this.addRenderableWidget(button_miner);
 		button_hunyer = Button.builder(Component.translatable("gui.palamod.palahelp_jobsxpgain.button_hunyer"), e -> {
+			int x = PalahelpJobsxpgainScreen.this.x;
+			int y = PalahelpJobsxpgainScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new PalahelpJobsxpgainButtonMessage(2, x, y, z));
+				PalahelpJobsxpgainButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
 		}).bounds(this.leftPos + 168, this.topPos + -13, 55, 20).build();
 		this.addRenderableWidget(button_hunyer);
 		button_alchimist = Button.builder(Component.translatable("gui.palamod.palahelp_jobsxpgain.button_alchimist"), e -> {
+			int x = PalahelpJobsxpgainScreen.this.x;
+			int y = PalahelpJobsxpgainScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new PalahelpJobsxpgainButtonMessage(3, x, y, z));
+				PalahelpJobsxpgainButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
 		}).bounds(this.leftPos + 223, this.topPos + -13, 70, 20).build();
 		this.addRenderableWidget(button_alchimist);
 		imagebutton_jobs_xpgain_arrow_up = new ImageButton(this.leftPos + 95, this.topPos + 165, 16, 12,
@@ -224,123 +248,147 @@ public class PalahelpJobsxpgainScreen extends AbstractContainerScreen<PalahelpJo
 			}
 		};
 		this.addRenderableWidget(imagebutton_jobs_xpgain_arrow_down);
-		imagebutton_jobs_xpgain_farmer_break = new ImageButton(this.leftPos + 40, this.topPos + 16, 24, 24,
+		imagebutton_jobs_xpgain_farmer_break = new ImageButton(this.leftPos + 40, this.topPos + 18, 24, 24,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/jobs_xpgain_farmer_break.png"), ResourceLocation.parse("palamod:textures/screens/jobs_xpgain_farmer_break_hover.png")), e -> {
 					int x = PalahelpJobsxpgainScreen.this.x;
 					int y = PalahelpJobsxpgainScreen.this.y;
-					if (true) {
+					if (IsModeFarmerJobsXpgainProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new PalahelpJobsxpgainButtonMessage(6, x, y, z));
 						PalahelpJobsxpgainButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				int x = PalahelpJobsxpgainScreen.this.x;
+				int y = PalahelpJobsxpgainScreen.this.y;
+				if (IsModeFarmerJobsXpgainProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_jobs_xpgain_farmer_break);
-		imagebutton_jobs_xpgain_farmer_craft = new ImageButton(this.leftPos + 40, this.topPos + 40, 24, 24,
+		imagebutton_jobs_xpgain_farmer_craft = new ImageButton(this.leftPos + 40, this.topPos + 42, 24, 24,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/jobs_xpgain_farmer_craft.png"), ResourceLocation.parse("palamod:textures/screens/jobs_xpgain_farmer_craft_hover.png")), e -> {
 					int x = PalahelpJobsxpgainScreen.this.x;
 					int y = PalahelpJobsxpgainScreen.this.y;
-					if (true) {
+					if (IsModeFarmerJobsXpgainProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new PalahelpJobsxpgainButtonMessage(7, x, y, z));
 						PalahelpJobsxpgainButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				int x = PalahelpJobsxpgainScreen.this.x;
+				int y = PalahelpJobsxpgainScreen.this.y;
+				if (IsModeFarmerJobsXpgainProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_jobs_xpgain_farmer_craft);
-		imagebutton_jobs_xpgain_miner_break = new ImageButton(this.leftPos + 16, this.topPos + 16, 24, 24,
+		imagebutton_jobs_xpgain_miner_break = new ImageButton(this.leftPos + 16, this.topPos + 18, 24, 24,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/jobs_xpgain_miner_break.png"), ResourceLocation.parse("palamod:textures/screens/jobs_xpgain_miner_break_hover.png")), e -> {
 					int x = PalahelpJobsxpgainScreen.this.x;
 					int y = PalahelpJobsxpgainScreen.this.y;
-					if (true) {
+					if (IsModeMinerJobsXpgainProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new PalahelpJobsxpgainButtonMessage(8, x, y, z));
 						PalahelpJobsxpgainButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				int x = PalahelpJobsxpgainScreen.this.x;
+				int y = PalahelpJobsxpgainScreen.this.y;
+				if (IsModeMinerJobsXpgainProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_jobs_xpgain_miner_break);
-		imagebutton_jobs_xpgain_miner_smelt = new ImageButton(this.leftPos + 16, this.topPos + 40, 24, 24,
+		imagebutton_jobs_xpgain_miner_smelt = new ImageButton(this.leftPos + 16, this.topPos + 42, 24, 24,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/jobs_xpgain_miner_smelt.png"), ResourceLocation.parse("palamod:textures/screens/jobs_xpgain_miner_smelt_hover.png")), e -> {
 					int x = PalahelpJobsxpgainScreen.this.x;
 					int y = PalahelpJobsxpgainScreen.this.y;
-					if (true) {
+					if (IsModeMinerJobsXpgainProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new PalahelpJobsxpgainButtonMessage(9, x, y, z));
 						PalahelpJobsxpgainButtonMessage.handleButtonAction(entity, 9, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				int x = PalahelpJobsxpgainScreen.this.x;
+				int y = PalahelpJobsxpgainScreen.this.y;
+				if (IsModeMinerJobsXpgainProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_jobs_xpgain_miner_smelt);
-		imagebutton_jobs_xpgain_hunter_smelt = new ImageButton(this.leftPos + 40, this.topPos + 64, 24, 24,
+		imagebutton_jobs_xpgain_hunter_smelt = new ImageButton(this.leftPos + 40, this.topPos + 90, 24, 24,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/jobs_xpgain_hunter_smelt.png"), ResourceLocation.parse("palamod:textures/screens/jobs_xpgain_hunter_smelt_hover.png")), e -> {
 					int x = PalahelpJobsxpgainScreen.this.x;
 					int y = PalahelpJobsxpgainScreen.this.y;
-					if (true) {
+					if (IsModeHunterJobsXpgainProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new PalahelpJobsxpgainButtonMessage(10, x, y, z));
 						PalahelpJobsxpgainButtonMessage.handleButtonAction(entity, 10, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				int x = PalahelpJobsxpgainScreen.this.x;
+				int y = PalahelpJobsxpgainScreen.this.y;
+				if (IsModeHunterJobsXpgainProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_jobs_xpgain_hunter_smelt);
-		imagebutton_jobs_xpgain_alchi_craft = new ImageButton(this.leftPos + 16, this.topPos + 64, 24, 24,
+		imagebutton_jobs_xpgain_alchi_craft = new ImageButton(this.leftPos + 16, this.topPos + 90, 24, 24,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/jobs_xpgain_alchi_craft.png"), ResourceLocation.parse("palamod:textures/screens/jobs_xpgain_alchi_craft_hover.png")), e -> {
 					int x = PalahelpJobsxpgainScreen.this.x;
 					int y = PalahelpJobsxpgainScreen.this.y;
-					if (true) {
+					if (IsModeAlchiJobsXpgainProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new PalahelpJobsxpgainButtonMessage(11, x, y, z));
 						PalahelpJobsxpgainButtonMessage.handleButtonAction(entity, 11, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				int x = PalahelpJobsxpgainScreen.this.x;
+				int y = PalahelpJobsxpgainScreen.this.y;
+				if (IsModeAlchiJobsXpgainProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_jobs_xpgain_alchi_craft);
-		imagebutton_jobs_xpgain_alchi_break = new ImageButton(this.leftPos + 16, this.topPos + 88, 24, 24,
+		imagebutton_jobs_xpgain_alchi_break = new ImageButton(this.leftPos + 16, this.topPos + 66, 24, 24,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/jobs_xpgain_alchi_break.png"), ResourceLocation.parse("palamod:textures/screens/jobs_xpgain_alchi_break_hover.png")), e -> {
 					int x = PalahelpJobsxpgainScreen.this.x;
 					int y = PalahelpJobsxpgainScreen.this.y;
-					if (true) {
+					if (IsModeAlchiJobsXpgainProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new PalahelpJobsxpgainButtonMessage(12, x, y, z));
 						PalahelpJobsxpgainButtonMessage.handleButtonAction(entity, 12, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				int x = PalahelpJobsxpgainScreen.this.x;
+				int y = PalahelpJobsxpgainScreen.this.y;
+				if (IsModeAlchiJobsXpgainProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_jobs_xpgain_alchi_break);
-		imagebutton_jobs_xpgain_hunter_kill = new ImageButton(this.leftPos + 40, this.topPos + 88, 24, 24,
+		imagebutton_jobs_xpgain_hunter_kill = new ImageButton(this.leftPos + 40, this.topPos + 66, 24, 24,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/jobs_xpgain_hunter_kill.png"), ResourceLocation.parse("palamod:textures/screens/jobs_xpgain_hunter_kill_hover.png")), e -> {
 					int x = PalahelpJobsxpgainScreen.this.x;
 					int y = PalahelpJobsxpgainScreen.this.y;
-					if (true) {
+					if (IsModeHunterJobsXpgainProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new PalahelpJobsxpgainButtonMessage(13, x, y, z));
 						PalahelpJobsxpgainButtonMessage.handleButtonAction(entity, 13, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				int x = PalahelpJobsxpgainScreen.this.x;
+				int y = PalahelpJobsxpgainScreen.this.y;
+				if (IsModeHunterJobsXpgainProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		this.addRenderableWidget(imagebutton_jobs_xpgain_hunter_kill);

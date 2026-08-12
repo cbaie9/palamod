@@ -47333,6 +47333,154 @@
           "src/main/java/palamod/procedures/PgetminerProcedure.java"
         ]
       }
+    },
+    {
+      "name": "IsModeFarmerJobsXpgain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_mode_farmer_jobs_xpgain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/IsModeFarmerJobsXpgainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "IsModeMinerJobsXpgain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_mode_miner_jobs_xpgain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/IsModeMinerJobsXpgainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "IsModeHunterJobsXpgain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_mode_hunter_jobs_xpgain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/IsModeHunterJobsXpgainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "IsModeAlchiJobsXpgain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_mode_alchi_jobs_xpgain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/IsModeAlchiJobsXpgainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "SetModeAlchiJobsXpgain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_mode_alchi_jobs_xpgain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/SetModeAlchiJobsXpgainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "SetModeHunterJobsXpgain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_mode_hunter_jobs_xpgain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/SetModeHunterJobsXpgainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "SetModeFarmerJobsXpgain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_mode_farmer_jobs_xpgain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/SetModeFarmerJobsXpgainProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "SetModeMinerJobsXpgain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_mode_miner_jobs_xpgain",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/SetModeMinerJobsXpgainProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

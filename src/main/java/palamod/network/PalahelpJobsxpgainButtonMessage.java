@@ -48,6 +48,22 @@ public record PalahelpJobsxpgainButtonMessage(int buttonID, int x, int y, int z)
 		// security measure to prevent arbitrary chunk generation
 		if (!world.getChunkSource().hasChunk(SectionPos.blockToSectionCoord(x), SectionPos.blockToSectionCoord(z)))
 			return;
+		if (buttonID == 0) {
+
+			SetModeFarmerJobsXpgainProcedure.execute(entity);
+		}
+		if (buttonID == 1) {
+
+			SetModeMinerJobsXpgainProcedure.execute(entity);
+		}
+		if (buttonID == 2) {
+
+			SetModeHunterJobsXpgainProcedure.execute(entity);
+		}
+		if (buttonID == 3) {
+
+			SetModeAlchiJobsXpgainProcedure.execute(entity);
+		}
 		if (buttonID == 4) {
 
 			PageUpPalahelpJobsXpGainProcedure.execute(entity);
