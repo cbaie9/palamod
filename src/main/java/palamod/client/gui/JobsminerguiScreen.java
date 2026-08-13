@@ -5,7 +5,7 @@ import palamod.world.inventory.JobsminerguiMenu;
 import palamod.procedures.JobsminergetxpprogressbarProcedure;
 import palamod.procedures.GetxpminertextProcedure;
 import palamod.procedures.GetxpminerProcedure;
-import palamod.procedures.ClientSideGetLevelJobsProcedure;
+import palamod.procedures.GetlevelminerProcedure;
 
 import palamod.network.JobsminerguiButtonMessage;
 
@@ -110,7 +110,7 @@ public class JobsminerguiScreen extends AbstractContainerScreen<JobsminerguiMenu
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(ClientSideGetLevelJobsProcedure.execute(world, x, y, z, entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+		for (Component actualComponent : Arrays.stream(GetlevelminerProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 5, 63 + yOffset, -1, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;

@@ -206,6 +206,12 @@ public class JobCraftRestrictionManagerProcedure {
                 .getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)) {
             return true;
         }
+        if (!world.getLevelData().getGameRules()
+                .getBoolean(PalamodModGameRules.LOCKEDCRAFT)) {
+            return true;
+        }
+
+        
 
         // Charge le fichier UNE SEULE FOIS
         if (!loaded) loadConfig();
