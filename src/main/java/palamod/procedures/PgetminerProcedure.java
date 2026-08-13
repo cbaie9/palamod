@@ -7,6 +7,6 @@ public class PgetminerProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		MsgtellrawautosendProcedure.execute(world, x, y, z, ClientSideGetLevelJobsProcedure.execute(world, x, y, z, entity));
+		MsgtellrawautosendProcedure.execute(world, x, y, z, entity, ClientSideGetLevelJobsProcedure.execute(world, x, y, z, entity));
 	}
 }

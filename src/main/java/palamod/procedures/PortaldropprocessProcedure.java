@@ -73,7 +73,7 @@ public class PortaldropprocessProcedure {
 					type_input = "erable";
 				}
 			}
-			for (int index314 = 0; index314 < 4; index314++) {
+			for (int index126 = 0; index126 < 4; index126++) {
 				if (loop == 0) {
 					active = PalamodModBlocks.AMETHYST_PORTALBLOCK.get().defaultBlockState();
 					type = "jacaranda";
@@ -250,11 +250,11 @@ public class PortaldropprocessProcedure {
 											_setstack.setCount(1);
 											ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 										}
-										MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.portal.need_pollen").getString());
+										MsgtellrawautosendProcedure.execute(world, x, y, z, entity, Component.translatable("palamod.portal.need_pollen").getString());
 										break;
 									}
 								} else {
-									MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.portal.need_pollen").getString());
+									MsgtellrawautosendProcedure.execute(world, x, y, z, entity, Component.translatable("palamod.portal.need_pollen").getString());
 									break;
 								}
 							} else {

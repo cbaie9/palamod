@@ -42,7 +42,7 @@ public class PalamachineprocessV3Procedure {
 					}
 				}
 				if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "palamachine_timer") >= 60) {
-					for (int index291 = 0; index291 < 5; index291++) {
+					for (int index103 = 0; index103 < 5; index103++) {
 						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 							int _slotid = (int) iloop;
 							ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();

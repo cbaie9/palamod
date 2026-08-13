@@ -38,7 +38,7 @@ public class FightingModeGetOutProcedure {
 					|| getEntityGameType(entity) == GameType.CREATIVE || getEntityGameType(entity) == GameType.SPECTATOR) {
 				if (entity instanceof LivingEntity _livingEntity4 && _livingEntity4.getAttributes().hasAttribute(PalamodModAttributes.IS_FIGHTING))
 					_livingEntity4.getAttribute(PalamodModAttributes.IS_FIGHTING).setBaseValue(0);
-				MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.infight.out").getString());
+				MsgtellrawautosendProcedure.execute(world, x, y, z, entity, Component.translatable("palamod.procedure.infight.out").getString());
 			} else {
 				if (entity instanceof LivingEntity _livingEntity7 && _livingEntity7.getAttributes().hasAttribute(PalamodModAttributes.FIGHTING_TIME))
 					_livingEntity7.getAttribute(PalamodModAttributes.FIGHTING_TIME).setBaseValue(

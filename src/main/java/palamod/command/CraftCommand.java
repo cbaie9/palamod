@@ -57,6 +57,7 @@ public class CraftCommand {
                             player.getX(),
                             player.getY(),
                             player.getZ(),
+                            player,
                             Component.translatable("palamod.procedure.noperm").getString()
                     );
 

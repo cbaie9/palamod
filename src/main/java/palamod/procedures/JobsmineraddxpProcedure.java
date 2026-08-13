@@ -19,7 +19,9 @@ import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
 
 public class JobsmineraddxpProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, CommandContext<CommandSourceStack> arguments) {
+	public static void execute(LevelAccessor world, double x, double y, double z, CommandContext<CommandSourceStack> arguments, Entity entity) {
+		if (entity == null)
+			return;
 		File jobs = new File("");
 		com.google.gson.JsonObject main = new com.google.gson.JsonObject();
 		double xp = 0;
@@ -54,7 +56,7 @@ public class JobsmineraddxpProcedure {
 				}
 			}
 		} else {
-			MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.gamerule_disable_jobs").getString());
+			MsgtellrawautosendProcedure.execute(world, x, y, z, entity, Component.translatable("palamod.procedure.gamerule_disable_jobs").getString());
 		}
 	}
 

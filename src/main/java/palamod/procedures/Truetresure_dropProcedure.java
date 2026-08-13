@@ -10,9 +10,9 @@ import net.minecraft.server.level.ServerLevel;
 
 public class Truetresure_dropProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		for (int index210 = 0; index210 < 3; index210++) {
+		for (int index22 = 0; index22 < 3; index22++) {
 			if (Math.random() < 0.7) {
-				for (int index211 = 0; index211 < 8; index211++) {
+				for (int index23 = 0; index23 < 8; index23++) {
 					if (world instanceof ServerLevel _level) {
 						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.PALADIUM_INGOT.get()));
 						entityToSpawn.setPickUpDelay(10);
@@ -33,7 +33,7 @@ public class Truetresure_dropProcedure {
 				}
 			}
 			if (Math.random() < 0.25) {
-				for (int index212 = 0; index212 < 4; index212++) {
+				for (int index24 = 0; index24 < 4; index24++) {
 					if (world instanceof ServerLevel _level) {
 						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModItems.ORANGEBLUE.get()));
 						entityToSpawn.setPickUpDelay(10);

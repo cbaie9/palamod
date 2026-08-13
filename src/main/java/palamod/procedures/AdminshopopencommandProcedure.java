@@ -42,7 +42,7 @@ public class AdminshopopencommandProcedure {
 				}, _bpos);
 			}
 		} else {
-			MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.gamerule_disable_adminshop").getString());
+			MsgtellrawautosendProcedure.execute(world, x, y, z, entity, Component.translatable("palamod.procedure.gamerule_disable_adminshop").getString());
 		}
 	}
 }

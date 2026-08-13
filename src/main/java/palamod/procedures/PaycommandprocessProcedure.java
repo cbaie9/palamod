@@ -92,7 +92,7 @@ public class PaycommandprocessProcedure {
 							exception.printStackTrace();
 						}
 					}
-					MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.pay1").getString() + "" + DoubleArgumentType.getDouble(arguments, "amount") + "$ "
+					MsgtellrawautosendProcedure.execute(world, x, y, z, entity, Component.translatable("palamod.procedure.pay1").getString() + "" + DoubleArgumentType.getDouble(arguments, "amount") + "$ "
 							+ Component.translatable("palamod.procedure.pay2").getString() + " " + (commandParameterEntity(arguments, "player2")).getDisplayName().getString());
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
@@ -100,13 +100,13 @@ public class PaycommandprocessProcedure {
 										+ Component.translatable("palamod.procedure.pay4").getString() + entity + ", " + Component.translatable("palamod.procedure.pay5").getString() + " " + StringArgumentType.getString(arguments, "reason")
 										+ "\",\"color\":\"green\"}"));
 				} else {
-					MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.pay_not_enough_money").getString());
+					MsgtellrawautosendProcedure.execute(world, x, y, z, entity, Component.translatable("palamod.procedure.pay_not_enough_money").getString());
 				}
 			} else {
-				MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.pay_entity_null").getString());
+				MsgtellrawautosendProcedure.execute(world, x, y, z, entity, Component.translatable("palamod.procedure.pay_entity_null").getString());
 			}
 		} else {
-			MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.gamerule_disable_money").getString());
+			MsgtellrawautosendProcedure.execute(world, x, y, z, entity, Component.translatable("palamod.procedure.gamerule_disable_money").getString());
 		}
 	}
 

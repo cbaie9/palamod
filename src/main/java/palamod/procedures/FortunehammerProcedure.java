@@ -29,9 +29,9 @@ public class FortunehammerProcedure {
 		String tag = "";
 		tag = "mineable/pickaxe";
 		i = -1;
-		for (int index200 = 0; index200 < 3; index200++) {
+		for (int index12 = 0; index12 < 3; index12++) {
 			j = -1;
-			for (int index201 = 0; index201 < 3; index201++) {
+			for (int index13 = 0; index13 < 3; index13++) {
 				if (i != 0 || j != 0) {
 					if (entity.getXRot() > 40 || entity.getXRot() < -40) {
 						if ((world.getBlockState(BlockPos.containing(x + i, y, z + j))).is(BlockTags.create(ResourceLocation.parse((tag).toLowerCase(java.util.Locale.ENGLISH))))) {

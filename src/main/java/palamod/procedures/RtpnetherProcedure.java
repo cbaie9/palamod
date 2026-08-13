@@ -54,7 +54,7 @@ public class RtpnetherProcedure {
 					bufferedReader.close();
 					main = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					lvl = main.get("lvl_miner").getAsDouble();
-					if (lvl >= 12 || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE)) {
+					if (lvl >= 12 || !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.LOCKEDUSE) || entity.hasPermissions(1)) {
 						xrandom = Math.abs(Mth.nextInt(RandomSource.create(), 1, 1000000));
 						zrandom = Math.abs(Mth.nextInt(RandomSource.create(), 1, 1000000));
 						if (!((entity.level().dimension()) == Level.NETHER)) {
@@ -236,7 +236,7 @@ public class RtpnetherProcedure {
 								_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 						}
 					} else {
-						MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.jobs_miner_err_nel").getString());
+						MsgtellrawautosendProcedure.execute(world, x, y, z, entity, Component.translatable("palamod.procedure.jobs_miner_err_nel").getString());
 					}
 				} catch (IOException e) {
 					e.printStackTrace();

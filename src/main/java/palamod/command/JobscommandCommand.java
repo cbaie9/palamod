@@ -33,7 +33,7 @@ public class JobscommandCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					JobsminersetlevelProcedure.execute(world, x, y, z, arguments);
+					JobsminersetlevelProcedure.execute(world, x, y, z, arguments, entity);
 					return 0;
 				}))).then(Commands.argument("num", DoubleArgumentType.doubleArg()).then(Commands.literal("xp").executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
@@ -47,7 +47,7 @@ public class JobscommandCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					JobsminersetxpProcedure.execute(world, x, y, z, arguments);
+					JobsminersetxpProcedure.execute(world, x, y, z, arguments, entity);
 					return 0;
 				})))).then(Commands.literal("add").then(Commands.argument("num", DoubleArgumentType.doubleArg()).then(Commands.literal("levels").executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
@@ -61,7 +61,7 @@ public class JobscommandCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					JobsmineraddlevelsProcedure.execute(world, x, y, z, arguments);
+					JobsmineraddlevelsProcedure.execute(world, x, y, z, arguments, entity);
 					return 0;
 				}))).then(Commands.argument("num", DoubleArgumentType.doubleArg()).then(Commands.literal("xp").executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
@@ -75,7 +75,7 @@ public class JobscommandCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					JobsmineraddxpProcedure.execute(world, x, y, z, arguments);
+					JobsmineraddxpProcedure.execute(world, x, y, z, arguments, entity);
 					return 0;
 				})))))).then(Commands.literal("farmer")
 						.then(Commands.argument("player", EntityArgument.player()).then(Commands.literal("set").then(Commands.argument("num", DoubleArgumentType.doubleArg()).then(Commands.literal("levels").executes(arguments -> {
@@ -90,7 +90,7 @@ public class JobscommandCommand {
 							if (entity != null)
 								direction = entity.getDirection();
 
-							JobsfarmersetlevelProcedure.execute(world, x, y, z, arguments);
+							JobsfarmersetlevelProcedure.execute(world, x, y, z, arguments, entity);
 							return 0;
 						}))).then(Commands.argument("num", DoubleArgumentType.doubleArg()).then(Commands.literal("xp").executes(arguments -> {
 							Level world = arguments.getSource().getUnsidedLevel();
@@ -104,7 +104,7 @@ public class JobscommandCommand {
 							if (entity != null)
 								direction = entity.getDirection();
 
-							JobsfarmersetxpProcedure.execute(world, x, y, z, arguments);
+							JobsfarmersetxpProcedure.execute(world, x, y, z, arguments, entity);
 							return 0;
 						})))).then(Commands.literal("add").then(Commands.argument("num", DoubleArgumentType.doubleArg()).then(Commands.literal("levels").executes(arguments -> {
 							Level world = arguments.getSource().getUnsidedLevel();
@@ -118,7 +118,7 @@ public class JobscommandCommand {
 							if (entity != null)
 								direction = entity.getDirection();
 
-							JobsfarmeraddlevelProcedure.execute(world, x, y, z, arguments);
+							JobsfarmeraddlevelProcedure.execute(world, x, y, z, arguments, entity);
 							return 0;
 						}))).then(Commands.argument("num", DoubleArgumentType.doubleArg()).then(Commands.literal("xp").executes(arguments -> {
 							Level world = arguments.getSource().getUnsidedLevel();
@@ -132,7 +132,7 @@ public class JobscommandCommand {
 							if (entity != null)
 								direction = entity.getDirection();
 
-							JobsfarmeraddxpProcedure.execute(world, x, y, z, arguments);
+							JobsfarmeraddxpProcedure.execute(world, x, y, z, arguments, entity);
 							return 0;
 						}))))))
 				.then(Commands.literal("hunter")
@@ -148,7 +148,7 @@ public class JobscommandCommand {
 							if (entity != null)
 								direction = entity.getDirection();
 
-							JobshuntersetlevelProcedure.execute(world, x, y, z, arguments);
+							JobshuntersetlevelProcedure.execute(world, x, y, z, arguments, entity);
 							return 0;
 						}))).then(Commands.argument("num", DoubleArgumentType.doubleArg()).then(Commands.literal("xp").executes(arguments -> {
 							Level world = arguments.getSource().getUnsidedLevel();
@@ -162,7 +162,7 @@ public class JobscommandCommand {
 							if (entity != null)
 								direction = entity.getDirection();
 
-							JobshuntersetxpProcedure.execute(world, x, y, z, arguments);
+							JobshuntersetxpProcedure.execute(world, x, y, z, arguments, entity);
 							return 0;
 						})))).then(Commands.literal("add").then(Commands.argument("num", DoubleArgumentType.doubleArg()).then(Commands.literal("levels").executes(arguments -> {
 							Level world = arguments.getSource().getUnsidedLevel();
@@ -176,7 +176,7 @@ public class JobscommandCommand {
 							if (entity != null)
 								direction = entity.getDirection();
 
-							JobshunteraddlevelProcedure.execute(world, x, y, z, arguments);
+							JobshunteraddlevelProcedure.execute(world, x, y, z, arguments, entity);
 							return 0;
 						}))).then(Commands.argument("num", DoubleArgumentType.doubleArg()).then(Commands.literal("xp").executes(arguments -> {
 							Level world = arguments.getSource().getUnsidedLevel();
@@ -190,7 +190,7 @@ public class JobscommandCommand {
 							if (entity != null)
 								direction = entity.getDirection();
 
-							JobshunteraddxpProcedure.execute(world, x, y, z, arguments);
+							JobshunteraddxpProcedure.execute(world, x, y, z, arguments, entity);
 							return 0;
 						}))))))
 				.then(Commands.literal("alchimist")
@@ -206,7 +206,7 @@ public class JobscommandCommand {
 							if (entity != null)
 								direction = entity.getDirection();
 
-							JobsalchisetlevelProcedure.execute(world, x, y, z, arguments);
+							JobsalchisetlevelProcedure.execute(world, x, y, z, arguments, entity);
 							return 0;
 						}))).then(Commands.argument("num", DoubleArgumentType.doubleArg()).then(Commands.literal("xp").executes(arguments -> {
 							Level world = arguments.getSource().getUnsidedLevel();
@@ -220,7 +220,7 @@ public class JobscommandCommand {
 							if (entity != null)
 								direction = entity.getDirection();
 
-							JobsalchisetxpProcedure.execute(world, x, y, z, arguments);
+							JobsalchisetxpProcedure.execute(world, x, y, z, arguments, entity);
 							return 0;
 						})))).then(Commands.literal("add").then(Commands.argument("num", DoubleArgumentType.doubleArg()).then(Commands.literal("levels").executes(arguments -> {
 							Level world = arguments.getSource().getUnsidedLevel();
@@ -234,7 +234,7 @@ public class JobscommandCommand {
 							if (entity != null)
 								direction = entity.getDirection();
 
-							JobsalchiaddlevelProcedure.execute(world, x, y, z, arguments);
+							JobsalchiaddlevelProcedure.execute(world, x, y, z, arguments, entity);
 							return 0;
 						}))).then(Commands.argument("num", DoubleArgumentType.doubleArg()).then(Commands.literal("xp").executes(arguments -> {
 							Level world = arguments.getSource().getUnsidedLevel();
@@ -248,7 +248,7 @@ public class JobscommandCommand {
 							if (entity != null)
 								direction = entity.getDirection();
 
-							JobsalchiaddxpProcedure.execute(world, x, y, z, arguments);
+							JobsalchiaddxpProcedure.execute(world, x, y, z, arguments, entity);
 							return 0;
 						}))))))
 				.then(Commands.literal("gui").executes(arguments -> {

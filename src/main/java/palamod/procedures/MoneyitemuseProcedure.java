@@ -122,7 +122,7 @@ public class MoneyitemuseProcedure {
 			}
 		} else {
 			if (PalamodModItems.MONEY_ITEM.get() == itemstack.getItem() || PalamodModItems.MONEY_1K.get() == itemstack.getItem()) {
-				MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.gamerule_disable_money").getString());
+				MsgtellrawautosendProcedure.execute(world, x, y, z, entity, Component.translatable("palamod.procedure.gamerule_disable_money").getString());
 			}
 		}
 	}

@@ -14,7 +14,7 @@ public class Uploader_gamerule_check_disable_moneyProcedure {
 		if (world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEMONEYGAMERULE)) {
 			if (entity instanceof Player _player)
 				_player.closeContainer();
-			MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.gamerule_disable_").getString());
+			MsgtellrawautosendProcedure.execute(world, x, y, z, entity, Component.translatable("palamod.procedure.gamerule_disable_").getString());
 		}
 	}
 }

@@ -30456,6 +30456,10 @@
             "type": "cmdcontext"
           },
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -30488,6 +30492,10 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
           },
           {
             "name": "x",
@@ -30524,6 +30532,10 @@
             "type": "cmdcontext"
           },
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -30556,6 +30568,10 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
           },
           {
             "name": "x",
@@ -30592,6 +30608,10 @@
             "type": "cmdcontext"
           },
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -30624,6 +30644,10 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
           },
           {
             "name": "x",
@@ -30660,6 +30684,10 @@
             "type": "cmdcontext"
           },
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -30692,6 +30720,10 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
           },
           {
             "name": "x",
@@ -30728,6 +30760,10 @@
             "type": "cmdcontext"
           },
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -30760,6 +30796,10 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
           },
           {
             "name": "x",
@@ -30796,6 +30836,10 @@
             "type": "cmdcontext"
           },
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -30828,6 +30872,10 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
           },
           {
             "name": "x",
@@ -30864,6 +30912,10 @@
             "type": "cmdcontext"
           },
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -30896,6 +30948,10 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
           },
           {
             "name": "x",
@@ -30932,6 +30988,10 @@
             "type": "cmdcontext"
           },
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -30964,6 +31024,10 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
           },
           {
             "name": "x",
@@ -41656,6 +41720,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -42413,6 +42481,10 @@
       "registry_name": "reloadcommandaddon",
       "metadata": {
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -47242,6 +47314,10 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
           },
           {
             "name": "x",
@@ -52708,7 +52784,8 @@
       "gui.palamod.palahelp_jobsxpgain.button_minermine": "Miner/mine",
       "gui.palamod.palahelp_jobsxpgain.button_hunterkill": "Hunter/kill",
       "gui.palamod.palahelp_jobsxpgain.button_alchibreak": "alchi/break",
-      "gui.palamod.palahelp_jobsxpgain.button_alchicraft": "alchi/craft"
+      "gui.palamod.palahelp_jobsxpgain.button_alchicraft": "alchi/craft",
+      "palamod.procedure.feed_message": "You has been fed"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54538,7 +54615,8 @@
       "gui.palamod.palahelp_jobsxpgain.button_minermine": "Miner/mine",
       "gui.palamod.palahelp_jobsxpgain.button_hunterkill": "Hunter/kill",
       "gui.palamod.palahelp_jobsxpgain.button_alchibreak": "alchi/break",
-      "gui.palamod.palahelp_jobsxpgain.button_alchicraft": "alchi/craft"
+      "gui.palamod.palahelp_jobsxpgain.button_alchicraft": "alchi/craft",
+      "palamod.procedure.feed_message": ""
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -56368,7 +56446,8 @@
       "gui.palamod.palahelp_jobsxpgain.button_minermine": "Miner/mine",
       "gui.palamod.palahelp_jobsxpgain.button_hunterkill": "Hunter/kill",
       "gui.palamod.palahelp_jobsxpgain.button_alchibreak": "alchi/break",
-      "gui.palamod.palahelp_jobsxpgain.button_alchicraft": "alchi/craft"
+      "gui.palamod.palahelp_jobsxpgain.button_alchicraft": "alchi/craft",
+      "palamod.procedure.feed_message": ""
     }
   },
   "metadata": {

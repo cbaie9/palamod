@@ -135,7 +135,7 @@ public class JobsfilecreateautorepairProcedure {
 							main.addProperty("multi_exp", ((world.getLevelData().getGameRules().getInt(PalamodModGameRules.JOBS_XP_BASE_MULTIPLIER)) / 100d));
 						}
 						jobs_name = "miner";
-						for (int index301 = 0; index301 < 4; index301++) {
+						for (int index113 = 0; index113 < 4; index113++) {
 							if (!main.has(("next_level_" + jobs_name))) {
 								main.addProperty(("next_level_" + jobs_name), 480);
 							}

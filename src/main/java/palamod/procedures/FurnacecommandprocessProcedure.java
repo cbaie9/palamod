@@ -39,10 +39,10 @@ public class FurnacecommandprocessProcedure {
 						_player.getInventory().setChanged();
 				}
 			} else {
-				MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.furnace_cantbesmelted").getString());
+				MsgtellrawautosendProcedure.execute(world, x, y, z, entity, Component.translatable("palamod.procedure.furnace_cantbesmelted").getString());
 			}
 		} else {
-			MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.noperm").getString());
+			MsgtellrawautosendProcedure.execute(world, x, y, z, entity, Component.translatable("palamod.procedure.noperm").getString());
 		}
 	}
 }

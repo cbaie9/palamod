@@ -143,7 +143,7 @@ public class HomeprocessProcedure {
 				}
 			}
 		} else {
-			MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.spawn.fightplayermsg").getString());
+			MsgtellrawautosendProcedure.execute(world, x, y, z, entity, Component.translatable("palamod.procedure.spawn.fightplayermsg").getString());
 		}
 	}
 }

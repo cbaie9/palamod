@@ -66,7 +66,7 @@ public class BackCommandProcessProcedure {
 					}
 				}
 				PalamodMod.LOGGER.info((((((Component.translatable("palamod.procedure.back.logontp").getString()).replace("%4", "" + zpos)).replace("%3", "" + ypos)).replace("%2", "" + xpos)).replace("%1", entity.getDisplayName().getString())));
-				MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.back.tp").getString());
+				MsgtellrawautosendProcedure.execute(world, x, y, z, entity, Component.translatable("palamod.procedure.back.tp").getString());
 			}
 		}
 	}

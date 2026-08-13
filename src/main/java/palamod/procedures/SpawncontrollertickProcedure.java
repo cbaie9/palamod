@@ -180,7 +180,7 @@ public class SpawncontrollertickProcedure {
 		}
 		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "checktick") >= 800 * (1 - 0.1 * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_speed_upgrades"))) {
 			if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_spawner") > 0) {
-				for (int index295 = 0; index295 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_witch"); index295++) {
+				for (int index107 = 0; index107 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_witch"); index107++) {
 					if (Math.random() < 1 - (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_witch") * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_witch")) / 4) {
 						if (world instanceof ServerLevel _level) {
 							Entity entityToSpawn = EntityType.WITCH.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
@@ -189,7 +189,7 @@ public class SpawncontrollertickProcedure {
 						}
 					}
 				}
-				for (int index296 = 0; index296 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_creeper"); index296++) {
+				for (int index108 = 0; index108 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_creeper"); index108++) {
 					if (Math.random() < 1 - (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_creeper") * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_creeper")) / 4) {
 						if (world instanceof ServerLevel _level) {
 							Entity entityToSpawn = EntityType.CREEPER.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
@@ -198,7 +198,7 @@ public class SpawncontrollertickProcedure {
 						}
 					}
 				}
-				for (int index297 = 0; index297 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_skeleton"); index297++) {
+				for (int index109 = 0; index109 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_skeleton"); index109++) {
 					if (Math.random() < (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_skeleton") * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_skeleton")) / 4) {
 						if (world instanceof ServerLevel _level) {
 							Entity entityToSpawn = EntityType.SKELETON.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
@@ -207,7 +207,7 @@ public class SpawncontrollertickProcedure {
 						}
 					}
 				}
-				for (int index298 = 0; index298 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie"); index298++) {
+				for (int index110 = 0; index110 < (int) getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie"); index110++) {
 					if (Math.random() < (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_zombie") * 4) / getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie")) {
 						if (world instanceof ServerLevel _level) {
 							Entity entityToSpawn = EntityType.ZOMBIE.spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 10) - 5, y, z + Mth.nextInt(RandomSource.create(), 1, 10) - 5), MobSpawnType.MOB_SUMMONED);
@@ -217,7 +217,7 @@ public class SpawncontrollertickProcedure {
 					}
 				}
 				if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_slime_upgrades") > 0) {
-					for (int index299 = 0; index299 < (int) Math.ceil(0.25 * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_slime_upgrades") * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_spawner")); index299++) {
+					for (int index111 = 0; index111 < (int) Math.ceil(0.25 * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_slime_upgrades") * getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_spawner")); index111++) {
 						if (Math.random() < (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_spawner") * 4)
 								/ (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_zombie") + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_skeleton")
 										+ getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_creeper") + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "tier_witch"))) {

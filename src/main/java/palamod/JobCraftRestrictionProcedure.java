@@ -3,6 +3,7 @@ package palamod.procedures;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.Entity;
 
 public class JobCraftRestrictionProcedure {
 
@@ -24,7 +25,7 @@ public class JobCraftRestrictionProcedure {
 
         if (playerLevel < requiredLevel) {
             // Envoie un message d'avertissement au joueur
-            MsgtellrawautosendProcedure.execute(world, x, y, z,
+            MsgtellrawautosendProcedure.execute(world, x, y, z,player,
                     "Vous devez être niveau " + requiredLevel + " en " + requiredJob + " pour crafter cet item ! (Votre niveau : " + (playerLevel >= 0 ? (int)playerLevel : "aucun") + ")");
             return false; // Craft interdit
         }

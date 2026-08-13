@@ -120,7 +120,7 @@ public class SpawnCommandProcedure {
 										_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 								}
 							} else {
-								MsgtellrawautosendProcedure.execute(world, x, y, z, "You can't teleport if you are in a fight");
+								MsgtellrawautosendProcedure.execute(world, x, y, z, entity, "You can't teleport if you are in a fight");
 							}
 						} else {
 							if (world instanceof ServerLevel _level)
@@ -135,7 +135,7 @@ public class SpawnCommandProcedure {
 				PalamodMod.LOGGER.error("File for spawn not found");
 			}
 		} else {
-			MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.spawn.fightplayermsg").getString());
+			MsgtellrawautosendProcedure.execute(world, x, y, z, entity, Component.translatable("palamod.procedure.spawn.fightplayermsg").getString());
 		}
 	}
 }

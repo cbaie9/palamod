@@ -1827,5 +1827,6 @@
   "gui.palamod.palahelp_jobsxpgain.button_minermine": "Miner/mine",
   "gui.palamod.palahelp_jobsxpgain.button_hunterkill": "Hunter/kill",
   "gui.palamod.palahelp_jobsxpgain.button_alchibreak": "alchi/break",
-  "gui.palamod.palahelp_jobsxpgain.button_alchicraft": "alchi/craft"
+  "gui.palamod.palahelp_jobsxpgain.button_alchicraft": "alchi/craft",
+  "palamod.procedure.feed_message": "You has been fed"
 }

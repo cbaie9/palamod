@@ -19,7 +19,7 @@ public class Spacefood_processProcedure {
 			return;
 		double yval = 0;
 		yval = y;
-		for (int index217 = 0; index217 < 900; index217++) {
+		for (int index29 = 0; index29 < 900; index29++) {
 			world.setBlock(BlockPos.containing(x, yval + 1, z), Blocks.AIR.defaultBlockState(), 3);
 			world.setBlock(BlockPos.containing(x, yval + 2, z), Blocks.AIR.defaultBlockState(), 3);
 			world.setBlock(BlockPos.containing(x, yval, z), Blocks.AIR.defaultBlockState(), 3);

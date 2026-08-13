@@ -20,6 +20,7 @@ import java.util.Map;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import net.minecraft.world.entity.Entity;
 
 public class JobCraftRestrictionManagerProcedure {
 
@@ -232,6 +233,7 @@ public class JobCraftRestrictionManagerProcedure {
                         x,
                         y,
                         z,
+                        player,
                         "Vous devez être niveau "
                                 + requiredLevel
                                 + " en "

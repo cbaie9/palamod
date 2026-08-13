@@ -20,20 +20,20 @@ public class ReloadcommandaddonProcedure {
 	public static void onCommand(CommandEvent event) {
 		Entity entity = event.getParseResults().getContext().getSource().getEntity();
 		if (entity != null) {
-			execute(event, entity.level(), entity.getX(), entity.getY(), entity.getZ(), event.getParseResults().getReader().getString());
+			execute(event, entity.level(), entity.getX(), entity.getY(), entity.getZ(),entity, event.getParseResults().getReader().getString());
 		}
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, String command) {
-		execute(null, world, x, y, z, command);
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, String command) {
+		execute(null, world, x, y, z,entity, command);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, String command) {
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, String command) {
 		if (command == null)
 			return;
 		if (command.startsWith("reload") && !world.getLevelData().getGameRules().getBoolean(PalamodModGameRules.DISABLEJOBSGAMERULE)) {
 			JobCraftRestrictionManagerProcedure.reload();
-			MsgtellrawautosendProcedure.execute(world, x, y, z, Component.translatable("palamod.procedure.reload_craft_config").getString());
+			MsgtellrawautosendProcedure.execute(world, x, y, z,entity, Component.translatable("palamod.procedure.reload_craft_config").getString());
 		}
 	}
 }
