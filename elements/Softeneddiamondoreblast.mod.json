@@ -2,7 +2,7 @@
   "_fv": 89,
   "_type": "recipe",
   "definition": {
-    "recipeType": "Smelting",
+    "recipeType": "Blasting",
     "recipeRetstackSize": 1,
     "group": "",
     "unlockingItems": [],
@@ -11,9 +11,9 @@
     "cookingTime": 200,
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
-    "smeltingInputStack": "CUSTOM:Softenedgoldore",
-    "smeltingReturnStack": "Items.GOLD_INGOT",
-    "name": "softenedgoldoresmelt",
+    "blastingInputStack": "CUSTOM:Softeneddiamondore",
+    "blastingReturnStack": "Items.DIAMOND",
+    "name": "softeneddiamondoreblast",
     "namespace": "mod"
   }
 }

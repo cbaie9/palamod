@@ -56,9 +56,9 @@ public class HammersmeltProcedure {
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt")))) {
 			tag = "mineable/pickaxe";
 			i = -1;
-			for (int index51 = 0; index51 < 3; index51++) {
+			for (int index1647 = 0; index1647 < 3; index1647++) {
 				j = -1;
-				for (int index52 = 0; index52 < 3; index52++) {
+				for (int index1648 = 0; index1648 < 3; index1648++) {
 					if (i != 0 || j != 0) {
 						if (entity.getXRot() > 40 || entity.getXRot() < -40) {
 							block_x = x + i;
@@ -87,7 +87,8 @@ public class HammersmeltProcedure {
 									: ItemStack.EMPTY).copy();
 							if (!(smelting_result.getItem() == Blocks.AIR.asItem()) && (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:smelt")))) != 0) {
-								for (int index53 = 0; index53 < (int) GetFortuneBonusAmountProcedure.execute(world, entity); index53++) {
+								for (int index1649 = 0; index1649 < (int) GetFortuneBonusAmountProcedure.execute((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
+										.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:hammer_fortune"))))); index1649++) {
 									if (world instanceof ServerLevel _level) {
 										ItemEntity entityToSpawn = new ItemEntity(_level, (block_x + 0.5), (block_y + 0.5), (block_z + 0.5), smelting_result);
 										entityToSpawn.setPickUpDelay(10);
@@ -101,6 +102,9 @@ public class HammersmeltProcedure {
 							if (removeBlock == true) {
 								world.destroyBlock(BlockPos.containing(block_x, block_y, block_z), false);
 							} else {
+								if (i != 0 || j != 0) {
+									ForturneprocessoredropProcedure.execute(world, block_x, block_y, block_z, entity);
+								}
 								{
 									BlockPos _pos = BlockPos.containing(block_x, block_y, block_z);
 									Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(block_x, block_y, block_z), null);

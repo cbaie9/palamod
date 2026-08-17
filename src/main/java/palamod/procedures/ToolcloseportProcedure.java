@@ -10,7 +10,7 @@ public class ToolcloseportProcedure {
 	public static void execute(LevelAccessor world) {
 		double nloop = 0;
 		nloop = 0;
-		for (int index33 = 0; index33 < 100; index33++) {
+		for (int index1099 = 0; index1099 < 100; index1099++) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = new BlockPos(0, 10, 0);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);

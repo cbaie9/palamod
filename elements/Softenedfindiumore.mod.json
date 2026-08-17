@@ -55,7 +55,7 @@
     ],
     "destroyTool": "pickaxe",
     "customDrop": "CUSTOM:Findium",
-    "dropAmount": 1,
+    "dropAmount": 0,
     "xpAmountMin": 0,
     "xpAmountMax": 5,
     "useLootTableForDrops": false,

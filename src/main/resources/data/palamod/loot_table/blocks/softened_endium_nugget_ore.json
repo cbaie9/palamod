@@ -1,20 +1,4 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "palamod:blocks/softened_endium_nugget_ore",
-  "pools": [
-    {
-      "rolls": 1.0,
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "palamod:endium_nugget"
-        }
-      ]
-    }
-  ]
+  "random_sequence": "palamod:blocks/softened_endium_nugget_ore"
 }

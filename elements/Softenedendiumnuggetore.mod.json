@@ -55,7 +55,7 @@
     ],
     "destroyTool": "pickaxe",
     "customDrop": "CUSTOM:Endiumnugget",
-    "dropAmount": 1,
+    "dropAmount": 0,
     "xpAmountMin": 0,
     "xpAmountMax": 100,
     "useLootTableForDrops": false,

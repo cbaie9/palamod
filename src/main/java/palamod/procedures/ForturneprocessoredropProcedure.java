@@ -23,6 +23,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.multiplayer.PlayerInfo;
@@ -46,7 +47,10 @@ public class ForturneprocessoredropProcedure {
 			return;
 		BlockState block_ore = Blocks.AIR.defaultBlockState();
 		ItemStack drop = ItemStack.EMPTY;
-		if (!((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt")))) && !(getEntityGameType(entity) == GameType.CREATIVE)) {
+		if ((!((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt"))))
+				|| !((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
+						.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:smelt")))) != 0))
+				&& !(getEntityGameType(entity) == GameType.CREATIVE)) {
 			if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.PALADIUM_ORE.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_PALADIUM_ORE.get()
 					|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_PALADIUM_ORE.get()) {
 				drop = new ItemStack(PalamodModItems.PALADIUM_RAW_ORE.get()).copy();
@@ -73,88 +77,23 @@ public class ForturneprocessoredropProcedure {
 				drop = new ItemStack(Items.DIAMOND).copy();
 			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_GOLD_ORE.get()) {
 				drop = new ItemStack(Items.RAW_GOLD).copy();
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_REDSTONE_ORE.get()) {
+				drop = new ItemStack(Items.REDSTONE).copy();
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_LAPIS_LAZULIS_ORE.get()) {
+				drop = new ItemStack(Items.LAPIS_LAZULI).copy();
+			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_TRIXIUM_ORE.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.TRIXIUM_ORE.get()
+					|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_TRIXIUM_ORE.get()) {
+				drop = new ItemStack(PalamodModItems.TRIXIUM.get()).copy();
 			} else {
 				drop = new ItemStack(Blocks.BEDROCK).copy();
 			}
 			if (!(drop.getItem() == Blocks.BEDROCK.asItem())) {
-				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE)) == 0) {
+				for (int index1230 = 0; index1230 < (int) GetFortuneBonusAmountProcedure.execute(
+						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE))); index1230++) {
 					if (world instanceof ServerLevel _level) {
 						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, drop);
 						entityToSpawn.setPickUpDelay(0);
 						_level.addFreshEntity(entityToSpawn);
-					}
-				} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE)) == 1) {
-					if (world instanceof ServerLevel _level) {
-						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, drop);
-						entityToSpawn.setPickUpDelay(0);
-						_level.addFreshEntity(entityToSpawn);
-					}
-					if (Math.random() < 0.33) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, drop);
-							entityToSpawn.setPickUpDelay(0);
-							_level.addFreshEntity(entityToSpawn);
-						}
-					}
-				} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE)) == 2) {
-					if (Math.random() < 0.5) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, drop);
-							entityToSpawn.setPickUpDelay(0);
-							_level.addFreshEntity(entityToSpawn);
-						}
-					} else {
-						if (Math.random() < 0.25) {
-							if (world instanceof ServerLevel _level) {
-								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, drop);
-								entityToSpawn.setPickUpDelay(0);
-								_level.addFreshEntity(entityToSpawn);
-							}
-						} else if (Math.random() < 0.25) {
-							if (world instanceof ServerLevel _level) {
-								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, drop);
-								entityToSpawn.setPickUpDelay(0);
-								_level.addFreshEntity(entityToSpawn);
-							}
-							if (world instanceof ServerLevel _level) {
-								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, drop);
-								entityToSpawn.setPickUpDelay(0);
-								_level.addFreshEntity(entityToSpawn);
-							}
-						}
-					}
-				} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE)) == 3) {
-					if (Math.random() < 0.4) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, drop);
-							entityToSpawn.setPickUpDelay(0);
-							_level.addFreshEntity(entityToSpawn);
-						}
-					} else {
-						if (Math.random() < 0.2) {
-							if (world instanceof ServerLevel _level) {
-								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, drop);
-								entityToSpawn.setPickUpDelay(0);
-								_level.addFreshEntity(entityToSpawn);
-							}
-						} else if (Math.random() < 0.2) {
-							if (world instanceof ServerLevel _level) {
-								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, drop);
-								entityToSpawn.setPickUpDelay(0);
-								_level.addFreshEntity(entityToSpawn);
-							}
-						} else if (Math.random() < 0.2) {
-							if (world instanceof ServerLevel _level) {
-								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, drop);
-								entityToSpawn.setPickUpDelay(0);
-								_level.addFreshEntity(entityToSpawn);
-							}
-							if (world instanceof ServerLevel _level) {
-								ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, drop);
-								entityToSpawn.setPickUpDelay(0);
-								_level.addFreshEntity(entityToSpawn);
-							}
-						}
 					}
 				}
 			}

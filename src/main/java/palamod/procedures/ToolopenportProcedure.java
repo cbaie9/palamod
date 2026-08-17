@@ -10,7 +10,7 @@ public class ToolopenportProcedure {
 	public static void execute(LevelAccessor world) {
 		double nloop = 0;
 		nloop = 0;
-		for (int index32 = 0; index32 < 100; index32++) {
+		for (int index1098 = 0; index1098 < 100; index1098++) {
 			if (!world.isClientSide()) {
 				BlockPos _bp = new BlockPos(0, 10, 0);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
