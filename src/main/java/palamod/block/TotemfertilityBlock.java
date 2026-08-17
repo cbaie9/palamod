@@ -13,15 +13,16 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -40,17 +41,35 @@ import net.minecraft.client.Minecraft;
 
 import java.util.List;
 
+import com.google.common.collect.ImmutableMap;
+
 public class TotemfertilityBlock extends Block implements EntityBlock {
-	private static final VoxelShape SHAPE = Shapes.or(box(2, 0, 2, 14, 1, 14), box(4, 12, 4, 12, 21, 12), box(12, 13, 7, 14, 20, 9), box(2, 13, 7, 4, 20, 9), box(14, 15, 7, 16, 21, 9), box(0, 15, 7, 2, 21, 9), box(16, 18, 7, 18, 22, 9),
-			box(-2, 18, 7, 0, 22, 9), box(18, 20, 7, 19, 23, 9), box(-3, 20, 7, -2, 23, 9), box(4, 1, 4, 12, 10, 12), box(5, 10, 5, 11, 12, 11), box(5, 21, 5, 11, 23, 11), box(4, 23, 4, 12, 32, 12));
+	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+	private final ImmutableMap<BlockState, VoxelShape> shapes = this.makeShapes();
 
 	public TotemfertilityBlock() {
 		super(BlockBehaviour.Properties.of().sound(SoundType.WOOD).strength(1f, 10f).noOcclusion().randomTicks().isRedstoneConductor((bs, br, bp) -> false).ignitedByLava().instrument(NoteBlockInstrument.BASS));
+		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
+	}
+
+	private ImmutableMap<BlockState, VoxelShape> makeShapes() {
+		return this.getShapeForEachState(state -> {
+			return switch (state.getValue(FACING)) {
+				case NORTH -> Shapes.or(box(2, 0, 2, 14, 1, 14), box(4, 12, 4, 12, 21, 12), box(12, 13, 7, 14, 20, 9), box(2, 13, 7, 4, 20, 9), box(14, 15, 7, 16, 21, 9), box(0, 15, 7, 2, 21, 9), box(16, 18, 7, 18, 22, 9), box(-2, 18, 7, 0, 22, 9),
+						box(18, 20, 7, 19, 23, 9), box(-3, 20, 7, -2, 23, 9), box(4, 1, 4, 12, 10, 12), box(5, 10, 5, 11, 12, 11), box(5, 21, 5, 11, 23, 11), box(4, 23, 4, 12, 32, 12));
+				case EAST -> Shapes.or(box(2, 0, 2, 14, 1, 14), box(4, 12, 4, 12, 21, 12), box(7, 13, 12, 9, 20, 14), box(7, 13, 2, 9, 20, 4), box(7, 15, 14, 9, 21, 16), box(7, 15, 0, 9, 21, 2), box(7, 18, 16, 9, 22, 18), box(7, 18, -2, 9, 22, 0),
+						box(7, 20, 18, 9, 23, 19), box(7, 20, -3, 9, 23, -2), box(4, 1, 4, 12, 10, 12), box(5, 10, 5, 11, 12, 11), box(5, 21, 5, 11, 23, 11), box(4, 23, 4, 12, 32, 12));
+				case WEST -> Shapes.or(box(2, 0, 2, 14, 1, 14), box(4, 12, 4, 12, 21, 12), box(7, 13, 2, 9, 20, 4), box(7, 13, 12, 9, 20, 14), box(7, 15, 0, 9, 21, 2), box(7, 15, 14, 9, 21, 16), box(7, 18, -2, 9, 22, 0), box(7, 18, 16, 9, 22, 18),
+						box(7, 20, -3, 9, 23, -2), box(7, 20, 18, 9, 23, 19), box(4, 1, 4, 12, 10, 12), box(5, 10, 5, 11, 12, 11), box(5, 21, 5, 11, 23, 11), box(4, 23, 4, 12, 32, 12));
+				default -> Shapes.or(box(2, 0, 2, 14, 1, 14), box(4, 12, 4, 12, 21, 12), box(2, 13, 7, 4, 20, 9), box(12, 13, 7, 14, 20, 9), box(0, 15, 7, 2, 21, 9), box(14, 15, 7, 16, 21, 9), box(-2, 18, 7, 0, 22, 9), box(16, 18, 7, 18, 22, 9),
+						box(-3, 20, 7, -2, 23, 9), box(18, 20, 7, 19, 23, 9), box(4, 1, 4, 12, 10, 12), box(5, 10, 5, 11, 12, 11), box(5, 21, 5, 11, 23, 11), box(4, 23, 4, 12, 32, 12));
+			};
+		});
 	}
 
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return SHAPE;
+		return shapes.get(state);
 	}
 
 	@Override
@@ -69,6 +88,28 @@ public class TotemfertilityBlock extends Block implements EntityBlock {
 	@Override
 	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return Shapes.empty();
+	}
+
+	@Override
+	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+		super.createBlockStateDefinition(builder);
+		builder.add(FACING);
+	}
+
+	@Override
+	public BlockState getStateForPlacement(BlockPlaceContext context) {
+		BlockState state = super.getStateForPlacement(context);
+		if (state == null)
+			return null;
+		return state.setValue(FACING, context.getHorizontalDirection().getOpposite());
+	}
+
+	public BlockState rotate(BlockState state, Rotation rot) {
+		return state.setValue(FACING, rot.rotate(state.getValue(FACING)));
+	}
+
+	public BlockState mirror(BlockState state, Mirror mirrorIn) {
+		return state.rotate(mirrorIn.getRotation(state.getValue(FACING)));
 	}
 
 	@Override

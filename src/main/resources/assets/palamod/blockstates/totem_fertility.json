@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
       "model": "palamod:block/totem_fertility"
+    },
+    "facing=east": {
+      "model": "palamod:block/totem_fertility",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "palamod:block/totem_fertility",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "palamod:block/totem_fertility",
+      "y": 270
     }
   }
 }

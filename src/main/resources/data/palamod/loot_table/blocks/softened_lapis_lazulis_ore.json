@@ -1,24 +1,4 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "palamod:blocks/softened_lapis_lazulis_ore",
-  "pools": [
-    {
-      "rolls": 1.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:lapis_lazuli",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 8
-            },
-            {
-              "function": "minecraft:explosion_decay"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  "random_sequence": "palamod:blocks/softened_lapis_lazulis_ore"
 }

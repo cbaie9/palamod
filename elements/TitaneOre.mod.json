@@ -87,8 +87,8 @@
       "CUSTOM:Palamod"
     ],
     "destroyTool": "pickaxe",
-    "customDrop": "CUSTOM:Titanerawore",
-    "dropAmount": 1,
+    "customDrop": "",
+    "dropAmount": 0,
     "xpAmountMin": 0,
     "xpAmountMax": 0,
     "useLootTableForDrops": false,

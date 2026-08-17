@@ -1,20 +1,4 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "palamod:blocks/softened_paladium_ore",
-  "pools": [
-    {
-      "rolls": 1.0,
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "palamod:paladium_raw_ore"
-        }
-      ]
-    }
-  ]
+  "random_sequence": "palamod:blocks/softened_paladium_ore"
 }
