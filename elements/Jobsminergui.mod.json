@@ -150,7 +150,7 @@
         "type": "button",
         "data": {
           "name": "button_how",
-          "text": "How ",
+          "text": "How",
           "isUndecorated": false,
           "onClick": "ConnectPalahelpJobsXpgain",
           "width": 48,

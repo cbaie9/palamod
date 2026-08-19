@@ -52687,7 +52687,7 @@
       "gui.palamod.palahelp_jobsxpgain.button_alchibreak": "alchi/break",
       "gui.palamod.palahelp_jobsxpgain.button_alchicraft": "alchi/craft",
       "palamod.procedure.feed_message": "You has been fed",
-      "gui.palamod.jobsminergui.button_how": "How ",
+      "gui.palamod.jobsminergui.button_how": "How",
       "gui.palamod.jobsfarmergui.button_how": "How",
       "gui.palamod.jobshuntergui.button_how": "How",
       "gui.palamod.jobsalchigui.button_how": "How"
@@ -56430,7 +56430,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.21.1.012",
+    "version": "1.21.1.013",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some textures )",
     "author": "cb9, FufuBS1,Gelyce ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",
