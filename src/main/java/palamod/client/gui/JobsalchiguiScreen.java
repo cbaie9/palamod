@@ -22,6 +22,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
+import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import java.util.stream.Collectors;
@@ -34,6 +35,7 @@ public class JobsalchiguiScreen extends AbstractContainerScreen<JobsalchiguiMenu
 	private final int x, y, z;
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
+	private Button button_how;
 	private ImageButton imagebutton_button_gray;
 	private ImageButton imagebutton_cross_no_button;
 	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/jobsminergui.png");
@@ -111,7 +113,7 @@ public class JobsalchiguiScreen extends AbstractContainerScreen<JobsalchiguiMenu
 		}
 		yOffset = 0;
 		for (Component actualComponent : Arrays.stream(GetlevelalchiProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 5, 63 + yOffset, -1, false);
+			guiGraphics.drawString(this.font, actualComponent, 94, 37 + yOffset, -1, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
@@ -120,6 +122,15 @@ public class JobsalchiguiScreen extends AbstractContainerScreen<JobsalchiguiMenu
 	@Override
 	public void init() {
 		super.init();
+		button_how = Button.builder(Component.translatable("gui.palamod.jobsalchigui.button_how"), e -> {
+			int x = JobsalchiguiScreen.this.x;
+			int y = JobsalchiguiScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new JobsalchiguiButtonMessage(0, x, y, z));
+				JobsalchiguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
+		}).bounds(this.leftPos + 15, this.topPos + 53, 40, 20).build();
+		this.addRenderableWidget(button_how);
 		imagebutton_button_gray = new ImageButton(this.leftPos + 104, this.topPos + 53, 48, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/craft_button_v2.png"), ResourceLocation.parse("palamod:textures/screens/craft_button_hover_v3.png")), e -> {
 				}) {
@@ -134,8 +145,8 @@ public class JobsalchiguiScreen extends AbstractContainerScreen<JobsalchiguiMenu
 					int x = JobsalchiguiScreen.this.x;
 					int y = JobsalchiguiScreen.this.y;
 					if (true) {
-						PacketDistributor.sendToServer(new JobsalchiguiButtonMessage(1, x, y, z));
-						JobsalchiguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
+						PacketDistributor.sendToServer(new JobsalchiguiButtonMessage(2, x, y, z));
+						JobsalchiguiButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override

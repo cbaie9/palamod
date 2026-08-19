@@ -47448,19 +47448,6 @@
       }
     },
     {
-      "name": "PaladiumOreBlockDrop",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "paladium_ore_block_drop",
-      "metadata": {
-        "dependencies": [],
-        "files": [
-          "src/main/java/palamod/procedures/PaladiumOreBlockDropProcedure.java"
-        ]
-      }
-    },
-    {
       "name": "Softeneddiamondoreblast",
       "type": "recipe",
       "compiles": true,
@@ -52699,7 +52686,11 @@
       "gui.palamod.palahelp_jobsxpgain.button_hunterkill": "Hunter/kill",
       "gui.palamod.palahelp_jobsxpgain.button_alchibreak": "alchi/break",
       "gui.palamod.palahelp_jobsxpgain.button_alchicraft": "alchi/craft",
-      "palamod.procedure.feed_message": "You has been fed"
+      "palamod.procedure.feed_message": "You has been fed",
+      "gui.palamod.jobsminergui.button_how": "How ",
+      "gui.palamod.jobsfarmergui.button_how": "How",
+      "gui.palamod.jobshuntergui.button_how": "How",
+      "gui.palamod.jobsalchigui.button_how": "How"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54530,7 +54521,11 @@
       "gui.palamod.palahelp_jobsxpgain.button_hunterkill": "Hunter/kill",
       "gui.palamod.palahelp_jobsxpgain.button_alchibreak": "alchi/break",
       "gui.palamod.palahelp_jobsxpgain.button_alchicraft": "alchi/craft",
-      "palamod.procedure.feed_message": ""
+      "palamod.procedure.feed_message": "",
+      "gui.palamod.jobsminergui.button_how": "How ",
+      "gui.palamod.jobsfarmergui.button_how": "How",
+      "gui.palamod.jobshuntergui.button_how": "How",
+      "gui.palamod.jobsalchigui.button_how": "How"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -56361,7 +56356,11 @@
       "gui.palamod.palahelp_jobsxpgain.button_hunterkill": "Hunter/kill",
       "gui.palamod.palahelp_jobsxpgain.button_alchibreak": "alchi/break",
       "gui.palamod.palahelp_jobsxpgain.button_alchicraft": "alchi/craft",
-      "palamod.procedure.feed_message": ""
+      "palamod.procedure.feed_message": "",
+      "gui.palamod.jobsminergui.button_how": "How ",
+      "gui.palamod.jobsfarmergui.button_how": "How",
+      "gui.palamod.jobshuntergui.button_how": "How",
+      "gui.palamod.jobsalchigui.button_how": "How"
     }
   },
   "metadata": {
@@ -56447,5 +56446,5 @@
     "credits": "Developed by guys who want exit warzone without being killed ---  NOT affiliated with mojang, microsoft or Paladium games/Recube ",
     "modElementsPackage": "palamod"
   },
-  "mcreatorVersion": 202600230420
+  "mcreatorVersion": 202600233518
 }

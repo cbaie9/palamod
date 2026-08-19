@@ -1,6 +1,7 @@
 package palamod.network;
 
 import palamod.procedures.ConnectminercraftProcedure;
+import palamod.procedures.ConnectPalahelpJobsXpgainProcedure;
 import palamod.procedures.CloseguiProcedure;
 
 import palamod.PalamodMod;
@@ -51,9 +52,13 @@ public record JobsminerguiButtonMessage(int buttonID, int x, int y, int z) imple
 			return;
 		if (buttonID == 0) {
 
-			ConnectminercraftProcedure.execute(world, x, y, z, entity);
+			ConnectPalahelpJobsXpgainProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
+
+			ConnectminercraftProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 2) {
 
 			CloseguiProcedure.execute(entity);
 		}

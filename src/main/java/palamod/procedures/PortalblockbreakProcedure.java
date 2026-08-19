@@ -30,7 +30,7 @@ public class PortalblockbreakProcedure {
 		boolean pass = false;
 		boolean master_check = false;
 		PalamodMod.LOGGER.debug("break portal via ");
-		for (int index1192 = 0; index1192 < 4; index1192++) {
+		for (int _i1 = 0; _i1 < 4; _i1++) {
 			if (loop == 0) {
 				active = PalamodModBlocks.AMETHYST_PORTALBLOCK.get().defaultBlockState();
 				shiny_wood = PalamodModBlocks.SHINY_JACARANDA_WOOD.get().defaultBlockState();

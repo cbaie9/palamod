@@ -1,6 +1,7 @@
 package palamod.network;
 
 import palamod.procedures.ConnectfarmercraftguiProcedure;
+import palamod.procedures.ConnectPalahelpJobsXpgainProcedure;
 import palamod.procedures.CloseguiProcedure;
 
 import palamod.PalamodMod;
@@ -51,9 +52,13 @@ public record JobsfarmerguiButtonMessage(int buttonID, int x, int y, int z) impl
 			return;
 		if (buttonID == 0) {
 
-			ConnectfarmercraftguiProcedure.execute(world, x, y, z, entity);
+			ConnectPalahelpJobsXpgainProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
+
+			ConnectfarmercraftguiProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 2) {
 
 			CloseguiProcedure.execute(entity);
 		}

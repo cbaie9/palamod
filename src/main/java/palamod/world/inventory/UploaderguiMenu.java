@@ -65,7 +65,7 @@ public class UploaderguiMenu extends AbstractContainerMenu implements PalamodMod
 			access = ContainerLevelAccess.create(world, pos);
 		}
 		if (pos != null) {
-			if (extraData.readableBytes() == 1) { // bound to item
+			if (extraData.readableBytes() == 1) {
 				byte hand = extraData.readByte();
 				ItemStack itemstack = hand == 0 ? this.entity.getMainHandItem() : this.entity.getOffhandItem();
 				this.boundItemMatcher = () -> itemstack == (hand == 0 ? this.entity.getMainHandItem() : this.entity.getOffhandItem());
@@ -74,8 +74,8 @@ public class UploaderguiMenu extends AbstractContainerMenu implements PalamodMod
 					this.internal = cap;
 					this.bound = true;
 				}
-			} else if (extraData.readableBytes() > 1) { // bound to entity
-				extraData.readByte(); // drop padding
+			} else if (extraData.readableBytes() > 1) {
+				extraData.readByte();
 				boundEntity = world.getEntity(extraData.readVarInt());
 				if (boundEntity != null) {
 					IItemHandler cap = boundEntity.getCapability(Capabilities.ItemHandler.ENTITY);
@@ -84,7 +84,7 @@ public class UploaderguiMenu extends AbstractContainerMenu implements PalamodMod
 						this.bound = true;
 					}
 				}
-			} else { // might be bound to block
+			} else {
 				boundBlockEntity = this.world.getBlockEntity(pos);
 				if (boundBlockEntity instanceof BaseContainerBlockEntity baseContainerBlockEntity) {
 					this.internal = new InvWrapper(baseContainerBlockEntity);

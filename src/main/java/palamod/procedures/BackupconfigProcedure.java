@@ -28,7 +28,7 @@ public class BackupconfigProcedure {
 			jobs = GetjobsfileProcedure.execute(entity);
 			if (jobs.exists() && jobs.isDirectory()) {
 				try {
-					FileOutputStream _fos = new FileOutputStream(("backup_.zip" + new java.text.SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime()) + "_.zip"));
+					FileOutputStream _fos = new FileOutputStream((FMLPaths.GAMEDIR.get().toString() + "\\backup\\palamod\\config\\backup-" + new java.text.SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime()) + ".zip"));
 					ZipOutputStream _zipOut = new ZipOutputStream(_fos);
 					new Object() {
 						public static void zipFile(File fileToZip, String fileName, ZipOutputStream zipOut) throws IOException {

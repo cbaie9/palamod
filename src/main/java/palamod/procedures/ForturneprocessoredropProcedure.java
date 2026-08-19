@@ -88,8 +88,8 @@ public class ForturneprocessoredropProcedure {
 				drop = new ItemStack(Blocks.BEDROCK).copy();
 			}
 			if (!(drop.getItem() == Blocks.BEDROCK.asItem())) {
-				for (int index1230 = 0; index1230 < (int) GetFortuneBonusAmountProcedure.execute(
-						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE))); index1230++) {
+				for (int _i1 = 0; _i1 < (int) GetFortuneBonusAmountProcedure
+						.execute((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE))); _i1++) {
 					if (world instanceof ServerLevel _level) {
 						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, drop);
 						entityToSpawn.setPickUpDelay(0);

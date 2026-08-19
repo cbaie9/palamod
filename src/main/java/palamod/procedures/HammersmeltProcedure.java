@@ -56,9 +56,9 @@ public class HammersmeltProcedure {
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt")))) {
 			tag = "mineable/pickaxe";
 			i = -1;
-			for (int index1647 = 0; index1647 < 3; index1647++) {
+			for (int _i1 = 0; _i1 < 3; _i1++) {
 				j = -1;
-				for (int index1648 = 0; index1648 < 3; index1648++) {
+				for (int _i2 = 0; _i2 < 3; _i2++) {
 					if (i != 0 || j != 0) {
 						if (entity.getXRot() > 40 || entity.getXRot() < -40) {
 							block_x = x + i;
@@ -87,8 +87,8 @@ public class HammersmeltProcedure {
 									: ItemStack.EMPTY).copy();
 							if (!(smelting_result.getItem() == Blocks.AIR.asItem()) && (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 									.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:smelt")))) != 0) {
-								for (int index1649 = 0; index1649 < (int) GetFortuneBonusAmountProcedure.execute((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-										.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:hammer_fortune"))))); index1649++) {
+								for (int _i3 = 0; _i3 < (int) GetFortuneBonusAmountProcedure.execute((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
+										.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:hammer_fortune"))))); _i3++) {
 									if (world instanceof ServerLevel _level) {
 										ItemEntity entityToSpawn = new ItemEntity(_level, (block_x + 0.5), (block_y + 0.5), (block_z + 0.5), smelting_result);
 										entityToSpawn.setPickUpDelay(10);

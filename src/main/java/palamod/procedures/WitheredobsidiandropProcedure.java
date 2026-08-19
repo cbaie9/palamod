@@ -17,7 +17,7 @@ public class WitheredobsidiandropProcedure {
 				_level.addFreshEntity(entityToSpawn);
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_2.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index1157 = 0; index1157 < 2; index1157++) {
+			for (int _i1 = 0; _i1 < 2; _i1++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -25,7 +25,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_3.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index1158 = 0; index1158 < 3; index1158++) {
+			for (int _i1 = 0; _i1 < 3; _i1++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -33,7 +33,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_4.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index1159 = 0; index1159 < 4; index1159++) {
+			for (int _i1 = 0; _i1 < 4; _i1++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -41,7 +41,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_5.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index1160 = 0; index1160 < 5; index1160++) {
+			for (int _i1 = 0; _i1 < 5; _i1++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -49,7 +49,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_6.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index1161 = 0; index1161 < 6; index1161++) {
+			for (int _i1 = 0; _i1 < 6; _i1++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -57,7 +57,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_7.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index1162 = 0; index1162 < 7; index1162++) {
+			for (int _i1 = 0; _i1 < 7; _i1++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -65,7 +65,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_8.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index1163 = 0; index1163 < 8; index1163++) {
+			for (int _i1 = 0; _i1 < 8; _i1++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -73,7 +73,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_9.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index1164 = 0; index1164 < 9; index1164++) {
+			for (int _i1 = 0; _i1 < 9; _i1++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -81,7 +81,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_10.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index1165 = 0; index1165 < 10; index1165++) {
+			for (int _i1 = 0; _i1 < 10; _i1++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -89,7 +89,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_11.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index1166 = 0; index1166 < 11; index1166++) {
+			for (int _i1 = 0; _i1 < 11; _i1++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -97,7 +97,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_12.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index1167 = 0; index1167 < 12; index1167++) {
+			for (int _i1 = 0; _i1 < 12; _i1++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);
@@ -105,7 +105,7 @@ public class WitheredobsidiandropProcedure {
 				}
 			}
 		} else if (PalamodModBlocks.WITHERED_OBSIDIAN_13.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-			for (int index1168 = 0; index1168 < 13; index1168++) {
+			for (int _i1 = 0; _i1 < 13; _i1++) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PalamodModBlocks.PALADIUM_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(10);

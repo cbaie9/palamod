@@ -76,7 +76,7 @@ public class Lasecu2conbackpackguiProcedure {
 				}
 				i = 0;
 				if (i2 >= 0) {
-					for (int index1145 = 0; index1145 < 9; index1145++) {
+					for (int _i1 = 0; _i1 < 9; _i1++) {
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu45 ? _menu45.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount(getAmountInGUISlot(entity, (int) i));
@@ -90,7 +90,7 @@ public class Lasecu2conbackpackguiProcedure {
 					}
 				}
 				if (i2 >= 9) {
-					for (int index1146 = 0; index1146 < 18; index1146++) {
+					for (int _i1 = 0; _i1 < 18; _i1++) {
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu49 ? _menu49.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount(getAmountInGUISlot(entity, (int) i));
@@ -104,7 +104,7 @@ public class Lasecu2conbackpackguiProcedure {
 					}
 				}
 				if (i2 >= 27) {
-					for (int index1147 = 0; index1147 < 18; index1147++) {
+					for (int _i1 = 0; _i1 < 18; _i1++) {
 						if (entity instanceof Player _player) {
 							ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu53 ? _menu53.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount(getAmountInGUISlot(entity, (int) i));
@@ -118,7 +118,7 @@ public class Lasecu2conbackpackguiProcedure {
 					}
 				}
 				if (i2 >= 55) {
-					for (int index1148 = 0; index1148 < 18; index1148++) {
+					for (int _i1 = 0; _i1 < 18; _i1++) {
 						i = i + 1;
 						if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
 							_menu.getSlots().get((int) i).set(ItemStack.EMPTY);

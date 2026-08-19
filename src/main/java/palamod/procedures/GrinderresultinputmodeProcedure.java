@@ -12,9 +12,9 @@ public class GrinderresultinputmodeProcedure {
 		if (input.is(ItemTags.create(ResourceLocation.parse("palamod:grinder_class_paladium")))) {
 			output = 1;
 		} else if (input.is(ItemTags.create(ResourceLocation.parse("palamod:grinder_class_green_paladium")))) {
-			output = 1;
+			output = 2;
 		} else if (input.is(ItemTags.create(ResourceLocation.parse("palamod:grinder_class_endium")))) {
-			output = 1;
+			output = 3;
 		}
 		return output;
 	}

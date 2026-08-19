@@ -17,7 +17,7 @@ public class Elevator_processProcedure {
 			entity.getPersistentData().putBoolean("player.jumping", false);
 			y_pos = y;
 			add_num = 1;
-			for (int index1091 = 0; index1091 < 320; index1091++) {
+			for (int _i1 = 0; _i1 < 320; _i1++) {
 				if ((world.getBlockState(BlockPos.containing(x, y_pos - add_num, z))).is(BlockTags.create(ResourceLocation.parse("palamod:elevator")))) {
 					{
 						Entity _ent = entity;
@@ -38,7 +38,7 @@ public class Elevator_processProcedure {
 			entity.getPersistentData().putBoolean("player.jumping", false);
 			y_pos = y;
 			add_num = 1;
-			for (int index1092 = 0; index1092 < 320; index1092++) {
+			for (int _i1 = 0; _i1 < 320; _i1++) {
 				if ((world.getBlockState(BlockPos.containing(x, y_pos + add_num, z))).is(BlockTags.create(ResourceLocation.parse("palamod:elevator")))) {
 					{
 						Entity _ent = entity;

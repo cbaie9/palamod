@@ -22,7 +22,7 @@ public class DrawbridgeprocessProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		double Numvar = 0;
 		if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.NORTH) {
-			for (int index1122 = 0; index1122 < 16; index1122++) {
+			for (int _i1 = 0; _i1 < 16; _i1++) {
 				if (!(((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) Numvar).copy()).getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState()).getBlock() == Blocks.AIR)
 						&& itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) Numvar).getCount() > 0 && (world.getBlockState(BlockPos.containing(x, y, z - (Numvar + 1)))).getBlock() == Blocks.AIR) {
 					world.setBlock(BlockPos.containing(x, y, z - (Numvar + 1)),
@@ -47,7 +47,7 @@ public class DrawbridgeprocessProcedure {
 				Numvar = Numvar + 1;
 			}
 		} else if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.SOUTH) {
-			for (int index1123 = 0; index1123 < 16; index1123++) {
+			for (int _i1 = 0; _i1 < 16; _i1++) {
 				if (!(((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) Numvar).copy()).getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState()).getBlock() == Blocks.AIR)
 						&& itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) Numvar).getCount() > 0 && (world.getBlockState(BlockPos.containing(x, y, z + Numvar + 1))).getBlock() == Blocks.AIR) {
 					world.setBlock(BlockPos.containing(x, y, z + Numvar + 1),
@@ -72,7 +72,7 @@ public class DrawbridgeprocessProcedure {
 				Numvar = Numvar + 1;
 			}
 		} else if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.WEST) {
-			for (int index1124 = 0; index1124 < 16; index1124++) {
+			for (int _i1 = 0; _i1 < 16; _i1++) {
 				if (!(((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) Numvar).copy()).getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState()).getBlock() == Blocks.AIR)
 						&& itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) Numvar).getCount() > 0 && (world.getBlockState(BlockPos.containing(x - (Numvar + 1), y, z))).getBlock() == Blocks.AIR) {
 					world.setBlock(BlockPos.containing(x - (Numvar + 1), y, z),
@@ -97,7 +97,7 @@ public class DrawbridgeprocessProcedure {
 				Numvar = Numvar + 1;
 			}
 		} else if ((getDirectionFromBlockState((world.getBlockState(BlockPos.containing(x, y, z))))) == Direction.EAST) {
-			for (int index1125 = 0; index1125 < 16; index1125++) {
+			for (int _i1 = 0; _i1 < 16; _i1++) {
 				if (!(((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) Numvar).copy()).getItem() instanceof BlockItem _bi ? _bi.getBlock().defaultBlockState() : Blocks.AIR.defaultBlockState()).getBlock() == Blocks.AIR)
 						&& itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) Numvar).getCount() > 0 && (world.getBlockState(BlockPos.containing(x + Numvar + 1, y, z))).getBlock() == Blocks.AIR) {
 					world.setBlock(BlockPos.containing(x + Numvar + 1, y, z),

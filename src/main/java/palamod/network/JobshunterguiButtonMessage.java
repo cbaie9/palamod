@@ -1,5 +1,6 @@
 package palamod.network;
 
+import palamod.procedures.ConnectPalahelpJobsXpgainProcedure;
 import palamod.procedures.CloseguiProcedure;
 
 import palamod.PalamodMod;
@@ -48,7 +49,11 @@ public record JobshunterguiButtonMessage(int buttonID, int x, int y, int z) impl
 		// security measure to prevent arbitrary chunk generation
 		if (!world.getChunkSource().hasChunk(SectionPos.blockToSectionCoord(x), SectionPos.blockToSectionCoord(z)))
 			return;
-		if (buttonID == 1) {
+		if (buttonID == 0) {
+
+			ConnectPalahelpJobsXpgainProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 2) {
 
 			CloseguiProcedure.execute(entity);
 		}

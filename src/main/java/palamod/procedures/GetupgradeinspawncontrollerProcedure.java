@@ -20,7 +20,7 @@ public class GetupgradeinspawncontrollerProcedure {
 		double speed = 0;
 		double more_upgrade = 0;
 		double looting = 0;
-		for (int index1179 = 0; index1179 < getBlockInventorySlotCount(world, BlockPos.containing(x, y, z)); index1179++) {
+		for (int _i1 = 0; _i1 < getBlockInventorySlotCount(world, BlockPos.containing(x, y, z)); _i1++) {
 			if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) iloop).copy()).getItem() == PalamodModItems.SPAWNER_UPGRADE_SLIME.get()) {
 				slime = slime + 1;
 			} else if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) iloop).copy()).getItem() == PalamodModItems.SPAWNER_UPGRADE_SPEED.get()) {

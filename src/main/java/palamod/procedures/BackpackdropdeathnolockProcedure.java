@@ -51,7 +51,7 @@ public class BackpackdropdeathnolockProcedure {
 			i2 = slot_num;
 			i = 0;
 			if (i2 >= 0) {
-				for (int index1141 = 0; index1141 < 9; index1141++) {
+				for (int _i1 = 0; _i1 < 9; _i1++) {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu21 ? _menu21.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
 						_setstack.setCount(getAmountInGUISlot(entity, (int) i));
@@ -61,7 +61,7 @@ public class BackpackdropdeathnolockProcedure {
 				}
 			}
 			if (i2 >= 9) {
-				for (int index1142 = 0; index1142 < 18; index1142++) {
+				for (int _i1 = 0; _i1 < 18; _i1++) {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu24 ? _menu24.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
 						_setstack.setCount(getAmountInGUISlot(entity, (int) i));
@@ -71,7 +71,7 @@ public class BackpackdropdeathnolockProcedure {
 				}
 			}
 			if (i2 >= 27) {
-				for (int index1143 = 0; index1143 < 18; index1143++) {
+				for (int _i1 = 0; _i1 < 18; _i1++) {
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu27 ? _menu27.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
 						_setstack.setCount(getAmountInGUISlot(entity, (int) i));
@@ -81,7 +81,7 @@ public class BackpackdropdeathnolockProcedure {
 				}
 			}
 			if (i2 >= 55) {
-				for (int index1144 = 0; index1144 < 18; index1144++) {
+				for (int _i1 = 0; _i1 < 18; _i1++) {
 					i = i + 1;
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof PalamodModMenus.MenuAccessor _menu30 ? _menu30.getSlots().get((int) i).getItem() : ItemStack.EMPTY).copy();
