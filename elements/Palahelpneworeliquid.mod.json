@@ -324,7 +324,7 @@
         "data": {
           "name": "tooltip_low_level_ore_easily_available",
           "text": {
-            "fixedValue": "Low level ore, easily available in cave "
+            "fixedValue": "Low level ore, easily available in caves"
           },
           "width": 75,
           "height": 30,

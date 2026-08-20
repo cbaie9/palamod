@@ -49,13 +49,13 @@ public record JobsalchiguiButtonMessage(int buttonID, int x, int y, int z) imple
 		// security measure to prevent arbitrary chunk generation
 		if (!world.getChunkSource().hasChunk(SectionPos.blockToSectionCoord(x), SectionPos.blockToSectionCoord(z)))
 			return;
-		if (buttonID == 0) {
+		if (buttonID == 1) {
 
-			ConnectPalahelpJobsXpgainProcedure.execute(world, x, y, z, entity);
+			CloseguiProcedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			CloseguiProcedure.execute(entity);
+			ConnectPalahelpJobsXpgainProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

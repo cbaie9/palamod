@@ -61,7 +61,7 @@
             "falpha": 0.0
           },
           "hasShadow": false,
-          "x": 139,
+          "x": 140,
           "y": 118,
           "locked": false
         }
@@ -146,15 +146,13 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_how",
-          "text": "How",
-          "isUndecorated": false,
+          "name": "imagebutton_how_button_jobs_v1",
+          "image": "how_button_jobs_v1.png",
+          "hoveredImage": "how_button_jobs_v1_hover.png",
           "onClick": "ConnectPalahelpJobsXpgain",
-          "width": 40,
-          "height": 20,
-          "x": 149,
+          "x": 140,
           "y": 133,
           "locked": false
         }
