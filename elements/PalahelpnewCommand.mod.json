@@ -520,7 +520,7 @@
         "data": {
           "name": "tooltip_pay_the_given_player_the_given_a",
           "text": {
-            "fixedValue": "Pay the given player the given amount of money if the current players have enough money."
+            "fixedValue": "Pay the given player the given amount of money if the current player have enough money."
           },
           "width": 34,
           "height": 8,

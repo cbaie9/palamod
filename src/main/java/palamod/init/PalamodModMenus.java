@@ -32,14 +32,12 @@ public class PalamodModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<Palahelpgui1Menu>> PALAHELPGUI_1 = REGISTRY.register("palahelpgui_1", () -> IMenuTypeExtension.create(Palahelpgui1Menu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<PalahelpblockMenu>> PALAHELPBLOCK = REGISTRY.register("palahelpblock", () -> IMenuTypeExtension.create(PalahelpblockMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<ForgeguiMenu>> FORGEGUI = REGISTRY.register("forgegui", () -> IMenuTypeExtension.create(ForgeguiMenu::new));
-	public static final DeferredHolder<MenuType<?>, MenuType<PalahelporeMenu>> PALAHELPORE = REGISTRY.register("palahelpore", () -> IMenuTypeExtension.create(PalahelporeMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<PalahelptreeMenu>> PALAHELPTREE = REGISTRY.register("palahelptree", () -> IMenuTypeExtension.create(PalahelptreeMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<PalahelpmachineMenu>> PALAHELPMACHINE = REGISTRY.register("palahelpmachine", () -> IMenuTypeExtension.create(PalahelpmachineMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<GrinderpalahelpguiMenu>> GRINDERPALAHELPGUI = REGISTRY.register("grinderpalahelpgui", () -> IMenuTypeExtension.create(GrinderpalahelpguiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<PalamachinepalahelpguiMenu>> PALAMACHINEPALAHELPGUI = REGISTRY.register("palamachinepalahelpgui", () -> IMenuTypeExtension.create(PalamachinepalahelpguiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<CrusherpalahelpguiMenu>> CRUSHERPALAHELPGUI = REGISTRY.register("crusherpalahelpgui", () -> IMenuTypeExtension.create(CrusherpalahelpguiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<ForgepalahelpguiMenu>> FORGEPALAHELPGUI = REGISTRY.register("forgepalahelpgui", () -> IMenuTypeExtension.create(ForgepalahelpguiMenu::new));
-	public static final DeferredHolder<MenuType<?>, MenuType<FluidpalahelpMenu>> FLUIDPALAHELP = REGISTRY.register("fluidpalahelp", () -> IMenuTypeExtension.create(FluidpalahelpMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<ItemmenupalahelpMenu>> ITEMMENUPALAHELP = REGISTRY.register("itemmenupalahelp", () -> IMenuTypeExtension.create(ItemmenupalahelpMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<LegendarystonepalahelpMenu>> LEGENDARYSTONEPALAHELP = REGISTRY.register("legendarystonepalahelp", () -> IMenuTypeExtension.create(LegendarystonepalahelpMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<ArmorpalahelpguiMenu>> ARMORPALAHELPGUI = REGISTRY.register("armorpalahelpgui", () -> IMenuTypeExtension.create(ArmorpalahelpguiMenu::new));

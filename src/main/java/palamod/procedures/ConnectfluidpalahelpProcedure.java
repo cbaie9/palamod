@@ -1,6 +1,6 @@
 package palamod.procedures;
 
-import palamod.world.inventory.FluidpalahelpMenu;
+import palamod.world.inventory.PalahelpneworeliquidMenu;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -26,7 +26,7 @@ public class ConnectfluidpalahelpProcedure {
 			_ent.openMenu(new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return Component.literal("Fluidpalahelp");
+					return Component.literal("Palahelpneworeliquid");
 				}
 
 				@Override
@@ -36,7 +36,7 @@ public class ConnectfluidpalahelpProcedure {
 
 				@Override
 				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-					return new FluidpalahelpMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					return new PalahelpneworeliquidMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 				}
 			}, _bpos);
 		}
