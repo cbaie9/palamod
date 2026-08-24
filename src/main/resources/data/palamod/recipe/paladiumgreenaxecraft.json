@@ -1,24 +1,20 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "group": "green_paladium_craft_group",
   "category": "equipment",
-  "ingredients": [
-    {
+  "pattern": [
+    "aa",
+    "ba",
+    "b "
+  ],
+  "key": {
+    "a": {
       "item": "palamod:green_paladium_ingot"
     },
-    {
-      "item": "palamod:green_paladium_ingot"
-    },
-    {
-      "item": "minecraft:stick"
-    },
-    {
-      "item": "palamod:green_paladium_ingot"
-    },
-    {
+    "b": {
       "item": "minecraft:stick"
     }
-  ],
+  },
   "result": {
     "id": "palamod:green_paladium_axe",
     "count": 1

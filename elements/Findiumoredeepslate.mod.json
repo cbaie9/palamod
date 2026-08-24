@@ -165,9 +165,9 @@
       "Blocks.TUFF",
       "Blocks.GRAVEL"
     ],
-    "generationShape": "UNIFORM",
-    "frequencyPerChunks": 15,
-    "frequencyOnChunk": 1,
+    "generationShape": "TRIANGLE",
+    "frequencyPerChunks": 4,
+    "frequencyOnChunk": 2,
     "minGenerateHeight": -64,
     "maxGenerateHeight": 0
   }

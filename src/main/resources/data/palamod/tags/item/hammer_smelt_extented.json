@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#palamod:potg_can_be_enchanted",
+      "required": false
+    },
+    {
+      "id": "#palamod:hammer_smt",
+      "required": false
+    }
+  ]
+}

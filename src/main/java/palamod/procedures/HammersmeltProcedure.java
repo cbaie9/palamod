@@ -53,7 +53,7 @@ public class HammersmeltProcedure {
 		double block_z = 0;
 		ItemStack smelting_result = ItemStack.EMPTY;
 		BlockState block = Blocks.AIR.defaultBlockState();
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smt")))) {
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(ResourceLocation.parse("palamod:hammer_smelt_extented")))) {
 			tag = "mineable/pickaxe";
 			i = -1;
 			for (int _i1 = 0; _i1 < 3; _i1++) {

@@ -3,8 +3,8 @@
   "values": [
     "palamod:pickaxe_of_the_gods_lv5",
     "palamod:titane_pickaxe",
-    "palamod:creative_hammer",
     "palamod:pickaxe_of_the_gods_lv6",
+    "palamod:creative_hammer",
     "palamod:endium_pickaxe",
     "palamod:pickaxe_of_the_gods_lv3",
     "palamod:pickaxe_of_the_gods_lv4",
@@ -17,15 +17,15 @@
     "palamod:green_paladium_hammer",
     "palamod:creative_potg",
     "palamod:titane_hammer",
-    "palamod:endium_seedplanter",
     "palamod:pickaxe_of_the_gods_lv10",
+    "palamod:endium_seedplanter",
     "palamod:pickaxe_of_the_gods_lv11",
     "palamod:pickaxe_of_the_gods_lv12",
     "palamod:pickaxe_of_the_gods_lv13",
     "palamod:pickaxe_of_the_gods_lv14",
     "palamod:pickaxe_of_the_gods_lv15",
-    "palamod:amethyst_seedplanter",
     "palamod:pickaxe_of_the_gods_lv16",
+    "palamod:amethyst_seedplanter",
     "palamod:pickaxe_of_the_gods_lv17",
     "palamod:pickaxe_of_the_gods_lv18",
     "palamod:pickaxe_of_the_gods_lv19",
@@ -44,7 +44,7 @@
     "palamod:endium_hammer",
     "palamod:pickaxe_of_the_gods_lv9",
     "palamod:pickaxe_of_the_gods_lv7",
-    "palamod:paladium_seedplanter",
-    "palamod:pickaxe_of_the_gods_lv8"
+    "palamod:pickaxe_of_the_gods_lv8",
+    "palamod:paladium_seedplanter"
   ]
 }

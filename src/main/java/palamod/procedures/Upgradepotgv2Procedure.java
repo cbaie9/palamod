@@ -39,7 +39,7 @@ public class Upgradepotgv2Procedure {
 		Pickaxe_stone_seen = main_hand.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone");
 		potg_fuel = main_hand.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("potg_fuel");
 		if (main_hand.isCorrectToolForDrops((world.getBlockState(BlockPos.containing(x, y, z))))) {
-			if (main_hand.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 150000) {
+			if (main_hand.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= DbgetneededBlockForPotgProcedure.execute(20)) {
 				if (main_hand.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg")))) != 0) {
 					auto_smelt = true;
 				} else if (main_hand.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole")))) != 0) {
@@ -105,7 +105,7 @@ public class Upgradepotgv2Procedure {
 						}
 					}
 				}
-			} else if (main_hand.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 88582) {
+			} else if (main_hand.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= DbgetneededBlockForPotgProcedure.execute(19)) {
 				if (main_hand.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg")))) != 0) {
 					auto_smelt = true;
 				} else if (main_hand.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole")))) != 0) {
@@ -164,7 +164,7 @@ public class Upgradepotgv2Procedure {
 						}
 					}
 				}
-			} else if (main_hand.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 55598) {
+			} else if (main_hand.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= DbgetneededBlockForPotgProcedure.execute(18)) {
 				if (main_hand.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg")))) != 0) {
 					auto_smelt = true;
 				} else if (main_hand.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:bighole")))) != 0) {
@@ -220,7 +220,8 @@ public class Upgradepotgv2Procedure {
 						}
 					}
 				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 36485) {
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= DbgetneededBlockForPotgProcedure
+					.execute(17)) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 						.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:autosmeltpotg")))) != 0) {
 					auto_smelt = true;
@@ -284,7 +285,8 @@ public class Upgradepotgv2Procedure {
 						}
 					}
 				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 25242) {
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= DbgetneededBlockForPotgProcedure
+					.execute(16)) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack92 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV16.get()).copy();
 					_setstack92.setCount(1);
@@ -317,7 +319,8 @@ public class Upgradepotgv2Procedure {
 						}
 					}
 				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 14620) {
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= DbgetneededBlockForPotgProcedure
+					.execute(15)) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack105 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV15.get()).copy();
 					_setstack105.setCount(1);
@@ -345,7 +348,8 @@ public class Upgradepotgv2Procedure {
 						}
 					}
 				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 10000) {
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= DbgetneededBlockForPotgProcedure
+					.execute(14)) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack116 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV14.get()).copy();
 					_setstack116.setCount(1);
@@ -373,7 +377,8 @@ public class Upgradepotgv2Procedure {
 						}
 					}
 				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 7804) {
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= DbgetneededBlockForPotgProcedure
+					.execute(13)) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack127 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV13.get()).copy();
 					_setstack127.setCount(1);
@@ -400,7 +405,8 @@ public class Upgradepotgv2Procedure {
 						}
 					}
 				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 6895) {
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= DbgetneededBlockForPotgProcedure
+					.execute(12)) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack136 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV12.get()).copy();
 					_setstack136.setCount(1);
@@ -427,7 +433,8 @@ public class Upgradepotgv2Procedure {
 						}
 					}
 				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 5403) {
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= DbgetneededBlockForPotgProcedure
+					.execute(11)) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack145 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV11.get()).copy();
 					_setstack145.setCount(1);
@@ -441,7 +448,8 @@ public class Upgradepotgv2Procedure {
 					final double _tagValue = (Pickaxe_stone_seen + 1);
 					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 4326) {
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= DbgetneededBlockForPotgProcedure
+					.execute(10)) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack152 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV10.get()).copy();
 					_setstack152.setCount(1);
@@ -455,7 +463,8 @@ public class Upgradepotgv2Procedure {
 					final double _tagValue = (Pickaxe_stone_seen + 1);
 					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 3542) {
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= DbgetneededBlockForPotgProcedure
+					.execute(9)) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack159 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV9.get()).copy();
 					_setstack159.setCount(1);
@@ -469,7 +478,8 @@ public class Upgradepotgv2Procedure {
 					final double _tagValue = (Pickaxe_stone_seen + 1);
 					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 2138) {
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= DbgetneededBlockForPotgProcedure
+					.execute(8)) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack166 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV8.get()).copy();
 					_setstack166.setCount(1);
@@ -482,7 +492,8 @@ public class Upgradepotgv2Procedure {
 					final double _tagValue = (Pickaxe_stone_seen + 1);
 					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 1589) {
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= DbgetneededBlockForPotgProcedure
+					.execute(7)) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack171 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV7.get()).copy();
 					_setstack171.setCount(1);
@@ -495,7 +506,8 @@ public class Upgradepotgv2Procedure {
 					final double _tagValue = (Pickaxe_stone_seen + 1);
 					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 1370) {
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= DbgetneededBlockForPotgProcedure
+					.execute(6)) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack176 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV6.get()).copy();
 					_setstack176.setCount(1);
@@ -508,7 +520,8 @@ public class Upgradepotgv2Procedure {
 					final double _tagValue = (Pickaxe_stone_seen + 1);
 					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 1172) {
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= DbgetneededBlockForPotgProcedure
+					.execute(5)) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack181 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV5.get()).copy();
 					_setstack181.setCount(1);
@@ -521,7 +534,8 @@ public class Upgradepotgv2Procedure {
 					final double _tagValue = (Pickaxe_stone_seen + 1);
 					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 757) {
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= DbgetneededBlockForPotgProcedure
+					.execute(4)) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack186 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV4.get()).copy();
 					_setstack186.setCount(1);
@@ -534,7 +548,8 @@ public class Upgradepotgv2Procedure {
 					final double _tagValue = (Pickaxe_stone_seen + 1);
 					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 250) {
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= DbgetneededBlockForPotgProcedure
+					.execute(3)) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack191 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV3.get()).copy();
 					_setstack191.setCount(1);
@@ -547,7 +562,8 @@ public class Upgradepotgv2Procedure {
 					final double _tagValue = (Pickaxe_stone_seen + 1);
 					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY), tag -> tag.putDouble(_tagName, _tagValue));
 				}
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= 100) {
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag().getDouble("Pickaxe_stone") >= DbgetneededBlockForPotgProcedure
+					.execute(2)) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack196 = new ItemStack(PalamodModItems.PICKAXE_OF_THE_GODS_LV2.get()).copy();
 					_setstack196.setCount(1);

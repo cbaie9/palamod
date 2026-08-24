@@ -1,7 +1,7 @@
 package palamod.item;
 
-import palamod.procedures.Upgradepotgv2Procedure;
-import palamod.procedures.TitlepogProcedure;
+import palamod.procedures.Upgradepotgv3Procedure;
+import palamod.procedures.TitlePogv2Procedure;
 import palamod.procedures.MoucepotgProcedure;
 
 import palamod.init.PalamodModItems;
@@ -101,7 +101,7 @@ public class Pickaxeofthegodslv4Item extends TieredItem {
 	@Override
 	public boolean mineBlock(ItemStack itemstack, Level world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
 		itemstack.hurtAndBreak(1, entity, LivingEntity.getSlotForHand(entity.getUsedItemHand()));
-		Upgradepotgv2Procedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
+		Upgradepotgv3Procedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 		return true;
 	}
 
@@ -116,7 +116,7 @@ public class Pickaxeofthegodslv4Item extends TieredItem {
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
 		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
-		String hoverText = TitlepogProcedure.execute(entity);
+		String hoverText = TitlePogv2Procedure.execute(itemstack);
 		if (hoverText != null) {
 			for (String line : hoverText.split("\n")) {
 				list.add(Component.literal(line));

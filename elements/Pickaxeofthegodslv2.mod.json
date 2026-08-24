@@ -15,7 +15,7 @@
       "fixedValue": [
         "Level 2"
       ],
-      "name": "Titlepog"
+      "name": "TitlePogv2"
     },
     "creativeTabs": [
       "CUSTOM:Pickaxeofgodstab"
@@ -36,6 +36,6 @@
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onItemInUseTick": "Moucepotg",
-    "onBlockDestroyedWithTool": "Upgradepotgv2"
+    "onBlockDestroyedWithTool": "Upgradepotgv3"
   }
 }

@@ -40375,25 +40375,6 @@
       }
     },
     {
-      "name": "Titlepog",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "titlepog",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ],
-        "return_type": "string",
-        "files": [
-          "src/main/java/palamod/procedures/TitlepogProcedure.java"
-        ]
-      }
-    },
-    {
       "name": "Newadminshopguigettitle",
       "type": "procedure",
       "compiles": true,
@@ -47430,6 +47411,138 @@
           "src/main/resources/data/palamod/recipe/softeneddiamondoreblast.json"
         ]
       }
+    },
+    {
+      "name": "DbgetneededBlockForPotg",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dbgetneeded_block_for_potg",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "level_potg",
+            "type": "number"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/DbgetneededBlockForPotgProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GetLevelPotg",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_level_potg",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "xppotg",
+            "type": "number"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/palamod/procedures/GetLevelPotgProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "GetPotGfromLevel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_pot_gfrom_level",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "level_potg",
+            "type": "number"
+          }
+        ],
+        "return_type": "itemstack",
+        "files": [
+          "src/main/java/palamod/procedures/GetPotGfromLevelProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Upgradepotgv3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "upgradepotgv_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/Upgradepotgv3Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "TitlePogv2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "title_pogv_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/palamod/procedures/TitlePogv2Procedure.java"
+        ]
+      }
+    },
+    {
+      "name": "MoucePogProcess",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mouce_pog_process",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "force_render",
+            "type": "logic"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/MoucePogProcessProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -49395,6 +49508,9 @@
       "Blocks.TRAPPED_CHEST"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~Findiumoredeepslate@CUSTOM:Findiumoredeepslate",
+      "~FindiumOre@CUSTOM:FindiumOre",
+      "~Trixiumore@CUSTOM:Trixiumore",
       "~EndiumPortalAngleBlock@CUSTOM:EndiumPortalAngleBlock",
       "~CauldronCore@CUSTOM:CauldronCore",
       "~Cauldron@CUSTOM:Cauldron",
@@ -49490,8 +49606,6 @@
       "~Paladiumchestv2@CUSTOM:Paladiumchestv2",
       "~Caveblock@CUSTOM:Caveblock",
       "~Trixiumblock@CUSTOM:Trixiumblock",
-      "~Trixiumore@CUSTOM:Trixiumore",
-      "~Findiumoredeepslate@CUSTOM:Findiumoredeepslate",
       "~Endiumnuggetoredeepslate@CUSTOM:Endiumnuggetoredeepslate",
       "~Paladiumgreenoredeepslate@CUSTOM:Paladiumgreenoredeepslate",
       "~Trixiumoredeepslate@CUSTOM:Trixiumoredeepslate",
@@ -49566,7 +49680,6 @@
       "~Findiumslab@CUSTOM:Findiumslab",
       "~Findiumstairs@CUSTOM:Findiumstairs",
       "~FindiumBlock@CUSTOM:FindiumBlock",
-      "~FindiumOre@CUSTOM:FindiumOre",
       "~EndiumBlock@CUSTOM:EndiumBlock",
       "~Paladiumcrusher@CUSTOM:Paladiumcrusher",
       "~AmethysteBlock@CUSTOM:AmethysteBlock",
@@ -49703,6 +49816,26 @@
       "~PaladiumBlock@CUSTOM:PaladiumBlock"
     ],
     "ITEMS:minecraft:pickaxes": [
+      "~Pickaxeofthegodslv1@CUSTOM:Pickaxeofthegodslv1",
+      "~Pickaxeofthegodslv5@CUSTOM:Pickaxeofthegodslv5",
+      "~Pickaxeofthegodslv4@CUSTOM:Pickaxeofthegodslv4",
+      "~Pickaxeofthegodslv3@CUSTOM:Pickaxeofthegodslv3",
+      "~Pickaxeofthegodslv2@CUSTOM:Pickaxeofthegodslv2",
+      "~Pickaxeofthegodslv9@CUSTOM:Pickaxeofthegodslv9",
+      "~Pickaxeofthegodslv16@CUSTOM:Pickaxeofthegodslv16",
+      "~Pickaxeofthegodslv8@CUSTOM:Pickaxeofthegodslv8",
+      "~Pickaxeofthegodslv13@CUSTOM:Pickaxeofthegodslv13",
+      "~Pickaxeofthegodslv7@CUSTOM:Pickaxeofthegodslv7",
+      "~Pickaxeofthegodslv14@CUSTOM:Pickaxeofthegodslv14",
+      "~Pickaxeofthegodslv6@CUSTOM:Pickaxeofthegodslv6",
+      "~Pickaxeofthegodslv19@CUSTOM:Pickaxeofthegodslv19",
+      "~Pickaxeofthegodslv17@CUSTOM:Pickaxeofthegodslv17",
+      "~Pickaxeofthegodslv18@CUSTOM:Pickaxeofthegodslv18",
+      "~Pickaxeofthegodslv11@CUSTOM:Pickaxeofthegodslv11",
+      "~Pickaxeofthegodslv12@CUSTOM:Pickaxeofthegodslv12",
+      "~Pickaxeofthegodslv20@CUSTOM:Pickaxeofthegodslv20",
+      "~Pickaxeofthegodslv10@CUSTOM:Pickaxeofthegodslv10",
+      "~Pickaxeofthegodslv15@CUSTOM:Pickaxeofthegodslv15",
       "~Endiumseedplanter@CUSTOM:Endiumseedplanter",
       "~Greenpaladiumseedplanter@CUSTOM:Greenpaladiumseedplanter",
       "~Paladiumseedplanter@CUSTOM:Paladiumseedplanter",
@@ -49712,26 +49845,6 @@
       "~Creativehammer@CUSTOM:Creativehammer",
       "~Greenpaladiumhammer@CUSTOM:Greenpaladiumhammer",
       "~Creativepotg@CUSTOM:Creativepotg",
-      "~Pickaxeofthegodslv13@CUSTOM:Pickaxeofthegodslv13",
-      "~Pickaxeofthegodslv20@CUSTOM:Pickaxeofthegodslv20",
-      "~Pickaxeofthegodslv19@CUSTOM:Pickaxeofthegodslv19",
-      "~Pickaxeofthegodslv18@CUSTOM:Pickaxeofthegodslv18",
-      "~Pickaxeofthegodslv17@CUSTOM:Pickaxeofthegodslv17",
-      "~Pickaxeofthegodslv16@CUSTOM:Pickaxeofthegodslv16",
-      "~Pickaxeofthegodslv15@CUSTOM:Pickaxeofthegodslv15",
-      "~Pickaxeofthegodslv14@CUSTOM:Pickaxeofthegodslv14",
-      "~Pickaxeofthegodslv12@CUSTOM:Pickaxeofthegodslv12",
-      "~Pickaxeofthegodslv11@CUSTOM:Pickaxeofthegodslv11",
-      "~Pickaxeofthegodslv10@CUSTOM:Pickaxeofthegodslv10",
-      "~Pickaxeofthegodslv9@CUSTOM:Pickaxeofthegodslv9",
-      "~Pickaxeofthegodslv8@CUSTOM:Pickaxeofthegodslv8",
-      "~Pickaxeofthegodslv7@CUSTOM:Pickaxeofthegodslv7",
-      "~Pickaxeofthegodslv6@CUSTOM:Pickaxeofthegodslv6",
-      "~Pickaxeofthegodslv5@CUSTOM:Pickaxeofthegodslv5",
-      "~Pickaxeofthegodslv4@CUSTOM:Pickaxeofthegodslv4",
-      "~Pickaxeofthegodslv3@CUSTOM:Pickaxeofthegodslv3",
-      "~Pickaxeofthegodslv2@CUSTOM:Pickaxeofthegodslv2",
-      "~Pickaxeofthegodslv1@CUSTOM:Pickaxeofthegodslv1",
       "~Endiumhammer@CUSTOM:Endiumhammer",
       "~Paladiumhammer@CUSTOM:Paladiumhammer",
       "~Titanehammer@CUSTOM:Titanehammer",
@@ -49750,28 +49863,28 @@
       "~PaladiumPickaxe@CUSTOM:PaladiumPickaxe"
     ],
     "ITEMS:minecraft:axes": [
-      "~Creativehammer@CUSTOM:Creativehammer",
-      "~Creativepotg@CUSTOM:Creativepotg",
-      "~Pickaxeofthegodslv13@CUSTOM:Pickaxeofthegodslv13",
-      "~Pickaxeofthegodslv20@CUSTOM:Pickaxeofthegodslv20",
-      "~Pickaxeofthegodslv19@CUSTOM:Pickaxeofthegodslv19",
-      "~Pickaxeofthegodslv18@CUSTOM:Pickaxeofthegodslv18",
-      "~Pickaxeofthegodslv17@CUSTOM:Pickaxeofthegodslv17",
-      "~Pickaxeofthegodslv16@CUSTOM:Pickaxeofthegodslv16",
-      "~Pickaxeofthegodslv15@CUSTOM:Pickaxeofthegodslv15",
-      "~Pickaxeofthegodslv14@CUSTOM:Pickaxeofthegodslv14",
-      "~Pickaxeofthegodslv12@CUSTOM:Pickaxeofthegodslv12",
-      "~Pickaxeofthegodslv11@CUSTOM:Pickaxeofthegodslv11",
-      "~Pickaxeofthegodslv10@CUSTOM:Pickaxeofthegodslv10",
-      "~Pickaxeofthegodslv9@CUSTOM:Pickaxeofthegodslv9",
-      "~Pickaxeofthegodslv8@CUSTOM:Pickaxeofthegodslv8",
-      "~Pickaxeofthegodslv7@CUSTOM:Pickaxeofthegodslv7",
-      "~Pickaxeofthegodslv6@CUSTOM:Pickaxeofthegodslv6",
+      "~Pickaxeofthegodslv1@CUSTOM:Pickaxeofthegodslv1",
       "~Pickaxeofthegodslv5@CUSTOM:Pickaxeofthegodslv5",
       "~Pickaxeofthegodslv4@CUSTOM:Pickaxeofthegodslv4",
       "~Pickaxeofthegodslv3@CUSTOM:Pickaxeofthegodslv3",
       "~Pickaxeofthegodslv2@CUSTOM:Pickaxeofthegodslv2",
-      "~Pickaxeofthegodslv1@CUSTOM:Pickaxeofthegodslv1",
+      "~Pickaxeofthegodslv9@CUSTOM:Pickaxeofthegodslv9",
+      "~Pickaxeofthegodslv16@CUSTOM:Pickaxeofthegodslv16",
+      "~Pickaxeofthegodslv8@CUSTOM:Pickaxeofthegodslv8",
+      "~Pickaxeofthegodslv13@CUSTOM:Pickaxeofthegodslv13",
+      "~Pickaxeofthegodslv7@CUSTOM:Pickaxeofthegodslv7",
+      "~Pickaxeofthegodslv14@CUSTOM:Pickaxeofthegodslv14",
+      "~Pickaxeofthegodslv6@CUSTOM:Pickaxeofthegodslv6",
+      "~Pickaxeofthegodslv19@CUSTOM:Pickaxeofthegodslv19",
+      "~Pickaxeofthegodslv17@CUSTOM:Pickaxeofthegodslv17",
+      "~Pickaxeofthegodslv18@CUSTOM:Pickaxeofthegodslv18",
+      "~Pickaxeofthegodslv11@CUSTOM:Pickaxeofthegodslv11",
+      "~Pickaxeofthegodslv12@CUSTOM:Pickaxeofthegodslv12",
+      "~Pickaxeofthegodslv20@CUSTOM:Pickaxeofthegodslv20",
+      "~Pickaxeofthegodslv10@CUSTOM:Pickaxeofthegodslv10",
+      "~Pickaxeofthegodslv15@CUSTOM:Pickaxeofthegodslv15",
+      "~Creativehammer@CUSTOM:Creativehammer",
+      "~Creativepotg@CUSTOM:Creativepotg",
       "~Paladiumgreenaxe@CUSTOM:Paladiumgreenaxe",
       "~EndiumAxe@CUSTOM:EndiumAxe",
       "~AmethysteAxe@CUSTOM:AmethysteAxe",
@@ -49779,6 +49892,26 @@
       "~PaladiumAxe@CUSTOM:PaladiumAxe"
     ],
     "ITEMS:minecraft:swords": [
+      "~Pickaxeofthegodslv1@CUSTOM:Pickaxeofthegodslv1",
+      "~Pickaxeofthegodslv5@CUSTOM:Pickaxeofthegodslv5",
+      "~Pickaxeofthegodslv4@CUSTOM:Pickaxeofthegodslv4",
+      "~Pickaxeofthegodslv3@CUSTOM:Pickaxeofthegodslv3",
+      "~Pickaxeofthegodslv2@CUSTOM:Pickaxeofthegodslv2",
+      "~Pickaxeofthegodslv9@CUSTOM:Pickaxeofthegodslv9",
+      "~Pickaxeofthegodslv16@CUSTOM:Pickaxeofthegodslv16",
+      "~Pickaxeofthegodslv8@CUSTOM:Pickaxeofthegodslv8",
+      "~Pickaxeofthegodslv13@CUSTOM:Pickaxeofthegodslv13",
+      "~Pickaxeofthegodslv7@CUSTOM:Pickaxeofthegodslv7",
+      "~Pickaxeofthegodslv14@CUSTOM:Pickaxeofthegodslv14",
+      "~Pickaxeofthegodslv6@CUSTOM:Pickaxeofthegodslv6",
+      "~Pickaxeofthegodslv19@CUSTOM:Pickaxeofthegodslv19",
+      "~Pickaxeofthegodslv17@CUSTOM:Pickaxeofthegodslv17",
+      "~Pickaxeofthegodslv18@CUSTOM:Pickaxeofthegodslv18",
+      "~Pickaxeofthegodslv11@CUSTOM:Pickaxeofthegodslv11",
+      "~Pickaxeofthegodslv12@CUSTOM:Pickaxeofthegodslv12",
+      "~Pickaxeofthegodslv20@CUSTOM:Pickaxeofthegodslv20",
+      "~Pickaxeofthegodslv10@CUSTOM:Pickaxeofthegodslv10",
+      "~Pickaxeofthegodslv15@CUSTOM:Pickaxeofthegodslv15",
       "~Endiumfastsword@CUSTOM:Endiumfastsword",
       "~Greenpaladiumfastsword@CUSTOM:Greenpaladiumfastsword",
       "~Creativehammer@CUSTOM:Creativehammer",
@@ -49786,26 +49919,6 @@
       "~Greenpaladiumbroadsword@CUSTOM:Greenpaladiumbroadsword",
       "~Creativepotg@CUSTOM:Creativepotg",
       "~Infernalknocker@CUSTOM:Infernalknocker",
-      "~Pickaxeofthegodslv13@CUSTOM:Pickaxeofthegodslv13",
-      "~Pickaxeofthegodslv20@CUSTOM:Pickaxeofthegodslv20",
-      "~Pickaxeofthegodslv19@CUSTOM:Pickaxeofthegodslv19",
-      "~Pickaxeofthegodslv18@CUSTOM:Pickaxeofthegodslv18",
-      "~Pickaxeofthegodslv17@CUSTOM:Pickaxeofthegodslv17",
-      "~Pickaxeofthegodslv16@CUSTOM:Pickaxeofthegodslv16",
-      "~Pickaxeofthegodslv15@CUSTOM:Pickaxeofthegodslv15",
-      "~Pickaxeofthegodslv14@CUSTOM:Pickaxeofthegodslv14",
-      "~Pickaxeofthegodslv12@CUSTOM:Pickaxeofthegodslv12",
-      "~Pickaxeofthegodslv11@CUSTOM:Pickaxeofthegodslv11",
-      "~Pickaxeofthegodslv10@CUSTOM:Pickaxeofthegodslv10",
-      "~Pickaxeofthegodslv9@CUSTOM:Pickaxeofthegodslv9",
-      "~Pickaxeofthegodslv8@CUSTOM:Pickaxeofthegodslv8",
-      "~Pickaxeofthegodslv7@CUSTOM:Pickaxeofthegodslv7",
-      "~Pickaxeofthegodslv6@CUSTOM:Pickaxeofthegodslv6",
-      "~Pickaxeofthegodslv5@CUSTOM:Pickaxeofthegodslv5",
-      "~Pickaxeofthegodslv4@CUSTOM:Pickaxeofthegodslv4",
-      "~Pickaxeofthegodslv3@CUSTOM:Pickaxeofthegodslv3",
-      "~Pickaxeofthegodslv2@CUSTOM:Pickaxeofthegodslv2",
-      "~Pickaxeofthegodslv1@CUSTOM:Pickaxeofthegodslv1",
       "~Paladiumfastsword@CUSTOM:Paladiumfastsword",
       "~Titanefastsword@CUSTOM:Titanefastsword",
       "~Amethystefastsword@CUSTOM:Amethystefastsword",
@@ -49921,6 +50034,9 @@
       "~PaladiumArmor@CUSTOM:PaladiumArmor.boots"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
+      "~Findiumoredeepslate@CUSTOM:Findiumoredeepslate",
+      "~FindiumOre@CUSTOM:FindiumOre",
+      "~Trixiumore@CUSTOM:Trixiumore",
       "~CauldronCore@CUSTOM:CauldronCore",
       "~Cauldron@CUSTOM:Cauldron",
       "~Moneyanvil@CUSTOM:Moneyanvil",
@@ -49930,8 +50046,6 @@
       "~Softenedtrixiumore@CUSTOM:Softenedtrixiumore",
       "~Softenedamethystore@CUSTOM:Softenedamethystore",
       "~Exctractor@CUSTOM:Exctractor",
-      "~Trixiumore@CUSTOM:Trixiumore",
-      "~Findiumoredeepslate@CUSTOM:Findiumoredeepslate",
       "~Amethystslab@CUSTOM:Amethystslab",
       "~Amethyststairs@CUSTOM:Amethyststairs",
       "~Paladiumforge@CUSTOM:Paladiumforge",
@@ -49941,7 +50055,6 @@
       "~Ironspike@CUSTOM:Ironspike",
       "~PaladiumGreenblock@CUSTOM:PaladiumGreenblock",
       "~FindiumBlock@CUSTOM:FindiumBlock",
-      "~FindiumOre@CUSTOM:FindiumOre",
       "~AmethysteBlock@CUSTOM:AmethysteBlock",
       "~AmethysteOre@CUSTOM:AmethysteOre"
     ],
@@ -50218,6 +50331,10 @@
     ],
     "BLOCKS:minecraft:wooden_buttons": [
       "~DeadButton@CUSTOM:DeadButton"
+    ],
+    "ITEMS:mod:hammer_smelt_extented": [
+      "TAG:mod:hammer_smt",
+      "TAG:mod:potg_can_be_enchanted"
     ]
   },
   "tab_element_order": {
@@ -52571,7 +52688,10 @@
       "gui.palamod.jobsfarmergui.button_how": "How",
       "gui.palamod.jobshuntergui.button_how": "How",
       "gui.palamod.jobsalchigui.button_how": "How",
-      "gui.palamod.crusherpalahelpgui.label_paladium_crusher_wiki": "Palahelp :  crusher "
+      "gui.palamod.crusherpalahelpgui.label_paladium_crusher_wiki": "Palahelp :  crusher ",
+      "item.palamod.pickaxe_of_the_gods_lv16.description_0": "Level 16",
+      "item.palamod.pickaxe_of_the_gods_lv19.description_0": "Level 19",
+      "item.palamod.pickaxe_of_the_gods_lv20.description_0": "Level 20"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54312,7 +54432,10 @@
       "gui.palamod.jobsfarmergui.button_how": "Comment",
       "gui.palamod.jobshuntergui.button_how": "Comment",
       "gui.palamod.jobsalchigui.button_how": "Comment",
-      "gui.palamod.crusherpalahelpgui.label_paladium_crusher_wiki": "Paladium crusher wiki"
+      "gui.palamod.crusherpalahelpgui.label_paladium_crusher_wiki": "Paladium crusher wiki",
+      "item.palamod.pickaxe_of_the_gods_lv16.description_0": "Level 16",
+      "item.palamod.pickaxe_of_the_gods_lv19.description_0": "Level 19",
+      "item.palamod.pickaxe_of_the_gods_lv20.description_0": "Level 20"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -56053,7 +56176,10 @@
       "gui.palamod.jobsfarmergui.button_how": "Comment",
       "gui.palamod.jobshuntergui.button_how": "Comment",
       "gui.palamod.jobsalchigui.button_how": "Comment",
-      "gui.palamod.crusherpalahelpgui.label_paladium_crusher_wiki": "Paladium crusher wiki"
+      "gui.palamod.crusherpalahelpgui.label_paladium_crusher_wiki": "Paladium crusher wiki",
+      "item.palamod.pickaxe_of_the_gods_lv16.description_0": "Level 16",
+      "item.palamod.pickaxe_of_the_gods_lv19.description_0": "Level 19",
+      "item.palamod.pickaxe_of_the_gods_lv20.description_0": "Level 20"
     }
   },
   "metadata": {
@@ -56123,7 +56249,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.21.1.014",
+    "version": "1.21.1.015_alpha2",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some textures )",
     "author": "cb9, FufuBS1,Gelyce ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",

@@ -12,10 +12,7 @@
     "name": "Pickaxe of the gods",
     "rarity": "COMMON",
     "specialInformation": {
-      "fixedValue": [
-        "Level 15"
-      ],
-      "name": "Titlepog"
+      "fixedValue": []
     },
     "creativeTabs": [
       "CUSTOM:Pickaxeofgodstab"
@@ -37,6 +34,6 @@
     "damageOnCrafting": false,
     "onItemInInventoryTick": "Getenchantpotg",
     "onItemInUseTick": "Moucepotg",
-    "onBlockDestroyedWithTool": "Upgradepotgv2"
+    "onBlockDestroyedWithTool": "Upgradepotgv3"
   }
 }

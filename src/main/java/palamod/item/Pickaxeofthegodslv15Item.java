@@ -1,7 +1,6 @@
 package palamod.item;
 
-import palamod.procedures.Upgradepotgv2Procedure;
-import palamod.procedures.TitlepogProcedure;
+import palamod.procedures.Upgradepotgv3Procedure;
 import palamod.procedures.MoucepotgProcedure;
 import palamod.procedures.GetenchantpotgProcedure;
 
@@ -12,15 +11,12 @@ import net.neoforged.neoforge.common.ItemAbility;
 import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.TieredItem;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.ItemStack;
@@ -32,12 +28,8 @@ import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.network.chat.Component;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
-
-import java.util.List;
 
 @EventBusSubscriber
 public class Pickaxeofthegodslv15Item extends TieredItem {
@@ -102,7 +94,7 @@ public class Pickaxeofthegodslv15Item extends TieredItem {
 	@Override
 	public boolean mineBlock(ItemStack itemstack, Level world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
 		itemstack.hurtAndBreak(1, entity, LivingEntity.getSlotForHand(entity.getUsedItemHand()));
-		Upgradepotgv2Procedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
+		Upgradepotgv3Procedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 		return true;
 	}
 
@@ -110,19 +102,6 @@ public class Pickaxeofthegodslv15Item extends TieredItem {
 	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 		itemstack.hurtAndBreak(2, entity, LivingEntity.getSlotForHand(entity.getUsedItemHand()));
 		return true;
-	}
-
-	@Override
-	@OnlyIn(Dist.CLIENT)
-	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, context, list, flag);
-		Entity entity = itemstack.getEntityRepresentation() != null ? itemstack.getEntityRepresentation() : Minecraft.getInstance().player;
-		String hoverText = TitlepogProcedure.execute(entity);
-		if (hoverText != null) {
-			for (String line : hoverText.split("\n")) {
-				list.add(Component.literal(line));
-			}
-		}
 	}
 
 	@Override

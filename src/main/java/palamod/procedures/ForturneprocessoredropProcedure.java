@@ -51,50 +51,60 @@ public class ForturneprocessoredropProcedure {
 				|| !((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
 						.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("palamod:smelt")))) != 0))
 				&& !(getEntityGameType(entity) == GameType.CREATIVE)) {
-			if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.PALADIUM_ORE.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_PALADIUM_ORE.get()
-					|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_PALADIUM_ORE.get()) {
-				drop = new ItemStack(PalamodModItems.PALADIUM_RAW_ORE.get()).copy();
-			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.TITANE_ORE.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_TITANE_ORE.get()
-					|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_TITANE_ORE.get()) {
-				drop = new ItemStack(PalamodModItems.TITANE_RAW_ORE.get()).copy();
-			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.AMETHYST_ORE.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_AMETHYST_ORE.get()
-					|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_AMETHYST_ORE.get()) {
-				drop = new ItemStack(PalamodModItems.AMETHYST_RAW_ORE.get()).copy();
-			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.PALADIUM_GREEN_ORE.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_GREEN_PALADIUM_ORE.get()
-					|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_GREEN_PALADIUM_ORE.get()) {
-				drop = new ItemStack(PalamodModItems.GREEN_PALADIUM_RAW_ORE.get()).copy();
-			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.FINDIUM_ORE.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_FINDIUM_ORE.get()
-					|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_FINDIUM_ORE.get()) {
-				drop = new ItemStack(PalamodModItems.FINDIUM.get()).copy();
-			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.ENDIUM_NUGGET_ORE.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_ENDIUM_NUGGET_ORE.get()
-					|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_ENDIUM_NUGGET_ORE.get()) {
-				drop = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
-			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_COAL_ORE.get()) {
-				drop = new ItemStack(Items.COAL).copy();
-			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_IRON_ORE.get()) {
-				drop = new ItemStack(Items.RAW_IRON).copy();
-			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_DIAMOND_ORE.get()) {
-				drop = new ItemStack(Items.DIAMOND).copy();
-			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_GOLD_ORE.get()) {
-				drop = new ItemStack(Items.RAW_GOLD).copy();
-			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_REDSTONE_ORE.get()) {
-				drop = new ItemStack(Items.REDSTONE).copy();
-			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_LAPIS_LAZULIS_ORE.get()) {
-				drop = new ItemStack(Items.LAPIS_LAZULI).copy();
-			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_TRIXIUM_ORE.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.TRIXIUM_ORE.get()
-					|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_TRIXIUM_ORE.get()) {
-				drop = new ItemStack(PalamodModItems.TRIXIUM.get()).copy();
-			} else {
-				drop = new ItemStack(Blocks.BEDROCK).copy();
-			}
-			if (!(drop.getItem() == Blocks.BEDROCK.asItem())) {
-				for (int _i1 = 0; _i1 < (int) GetFortuneBonusAmountProcedure
-						.execute((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE))); _i1++) {
-					if (world instanceof ServerLevel _level) {
-						ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, drop);
-						entityToSpawn.setPickUpDelay(0);
-						_level.addFreshEntity(entityToSpawn);
+			if (!((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.SILK_TOUCH)) != 0)) {
+				if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.PALADIUM_ORE.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_PALADIUM_ORE.get()
+						|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_PALADIUM_ORE.get()) {
+					drop = new ItemStack(PalamodModItems.PALADIUM_RAW_ORE.get()).copy();
+				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.TITANE_ORE.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_TITANE_ORE.get()
+						|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_TITANE_ORE.get()) {
+					drop = new ItemStack(PalamodModItems.TITANE_RAW_ORE.get()).copy();
+				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.AMETHYST_ORE.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_AMETHYST_ORE.get()
+						|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_AMETHYST_ORE.get()) {
+					drop = new ItemStack(PalamodModItems.AMETHYST_RAW_ORE.get()).copy();
+				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.PALADIUM_GREEN_ORE.get()
+						|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_GREEN_PALADIUM_ORE.get()
+						|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_GREEN_PALADIUM_ORE.get()) {
+					drop = new ItemStack(PalamodModItems.GREEN_PALADIUM_RAW_ORE.get()).copy();
+				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.FINDIUM_ORE.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_FINDIUM_ORE.get()
+						|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_FINDIUM_ORE.get()) {
+					drop = new ItemStack(PalamodModItems.FINDIUM.get()).copy();
+				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.ENDIUM_NUGGET_ORE.get()
+						|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_ENDIUM_NUGGET_ORE.get()
+						|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_ENDIUM_NUGGET_ORE.get()) {
+					drop = new ItemStack(PalamodModItems.ENDIUM_NUGGET.get()).copy();
+				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_COAL_ORE.get()) {
+					drop = new ItemStack(Items.COAL).copy();
+				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_IRON_ORE.get()) {
+					drop = new ItemStack(Items.RAW_IRON).copy();
+				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_DIAMOND_ORE.get()) {
+					drop = new ItemStack(Items.DIAMOND).copy();
+				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_GOLD_ORE.get()) {
+					drop = new ItemStack(Items.RAW_GOLD).copy();
+				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_REDSTONE_ORE.get()) {
+					drop = new ItemStack(Items.REDSTONE).copy();
+				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_LAPIS_LAZULIS_ORE.get()) {
+					drop = new ItemStack(Items.LAPIS_LAZULI).copy();
+				} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.SOFTENED_TRIXIUM_ORE.get() || (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.TRIXIUM_ORE.get()
+						|| (world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PalamodModBlocks.DEEPSLATE_TRIXIUM_ORE.get()) {
+					drop = new ItemStack(PalamodModItems.TRIXIUM.get()).copy();
+				} else {
+					drop = new ItemStack(Blocks.BEDROCK).copy();
+				}
+				if (!(drop.getItem() == Blocks.BEDROCK.asItem())) {
+					for (int _i1 = 0; _i1 < (int) GetFortuneBonusAmountProcedure
+							.execute((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.FORTUNE))); _i1++) {
+						if (world instanceof ServerLevel _level) {
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, drop);
+							entityToSpawn.setPickUpDelay(0);
+							_level.addFreshEntity(entityToSpawn);
+						}
 					}
+				}
+			} else {
+				if (world instanceof ServerLevel _level) {
+					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, (new ItemStack((world.getBlockState(BlockPos.containing(x, y, z))).getBlock())));
+					entityToSpawn.setPickUpDelay(0);
+					_level.addFreshEntity(entityToSpawn);
 				}
 			}
 		}

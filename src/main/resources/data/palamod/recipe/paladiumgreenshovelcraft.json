@@ -1,18 +1,20 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "group": "green_paladium_craft_group",
   "category": "equipment",
-  "ingredients": [
-    {
+  "pattern": [
+    "a",
+    "b",
+    "b"
+  ],
+  "key": {
+    "a": {
       "item": "palamod:green_paladium_ingot"
     },
-    {
-      "item": "minecraft:stick"
-    },
-    {
+    "b": {
       "item": "minecraft:stick"
     }
-  ],
+  },
   "result": {
     "id": "palamod:green_paladium_shovel",
     "count": 1
