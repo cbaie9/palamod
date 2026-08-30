@@ -138,6 +138,13 @@ public class PalahelpneworeliquidScreen extends AbstractContainerScreen<Palahelp
 			}
 			customTooltipShown = true;
 		}
+		if (mouseX > leftPos + 260 && mouseX < leftPos + 300 && mouseY > topPos + 144 && mouseY < topPos + 168) {
+			if (Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_go_to_palahelp_command").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpneworeliquid.tooltip_go_to_palahelp_command").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
+			customTooltipShown = true;
+		}
 		if (!customTooltipShown)
 			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -268,6 +275,12 @@ public class PalahelpneworeliquidScreen extends AbstractContainerScreen<Palahelp
 		this.addRenderableWidget(imagebutton_arrow_palahelp_left_off);
 		imagebutton_arrow_palahelp_right_off = new ImageButton(this.leftPos + 262, this.topPos + 146, 41, 20,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_palahelp_right_off.png"), ResourceLocation.parse("palamod:textures/screens/arrow_palahelp_right_on.png")), e -> {
+					int x = PalahelpneworeliquidScreen.this.x;
+					int y = PalahelpneworeliquidScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new PalahelpneworeliquidButtonMessage(2, x, y, z));
+						PalahelpneworeliquidButtonMessage.handleButtonAction(entity, 2, x, y, z);
+					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {

@@ -32,7 +32,7 @@
             "falpha": 0.0
           },
           "hasShadow": true,
-          "x": 98,
+          "x": 69,
           "y": 41,
           "locked": false
         }
@@ -58,13 +58,97 @@
         "type": "button",
         "data": {
           "name": "button_xpgain",
-          "text": "xpGain",
+          "text": "Help for gaining experience",
           "isUndecorated": false,
           "onClick": "ConnectPalahelpJobsXpgain",
-          "width": 55,
+          "width": 141,
           "height": 20,
-          "x": 234,
-          "y": 168,
+          "x": 224,
+          "y": 109,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_more_information_on_thenjobs_sy",
+          "text": {
+            "fixedValue": "More information on the\\nJobs system can be\\nfound below with the Jobs\\nexperience GUI"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 229,
+          "y": 42,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_palahelp_left_off",
+          "image": "arrow_palahelp_left_off.png",
+          "hoveredImage": "arrow_palahelp_left_on.png",
+          "onClick": "ConnectNewPalahelpCommand",
+          "x": 71,
+          "y": 174,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_access_jobs_xpgain_gui",
+          "text": {
+            "fixedValue": "Access Jobs XpGain GUI"
+          },
+          "width": 141,
+          "height": 20,
+          "x": 224,
+          "y": 109,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_sommaire_btn",
+          "image": "sommaire_btn.png",
+          "hoveredImage": "sommaire_btn.png",
+          "onClick": "ConnectNewPalahelp",
+          "x": 180,
+          "y": 29,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_tra_dreturntosumarry",
+          "text": {
+            "fixedValue": "",
+            "name": "TRADreturntosumarry"
+          },
+          "width": 18,
+          "height": 20,
+          "x": 178,
+          "y": 29,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_go_to_palahelp_commands",
+          "text": {
+            "fixedValue": "Go to Palahelp Commands"
+          },
+          "width": 45,
+          "height": 24,
+          "x": 69,
+          "y": 172,
           "locked": false
         }
       }

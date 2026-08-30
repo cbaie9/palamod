@@ -2,6 +2,8 @@ package palamod.client.gui;
 
 import palamod.world.inventory.PalahelpJobsMenu;
 
+import palamod.procedures.TRADreturntosumarryProcedure;
+
 import palamod.network.PalahelpJobsButtonMessage;
 
 import palamod.init.PalamodModScreens;
@@ -14,6 +16,8 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.WidgetSprites;
+import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
@@ -28,6 +32,8 @@ public class PalahelpJobsScreen extends AbstractContainerScreen<PalahelpJobsMenu
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
 	private Button button_xpgain;
+	private ImageButton imagebutton_arrow_palahelp_left_off;
+	private ImageButton imagebutton_sommaire_btn;
 	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/template_livre.png");
 
 	public PalahelpJobsScreen(PalahelpJobsMenu container, Inventory inventory, Component text) {
@@ -50,7 +56,29 @@ public class PalahelpJobsScreen extends AbstractContainerScreen<PalahelpJobsMenu
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		boolean customTooltipShown = false;
+		if (mouseX > leftPos + 170 && mouseX < leftPos + 311 && mouseY > topPos + 79 && mouseY < topPos + 99) {
+			if (Component.translatable("gui.palamod.palahelp_jobs.tooltip_access_jobs_xpgain_gui").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelp_jobs.tooltip_access_jobs_xpgain_gui").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 124 && mouseX < leftPos + 142 && mouseY > topPos + -1 && mouseY < topPos + 19) {
+			if (TRADreturntosumarryProcedure.execute() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(TRADreturntosumarryProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 15 && mouseX < leftPos + 60 && mouseY > topPos + 142 && mouseY < topPos + 166) {
+			if (Component.translatable("gui.palamod.palahelp_jobs.tooltip_go_to_palahelp_commands").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelp_jobs.tooltip_go_to_palahelp_commands").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
@@ -77,13 +105,19 @@ public class PalahelpJobsScreen extends AbstractContainerScreen<PalahelpJobsMenu
 		int yOffset = 0;
 		yOffset = 0;
 		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelp_jobs.label_the_jobs").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 44, 11 + yOffset, -1, true);
+			guiGraphics.drawString(this.font, actualComponent, 15, 11 + yOffset, -1, true);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		yOffset = 0;
 		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelp_jobs.label_the_jobs_is_a_level_basednsyste").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 15, 29 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelp_jobs.label_more_information_on_thenjobs_sy").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 175, 12 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
@@ -99,7 +133,37 @@ public class PalahelpJobsScreen extends AbstractContainerScreen<PalahelpJobsMenu
 				PacketDistributor.sendToServer(new PalahelpJobsButtonMessage(0, x, y, z));
 				PalahelpJobsButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 180, this.topPos + 138, 55, 20).build();
+		}).bounds(this.leftPos + 170, this.topPos + 79, 141, 20).build();
 		this.addRenderableWidget(button_xpgain);
+		imagebutton_arrow_palahelp_left_off = new ImageButton(this.leftPos + 17, this.topPos + 144, 41, 20,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_palahelp_left_off.png"), ResourceLocation.parse("palamod:textures/screens/arrow_palahelp_left_on.png")), e -> {
+					int x = PalahelpJobsScreen.this.x;
+					int y = PalahelpJobsScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new PalahelpJobsButtonMessage(1, x, y, z));
+						PalahelpJobsButtonMessage.handleButtonAction(entity, 1, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addRenderableWidget(imagebutton_arrow_palahelp_left_off);
+		imagebutton_sommaire_btn = new ImageButton(this.leftPos + 126, this.topPos + -1, 14, 18,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/sommaire_btn.png"), ResourceLocation.parse("palamod:textures/screens/sommaire_btn.png")), e -> {
+					int x = PalahelpJobsScreen.this.x;
+					int y = PalahelpJobsScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new PalahelpJobsButtonMessage(2, x, y, z));
+						PalahelpJobsButtonMessage.handleButtonAction(entity, 2, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addRenderableWidget(imagebutton_sommaire_btn);
 	}
 }

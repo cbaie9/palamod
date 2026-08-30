@@ -1,5 +1,7 @@
 package palamod.network;
 
+import palamod.procedures.ConnectnewOreLiquidsPalahelpProcedure;
+import palamod.procedures.ConnectPalahelpJobsProcedure;
 import palamod.procedures.ConnectNewPalahelpProcedure;
 
 import palamod.PalamodMod;
@@ -48,9 +50,17 @@ public record PalahelpnewCommandButtonMessage(int buttonID, int x, int y, int z)
 		// security measure to prevent arbitrary chunk generation
 		if (!world.getChunkSource().hasChunk(SectionPos.blockToSectionCoord(x), SectionPos.blockToSectionCoord(z)))
 			return;
+		if (buttonID == 0) {
+
+			ConnectnewOreLiquidsPalahelpProcedure.execute(world, x, y, z, entity);
+		}
 		if (buttonID == 1) {
 
 			ConnectNewPalahelpProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 2) {
+
+			ConnectPalahelpJobsProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

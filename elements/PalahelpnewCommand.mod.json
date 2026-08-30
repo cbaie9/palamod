@@ -4,7 +4,7 @@
   "definition": {
     "type": 0,
     "width": 320,
-    "height": 182,
+    "height": 180,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": false,
@@ -219,7 +219,7 @@
             "falpha": 0.0
           },
           "hasShadow": false,
-          "x": 71,
+          "x": 74,
           "y": 169,
           "locked": false
         }
@@ -230,8 +230,9 @@
           "name": "imagebutton_arrow_palahelp_left_off",
           "image": "arrow_palahelp_left_off.png",
           "hoveredImage": "arrow_palahelp_left_on.png",
-          "x": 71,
-          "y": 179,
+          "onClick": "ConnectnewOreLiquidsPalahelp",
+          "x": 74,
+          "y": 180,
           "locked": false
         }
       },
@@ -496,7 +497,7 @@
           },
           "width": 31,
           "height": 10,
-          "x": 73,
+          "x": 74,
           "y": 170,
           "locked": false
         }
@@ -647,6 +648,46 @@
           "hasShadow": false,
           "x": 224,
           "y": 103,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_go_to_palahelp_ores_and_liquids",
+          "text": {
+            "fixedValue": "Go to Palahelp Ores and liquids"
+          },
+          "width": 37,
+          "height": 20,
+          "x": 74,
+          "y": 180,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_palahelp_right_off",
+          "image": "arrow_palahelp_right_off.png",
+          "hoveredImage": "arrow_palahelp_right_on.png",
+          "onClick": "ConnectPalahelpJobs",
+          "x": 318,
+          "y": 180,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_go_to_palahelp_jobs",
+          "text": {
+            "fixedValue": "Go to Palahelp Jobs"
+          },
+          "width": 42,
+          "height": 24,
+          "x": 318,
+          "y": 177,
           "locked": false
         }
       }

@@ -1740,5 +1740,11 @@
   "gui.palamod.crusherpalahelpgui.label_paladium_crusher_wiki": "Paladium crusher wiki",
   "item.palamod.pickaxe_of_the_gods_lv16.description_0": "Level 16",
   "item.palamod.pickaxe_of_the_gods_lv19.description_0": "Level 19",
-  "item.palamod.pickaxe_of_the_gods_lv20.description_0": "Level 20"
+  "item.palamod.pickaxe_of_the_gods_lv20.description_0": "Level 20",
+  "gui.palamod.palahelp_jobs.label_more_information_on_thenjobs_sy": "More information on the\\nJobs system can be\\nfound below with\\nthe Jobs experience GUI",
+  "gui.palamod.palahelp_jobs.tooltip_access_jobs_xpgain_gui": "Access Jobs XpGain GUI",
+  "gui.palamod.palahelpneworeliquid.tooltip_go_to_palahelp_command": "Go to Palahelp Command",
+  "gui.palamod.palahelpnew_command.tooltip_go_to_palahelp_ores_and_liquids": "Go to Palahelp Ores and liquids",
+  "gui.palamod.palahelpnew_command.tooltip_go_to_palahelp_jobs": "Go to Palahelp Jobs",
+  "gui.palamod.palahelp_jobs.tooltip_go_to_palahelp_commands": "Go to Palahelp Commands"
 }

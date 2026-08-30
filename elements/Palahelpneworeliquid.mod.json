@@ -460,6 +460,7 @@
           "name": "imagebutton_arrow_palahelp_right_off",
           "image": "arrow_palahelp_right_off.png",
           "hoveredImage": "arrow_palahelp_right_on.png",
+          "onClick": "ConnectNewPalahelpCommand",
           "x": 317,
           "y": 178,
           "locked": false
@@ -476,6 +477,20 @@
           "height": 25,
           "x": 158,
           "y": 174,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_go_to_palahelp_command",
+          "text": {
+            "fixedValue": "Go to Palahelp Command"
+          },
+          "width": 40,
+          "height": 24,
+          "x": 315,
+          "y": 176,
           "locked": false
         }
       }

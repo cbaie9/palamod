@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#neoforge:green_paladium_ore",
+      "required": false
+    },
+    {
+      "id": "#neoforge:amethyst_ore",
+      "required": false
+    },
+    {
+      "id": "#neoforge:paladium_ore",
+      "required": false
+    },
+    {
+      "id": "#neoforge:titane_ore",
+      "required": false
+    },
+    {
+      "id": "#minecraft:findium_ore",
+      "required": false
+    },
+    {
+      "id": "#neoforge:endium_ore",
+      "required": false
+    }
+  ]
+}
