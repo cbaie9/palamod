@@ -11,16 +11,6 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "image",
-        "data": {
-          "image": "crusherpalahelpgui.png",
-          "use1Xscale": false,
-          "x": 3,
-          "y": 21,
-          "locked": false
-        }
-      },
-      {
         "type": "label",
         "data": {
           "name": "label_paladium_crusher_wiki",
@@ -28,210 +18,12 @@
             "fixedValue": "Palahelp :  crusher "
           },
           "color": {
-            "value": -1,
+            "value": -13421773,
             "falpha": 0.0
           },
           "hasShadow": false,
-          "x": 138,
-          "y": 24,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_voici_le_crusher_la_machine_per",
-          "text": {
-            "fixedValue": "Voici le crusher, la machine permetant, avec",
-            "name": "Palahelpcrusher0"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 8,
-          "y": 48,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_des_fruit_de_fabriquer_des_miner",
-          "text": {
-            "fixedValue": "des fruit de fabriquer des minerais dont",
-            "name": "Palahelpcrusher1"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 8,
-          "y": 60,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_lendium_entre_autre_le_princip",
-          "text": {
-            "fixedValue": "l'endium entre autre. Le principe est simple",
-            "name": "Palahelpcrusher2"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 7,
-          "y": 72,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_il_faut_mettre_du_fuel_et_des_f",
-          "text": {
-            "fixedValue": "Il faut mettre du fuel* et des fruit dans le",
-            "name": "Palahelpcrusher3"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 8,
-          "y": 84,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_crusher_le_fuel_est_soit_le_gol",
-          "text": {
-            "fixedValue": "crusher. Le fuel est soit le gold mixed coal,",
-            "name": "Palahelpcrusher4"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 8,
-          "y": 95,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_titane_soit_le_titane_mixed",
-          "text": {
-            "fixedValue": "( titane ) soit le titane mixed coal ( paladium) ou le palamixed coal pour",
-            "name": "Palahelpcrusher6"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 7,
-          "y": 108,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_lendium_pour_celuici_il_faudr",
-          "text": {
-            "fixedValue": "L'endium. Pour celui-ci il faudra insérer 128 palamixed et 128 orangeblue puis",
-            "name": "Palahelpcrusher7"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 7,
-          "y": 121,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_appuyer_sur_le_bouton_start_fus",
-          "text": {
-            "fixedValue": "Appuyer sur le bouton \"start fusion\" vous donnera 1 nugget quand tout les",
-            "name": "Palahelpcrusher8"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 7,
-          "y": 133,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_lment_auront_t_insrs",
-          "text": {
-            "fixedValue": "élément auront été insérés.",
-            "name": "Palahelpcrusher9"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 8,
-          "y": 147,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_note_vous_ntes_pas_obliger_d",
-          "text": {
-            "fixedValue": "Note : vous n'êtes pas obliger d'inséré 128 de chaque mais il aura une chance",
-            "name": "Palahelpcrusher12"
-          },
-          "color": {
-            "value": -26368,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 9,
-          "y": 170,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_que_le_nugget_napparaise_prob",
-          "text": {
-            "fixedValue": "que le nugget n'apparaise [ probabilité tant la chance que le nugget appairaise",
-            "name": "Palahelpcrusher13"
-          },
-          "color": {
-            "value": -26368,
-            "falpha": 0.0
-          },
-          "hasShadow": false,
-          "x": 8,
-          "y": 181,
+          "x": 90,
+          "y": 52,
           "locked": false
         }
       },
@@ -240,7 +32,7 @@
         "data": {
           "name": "label_11_v1",
           "text": {
-            "fixedValue": "1/1 v2.1"
+            "fixedValue": "1/1 v3.0"
           },
           "color": {
             "value": -1,
@@ -249,66 +41,6 @@
           "hasShadow": false,
           "x": 378,
           "y": 204,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "mid_gray_line.png",
-          "use1Xscale": false,
-          "x": 102,
-          "y": 19,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "left_gray_line.png",
-          "use1Xscale": false,
-          "x": 2,
-          "y": 19,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "crusher_front.png",
-          "use1Xscale": false,
-          "x": 9,
-          "y": 23,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "mid_gray_line.png",
-          "use1Xscale": false,
-          "x": 202,
-          "y": 19,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "right_gray_line.png",
-          "use1Xscale": false,
-          "x": 323,
-          "y": 19,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "mid_gray_line.png",
-          "use1Xscale": false,
-          "x": 279,
-          "y": 19,
           "locked": false
         }
       },
@@ -367,8 +99,8 @@
           "image": "book_button.png",
           "hoveredImage": "book_button_hover.png",
           "onClick": "Connectpalahelpcrushercraft",
-          "x": 305,
-          "y": 23,
+          "x": 71,
+          "y": 181,
           "locked": false
         }
       },
@@ -381,8 +113,8 @@
           },
           "width": 20,
           "height": 18,
-          "x": 305,
-          "y": 23,
+          "x": 71,
+          "y": 181,
           "locked": false
         }
       },
@@ -398,6 +130,94 @@
           "height": 16,
           "x": 399,
           "y": 23,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_this_is_the_crusher_the_machine",
+          "text": {
+            "fixedValue": "This is the crusher, the\\nmachine who permiter you\\nto with fruits create \\nendium. The process is \\nsimple, you need to mix fuel\\nand fruits to obtain modded\\ningots like endium. "
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 68,
+          "y": 65,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_to_finish_the_creation_of_the_in",
+          "text": {
+            "fixedValue": "To finish the creation of\\nthe ingot press the \\n\"start fusion\" button "
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 226,
+          "y": 58,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_note_its_not_mandatory_to_put",
+          "text": {
+            "fixedValue": "Note : it's not mandatory to\\nput 128 fruit and fuel in \\nthe crusher but there is a\\nchancethe nugget don't \\nappear\\n[ 128 is 100% to appear ]"
+          },
+          "color": {
+            "value": -26368,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 225,
+          "y": 140,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "template_livre.png",
+          "use1Xscale": false,
+          "x": 54,
+          "y": 39,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "crusher_front.png",
+          "use1Xscale": false,
+          "x": 72,
+          "y": 48,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_you_can_see_all_the_crafts_here",
+          "text": {
+            "fixedValue": "You can see all the crafts\\nhere"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 68,
+          "y": 159,
           "locked": false
         }
       }

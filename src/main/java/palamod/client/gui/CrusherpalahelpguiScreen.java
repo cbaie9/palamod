@@ -2,7 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.CrusherpalahelpguiMenu;
 
-import palamod.procedures.*;
+import palamod.procedures.ClosetheguitransProcedure;
 
 import palamod.network.CrusherpalahelpguiButtonMessage;
 
@@ -35,13 +35,8 @@ public class CrusherpalahelpguiScreen extends AbstractContainerScreen<Crusherpal
 	private ImageButton imagebutton_arrow_adminshop;
 	private ImageButton imagebutton_home_pixel_adminshop;
 	private ImageButton imagebutton_book_button;
-	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/crusherpalahelpgui.png");
-	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
-	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/left_gray_line.png");
-	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/crusher_front.png");
-	private static final ResourceLocation IMAGE_4 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
-	private static final ResourceLocation IMAGE_5 = ResourceLocation.parse("palamod:textures/screens/right_gray_line.png");
-	private static final ResourceLocation IMAGE_6 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/template_livre.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/crusher_front.png");
 
 	public CrusherpalahelpguiScreen(CrusherpalahelpguiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -64,7 +59,7 @@ public class CrusherpalahelpguiScreen extends AbstractContainerScreen<Crusherpal
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
-		if (mouseX > leftPos + 301 && mouseX < leftPos + 321 && mouseY > topPos + 3 && mouseY < topPos + 21) {
+		if (mouseX > leftPos + 67 && mouseX < leftPos + 87 && mouseY > topPos + 161 && mouseY < topPos + 179) {
 			if (Component.translatable("gui.palamod.crusherpalahelpgui.tooltip_see_craft_for_crusher").getString() != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.crusherpalahelpgui.tooltip_see_craft_for_crusher").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
 						mouseY);
@@ -86,13 +81,8 @@ public class CrusherpalahelpguiScreen extends AbstractContainerScreen<Crusherpal
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(IMAGE_0, this.leftPos + -1, this.topPos + 1, 0, 0, 420, 200, 420, 200);
-		guiGraphics.blit(IMAGE_1, this.leftPos + 98, this.topPos + -1, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(IMAGE_2, this.leftPos + -2, this.topPos + -1, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(IMAGE_3, this.leftPos + 5, this.topPos + 3, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(IMAGE_4, this.leftPos + 198, this.topPos + -1, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(IMAGE_5, this.leftPos + 319, this.topPos + -1, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(IMAGE_6, this.leftPos + 275, this.topPos + -1, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_0, this.leftPos + 50, this.topPos + 19, 0, 0, 320, 180, 320, 180);
+		guiGraphics.blit(IMAGE_1, this.leftPos + 68, this.topPos + 28, 0, 0, 16, 16, 16, 16);
 		RenderSystem.disableBlend();
 	}
 
@@ -111,79 +101,37 @@ public class CrusherpalahelpguiScreen extends AbstractContainerScreen<Crusherpal
 		int yOffset = 0;
 		yOffset = 0;
 		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.crusherpalahelpgui.label_paladium_crusher_wiki").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 134, 4 + yOffset, -1, false);
-			heightPadding = 2;
-			yOffset += this.font.lineHeight + heightPadding;
-		}
-		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpcrusher0Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 4, 28 + yOffset, -12829636, false);
-			heightPadding = 2;
-			yOffset += this.font.lineHeight + heightPadding;
-		}
-		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpcrusher1Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 4, 40 + yOffset, -12829636, false);
-			heightPadding = 2;
-			yOffset += this.font.lineHeight + heightPadding;
-		}
-		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpcrusher2Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 3, 52 + yOffset, -12829636, false);
-			heightPadding = 2;
-			yOffset += this.font.lineHeight + heightPadding;
-		}
-		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpcrusher3Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 4, 64 + yOffset, -12829636, false);
-			heightPadding = 2;
-			yOffset += this.font.lineHeight + heightPadding;
-		}
-		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpcrusher4Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 4, 75 + yOffset, -12829636, false);
-			heightPadding = 2;
-			yOffset += this.font.lineHeight + heightPadding;
-		}
-		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpcrusher6Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 3, 88 + yOffset, -12829636, false);
-			heightPadding = 2;
-			yOffset += this.font.lineHeight + heightPadding;
-		}
-		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpcrusher7Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 3, 101 + yOffset, -12829636, false);
-			heightPadding = 2;
-			yOffset += this.font.lineHeight + heightPadding;
-		}
-		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpcrusher8Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 3, 113 + yOffset, -12829636, false);
-			heightPadding = 2;
-			yOffset += this.font.lineHeight + heightPadding;
-		}
-		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpcrusher9Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 4, 127 + yOffset, -12829636, false);
-			heightPadding = 2;
-			yOffset += this.font.lineHeight + heightPadding;
-		}
-		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpcrusher12Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 5, 150 + yOffset, -26368, false);
-			heightPadding = 2;
-			yOffset += this.font.lineHeight + heightPadding;
-		}
-		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Palahelpcrusher13Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 4, 161 + yOffset, -26368, false);
+			guiGraphics.drawString(this.font, actualComponent, 86, 32 + yOffset, -13421773, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		yOffset = 0;
 		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.crusherpalahelpgui.label_11_v1").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 374, 184 + yOffset, -1, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.crusherpalahelpgui.label_this_is_the_crusher_the_machine").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 64, 45 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.crusherpalahelpgui.label_to_finish_the_creation_of_the_in").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 222, 38 + yOffset, -65536, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.crusherpalahelpgui.label_note_its_not_mandatory_to_put").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 221, 120 + yOffset, -26368, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.crusherpalahelpgui.label_you_can_see_all_the_crafts_here").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 64, 139 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
@@ -252,7 +200,7 @@ public class CrusherpalahelpguiScreen extends AbstractContainerScreen<Crusherpal
 			}
 		};
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
-		imagebutton_book_button = new ImageButton(this.leftPos + 301, this.topPos + 3, 20, 18,
+		imagebutton_book_button = new ImageButton(this.leftPos + 67, this.topPos + 161, 20, 18,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/book_button.png"), ResourceLocation.parse("palamod:textures/screens/book_button_hover.png")), e -> {
 					int x = CrusherpalahelpguiScreen.this.x;
 					int y = CrusherpalahelpguiScreen.this.y;

@@ -52210,7 +52210,7 @@
       "item.palamod.titane_seedplanter": "Titane seedplanter",
       "gui.palamod.jobsfarmercraftgui.tooltip_cobblebreakers_titane_upgrade": "Cobblebreaker\u0027s titane upgrade",
       "block.palamod.unknownblock": "Unknown",
-      "gui.palamod.crusherpalahelpgui.label_11_v1": "1/1 v2.1",
+      "gui.palamod.crusherpalahelpgui.label_11_v1": "1/1 v3.0",
       "block.palamod.fake_paladium_ore": "Paladium Ore",
       "gui.palamod.golemtreec.golem_v_hunter1": "la voie hunter",
       "item.palamod.pickaxeofthegodslv_4.description_0": "Level 4",
@@ -52728,7 +52728,11 @@
       "gui.palamod.palahelpneworeliquid.tooltip_go_to_palahelp_command": "Go to Palahelp Command",
       "gui.palamod.palahelpnew_command.tooltip_go_to_palahelp_ores_and_liquids": "Go to Palahelp Ores and liquids",
       "gui.palamod.palahelpnew_command.tooltip_go_to_palahelp_jobs": "Go to Palahelp Jobs",
-      "gui.palamod.palahelp_jobs.tooltip_go_to_palahelp_commands": "Go to Palahelp Commands"
+      "gui.palamod.palahelp_jobs.tooltip_go_to_palahelp_commands": "Go to Palahelp Commands",
+      "gui.palamod.crusherpalahelpgui.label_this_is_the_crusher_the_machine": "This is the crusher, the\\nmachine who permiter you\\nto with fruits create \\nendium. The process is \\nsimple, you need to mix fuel\\nand fruits to obtain modded\\ningots like endium. ",
+      "gui.palamod.crusherpalahelpgui.label_to_finish_the_creation_of_the_in": "To finish the creation of\\nthe ingot press the \\n\"start fusion\" button ",
+      "gui.palamod.crusherpalahelpgui.label_note_its_not_mandatory_to_put": "Note : it\u0027s not mandatory to\\nput 128 fruit and fuel in \\nthe crusher but there is a\\nchancethe nugget don\u0027t \\nappear\\n[ 128 is 100% to appear ]",
+      "gui.palamod.crusherpalahelpgui.label_you_can_see_all_the_crafts_here": "You can see all the crafts\\nhere"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54478,7 +54482,11 @@
       "gui.palamod.palahelpneworeliquid.tooltip_go_to_palahelp_command": "Go to Palahelp Command",
       "gui.palamod.palahelpnew_command.tooltip_go_to_palahelp_ores_and_liquids": "Go to Palahelp Ores and liquids",
       "gui.palamod.palahelpnew_command.tooltip_go_to_palahelp_jobs": "Go to Palahelp Jobs",
-      "gui.palamod.palahelp_jobs.tooltip_go_to_palahelp_commands": "Go to Palahelp Commands"
+      "gui.palamod.palahelp_jobs.tooltip_go_to_palahelp_commands": "Go to Palahelp Commands",
+      "gui.palamod.crusherpalahelpgui.label_this_is_the_crusher_the_machine": "This is the crusher, the machine who\\npermiter you to with fruits create endium\\nThe process is simple, you need to mix fuel\\nand fruits to obtain modded ingots like\\nendium. For the fuel you can put different\\nfuels like gold mixed coal to create amethsyt,\\namethyst mixed coal for titane, titane mixed\\ncoal for paladium and paladium mixed coal for endium",
+      "gui.palamod.crusherpalahelpgui.label_to_finish_the_creation_of_the_in": "To finish the creation of the ingot  press the \"start fusion\" button ",
+      "gui.palamod.crusherpalahelpgui.label_note_its_not_mandatory_to_put": "Note : it\u0027s not mandatory to put 128 fruit and fuel in the crusher but \\nthere is a chance the nugget don\u0027t appear [ 128 is 100% to appear ]",
+      "gui.palamod.crusherpalahelpgui.label_you_can_see_all_the_crafts_here": "You can see all the crafts\\nhere"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -56228,7 +56236,11 @@
       "gui.palamod.palahelpneworeliquid.tooltip_go_to_palahelp_command": "Go to Palahelp Command",
       "gui.palamod.palahelpnew_command.tooltip_go_to_palahelp_ores_and_liquids": "Go to Palahelp Ores and liquids",
       "gui.palamod.palahelpnew_command.tooltip_go_to_palahelp_jobs": "Go to Palahelp Jobs",
-      "gui.palamod.palahelp_jobs.tooltip_go_to_palahelp_commands": "Go to Palahelp Commands"
+      "gui.palamod.palahelp_jobs.tooltip_go_to_palahelp_commands": "Go to Palahelp Commands",
+      "gui.palamod.crusherpalahelpgui.label_this_is_the_crusher_the_machine": "This is the crusher, the machine who\\npermiter you to with fruits create endium\\nThe process is simple, you need to mix fuel\\nand fruits to obtain modded ingots like\\nendium. For the fuel you can put different\\nfuels like gold mixed coal to create amethsyt,\\namethyst mixed coal for titane, titane mixed\\ncoal for paladium and paladium mixed coal for endium",
+      "gui.palamod.crusherpalahelpgui.label_to_finish_the_creation_of_the_in": "To finish the creation of the ingot  press the \"start fusion\" button ",
+      "gui.palamod.crusherpalahelpgui.label_note_its_not_mandatory_to_put": "Note : it\u0027s not mandatory to put 128 fruit and fuel in the crusher but \\nthere is a chance the nugget don\u0027t appear [ 128 is 100% to appear ]",
+      "gui.palamod.crusherpalahelpgui.label_you_can_see_all_the_crafts_here": "You can see all the crafts\\nhere"
     }
   },
   "metadata": {
@@ -56298,7 +56310,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.21.1.017",
+    "version": "1.21.1.018",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some textures )",
     "author": "cb9, FufuBS1,Gelyce ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",
