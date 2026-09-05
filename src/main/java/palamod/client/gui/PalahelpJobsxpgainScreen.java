@@ -46,7 +46,7 @@ public class PalahelpJobsxpgainScreen extends AbstractContainerScreen<PalahelpJo
 	private ImageButton imagebutton_jobs_xpgain_alchi_craft;
 	private ImageButton imagebutton_jobs_xpgain_alchi_break;
 	private ImageButton imagebutton_jobs_xpgain_hunter_kill;
-	private static final ResourceLocation BACKGROUND = ResourceLocation.parse("palamod:textures/screens/palahelp_jobsxpgain.png");
+	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/palahelp_jobsxpgain.png");
 	private static final ResourceLocation SPRITE_0 = ResourceLocation.parse("palamod:textures/screens/sprite_xpgain.png");
 	private static final ResourceLocation SPRITE_1 = ResourceLocation.parse("palamod:textures/screens/sprite_xpgain.png");
 	private static final ResourceLocation SPRITE_2 = ResourceLocation.parse("palamod:textures/screens/sprite_xpgain.png");
@@ -82,7 +82,7 @@ public class PalahelpJobsxpgainScreen extends AbstractContainerScreen<PalahelpJo
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(BACKGROUND, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+		guiGraphics.blit(IMAGE_0, this.leftPos + 0, this.topPos + 0, 0, 0, 300, 180, 300, 180);
 		if (ShowFromSlot0PalahelpJobsXpGainProcedure.execute(entity)) {
 			guiGraphics.blit(SPRITE_0, this.leftPos + 247, this.topPos + 41, Mth.clamp((int) GetSprite0PalahelpJobsXpGainProcedure.execute(world, entity) * 16, 0, 16), 0, 16, 16, 32, 16);
 		}

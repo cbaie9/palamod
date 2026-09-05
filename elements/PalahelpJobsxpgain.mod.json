@@ -7,7 +7,7 @@
     "height": 180,
     "inventoryOffsetX": 300,
     "inventoryOffsetY": 1800,
-    "renderBgLayer": true,
+    "renderBgLayer": false,
     "doesPauseGame": false,
     "components": [
       {
@@ -545,6 +545,16 @@
           "displayCondition": "IsModeHunterJobsXpgain",
           "x": 104,
           "y": 96,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "palahelp_jobsxpgain.png",
+          "use1Xscale": false,
+          "x": 64,
+          "y": 30,
           "locked": false
         }
       }
