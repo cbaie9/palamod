@@ -43,7 +43,7 @@
           "name": "imagebutton_arrow_adminshop",
           "image": "arrow_palahelp_left_off.png",
           "hoveredImage": "arrow_palahelp_left_on.png",
-          "onClick": "ConnectNewPalahelpCommand",
+          "onClick": "ConnectPalahelpJobs",
           "x": 69,
           "y": 175,
           "locked": false
@@ -311,7 +311,7 @@
         "data": {
           "name": "tooltip_return_to_previous_page_palahe",
           "text": {
-            "fixedValue": "Return to Previous Page : Palahelp Command"
+            "fixedValue": "Go to Palahelp Jobs"
           },
           "width": 41,
           "height": 21,
@@ -340,6 +340,21 @@
           "name": "imagebutton_arrow_palahelp_right_off",
           "image": "arrow_palahelp_right_off.png",
           "hoveredImage": "arrow_palahelp_right_on.png",
+          "onClick": "Connectpalahelpcrusher",
+          "x": 316,
+          "y": 176,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_go_to_palahelp_crusher",
+          "text": {
+            "fixedValue": "Go to Palahelp Crusher"
+          },
+          "width": 36,
+          "height": 20,
           "x": 316,
           "y": 176,
           "locked": false

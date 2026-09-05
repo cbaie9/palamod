@@ -291,6 +291,44 @@
           "y": 60,
           "locked": false
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_legacy_palahelp",
+          "text": "Legacy Palahelp",
+          "isUndecorated": false,
+          "onClick": "Backpalahelp",
+          "width": 100,
+          "height": 20,
+          "x": 71,
+          "y": 151,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_old_palahelp_because_this_versio",
+          "text": {
+            "fixedValue": "Old Palahelp because this version is still in developpement,\\nSome Pages of the old Palahelp may redirect to the newer version of same pages"
+          },
+          "width": 100,
+          "height": 20,
+          "x": 71,
+          "y": 151,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "paladium_block_photo.png",
+          "use1Xscale": true,
+          "x": 114,
+          "y": 62,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {

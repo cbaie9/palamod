@@ -1,5 +1,6 @@
 package palamod.network;
 
+import palamod.procedures.Connectgrinderpag1Procedure;
 import palamod.procedures.ConnectPalahelpJobsXpgainProcedure;
 import palamod.procedures.ConnectNewPalahelpProcedure;
 import palamod.procedures.ConnectNewPalahelpCommandProcedure;
@@ -61,6 +62,10 @@ public record PalahelpJobsButtonMessage(int buttonID, int x, int y, int z) imple
 		if (buttonID == 2) {
 
 			ConnectNewPalahelpProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 3) {
+
+			Connectgrinderpag1Procedure.execute(world, x, y, z, entity);
 		}
 	}
 

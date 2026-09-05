@@ -1,6 +1,7 @@
 package palamod.command;
 
 import palamod.procedures.OpencheckssetuppalahelpProcedure;
+import palamod.procedures.ConnectNewPalahelpProcedure;
 
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;
@@ -23,7 +24,21 @@ public class PalahelpCommand {
 	public static void registerCommand(RegisterCommandsEvent event) {
 		event.getDispatcher().register(Commands.literal("palahelp")
 
-				.then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(arguments -> {
+				.executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					ConnectNewPalahelpProcedure.execute(world, x, y, z, entity);
+					return 0;
+				}).then(Commands.literal("legacy_palahelp").then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -65,7 +80,7 @@ public class PalahelpCommand {
 
 					OpencheckssetuppalahelpProcedure.execute(world, x, y, z, entity);
 					return 0;
-				}));
+				})));
 	}
 
 }

@@ -37,7 +37,9 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 	private Button button_palamachine;
 	private Button button_crusher;
 	private Button button_more;
+	private Button button_legacy_palahelp;
 	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/template_livre.png");
+	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/paladium_block_photo.png");
 
 	public NewPalahelpGuiIntroScreen(NewPalahelpGuiIntroMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -67,6 +69,13 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 			}
 			customTooltipShown = true;
 		}
+		if (mouseX > leftPos + 17 && mouseX < leftPos + 117 && mouseY > topPos + 121 && mouseY < topPos + 141) {
+			if (Component.translatable("gui.palamod.new_palahelp_gui_intro.tooltip_old_palahelp_because_this_versio").getString() != null) {
+				guiGraphics.renderComponentTooltip(font,
+						Arrays.stream(Component.translatable("gui.palamod.new_palahelp_gui_intro.tooltip_old_palahelp_because_this_versio").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
+			customTooltipShown = true;
+		}
 		if (!customTooltipShown)
 			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -77,6 +86,7 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(IMAGE_0, this.leftPos + 1, this.topPos + -2, 0, 0, 320, 180, 320, 180);
+		guiGraphics.blit(IMAGE_1, this.leftPos + 60, this.topPos + 32, 0, 0, 85, 84, 85, 84);
 		RenderSystem.disableBlend();
 	}
 
@@ -224,5 +234,14 @@ public class NewPalahelpGuiIntroScreen extends AbstractContainerScreen<NewPalahe
 		button_more = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_more"), e -> {
 		}).bounds(this.leftPos + 242, this.topPos + 134, 61, 20).build();
 		this.addRenderableWidget(button_more);
+		button_legacy_palahelp = Button.builder(Component.translatable("gui.palamod.new_palahelp_gui_intro.button_legacy_palahelp"), e -> {
+			int x = NewPalahelpGuiIntroScreen.this.x;
+			int y = NewPalahelpGuiIntroScreen.this.y;
+			if (true) {
+				PacketDistributor.sendToServer(new NewPalahelpGuiIntroButtonMessage(10, x, y, z));
+				NewPalahelpGuiIntroButtonMessage.handleButtonAction(entity, 10, x, y, z);
+			}
+		}).bounds(this.leftPos + 17, this.topPos + 121, 100, 20).build();
+		this.addRenderableWidget(button_legacy_palahelp);
 	}
 }

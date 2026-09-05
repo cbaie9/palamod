@@ -84,6 +84,10 @@ public record NewPalahelpGuiIntroButtonMessage(int buttonID, int x, int y, int z
 
 			ConnectpalahelpcrusherProcedure.execute(world, x, y, z, entity);
 		}
+		if (buttonID == 10) {
+
+			BackpalahelpProcedure.execute(world, x, y, z, entity);
+		}
 	}
 
 	@SubscribeEvent

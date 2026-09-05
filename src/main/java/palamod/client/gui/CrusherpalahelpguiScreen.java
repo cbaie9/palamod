@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.CrusherpalahelpguiMenu;
 
+import palamod.procedures.TRADreturntosumarryProcedure;
 import palamod.procedures.ClosetheguitransProcedure;
 
 import palamod.network.CrusherpalahelpguiButtonMessage;
@@ -35,6 +36,8 @@ public class CrusherpalahelpguiScreen extends AbstractContainerScreen<Crusherpal
 	private ImageButton imagebutton_arrow_adminshop;
 	private ImageButton imagebutton_home_pixel_adminshop;
 	private ImageButton imagebutton_book_button;
+	private ImageButton imagebutton_sommaire_btn;
+	private ImageButton imagebutton_arrow_palahelp_left_off;
 	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/template_livre.png");
 	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/crusher_front.png");
 
@@ -59,7 +62,7 @@ public class CrusherpalahelpguiScreen extends AbstractContainerScreen<Crusherpal
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		boolean customTooltipShown = false;
-		if (mouseX > leftPos + 67 && mouseX < leftPos + 87 && mouseY > topPos + 161 && mouseY < topPos + 179) {
+		if (mouseX > leftPos + 163 && mouseX < leftPos + 183 && mouseY > topPos + 162 && mouseY < topPos + 180) {
 			if (Component.translatable("gui.palamod.crusherpalahelpgui.tooltip_see_craft_for_crusher").getString() != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.crusherpalahelpgui.tooltip_see_craft_for_crusher").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
 						mouseY);
@@ -69,6 +72,19 @@ public class CrusherpalahelpguiScreen extends AbstractContainerScreen<Crusherpal
 		if (mouseX > leftPos + 395 && mouseX < leftPos + 411 && mouseY > topPos + 3 && mouseY < topPos + 19) {
 			if (ClosetheguitransProcedure.execute() != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(ClosetheguitransProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 224 && mouseX < leftPos + 244 && mouseY > topPos + 19 && mouseY < topPos + 38) {
+			if (TRADreturntosumarryProcedure.execute() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(TRADreturntosumarryProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 67 && mouseX < leftPos + 103 && mouseY > topPos + 164 && mouseY < topPos + 184) {
+			if (Component.translatable("gui.palamod.crusherpalahelpgui.tooltip_go_to_palahelp_grinder").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.crusherpalahelpgui.tooltip_go_to_palahelp_grinder").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
 			}
 			customTooltipShown = true;
 		}
@@ -200,7 +216,7 @@ public class CrusherpalahelpguiScreen extends AbstractContainerScreen<Crusherpal
 			}
 		};
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
-		imagebutton_book_button = new ImageButton(this.leftPos + 67, this.topPos + 161, 20, 18,
+		imagebutton_book_button = new ImageButton(this.leftPos + 163, this.topPos + 162, 20, 18,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/book_button.png"), ResourceLocation.parse("palamod:textures/screens/book_button_hover.png")), e -> {
 					int x = CrusherpalahelpguiScreen.this.x;
 					int y = CrusherpalahelpguiScreen.this.y;
@@ -215,5 +231,35 @@ public class CrusherpalahelpguiScreen extends AbstractContainerScreen<Crusherpal
 			}
 		};
 		this.addRenderableWidget(imagebutton_book_button);
+		imagebutton_sommaire_btn = new ImageButton(this.leftPos + 227, this.topPos + 19, 14, 18,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/sommaire_btn.png"), ResourceLocation.parse("palamod:textures/screens/sommaire_btn.png")), e -> {
+					int x = CrusherpalahelpguiScreen.this.x;
+					int y = CrusherpalahelpguiScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new CrusherpalahelpguiButtonMessage(5, x, y, z));
+						CrusherpalahelpguiButtonMessage.handleButtonAction(entity, 5, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addRenderableWidget(imagebutton_sommaire_btn);
+		imagebutton_arrow_palahelp_left_off = new ImageButton(this.leftPos + 67, this.topPos + 164, 41, 20,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_palahelp_left_off.png"), ResourceLocation.parse("palamod:textures/screens/arrow_palahelp_left_on.png")), e -> {
+					int x = CrusherpalahelpguiScreen.this.x;
+					int y = CrusherpalahelpguiScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new CrusherpalahelpguiButtonMessage(6, x, y, z));
+						CrusherpalahelpguiButtonMessage.handleButtonAction(entity, 6, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addRenderableWidget(imagebutton_arrow_palahelp_left_off);
 	}
 }

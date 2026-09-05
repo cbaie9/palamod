@@ -5,6 +5,6 @@
     "commandName": "palahelp",
     "type": "STANDARD",
     "permissionLevel": "No requirement",
-    "argsxml": "<xml><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"old_command\"><field name=\"procedure\">Opencheckssetuppalahelp</field></block></next></block></xml>"
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"call_procedure\"><field name=\"procedure\">ConnectNewPalahelp</field><next><block type=\"literal\"><field name=\"name\">legacy_palahelp</field><statement name=\"args\"><block type=\"old_command\"><field name=\"procedure\">Opencheckssetuppalahelp</field></block></statement></block></next></block></next></block></xml>"
   }
 }

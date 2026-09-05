@@ -1,8 +1,9 @@
 package palamod.network;
 
 import palamod.procedures.OpenexamplegrinderProcedure;
+import palamod.procedures.ConnectpalahelpcrusherProcedure;
+import palamod.procedures.ConnectPalahelpJobsProcedure;
 import palamod.procedures.ConnectNewPalahelpProcedure;
-import palamod.procedures.ConnectNewPalahelpCommandProcedure;
 
 import palamod.PalamodMod;
 
@@ -52,7 +53,7 @@ public record GrinderpalahelpguiButtonMessage(int buttonID, int x, int y, int z)
 			return;
 		if (buttonID == 0) {
 
-			ConnectNewPalahelpCommandProcedure.execute(world, x, y, z, entity);
+			ConnectPalahelpJobsProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
@@ -61,6 +62,10 @@ public record GrinderpalahelpguiButtonMessage(int buttonID, int x, int y, int z)
 		if (buttonID == 2) {
 
 			ConnectNewPalahelpProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 3) {
+
+			ConnectpalahelpcrusherProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

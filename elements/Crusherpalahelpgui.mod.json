@@ -99,8 +99,8 @@
           "image": "book_button.png",
           "hoveredImage": "book_button_hover.png",
           "onClick": "Connectpalahelpcrushercraft",
-          "x": 71,
-          "y": 181,
+          "x": 167,
+          "y": 182,
           "locked": false
         }
       },
@@ -113,8 +113,8 @@
           },
           "width": 20,
           "height": 18,
-          "x": 71,
-          "y": 181,
+          "x": 167,
+          "y": 182,
           "locked": false
         }
       },
@@ -218,6 +218,59 @@
           "hasShadow": false,
           "x": 68,
           "y": 159,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_sommaire_btn",
+          "image": "sommaire_btn.png",
+          "hoveredImage": "sommaire_btn.png",
+          "onClick": "ConnectNewPalahelp",
+          "x": 231,
+          "y": 39,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_tra_dreturntosumarry",
+          "text": {
+            "fixedValue": "",
+            "name": "TRADreturntosumarry"
+          },
+          "width": 20,
+          "height": 19,
+          "x": 228,
+          "y": 39,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_palahelp_left_off",
+          "image": "arrow_palahelp_left_off.png",
+          "hoveredImage": "arrow_palahelp_left_on.png",
+          "onClick": "Connectgrinderpag1",
+          "x": 71,
+          "y": 184,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_go_to_palahelp_grinder",
+          "text": {
+            "fixedValue": "Go to Palahelp Grinder"
+          },
+          "width": 36,
+          "height": 20,
+          "x": 71,
+          "y": 184,
           "locked": false
         }
       }

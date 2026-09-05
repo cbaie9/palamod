@@ -151,6 +151,32 @@
           "y": 172,
           "locked": false
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_palahelp_right_off",
+          "image": "arrow_palahelp_right_off.png",
+          "hoveredImage": "arrow_palahelp_right_on.png",
+          "onClick": "Connectgrinderpag1",
+          "x": 317,
+          "y": 176,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_go_to_palahelp_grinder",
+          "text": {
+            "fixedValue": "Go to Palahelp Grinder"
+          },
+          "width": 36,
+          "height": 20,
+          "x": 317,
+          "y": 176,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {

@@ -116,6 +116,13 @@ public class GrinderpalahelpguiScreen extends AbstractContainerScreen<Grinderpal
 			}
 			customTooltipShown = true;
 		}
+		if (mouseX > leftPos + 262 && mouseX < leftPos + 298 && mouseY > topPos + 146 && mouseY < topPos + 166) {
+			if (Component.translatable("gui.palamod.grinderpalahelpgui.tooltip_go_to_palahelp_crusher").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.grinderpalahelpgui.tooltip_go_to_palahelp_crusher").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
+			customTooltipShown = true;
+		}
 		if (!customTooltipShown)
 			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -242,6 +249,12 @@ public class GrinderpalahelpguiScreen extends AbstractContainerScreen<Grinderpal
 		this.addRenderableWidget(imagebutton_sommaire_btn);
 		imagebutton_arrow_palahelp_right_off = new ImageButton(this.leftPos + 262, this.topPos + 146, 41, 20,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/arrow_palahelp_right_off.png"), ResourceLocation.parse("palamod:textures/screens/arrow_palahelp_right_on.png")), e -> {
+					int x = GrinderpalahelpguiScreen.this.x;
+					int y = GrinderpalahelpguiScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new GrinderpalahelpguiButtonMessage(3, x, y, z));
+						GrinderpalahelpguiButtonMessage.handleButtonAction(entity, 3, x, y, z);
+					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {

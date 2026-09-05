@@ -52696,7 +52696,7 @@
       "gui.palamod.grinderpalahelpgui.label_here_the_3_layer_ofn_the_grinde": "Here the 3 layer of\\n the grinder\\n(Hover the images)",
       "gui.palamod.grinderpalahelpgui.tooltip_layer_1_and_3_of_the_grinder": "Layer 1 and 3 of the grinder",
       "gui.palamod.grinderpalahelpgui.tooltip_layer_2_of_the_grinder": "Layer 2 of the grinder",
-      "gui.palamod.grinderpalahelpgui.tooltip_return_to_previous_page_palahe": "Return to Previous Page : Palahelp Command",
+      "gui.palamod.grinderpalahelpgui.tooltip_return_to_previous_page_palahe": "Go to Palahelp Jobs",
       "gui.palamod.grinderpalahelpgui.tooltip_example_graphical_user_interface": "Example Graphical User Interface of the Grinder",
       "gui.palamod.palahelp_jobs.label_the_jobs": "The Jobs system",
       "gui.palamod.palahelp_jobs.label_the_jobs_is_a_level_basednsyste": "The jobs is a level based\\nsystem to unlock item and\\nfeature in the mod.\\nWays to gain experience\\nare available in the jobs\\nInterface.\\nThe jobs G.U.I can be opened\\nwith /jobs gui or with [J] ",
@@ -52732,7 +52732,12 @@
       "gui.palamod.crusherpalahelpgui.label_this_is_the_crusher_the_machine": "This is the crusher, the\\nmachine who permiter you\\nto with fruits create \\nendium. The process is \\nsimple, you need to mix fuel\\nand fruits to obtain modded\\ningots like endium. ",
       "gui.palamod.crusherpalahelpgui.label_to_finish_the_creation_of_the_in": "To finish the creation of\\nthe ingot press the \\n\"start fusion\" button ",
       "gui.palamod.crusherpalahelpgui.label_note_its_not_mandatory_to_put": "Note : it\u0027s not mandatory to\\nput 128 fruit and fuel in \\nthe crusher but there is a\\nchancethe nugget don\u0027t \\nappear\\n[ 128 is 100% to appear ]",
-      "gui.palamod.crusherpalahelpgui.label_you_can_see_all_the_crafts_here": "You can see all the crafts\\nhere"
+      "gui.palamod.crusherpalahelpgui.label_you_can_see_all_the_crafts_here": "You can see all the crafts\\nhere",
+      "gui.palamod.crusherpalahelpgui.tooltip_go_to_palahelp_grinder": "Go to Palahelp Grinder",
+      "gui.palamod.palahelp_jobs.tooltip_go_to_palahelp_grinder": "Go to Palahelp Grinder",
+      "gui.palamod.grinderpalahelpgui.tooltip_go_to_palahelp_crusher": "Go to Palahelp Crusher",
+      "gui.palamod.new_palahelp_gui_intro.tooltip_old_palahelp_because_this_versio": "Old Palahelp because this version is still in developpement,\\nSome Pages of the old Palahelp may redirect to the newer version of same pages",
+      "gui.palamod.new_palahelp_gui_intro.button_legacy_palahelp": "Legacy Palahelp"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54486,7 +54491,12 @@
       "gui.palamod.crusherpalahelpgui.label_this_is_the_crusher_the_machine": "This is the crusher, the machine who\\npermiter you to with fruits create endium\\nThe process is simple, you need to mix fuel\\nand fruits to obtain modded ingots like\\nendium. For the fuel you can put different\\nfuels like gold mixed coal to create amethsyt,\\namethyst mixed coal for titane, titane mixed\\ncoal for paladium and paladium mixed coal for endium",
       "gui.palamod.crusherpalahelpgui.label_to_finish_the_creation_of_the_in": "To finish the creation of the ingot  press the \"start fusion\" button ",
       "gui.palamod.crusherpalahelpgui.label_note_its_not_mandatory_to_put": "Note : it\u0027s not mandatory to put 128 fruit and fuel in the crusher but \\nthere is a chance the nugget don\u0027t appear [ 128 is 100% to appear ]",
-      "gui.palamod.crusherpalahelpgui.label_you_can_see_all_the_crafts_here": "You can see all the crafts\\nhere"
+      "gui.palamod.crusherpalahelpgui.label_you_can_see_all_the_crafts_here": "You can see all the crafts\\nhere",
+      "gui.palamod.crusherpalahelpgui.tooltip_go_to_palahelp_grinder": "Go to Palahelp Grinder",
+      "gui.palamod.palahelp_jobs.tooltip_go_to_palahelp_grinder": "Go to Palahelp Grinder",
+      "gui.palamod.grinderpalahelpgui.tooltip_go_to_palahelp_crusher": "Go to Palahelp Crusher",
+      "gui.palamod.new_palahelp_gui_intro.tooltip_old_palahelp_because_this_versio": "Old Palahelp because this version is still in developpement,\\nSome Pages of the old Palahelp may redirect to the newer version of same pages",
+      "gui.palamod.new_palahelp_gui_intro.button_legacy_palahelp": "Legacy Palahelp"
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -56240,7 +56250,12 @@
       "gui.palamod.crusherpalahelpgui.label_this_is_the_crusher_the_machine": "This is the crusher, the machine who\\npermiter you to with fruits create endium\\nThe process is simple, you need to mix fuel\\nand fruits to obtain modded ingots like\\nendium. For the fuel you can put different\\nfuels like gold mixed coal to create amethsyt,\\namethyst mixed coal for titane, titane mixed\\ncoal for paladium and paladium mixed coal for endium",
       "gui.palamod.crusherpalahelpgui.label_to_finish_the_creation_of_the_in": "To finish the creation of the ingot  press the \"start fusion\" button ",
       "gui.palamod.crusherpalahelpgui.label_note_its_not_mandatory_to_put": "Note : it\u0027s not mandatory to put 128 fruit and fuel in the crusher but \\nthere is a chance the nugget don\u0027t appear [ 128 is 100% to appear ]",
-      "gui.palamod.crusherpalahelpgui.label_you_can_see_all_the_crafts_here": "You can see all the crafts\\nhere"
+      "gui.palamod.crusherpalahelpgui.label_you_can_see_all_the_crafts_here": "You can see all the crafts\\nhere",
+      "gui.palamod.crusherpalahelpgui.tooltip_go_to_palahelp_grinder": "Go to Palahelp Grinder",
+      "gui.palamod.palahelp_jobs.tooltip_go_to_palahelp_grinder": "Go to Palahelp Grinder",
+      "gui.palamod.grinderpalahelpgui.tooltip_go_to_palahelp_crusher": "Go to Palahelp Crusher",
+      "gui.palamod.new_palahelp_gui_intro.tooltip_old_palahelp_because_this_versio": "Old Palahelp because this version is still in developpement,\\nSome Pages of the old Palahelp may redirect to the newer version of same pages",
+      "gui.palamod.new_palahelp_gui_intro.button_legacy_palahelp": "Legacy Palahelp"
     }
   },
   "metadata": {
