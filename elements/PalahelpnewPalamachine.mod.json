@@ -1,0 +1,616 @@
+{
+  "_fv": 89,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 400,
+    "height": 225,
+    "inventoryOffsetX": 1000,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "sticknewhelp.png",
+          "use1Xscale": false,
+          "x": 14,
+          "y": 8,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "left_gray_line.png",
+          "use1Xscale": false,
+          "x": 14,
+          "y": 8,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mid_gray_line.png",
+          "use1Xscale": false,
+          "x": 113,
+          "y": 8,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mid_gray_line.png",
+          "use1Xscale": false,
+          "x": 213,
+          "y": 8,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "right_gray_line.png",
+          "use1Xscale": false,
+          "x": 314,
+          "y": 8,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_palahelp_stick",
+          "text": {
+            "fixedValue": "Palahelp : Palamachine"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 172,
+          "y": 16,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_cross_no_button",
+          "image": "cross_no_button.png",
+          "hoveredImage": "pointed_cross_no_button.png",
+          "onClick": "Closegui",
+          "x": 393,
+          "y": 12,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_adminshop",
+          "image": "arrow_adminshop.png",
+          "hoveredImage": "arrow_adminshop_poi.png",
+          "onClick": "Connectitemmenu",
+          "x": 373,
+          "y": 12,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_home_pixel_adminshop",
+          "image": "home_pixel_adminshop.png",
+          "hoveredImage": "pointec_home_pixel_adminshop.png",
+          "onClick": "Backpalahelp",
+          "x": 356,
+          "y": 13,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 25,
+          "y": 145,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 94,
+          "y": 131,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 2,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 161,
+          "y": 145,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 3,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 57,
+          "y": 165,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 4,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 130,
+          "y": 166,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 5,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 94,
+          "y": 195,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 6,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 287,
+          "y": 131,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 7,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 287,
+          "y": 149,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 8,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 287,
+          "y": 167,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 9,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 305,
+          "y": 131,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 10,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 305,
+          "y": 149,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 11,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 305,
+          "y": 167,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 12,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 323,
+          "y": 131,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 13,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 323,
+          "y": 149,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 14,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 323,
+          "y": 167,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrow_new.png",
+          "use1Xscale": true,
+          "x": 345,
+          "y": 152,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": true
+          },
+          "id": 15,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 375,
+          "y": 149,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_effect_of_the_stick",
+          "text": {
+            "fixedValue": "The Palamachine is a block used to make all kind of item useful for craft\\nor by themself. For stick there a special page to know the effects and crafts"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 18,
+          "y": 34,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_palamachine",
+          "text": {
+            "fixedValue": "Palamachine"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 75,
+          "y": 114,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_craft",
+          "text": {
+            "fixedValue": "Crafts"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 17,
+          "y": 91,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_speed_stick",
+          "image": "speed_stick.png",
+          "hoveredImage": "speed_stick_hover_poi.png",
+          "onClick": "Palahelpstickmodespeed",
+          "x": 20,
+          "y": 12,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_jump_stick2",
+          "image": "jump_stick2.png",
+          "hoveredImage": "jump_stick_hover_poi.png",
+          "onClick": "Palahelpstickmodejump",
+          "x": 37,
+          "y": 12,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_hyperjump_stick",
+          "image": "hyperjump_stick.png",
+          "hoveredImage": "hyper_jump_stick_hover_poi.png",
+          "onClick": "Palahelpstickmodehyperjump",
+          "x": 56,
+          "y": 13,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_heal_stick",
+          "image": "heal_stick.png",
+          "hoveredImage": "heal_stick_hover_poi.png",
+          "onClick": "Palahelpstickmodeheal",
+          "x": 75,
+          "y": 12,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_damage_stick",
+          "image": "damage_stick.png",
+          "hoveredImage": "damage_stick_hover_poi.png",
+          "onClick": "Palahelpstickmodedamage",
+          "x": 93,
+          "y": 12,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_strenghtstick",
+          "image": "strenghtstick.png",
+          "hoveredImage": "strenght_stick_hover_poi.png",
+          "onClick": "Palahelpstickmodestrenght",
+          "x": 109,
+          "y": 13,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_stickofgod",
+          "image": "stickofgod.png",
+          "hoveredImage": "stick_of_gods_hover_poi.png",
+          "onClick": "Palahelpstickmodesog",
+          "x": 127,
+          "y": 13,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mid_gray_line.png",
+          "use1Xscale": false,
+          "x": 274,
+          "y": 8,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_closetheguitrans",
+          "text": {
+            "fixedValue": "",
+            "name": "Closetheguitrans"
+          },
+          "width": 16,
+          "height": 16,
+          "x": 393,
+          "y": 12,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_work_in_progress_build",
+          "text": {
+            "fixedValue": "Work in Progress Build"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 155,
+          "y": 75,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 100,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

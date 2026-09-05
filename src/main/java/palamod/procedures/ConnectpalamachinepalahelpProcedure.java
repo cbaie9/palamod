@@ -1,6 +1,6 @@
 package palamod.procedures;
 
-import palamod.world.inventory.PalamachinepalahelpguiMenu;
+import palamod.world.inventory.PalahelpnewPalamachineMenu;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -26,7 +26,7 @@ public class ConnectpalamachinepalahelpProcedure {
 			_ent.openMenu(new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return Component.literal("Palamachinepalahelpgui");
+					return Component.literal("PalahelpnewPalamachine");
 				}
 
 				@Override
@@ -36,7 +36,7 @@ public class ConnectpalamachinepalahelpProcedure {
 
 				@Override
 				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-					return new PalamachinepalahelpguiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					return new PalahelpnewPalamachineMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 				}
 			}, _bpos);
 		}

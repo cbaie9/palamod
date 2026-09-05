@@ -1769,5 +1769,10 @@
   "palamod.palahelp_stick_hyper_jump": "Hyper jump Stick : Give a jump VI effect during 10 seconds",
   "palamod.palahelp_stick_damage": "Damage stick : Shot 25 arrow where you look",
   "palamod.palahelp_stick_heal": "Heal Stick : Give a instant heath 2 during 1 second",
-  "palamod.palahelp_stick_oob": "[ Error 7 ] : The value of description is out of bound"
+  "palamod.palahelp_stick_oob": "[ Error 7 ] : The value of description is out of bound",
+  "gui.palamod.palahelpnew_palamachine.label_effect_of_the_stick": "The Palamachine is a block used to make all kind of item useful for craft\\nor by themself. For stick there a special page to know the effects and crafts",
+  "gui.palamod.palahelpnew_palamachine.label_palamachine": "Palamachine",
+  "gui.palamod.palahelpnew_palamachine.label_craft": "Crafts",
+  "gui.palamod.palahelpnew_palamachine.label_palahelp_stick": "Palahelp : Palamachine",
+  "gui.palamod.palahelpnew_palamachine.label_work_in_progress_build": "Work in Progress Build"
 }

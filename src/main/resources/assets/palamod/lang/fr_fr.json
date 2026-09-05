@@ -1765,5 +1765,10 @@
   "palamod.palahelp_stick_hyper_jump": "",
   "palamod.palahelp_stick_damage": "",
   "palamod.palahelp_stick_heal": "",
-  "palamod.palahelp_stick_oob": ""
+  "palamod.palahelp_stick_oob": "",
+  "gui.palamod.palahelpnew_palamachine.label_effect_of_the_stick": "Effect of the stick",
+  "gui.palamod.palahelpnew_palamachine.label_palamachine": "Palamachine",
+  "gui.palamod.palahelpnew_palamachine.label_craft": "Craft",
+  "gui.palamod.palahelpnew_palamachine.label_palahelp_stick": "Palahelp : Stick",
+  "gui.palamod.palahelpnew_palamachine.label_work_in_progress_build": "Work in Progress Build"
 }

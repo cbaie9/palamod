@@ -110,6 +110,7 @@ public class PalamodModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<PalahelpnewCommandMenu>> PALAHELPNEW_COMMAND = REGISTRY.register("palahelpnew_command", () -> IMenuTypeExtension.create(PalahelpnewCommandMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<PalahelpJobsMenu>> PALAHELP_JOBS = REGISTRY.register("palahelp_jobs", () -> IMenuTypeExtension.create(PalahelpJobsMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<PalahelpJobsxpgainMenu>> PALAHELP_JOBSXPGAIN = REGISTRY.register("palahelp_jobsxpgain", () -> IMenuTypeExtension.create(PalahelpJobsxpgainMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<PalahelpnewPalamachineMenu>> PALAHELPNEW_PALAMACHINE = REGISTRY.register("palahelpnew_palamachine", () -> IMenuTypeExtension.create(PalahelpnewPalamachineMenu::new));
 
 	public interface MenuAccessor {
 		Map<String, Object> getMenuState();
