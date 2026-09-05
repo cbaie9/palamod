@@ -1755,5 +1755,15 @@
   "gui.palamod.palahelp_jobs.tooltip_go_to_palahelp_grinder": "Go to Palahelp Grinder",
   "gui.palamod.grinderpalahelpgui.tooltip_go_to_palahelp_crusher": "Go to Palahelp Crusher",
   "gui.palamod.new_palahelp_gui_intro.tooltip_old_palahelp_because_this_versio": "Old Palahelp because this version is still in developpement,\\nSome Pages of the old Palahelp may redirect to the newer version of same pages",
-  "gui.palamod.new_palahelp_gui_intro.button_legacy_palahelp": "Legacy Palahelp"
+  "gui.palamod.new_palahelp_gui_intro.button_legacy_palahelp": "Legacy Palahelp",
+  "palamod.palahelp_stick_speed": "",
+  "palamod.palahelp_stick_sog": "",
+  "palamod.palahelp_heal": "",
+  "palamod.palahelp_stick_jump": "",
+  "palamod.palahelp_hyper_jump": "",
+  "palamod.palahelp_stick_strenght": "",
+  "palamod.palahelp_stick_hyper_jump": "",
+  "palamod.palahelp_stick_damage": "",
+  "palamod.palahelp_stick_heal": "",
+  "palamod.palahelp_stick_oob": ""
 }

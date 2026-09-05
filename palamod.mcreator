@@ -25792,10 +25792,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -25849,10 +25845,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -25914,10 +25906,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -25936,10 +25924,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -25958,10 +25942,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -25980,10 +25960,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -26002,10 +25978,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -26024,10 +25996,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -52737,7 +52705,17 @@
       "gui.palamod.palahelp_jobs.tooltip_go_to_palahelp_grinder": "Go to Palahelp Grinder",
       "gui.palamod.grinderpalahelpgui.tooltip_go_to_palahelp_crusher": "Go to Palahelp Crusher",
       "gui.palamod.new_palahelp_gui_intro.tooltip_old_palahelp_because_this_versio": "Old Palahelp because this version is still in developpement,\\nSome Pages of the old Palahelp may redirect to the newer version of same pages",
-      "gui.palamod.new_palahelp_gui_intro.button_legacy_palahelp": "Legacy Palahelp"
+      "gui.palamod.new_palahelp_gui_intro.button_legacy_palahelp": "Legacy Palahelp",
+      "palamod.palahelp_stick_speed": "Speed Stick : Give a speed III effect during 10 seconds",
+      "palamod.palahelp_stick_sog": "Stick of gods : Give speed V for 3 secondes, strenght, saturation and \\nregenation",
+      "palamod.palahelp_heal": "",
+      "palamod.palahelp_stick_jump": "Jump Stick : Give a jump III effect during 10 seconds",
+      "palamod.palahelp_hyper_jump": "",
+      "palamod.palahelp_stick_strenght": "Strenght stick : Give a strenght III effect for 40 seconds",
+      "palamod.palahelp_stick_hyper_jump": "Hyper jump Stick : Give a jump VI effect during 10 seconds",
+      "palamod.palahelp_stick_damage": "Damage stick : Shot 25 arrow where you look",
+      "palamod.palahelp_stick_heal": "Heal Stick : Give a instant heath 2 during 1 second",
+      "palamod.palahelp_stick_oob": "[ Error 7 ] : The value of description is out of bound"
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54496,7 +54474,17 @@
       "gui.palamod.palahelp_jobs.tooltip_go_to_palahelp_grinder": "Go to Palahelp Grinder",
       "gui.palamod.grinderpalahelpgui.tooltip_go_to_palahelp_crusher": "Go to Palahelp Crusher",
       "gui.palamod.new_palahelp_gui_intro.tooltip_old_palahelp_because_this_versio": "Old Palahelp because this version is still in developpement,\\nSome Pages of the old Palahelp may redirect to the newer version of same pages",
-      "gui.palamod.new_palahelp_gui_intro.button_legacy_palahelp": "Legacy Palahelp"
+      "gui.palamod.new_palahelp_gui_intro.button_legacy_palahelp": "Legacy Palahelp",
+      "palamod.palahelp_stick_speed": "",
+      "palamod.palahelp_stick_sog": "",
+      "palamod.palahelp_heal": "",
+      "palamod.palahelp_stick_jump": "",
+      "palamod.palahelp_hyper_jump": "",
+      "palamod.palahelp_stick_strenght": "",
+      "palamod.palahelp_stick_hyper_jump": "",
+      "palamod.palahelp_stick_damage": "",
+      "palamod.palahelp_stick_heal": "",
+      "palamod.palahelp_stick_oob": ""
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -56255,7 +56243,17 @@
       "gui.palamod.palahelp_jobs.tooltip_go_to_palahelp_grinder": "Go to Palahelp Grinder",
       "gui.palamod.grinderpalahelpgui.tooltip_go_to_palahelp_crusher": "Go to Palahelp Crusher",
       "gui.palamod.new_palahelp_gui_intro.tooltip_old_palahelp_because_this_versio": "Old Palahelp because this version is still in developpement,\\nSome Pages of the old Palahelp may redirect to the newer version of same pages",
-      "gui.palamod.new_palahelp_gui_intro.button_legacy_palahelp": "Legacy Palahelp"
+      "gui.palamod.new_palahelp_gui_intro.button_legacy_palahelp": "Legacy Palahelp",
+      "palamod.palahelp_stick_speed": "",
+      "palamod.palahelp_stick_sog": "",
+      "palamod.palahelp_heal": "",
+      "palamod.palahelp_stick_jump": "",
+      "palamod.palahelp_hyper_jump": "",
+      "palamod.palahelp_stick_strenght": "",
+      "palamod.palahelp_stick_hyper_jump": "",
+      "palamod.palahelp_stick_damage": "",
+      "palamod.palahelp_stick_heal": "",
+      "palamod.palahelp_stick_oob": ""
     }
   },
   "metadata": {

@@ -133,7 +133,7 @@ public class SticknewhelpScreen extends AbstractContainerScreen<SticknewhelpMenu
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Getlabelnewstick1Procedure.execute(world, entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+		for (Component actualComponent : Arrays.stream(Getlabelnewstick1Procedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
 			guiGraphics.drawString(this.font, actualComponent, 5, 39 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;

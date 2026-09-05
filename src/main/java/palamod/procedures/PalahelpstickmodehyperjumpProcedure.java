@@ -4,18 +4,13 @@ import palamod.init.PalamodModMenus;
 import palamod.init.PalamodModItems;
 import palamod.init.PalamodModBlocks;
 
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.core.BlockPos;
 
 public class PalahelpstickmodehyperjumpProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		if (entity instanceof Player _player && _player.containerMenu instanceof PalamodModMenus.MenuAccessor _menu) {
@@ -57,17 +52,6 @@ public class PalahelpstickmodehyperjumpProcedure {
 			_menu.getSlots().get(15).set(_setstack11);
 			_player.containerMenu.broadcastChanges();
 		}
-		if ((world.getBlockState(new BlockPos(0, 10, 0))).getBlock() == PalamodModBlocks.NBT_BLOCK.get()) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = new BlockPos(0, 10, 0);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putDouble(("mode_stick_" + entity.getStringUUID()), 3);
-				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-		}
+		entity.getPersistentData().putDouble("mode_stick", 3);
 	}
 }

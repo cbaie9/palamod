@@ -62,31 +62,31 @@ public record SticknewhelpButtonMessage(int buttonID, int x, int y, int z) imple
 		}
 		if (buttonID == 3) {
 
-			PalahelpstickmodespeedProcedure.execute(world, entity);
+			PalahelpstickmodespeedProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			PalahelpstickmodejumpProcedure.execute(world, entity);
+			PalahelpstickmodejumpProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
 
-			PalahelpstickmodehyperjumpProcedure.execute(world, entity);
+			PalahelpstickmodehyperjumpProcedure.execute(entity);
 		}
 		if (buttonID == 6) {
 
-			PalahelpstickmodehealProcedure.execute(world, entity);
+			PalahelpstickmodehealProcedure.execute(entity);
 		}
 		if (buttonID == 7) {
 
-			PalahelpstickmodedamageProcedure.execute(world, entity);
+			PalahelpstickmodedamageProcedure.execute(entity);
 		}
 		if (buttonID == 8) {
 
-			PalahelpstickmodestrenghtProcedure.execute(world, entity);
+			PalahelpstickmodestrenghtProcedure.execute(entity);
 		}
 		if (buttonID == 9) {
 
-			PalahelpstickmodesogProcedure.execute(world, entity);
+			PalahelpstickmodesogProcedure.execute(entity);
 		}
 	}
 
