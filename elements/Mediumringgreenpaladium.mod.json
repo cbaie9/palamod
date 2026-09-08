@@ -3,8 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "green_paladium_medium_rng",
+    "texture": "green_paladium_medium_ring",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "animations": [],
@@ -31,6 +32,9 @@
     "specialInformation": {
       "fixedValue": []
     },
+    "glowCondition": {
+      "fixedValue": false
+    },
     "openGUIOnRightClick": {
       "fixedValue": false
     },
@@ -40,6 +44,7 @@
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
+    "projectile": "CUSTOM:Switcharrow",
     "projectileDisableAmmoCheck": false,
     "isFood": false,
     "nutritionalValue": 4,
@@ -49,6 +54,8 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": "",
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 100,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": [],

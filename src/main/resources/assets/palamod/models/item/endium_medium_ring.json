@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "palamod:item/endium_medium"
+    "layer0": "palamod:item/endium_medium_ring"
   }
 }

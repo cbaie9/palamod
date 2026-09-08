@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "palamod:item/green_ring"
+    "layer0": "palamod:item/green_paladium_small_ring"
   }
 }
