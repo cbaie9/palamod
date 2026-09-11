@@ -47525,6 +47525,19 @@
           "src/main/java/palamod/network/PalahelpnewPalamachineButtonMessage.java"
         ]
       }
+    },
+    {
+      "name": "Rawamethystblastfurnacesmelt",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rawamethystblastfurnacesmelt",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/rawamethystblastfurnacesmelt.json",
+          "src/main/resources/data/palamod/recipe/rawamethystblastfurnacesmelt.json"
+        ]
+      }
     }
   ],
   "variable_elements": [

@@ -2,6 +2,8 @@ package palamod.procedures;
 
 import palamod.init.PalamodModBlocks;
 
+import palamod.PalamodMod;
+
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -9,7 +11,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.tags.TagKey;
@@ -46,20 +51,36 @@ public class RtpcommandProcedure {
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
-					if (world.getBiome(BlockPos.containing(xrandom, y, zrandom)).is(TagKey.create(Registries.BIOME, ResourceLocation.parse("minecraft:ocean")))) {
-						yrandom = world.getHeight(Heightmap.Types.OCEAN_FLOOR, (int) xrandom, (int) zrandom);
-					} else {
-						yrandom = world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) xrandom, (int) zrandom);
-					}
 					{
 						Entity _ent = entity;
 						double _tx = xrandom;
-						double _ty = yrandom;
+						double _ty = 256;
 						double _tz = zrandom;
 						_ent.teleportTo(_tx, _ty, _tz);
 						if (_ent instanceof ServerPlayer _serverPlayer)
 							_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
 					}
+					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 1, false, false));
+					if (world.getBiome(BlockPos.containing(xrandom, y, zrandom)).is(TagKey.create(Registries.BIOME, ResourceLocation.parse("minecraft:ocean")))) {
+						yrandom = world.getHeight(Heightmap.Types.OCEAN_FLOOR, (int) xrandom, (int) zrandom);
+					} else {
+						yrandom = world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) xrandom, (int) zrandom);
+					}
+					entity.getPersistentData().putDouble("tp_y_random", yrandom);
+					entity.getPersistentData().putDouble("tp_z_random", zrandom);
+					entity.getPersistentData().putDouble("tp_x_random", xrandom);
+					PalamodMod.queueServerWork(100, () -> {
+						{
+							Entity _ent = entity;
+							double _tx = (entity.getPersistentData().getDouble("tp_x_random"));
+							double _ty = (entity.getPersistentData().getDouble("tp_y_random"));
+							double _tz = (entity.getPersistentData().getDouble("tp_z_random"));
+							_ent.teleportTo(_tx, _ty, _tz);
+							if (_ent instanceof ServerPlayer _serverPlayer)
+								_serverPlayer.connection.teleport(_tx, _ty, _tz, _ent.getYRot(), _ent.getXRot());
+						}
+					});
 				} else {
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),

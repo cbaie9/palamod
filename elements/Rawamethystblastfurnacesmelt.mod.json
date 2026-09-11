@@ -1,0 +1,21 @@
+{
+  "_fv": 89,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Blasting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      "CUSTOM:Amethystrawore"
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 5.0,
+    "cookingTime": 100,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "blastingInputStack": "CUSTOM:Amethystrawore",
+    "blastingReturnStack": "CUSTOM:Amethyste",
+    "name": "rawamethystblastfurnacesmelt",
+    "namespace": "mod"
+  }
+}
