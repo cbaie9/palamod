@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "palamod:gold_particle"
+    }
+  },
+  "result": {
+    "id": "minecraft:gold_nugget",
+    "count": 1
+  }
+}

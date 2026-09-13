@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result": {
+    "id": "palamod:iron_particle",
+    "count": 1
+  }
+}

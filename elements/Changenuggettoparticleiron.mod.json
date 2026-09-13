@@ -1,0 +1,32 @@
+{
+  "_fv": 89,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      "Items.IRON_NUGGET",
+      "CUSTOM:Ironparticle"
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      "",
+      "",
+      "",
+      "",
+      "Items.IRON_NUGGET",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "recipeReturnStack": "CUSTOM:Ironparticle",
+    "name": "change_nugget_toparticle_iron",
+    "namespace": "mod"
+  }
+}

@@ -47538,6 +47538,58 @@
           "src/main/resources/data/palamod/recipe/rawamethystblastfurnacesmelt.json"
         ]
       }
+    },
+    {
+      "name": "Changenuggettoparticleiron",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "changenuggettoparticleiron",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/change_nugget_toparticle_iron.json",
+          "src/main/resources/data/palamod/advancement/recipes/changenuggettoparticleiron.json"
+        ]
+      }
+    },
+    {
+      "name": "Changeparticletonuggetiron",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "changeparticletonuggetiron",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/changeparticletonuggetiron.json",
+          "src/main/resources/data/palamod/recipe/change_particle_to_nugget_iron.json"
+        ]
+      }
+    },
+    {
+      "name": "Changenuggettoparticlegold",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "changenuggettoparticlegold",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/change_nugget_to_particle_gold.json",
+          "src/main/resources/data/palamod/advancement/recipes/changenuggettoparticlegold.json"
+        ]
+      }
+    },
+    {
+      "name": "Changeparticletonugget",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "changeparticletonugget",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/advancement/recipes/changeparticletonugget.json",
+          "src/main/resources/data/palamod/recipe/change_particle_to_nugget_gold.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -52709,7 +52761,7 @@
       "palamod.procedure.jobsxpgain.t1glueball": "Tier 1 Glueball",
       "palamod.procedure.jobsxpgain.t2glueball": "Tier 2 Glueball",
       "gui.palamod.palahelp_jobs.button_xpgain": "Help for gaining experience",
-      "palamod.procedure.feed_message": "You has been fed",
+      "palamod.procedure.feed_message": "You have been fed",
       "gui.palamod.jobsminergui.button_how": "How",
       "gui.palamod.jobsfarmergui.button_how": "How",
       "gui.palamod.jobshuntergui.button_how": "How",
@@ -56365,7 +56417,7 @@
   "workspaceSettings": {
     "modid": "palamod",
     "modName": "Palamod renew",
-    "version": "1.21.1.019",
+    "version": "1.21.1.021",
     "description": "Un univers alternatif où la v5 à bien changé de version  -- A mod who remake Palamod from French server Paladium from scratch ( and some textures )",
     "author": "cb9, FufuBS1,Gelyce ( + Paladium Games for the original mod)",
     "websiteURL": "Paladium team :  https://paladium-pvp.fr , Discord :  https://discord.com/invite/dVvNDrQENA",

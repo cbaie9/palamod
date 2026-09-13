@@ -1,0 +1,32 @@
+{
+  "_fv": 89,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      "Items.GOLD_NUGGET",
+      "CUSTOM:Goldparticle"
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      "",
+      "",
+      "",
+      "",
+      "CUSTOM:Goldparticle",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "recipeReturnStack": "Items.GOLD_NUGGET",
+    "name": "change_particle_to_nugget_gold",
+    "namespace": "mod"
+  }
+}
