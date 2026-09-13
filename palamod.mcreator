@@ -47590,6 +47590,18 @@
           "src/main/resources/data/palamod/recipe/change_particle_to_nugget_gold.json"
         ]
       }
+    },
+    {
+      "name": "Printingpresscraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "printingpresscraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/palamod/recipe/printingpresscraft.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -50413,6 +50425,25 @@
     ],
     "BLOCKS:mod:softened_ores": [
       "TAG:mod:softened_ores"
+    ],
+    "ITEMS:c:wodden_slabs": [
+      "CUSTOM:Ostrya_woodSlab",
+      "CUSTOM:Jacaranda_Slab",
+      "CUSTOM:Judeecercis_Slab",
+      "CUSTOM:Erable_Slab",
+      "Blocks.WARPED_SLAB",
+      "Blocks.CRIMSON_SLAB",
+      "Blocks.WOODEN_SLAB#5",
+      "Blocks.WOODEN_SLAB#4",
+      "Blocks.WOODEN_SLAB#3",
+      "Blocks.WOODEN_SLAB#2",
+      "Blocks.WOODEN_SLAB#1",
+      "Blocks.WOODEN_SLAB#0",
+      "Blocks.BAMBOO_SLAB",
+      "Blocks.BAMBOO_MOSAIC_SLAB",
+      "Blocks.MANGROVE_SLAB",
+      "Blocks.CHERRY_SLAB",
+      "Blocks.STONE_SLAB#2"
     ]
   },
   "tab_element_order": {

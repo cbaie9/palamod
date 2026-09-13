@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    "eee"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "minecraft:blaze_rod"
+    },
+    "c": {
+      "tag": "c:wodden_slabs"
+    },
+    "d": {
+      "item": "minecraft:heavy_weighted_pressure_plate"
+    },
+    "e": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "id": "palamod:printingpress",
+    "count": 1
+  }
+}

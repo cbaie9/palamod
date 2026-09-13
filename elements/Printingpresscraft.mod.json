@@ -1,0 +1,29 @@
+{
+  "_fv": 89,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      "Items.IRON_INGOT",
+      "Items.BLAZE_ROD",
+      "Items.IRON_INGOT",
+      "TAG:c:wodden_slabs",
+      "Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE",
+      "TAG:c:wodden_slabs",
+      "Blocks.IRON_BLOCK",
+      "Blocks.IRON_BLOCK",
+      "Blocks.IRON_BLOCK"
+    ],
+    "recipeReturnStack": "CUSTOM:Printingpress",
+    "name": "printingpresscraft",
+    "namespace": "mod"
+  }
+}
