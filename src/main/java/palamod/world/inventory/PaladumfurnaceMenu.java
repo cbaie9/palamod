@@ -1,8 +1,12 @@
 package palamod.world.inventory;
 
+import palamod.procedures.IsItemFuelProcedure;
+import palamod.procedures.CanPutItemInsideFurnaceProcedure;
+
 import palamod.network.PaladumfurnaceSlotMessage;
 
 import palamod.init.PalamodModMenus;
+import palamod.init.PalamodModItems;
 
 import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.items.wrapper.InvWrapper;
@@ -96,11 +100,21 @@ public class PaladumfurnaceMenu extends AbstractContainerMenu implements Palamod
 			private final int slot = 0;
 			private int x = PaladumfurnaceMenu.this.x;
 			private int y = PaladumfurnaceMenu.this.y;
+
+			@Override
+			public boolean mayPlace(ItemStack itemstack) {
+				return !CanPutItemInsideFurnaceProcedure.execute(world, itemstack);
+			}
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 60, 59) {
 			private final int slot = 1;
 			private int x = PaladumfurnaceMenu.this.x;
 			private int y = PaladumfurnaceMenu.this.y;
+
+			@Override
+			public boolean mayPlace(ItemStack itemstack) {
+				return !IsItemFuelProcedure.execute(world, itemstack);
+			}
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 121, 41) {
 			private final int slot = 2;
@@ -122,6 +136,11 @@ public class PaladumfurnaceMenu extends AbstractContainerMenu implements Palamod
 			private final int slot = 3;
 			private int x = PaladumfurnaceMenu.this.x;
 			private int y = PaladumfurnaceMenu.this.y;
+
+			@Override
+			public boolean mayPlace(ItemStack stack) {
+				return PalamodModItems.FURNACE_UPGRADE.get() == stack.getItem();
+			}
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)

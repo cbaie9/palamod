@@ -34,7 +34,8 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "CanPutItemInsideFurnace"
           },
           "id": 0,
           "disablePickup": {
@@ -70,7 +71,8 @@
             "value": ""
           },
           "disablePlacement": {
-            "fixedValue": false
+            "fixedValue": false,
+            "name": "IsItemFuel"
           },
           "id": 1,
           "disablePickup": {
@@ -100,7 +102,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": ""
+            "value": "CUSTOM:Furnaceupgrade"
           },
           "disablePlacement": {
             "fixedValue": false
