@@ -1,6 +1,6 @@
 package palamod.world.inventory;
 
-import palamod.procedures.IsItemFuelProcedure;
+import palamod.procedures.IsItemFuelGUIcheckProcedure;
 import palamod.procedures.CanPutItemInsideFurnaceProcedure;
 
 import palamod.network.PaladumfurnaceSlotMessage;
@@ -113,7 +113,7 @@ public class PaladumfurnaceMenu extends AbstractContainerMenu implements Palamod
 
 			@Override
 			public boolean mayPlace(ItemStack itemstack) {
-				return !IsItemFuelProcedure.execute(world, itemstack);
+				return !IsItemFuelGUIcheckProcedure.execute(world, itemstack);
 			}
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 121, 41) {

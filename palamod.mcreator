@@ -47648,6 +47648,29 @@
           "src/main/java/palamod/procedures/IsItemFuelProcedure.java"
         ]
       }
+    },
+    {
+      "name": "IsItemFuelGUIcheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_item_fuel_gu_icheck",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/palamod/procedures/IsItemFuelGUIcheckProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

@@ -72,7 +72,7 @@
           },
           "disablePlacement": {
             "fixedValue": false,
-            "name": "IsItemFuel"
+            "name": "IsItemFuelGUIcheck"
           },
           "id": 1,
           "disablePickup": {
