@@ -1774,5 +1774,10 @@
   "gui.palamod.palahelpnew_palamachine.label_palamachine": "Palamachine",
   "gui.palamod.palahelpnew_palamachine.label_craft": "Crafts",
   "gui.palamod.palahelpnew_palamachine.label_palahelp_stick": "Palahelp : Palamachine",
-  "gui.palamod.palahelpnew_palamachine.label_work_in_progress_build": "Work in Progress Build"
+  "gui.palamod.palahelpnew_palamachine.label_work_in_progress_build": "Work in Progress Build",
+  "palamod.printing_press.use": "An enchanted book based on the inserted plate has been created",
+  "palamod.printing_press.break": "The enchanted plate has broken, please insert a new enchanted plate to re-use the press.",
+  "palamod.printing_press.noink": "There are no enough paladium ink in the printing press in order to work, the printing need at least 6 paladium ink. To insert the book, do a right click with the paladium ink in hand with the press.",
+  "palamod.printing_press.nobook": "There are no enough book in the printing press in order to work, the printing need at least 3 books. To insert the book, do a right click with the book in hand with the press.",
+  "palamod.printing_press.noplate": "There is no enchated plate in the printing press, try inserting a enchated plate and try again. To obtain an enchanted plate, use the type setting machine."
 }

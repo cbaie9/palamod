@@ -50118,12 +50118,12 @@
       "~AmethysteOre@CUSTOM:AmethysteOre"
     ],
     "BLOCKS:minecraft:mineable/axe": [
+      "~ShinyErablewood@CUSTOM:ShinyErablewood",
+      "~ShinyOstryaWood@CUSTOM:ShinyOstryaWood",
       "~EndiumPortalBlock@CUSTOM:EndiumPortalBlock",
       "~PaladiumPortalBlock@CUSTOM:PaladiumPortalBlock",
       "~TitanePortalBlock@CUSTOM:TitanePortalBlock",
       "~AmethystPortalblock@CUSTOM:AmethystPortalblock",
-      "~ShinyOstryaWood@CUSTOM:ShinyOstryaWood",
-      "~ShinyErablewood@CUSTOM:ShinyErablewood",
       "~Shinyjudeecerciswood@CUSTOM:Shinyjudeecerciswood",
       "~Shinyjacarandawood@CUSTOM:Shinyjacarandawood",
       "~DeadButton@CUSTOM:DeadButton",
@@ -52830,7 +52830,12 @@
       "gui.palamod.palahelpnew_palamachine.label_palamachine": "Palamachine",
       "gui.palamod.palahelpnew_palamachine.label_craft": "Crafts",
       "gui.palamod.palahelpnew_palamachine.label_palahelp_stick": "Palahelp : Palamachine",
-      "gui.palamod.palahelpnew_palamachine.label_work_in_progress_build": "Work in Progress Build"
+      "gui.palamod.palahelpnew_palamachine.label_work_in_progress_build": "Work in Progress Build",
+      "palamod.printing_press.use": "An enchanted book based on the inserted plate has been created",
+      "palamod.printing_press.break": "The enchanted plate has broken, please insert a new enchanted plate to re-use the press.",
+      "palamod.printing_press.noink": "There are no enough paladium ink in the printing press in order to work, the printing need at least 6 paladium ink. To insert the book, do a right click with the paladium ink in hand with the press.",
+      "palamod.printing_press.nobook": "There are no enough book in the printing press in order to work, the printing need at least 3 books. To insert the book, do a right click with the book in hand with the press.",
+      "palamod.printing_press.noplate": "There is no enchated plate in the printing press, try inserting a enchated plate and try again. To obtain an enchanted plate, use the type setting machine."
     },
     "fr_fr": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -54604,7 +54609,12 @@
       "gui.palamod.palahelpnew_palamachine.label_palamachine": "Palamachine",
       "gui.palamod.palahelpnew_palamachine.label_craft": "Craft",
       "gui.palamod.palahelpnew_palamachine.label_palahelp_stick": "Palahelp : Stick",
-      "gui.palamod.palahelpnew_palamachine.label_work_in_progress_build": "Work in Progress Build"
+      "gui.palamod.palahelpnew_palamachine.label_work_in_progress_build": "Work in Progress Build",
+      "palamod.printing_press.use": "",
+      "palamod.printing_press.break": "",
+      "palamod.printing_press.noink": "",
+      "palamod.printing_press.nobook": "",
+      "palamod.printing_press.noplate": ""
     },
     "fr_be": {
       "gui.palamod.megasafechestfirstsetup.label_this_account_bypass_the_code": "ce compte (n\u0027a pas besoin du code)",
@@ -56378,7 +56388,12 @@
       "gui.palamod.palahelpnew_palamachine.label_palamachine": "Palamachine",
       "gui.palamod.palahelpnew_palamachine.label_craft": "Craft",
       "gui.palamod.palahelpnew_palamachine.label_palahelp_stick": "Palahelp : Stick",
-      "gui.palamod.palahelpnew_palamachine.label_work_in_progress_build": "Work in Progress Build"
+      "gui.palamod.palahelpnew_palamachine.label_work_in_progress_build": "Work in Progress Build",
+      "palamod.printing_press.use": "",
+      "palamod.printing_press.break": "",
+      "palamod.printing_press.noink": "",
+      "palamod.printing_press.nobook": "",
+      "palamod.printing_press.noplate": ""
     }
   },
   "metadata": {

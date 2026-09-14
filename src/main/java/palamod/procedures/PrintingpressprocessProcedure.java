@@ -37,81 +37,97 @@ public class PrintingpressprocessProcedure {
 			return;
 		double remove_item = 0;
 		ItemStack output_item = ItemStack.EMPTY;
-		PalamodMod.LOGGER.debug(("plate :" + getBlockNBTLogic(world, BlockPos.containing(x, y, z), "isplateready")));
-		PalamodMod.LOGGER.debug(("book :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "book_count")));
-		PalamodMod.LOGGER.debug(("ink :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count")));
-		PalamodMod.LOGGER.debug(("locked :" + getBlockNBTLogic(world, BlockPos.containing(x, y, z), "locked")));
+		PalamodMod.LOGGER.debug((((("----------\\nPrinting Press Status\\nPlate: %1\\nBook: %2\\nInk: %3\\nPlate Locked in Press : %4\\n----------".replace("%4", "" + getBlockNBTLogic(world, BlockPos.containing(x, y, z), "locked"))).replace("%3",
+				Math.round(getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count")) + "/64")).replace("%2", Math.round(getBlockNBTNumber(world, BlockPos.containing(x, y, z), "book_count")) + "/64"))
+				.replace("%1", getBlockNBTLogic(world, BlockPos.containing(x, y, z), "isplateready") ? "Inserted" : "Not Inserted")));
 		if (entity.isShiftKeyDown()) {
-			if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "isplateready") && 3 <= getBlockNBTNumber(world, BlockPos.containing(x, y, z), "book_count") && 6 <= getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count")) {
-				if (!world.isClientSide()) {
-					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null) {
-						_blockEntity.getPersistentData().putBoolean("locked", true);
-					}
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				output_item = new ItemStack(Items.ENCHANTED_BOOK).copy();
-				output_item.applyComponents((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getComponents());
-				if (world instanceof ServerLevel _level) {
-					ItemEntity entityToSpawn = new ItemEntity(_level, x, (y + 0.25), z, output_item);
-					entityToSpawn.setPickUpDelay(10);
-					_level.addFreshEntity(entityToSpawn);
-				}
-				if (!world.isClientSide()) {
-					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null) {
-						_blockEntity.getPersistentData().putDouble("nb_book", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_book") + 1));
-					}
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-				}
-				if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_book") >= 3) {
-					if (!world.isClientSide()) {
-						BlockPos _bp = BlockPos.containing(x, y, z);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null) {
-							_blockEntity.getPersistentData().putDouble("ink_count", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count") - 6));
-							_blockEntity.getPersistentData().putDouble("book_count", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "book_count") - 3));
-							_blockEntity.getPersistentData().putDouble("nb_book", 0);
+			if (getBlockNBTLogic(world, BlockPos.containing(x, y, z), "isplateready")) {
+				if (3 <= getBlockNBTNumber(world, BlockPos.containing(x, y, z), "book_count")) {
+					if (6 <= getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count")) {
+						if (!world.isClientSide()) {
+							BlockPos _bp = BlockPos.containing(x, y, z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null) {
+								_blockEntity.getPersistentData().putBoolean("locked", true);
+							}
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-					}
-					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable)
-						_itemHandlerModifiable.setStackInSlot(0, ItemStack.EMPTY);
-					if (!world.isClientSide()) {
-						BlockPos _bp = BlockPos.containing(x, y, z);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null) {
-							_blockEntity.getPersistentData().putBoolean("locked", false);
-							_blockEntity.getPersistentData().putBoolean("isplateready", false);
+						output_item = new ItemStack(Items.ENCHANTED_BOOK).copy();
+						output_item.applyComponents((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getComponents());
+						if (world instanceof ServerLevel _level) {
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, (y + 0.25), z, output_item);
+							entityToSpawn.setPickUpDelay(10);
+							_level.addFreshEntity(entityToSpawn);
 						}
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-					}
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.anvil.destroy")), SoundSource.NEUTRAL, 1, 1);
+						if (!world.isClientSide()) {
+							BlockPos _bp = BlockPos.containing(x, y, z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null) {
+								_blockEntity.getPersistentData().putDouble("nb_book", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_book") + 1));
+							}
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
+						if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "nb_book") >= 3) {
+							if (!world.isClientSide()) {
+								BlockPos _bp = BlockPos.containing(x, y, z);
+								BlockEntity _blockEntity = world.getBlockEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_blockEntity != null) {
+									_blockEntity.getPersistentData().putDouble("ink_count", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count") - 6));
+									_blockEntity.getPersistentData().putDouble("book_count", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "book_count") - 3));
+									_blockEntity.getPersistentData().putDouble("nb_book", 0);
+								}
+								if (world instanceof Level _level)
+									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+							}
+							if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable)
+								_itemHandlerModifiable.setStackInSlot(0, ItemStack.EMPTY);
+							if (!world.isClientSide()) {
+								BlockPos _bp = BlockPos.containing(x, y, z);
+								BlockEntity _blockEntity = world.getBlockEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_blockEntity != null) {
+									_blockEntity.getPersistentData().putBoolean("locked", false);
+									_blockEntity.getPersistentData().putBoolean("isplateready", false);
+								}
+								if (world instanceof Level _level)
+									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+							}
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.anvil.destroy")), SoundSource.NEUTRAL, 1, 1);
+								} else {
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.anvil.destroy")), SoundSource.NEUTRAL, 1, 1, false);
+								}
+							}
+							if (entity instanceof Player _player && !_player.level().isClientSide())
+								_player.displayClientMessage(Component.literal((Component.translatable("palamod.printing_press.use").getString())), false);
 						} else {
-							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.anvil.destroy")), SoundSource.NEUTRAL, 1, 1, false);
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.anvil.break")), SoundSource.NEUTRAL, 1, 1);
+								} else {
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.anvil.break")), SoundSource.NEUTRAL, 1, 1, false);
+								}
+							}
+							if (entity instanceof Player _player && !_player.level().isClientSide())
+								_player.displayClientMessage(Component.literal((Component.translatable("palamod.printing_press.break").getString())), false);
 						}
+					} else {
+						if (entity instanceof Player _player && !_player.level().isClientSide())
+							_player.displayClientMessage(Component.literal((Component.translatable("palamod.printing_press.noink").getString())), false);
 					}
 				} else {
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.anvil.break")), SoundSource.NEUTRAL, 1, 1);
-						} else {
-							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.anvil.break")), SoundSource.NEUTRAL, 1, 1, false);
-						}
-					}
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal((Component.translatable("palamod.printing_press.nobook").getString())), false);
 				}
+			} else {
+				if (entity instanceof Player _player && !_player.level().isClientSide())
+					_player.displayClientMessage(Component.literal((Component.translatable("palamod.printing_press.noplate").getString())), false);
 			}
 		} else {
 			if (!getBlockNBTLogic(world, BlockPos.containing(x, y, z), "locked")) {
@@ -138,9 +154,9 @@ public class PrintingpressprocessProcedure {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal("plate ready"), false);
 						if (entity instanceof LivingEntity _entity) {
-							ItemStack _setstack40 = new ItemStack(Blocks.AIR).copy();
-							_setstack40.setCount(1);
-							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack40);
+							ItemStack _setstack47 = new ItemStack(Blocks.AIR).copy();
+							_setstack47.setCount(1);
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack47);
 							if (_entity instanceof Player _player)
 								_player.getInventory().setChanged();
 						}
@@ -162,9 +178,9 @@ public class PrintingpressprocessProcedure {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("ink count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count"))), false);
 						if (entity instanceof LivingEntity _entity) {
-							ItemStack _setstack57 = new ItemStack(PalamodModItems.PALADIUM_INK.get()).copy();
-							_setstack57.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
-							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack57);
+							ItemStack _setstack64 = new ItemStack(PalamodModItems.PALADIUM_INK.get()).copy();
+							_setstack64.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack64);
 							if (_entity instanceof Player _player)
 								_player.getInventory().setChanged();
 						}
@@ -173,9 +189,9 @@ public class PrintingpressprocessProcedure {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("ink count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "ink_count"))), false);
 						if (entity instanceof LivingEntity _entity) {
-							ItemStack _setstack68 = new ItemStack(PalamodModItems.PALADIUM_INK.get()).copy();
-							_setstack68.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
-							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack68);
+							ItemStack _setstack75 = new ItemStack(PalamodModItems.PALADIUM_INK.get()).copy();
+							_setstack75.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack75);
 							if (_entity instanceof Player _player)
 								_player.getInventory().setChanged();
 						}
@@ -197,9 +213,9 @@ public class PrintingpressprocessProcedure {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("book count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "book_count"))), false);
 						if (entity instanceof LivingEntity _entity) {
-							ItemStack _setstack85 = new ItemStack(Items.WRITTEN_BOOK).copy();
-							_setstack85.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
-							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack85);
+							ItemStack _setstack92 = new ItemStack(Items.WRITTEN_BOOK).copy();
+							_setstack92.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack92);
 							if (_entity instanceof Player _player)
 								_player.getInventory().setChanged();
 						}
@@ -208,9 +224,9 @@ public class PrintingpressprocessProcedure {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("book count :" + getBlockNBTNumber(world, BlockPos.containing(x, y, z), "book_count"))), false);
 						if (entity instanceof LivingEntity _entity) {
-							ItemStack _setstack96 = new ItemStack(Items.BOOK).copy();
-							_setstack96.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
-							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack96);
+							ItemStack _setstack103 = new ItemStack(Items.BOOK).copy();
+							_setstack103.setCount((int) ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() - remove_item));
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack103);
 							if (_entity instanceof Player _player)
 								_player.getInventory().setChanged();
 						}
