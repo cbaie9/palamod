@@ -40,6 +40,12 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 	private ImageButton imagebutton_damage_stick;
 	private ImageButton imagebutton_strenghtstick;
 	private ImageButton imagebutton_stickofgod;
+	private ImageButton imagebutton_endium_medium_ring;
+	private ImageButton imagebutton_endium_big_ring;
+	private ImageButton imagebutton_unclaimfinder;
+	private ImageButton imagebutton_unclaimfinder_orange;
+	private ImageButton imagebutton_unclaimfinder_red;
+	private ImageButton imagebutton_unclaimfinder_precise;
 	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/sticknewhelp.png");
 	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/left_gray_line.png");
 	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
@@ -127,7 +133,7 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 		}
 		yOffset = 0;
 		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpnew_palamachine.label_craft").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 3, 83 + yOffset, -12829636, false);
+			guiGraphics.drawString(this.font, actualComponent, 5, 88 + yOffset, -12829636, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
@@ -187,8 +193,8 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 			}
 		};
 		this.addRenderableWidget(imagebutton_home_pixel_adminshop);
-		imagebutton_speed_stick = new ImageButton(this.leftPos + 6, this.topPos + 4, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/speed_stick.png"), ResourceLocation.parse("palamod:textures/screens/speed_stick_hover_poi.png")), e -> {
+		imagebutton_speed_stick = new ImageButton(this.leftPos + 43, this.topPos + 84, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/paladium_small_ring.png"), ResourceLocation.parse("palamod:textures/screens/white_small_ring.png")), e -> {
 					int x = PalahelpnewPalamachineScreen.this.x;
 					int y = PalahelpnewPalamachineScreen.this.y;
 					if (true) {
@@ -202,8 +208,8 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 			}
 		};
 		this.addRenderableWidget(imagebutton_speed_stick);
-		imagebutton_jump_stick2 = new ImageButton(this.leftPos + 23, this.topPos + 4, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/jump_stick2.png"), ResourceLocation.parse("palamod:textures/screens/jump_stick_hover_poi.png")), e -> {
+		imagebutton_jump_stick2 = new ImageButton(this.leftPos + 62, this.topPos + 84, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/paladium_medium_ring.png"), ResourceLocation.parse("palamod:textures/screens/white_medium_ring.png")), e -> {
 					int x = PalahelpnewPalamachineScreen.this.x;
 					int y = PalahelpnewPalamachineScreen.this.y;
 					if (true) {
@@ -217,8 +223,8 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 			}
 		};
 		this.addRenderableWidget(imagebutton_jump_stick2);
-		imagebutton_hyperjump_stick = new ImageButton(this.leftPos + 42, this.topPos + 5, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/hyperjump_stick.png"), ResourceLocation.parse("palamod:textures/screens/hyper_jump_stick_hover_poi.png")), e -> {
+		imagebutton_hyperjump_stick = new ImageButton(this.leftPos + 81, this.topPos + 85, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/paladium_big_ring.png"), ResourceLocation.parse("palamod:textures/screens/white_big_ring.png")), e -> {
 					int x = PalahelpnewPalamachineScreen.this.x;
 					int y = PalahelpnewPalamachineScreen.this.y;
 					if (true) {
@@ -232,8 +238,8 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 			}
 		};
 		this.addRenderableWidget(imagebutton_hyperjump_stick);
-		imagebutton_heal_stick = new ImageButton(this.leftPos + 61, this.topPos + 4, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/heal_stick.png"), ResourceLocation.parse("palamod:textures/screens/heal_stick_hover_poi.png")), e -> {
+		imagebutton_heal_stick = new ImageButton(this.leftPos + 100, this.topPos + 84, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/green_paladium_small_ring.png"), ResourceLocation.parse("palamod:textures/screens/white_small_ring.png")), e -> {
 					int x = PalahelpnewPalamachineScreen.this.x;
 					int y = PalahelpnewPalamachineScreen.this.y;
 					if (true) {
@@ -247,8 +253,8 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 			}
 		};
 		this.addRenderableWidget(imagebutton_heal_stick);
-		imagebutton_damage_stick = new ImageButton(this.leftPos + 79, this.topPos + 4, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/damage_stick.png"), ResourceLocation.parse("palamod:textures/screens/damage_stick_hover_poi.png")), e -> {
+		imagebutton_damage_stick = new ImageButton(this.leftPos + 118, this.topPos + 84, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/green_paladium_medium_ring.png"), ResourceLocation.parse("palamod:textures/screens/white_medium_ring.png")), e -> {
 					int x = PalahelpnewPalamachineScreen.this.x;
 					int y = PalahelpnewPalamachineScreen.this.y;
 					if (true) {
@@ -262,8 +268,8 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 			}
 		};
 		this.addRenderableWidget(imagebutton_damage_stick);
-		imagebutton_strenghtstick = new ImageButton(this.leftPos + 95, this.topPos + 5, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/strenghtstick.png"), ResourceLocation.parse("palamod:textures/screens/strenght_stick_hover_poi.png")), e -> {
+		imagebutton_strenghtstick = new ImageButton(this.leftPos + 136, this.topPos + 85, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/green_paladium_big_ring.png"), ResourceLocation.parse("palamod:textures/screens/white_big_ring.png")), e -> {
 					int x = PalahelpnewPalamachineScreen.this.x;
 					int y = PalahelpnewPalamachineScreen.this.y;
 					if (true) {
@@ -277,8 +283,8 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 			}
 		};
 		this.addRenderableWidget(imagebutton_strenghtstick);
-		imagebutton_stickofgod = new ImageButton(this.leftPos + 113, this.topPos + 5, 16, 16,
-				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/stickofgod.png"), ResourceLocation.parse("palamod:textures/screens/stick_of_gods_hover_poi.png")), e -> {
+		imagebutton_stickofgod = new ImageButton(this.leftPos + 155, this.topPos + 84, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/endium_small_ring.png"), ResourceLocation.parse("palamod:textures/screens/white_small_ring.png")), e -> {
 					int x = PalahelpnewPalamachineScreen.this.x;
 					int y = PalahelpnewPalamachineScreen.this.y;
 					if (true) {
@@ -292,5 +298,59 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 			}
 		};
 		this.addRenderableWidget(imagebutton_stickofgod);
+		imagebutton_endium_medium_ring = new ImageButton(this.leftPos + 173, this.topPos + 84, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/endium_medium_ring.png"), ResourceLocation.parse("palamod:textures/screens/white_medium_ring.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addRenderableWidget(imagebutton_endium_medium_ring);
+		imagebutton_endium_big_ring = new ImageButton(this.leftPos + 191, this.topPos + 83, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/endium_big_ring.png"), ResourceLocation.parse("palamod:textures/screens/white_big_ring.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addRenderableWidget(imagebutton_endium_big_ring);
+		imagebutton_unclaimfinder = new ImageButton(this.leftPos + 210, this.topPos + 82, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/unclaimfinder.png"), ResourceLocation.parse("palamod:textures/screens/white_unclaim_finder.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addRenderableWidget(imagebutton_unclaimfinder);
+		imagebutton_unclaimfinder_orange = new ImageButton(this.leftPos + 226, this.topPos + 82, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/unclaimfinder_orange.png"), ResourceLocation.parse("palamod:textures/screens/white_unclaim_finder.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addRenderableWidget(imagebutton_unclaimfinder_orange);
+		imagebutton_unclaimfinder_red = new ImageButton(this.leftPos + 242, this.topPos + 81, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/unclaimfinder_red.png"), ResourceLocation.parse("palamod:textures/screens/white_unclaim_finder.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addRenderableWidget(imagebutton_unclaimfinder_red);
+		imagebutton_unclaimfinder_precise = new ImageButton(this.leftPos + 259, this.topPos + 81, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/unclaimfinder_precise.png"), ResourceLocation.parse("palamod:textures/screens/white_unclaim_finder.png")), e -> {
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addRenderableWidget(imagebutton_unclaimfinder_precise);
 	}
 }

@@ -50342,6 +50342,8 @@
       "~Ostrya_woodFence@CUSTOM:Ostrya_woodFence"
     ],
     "ITEMS:minecraft:enchantable/durability": [
+      "~Mediumring@CUSTOM:Mediumring",
+      "~Smallring@CUSTOM:Smallring",
       "~Cavernehammer@CUSTOM:Cavernehammer",
       "~Unclaimfinderblue@CUSTOM:Unclaimfinderblue",
       "~Unclaimfinderred@CUSTOM:Unclaimfinderred",
@@ -50358,8 +50360,6 @@
       "~Endiummediumring@CUSTOM:Endiummediumring",
       "~Endiumsmallring@CUSTOM:Endiumsmallring",
       "~Bigring@CUSTOM:Bigring",
-      "~Mediumring@CUSTOM:Mediumring",
-      "~Smallring@CUSTOM:Smallring",
       "~Paladiumphone@CUSTOM:Paladiumphone",
       "~Compressedxpberry@CUSTOM:Compressedxpberry",
       "~Xpberry@CUSTOM:Xpberry"

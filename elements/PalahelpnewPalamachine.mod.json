@@ -473,8 +473,8 @@
             "falpha": 0.0
           },
           "hasShadow": false,
-          "x": 17,
-          "y": 91,
+          "x": 19,
+          "y": 96,
           "locked": false
         }
       },
@@ -482,11 +482,11 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_speed_stick",
-          "image": "speed_stick.png",
-          "hoveredImage": "speed_stick_hover_poi.png",
+          "image": "paladium_small_ring.png",
+          "hoveredImage": "white_small_ring.png",
           "onClick": "Palahelpstickmodespeed",
-          "x": 20,
-          "y": 12,
+          "x": 57,
+          "y": 92,
           "locked": false
         }
       },
@@ -494,11 +494,11 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_jump_stick2",
-          "image": "jump_stick2.png",
-          "hoveredImage": "jump_stick_hover_poi.png",
+          "image": "paladium_medium_ring.png",
+          "hoveredImage": "white_medium_ring.png",
           "onClick": "Palahelpstickmodejump",
-          "x": 37,
-          "y": 12,
+          "x": 76,
+          "y": 92,
           "locked": false
         }
       },
@@ -506,11 +506,11 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_hyperjump_stick",
-          "image": "hyperjump_stick.png",
-          "hoveredImage": "hyper_jump_stick_hover_poi.png",
+          "image": "paladium_big_ring.png",
+          "hoveredImage": "white_big_ring.png",
           "onClick": "Palahelpstickmodehyperjump",
-          "x": 56,
-          "y": 13,
+          "x": 95,
+          "y": 93,
           "locked": false
         }
       },
@@ -518,11 +518,11 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_heal_stick",
-          "image": "heal_stick.png",
-          "hoveredImage": "heal_stick_hover_poi.png",
+          "image": "green_paladium_small_ring.png",
+          "hoveredImage": "white_small_ring.png",
           "onClick": "Palahelpstickmodeheal",
-          "x": 75,
-          "y": 12,
+          "x": 114,
+          "y": 92,
           "locked": false
         }
       },
@@ -530,11 +530,11 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_damage_stick",
-          "image": "damage_stick.png",
-          "hoveredImage": "damage_stick_hover_poi.png",
+          "image": "green_paladium_medium_ring.png",
+          "hoveredImage": "white_medium_ring.png",
           "onClick": "Palahelpstickmodedamage",
-          "x": 93,
-          "y": 12,
+          "x": 132,
+          "y": 92,
           "locked": false
         }
       },
@@ -542,11 +542,11 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_strenghtstick",
-          "image": "strenghtstick.png",
-          "hoveredImage": "strenght_stick_hover_poi.png",
+          "image": "green_paladium_big_ring.png",
+          "hoveredImage": "white_big_ring.png",
           "onClick": "Palahelpstickmodestrenght",
-          "x": 109,
-          "y": 13,
+          "x": 150,
+          "y": 93,
           "locked": false
         }
       },
@@ -554,11 +554,11 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_stickofgod",
-          "image": "stickofgod.png",
-          "hoveredImage": "stick_of_gods_hover_poi.png",
+          "image": "endium_small_ring.png",
+          "hoveredImage": "white_small_ring.png",
           "onClick": "Palahelpstickmodesog",
-          "x": 127,
-          "y": 13,
+          "x": 169,
+          "y": 92,
           "locked": false
         }
       },
@@ -601,6 +601,72 @@
           "hasShadow": false,
           "x": 155,
           "y": 75,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_endium_medium_ring",
+          "image": "endium_medium_ring.png",
+          "hoveredImage": "white_medium_ring.png",
+          "x": 187,
+          "y": 92,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_endium_big_ring",
+          "image": "endium_big_ring.png",
+          "hoveredImage": "white_big_ring.png",
+          "x": 205,
+          "y": 91,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_unclaimfinder",
+          "image": "unclaimfinder.png",
+          "hoveredImage": "white_unclaim_finder.png",
+          "x": 224,
+          "y": 90,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_unclaimfinder_orange",
+          "image": "unclaimfinder_orange.png",
+          "hoveredImage": "white_unclaim_finder.png",
+          "x": 240,
+          "y": 90,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_unclaimfinder_red",
+          "image": "unclaimfinder_red.png",
+          "hoveredImage": "white_unclaim_finder.png",
+          "x": 256,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_unclaimfinder_precise",
+          "image": "unclaimfinder_precise.png",
+          "hoveredImage": "white_unclaim_finder.png",
+          "x": 273,
+          "y": 89,
           "locked": false
         }
       }
