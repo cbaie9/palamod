@@ -88,6 +88,10 @@ public record PalahelpnewPalamachineButtonMessage(int buttonID, int x, int y, in
 
 			PalahelpstickmodesogProcedure.execute(entity);
 		}
+		if (buttonID == 16) {
+
+			OpennewstickguiProcedure.execute(world, x, y, z, entity);
+		}
 	}
 
 	@SubscribeEvent

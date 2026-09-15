@@ -46,6 +46,7 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 	private ImageButton imagebutton_unclaimfinder_orange;
 	private ImageButton imagebutton_unclaimfinder_red;
 	private ImageButton imagebutton_unclaimfinder_precise;
+	private ImageButton imagebutton_heal_stick1;
 	private static final ResourceLocation IMAGE_0 = ResourceLocation.parse("palamod:textures/screens/sticknewhelp.png");
 	private static final ResourceLocation IMAGE_1 = ResourceLocation.parse("palamod:textures/screens/left_gray_line.png");
 	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
@@ -78,6 +79,13 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 		if (mouseX > leftPos + 379 && mouseX < leftPos + 395 && mouseY > topPos + 4 && mouseY < topPos + 20) {
 			if (ClosetheguitransProcedure.execute() != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(ClosetheguitransProcedure.execute().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX, mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 275 && mouseX < leftPos + 290 && mouseY > topPos + 81 && mouseY < topPos + 95) {
+			if (Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_go_to_palahelp").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_go_to_palahelp").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
 			}
 			customTooltipShown = true;
 		}
@@ -352,5 +360,20 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 			}
 		};
 		this.addRenderableWidget(imagebutton_unclaimfinder_precise);
+		imagebutton_heal_stick1 = new ImageButton(this.leftPos + 274, this.topPos + 80, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/heal_stick.png"), ResourceLocation.parse("palamod:textures/screens/heal_stick_hover_poi.png")), e -> {
+					int x = PalahelpnewPalamachineScreen.this.x;
+					int y = PalahelpnewPalamachineScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new PalahelpnewPalamachineButtonMessage(16, x, y, z));
+						PalahelpnewPalamachineButtonMessage.handleButtonAction(entity, 16, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		this.addRenderableWidget(imagebutton_heal_stick1);
 	}
 }
