@@ -146,8 +146,8 @@
             "fixedValue": true
           },
           "dropItemsWhenNotBound": true,
-          "x": 94,
-          "y": 131,
+          "x": 57,
+          "y": 165,
           "locked": false
         }
       },
@@ -165,8 +165,8 @@
             "fixedValue": true
           },
           "dropItemsWhenNotBound": true,
-          "x": 161,
-          "y": 145,
+          "x": 94,
+          "y": 131,
           "locked": false
         }
       },
@@ -184,8 +184,8 @@
             "fixedValue": true
           },
           "dropItemsWhenNotBound": true,
-          "x": 57,
-          "y": 165,
+          "x": 161,
+          "y": 145,
           "locked": false
         }
       },
@@ -484,7 +484,7 @@
           "name": "imagebutton_speed_stick",
           "image": "paladium_small_ring.png",
           "hoveredImage": "white_small_ring.png",
-          "onClick": "Palahelpstickmodespeed",
+          "onClick": "PalahelpPalamachinePaladiumringsmall",
           "x": 57,
           "y": 92,
           "locked": false
@@ -496,7 +496,7 @@
           "name": "imagebutton_jump_stick2",
           "image": "paladium_medium_ring.png",
           "hoveredImage": "white_medium_ring.png",
-          "onClick": "Palahelpstickmodejump",
+          "onClick": "PalahelpPalamachinePaladiumringmedium",
           "x": 76,
           "y": 92,
           "locked": false
@@ -508,7 +508,7 @@
           "name": "imagebutton_hyperjump_stick",
           "image": "paladium_big_ring.png",
           "hoveredImage": "white_big_ring.png",
-          "onClick": "Palahelpstickmodehyperjump",
+          "onClick": "PalahelpPalamachinePaladiumringbig",
           "x": 95,
           "y": 93,
           "locked": false
@@ -520,7 +520,7 @@
           "name": "imagebutton_heal_stick",
           "image": "green_paladium_small_ring.png",
           "hoveredImage": "white_small_ring.png",
-          "onClick": "Palahelpstickmodeheal",
+          "onClick": "PalahelpPalamachineGreenPaladiumringsmall",
           "x": 114,
           "y": 92,
           "locked": false
@@ -532,7 +532,7 @@
           "name": "imagebutton_damage_stick",
           "image": "green_paladium_medium_ring.png",
           "hoveredImage": "white_medium_ring.png",
-          "onClick": "Palahelpstickmodedamage",
+          "onClick": "PalahelpPalamachineGreenPaladiumringmedium",
           "x": 132,
           "y": 92,
           "locked": false
@@ -544,7 +544,7 @@
           "name": "imagebutton_strenghtstick",
           "image": "green_paladium_big_ring.png",
           "hoveredImage": "white_big_ring.png",
-          "onClick": "Palahelpstickmodestrenght",
+          "onClick": "PalahelpPalamachineGreenPaladiumringbig",
           "x": 150,
           "y": 93,
           "locked": false
@@ -556,7 +556,7 @@
           "name": "imagebutton_stickofgod",
           "image": "endium_small_ring.png",
           "hoveredImage": "white_small_ring.png",
-          "onClick": "Palahelpstickmodesog",
+          "onClick": "PalahelpPalamachineEndiumringsmall",
           "x": 169,
           "y": 92,
           "locked": false
@@ -610,6 +610,7 @@
           "name": "imagebutton_endium_medium_ring",
           "image": "endium_medium_ring.png",
           "hoveredImage": "white_medium_ring.png",
+          "onClick": "PalahelpPalamachineEndiumringmedium",
           "x": 187,
           "y": 92,
           "locked": false
@@ -621,6 +622,7 @@
           "name": "imagebutton_endium_big_ring",
           "image": "endium_big_ring.png",
           "hoveredImage": "white_big_ring.png",
+          "onClick": "PalahelpPalamachineEndiumringbig",
           "x": 205,
           "y": 91,
           "locked": false

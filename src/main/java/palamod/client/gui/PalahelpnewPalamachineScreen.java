@@ -308,6 +308,12 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 		this.addRenderableWidget(imagebutton_stickofgod);
 		imagebutton_endium_medium_ring = new ImageButton(this.leftPos + 173, this.topPos + 84, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/endium_medium_ring.png"), ResourceLocation.parse("palamod:textures/screens/white_medium_ring.png")), e -> {
+					int x = PalahelpnewPalamachineScreen.this.x;
+					int y = PalahelpnewPalamachineScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new PalahelpnewPalamachineButtonMessage(10, x, y, z));
+						PalahelpnewPalamachineButtonMessage.handleButtonAction(entity, 10, x, y, z);
+					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
@@ -317,6 +323,12 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 		this.addRenderableWidget(imagebutton_endium_medium_ring);
 		imagebutton_endium_big_ring = new ImageButton(this.leftPos + 191, this.topPos + 83, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/endium_big_ring.png"), ResourceLocation.parse("palamod:textures/screens/white_big_ring.png")), e -> {
+					int x = PalahelpnewPalamachineScreen.this.x;
+					int y = PalahelpnewPalamachineScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new PalahelpnewPalamachineButtonMessage(11, x, y, z));
+						PalahelpnewPalamachineButtonMessage.handleButtonAction(entity, 11, x, y, z);
+					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {

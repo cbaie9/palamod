@@ -47671,6 +47671,222 @@
           "src/main/java/palamod/procedures/IsItemFuelGUIcheckProcedure.java"
         ]
       }
+    },
+    {
+      "name": "PalahelpPalamachinePaladiumringsmall",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palahelp_palamachine_paladiumringsmall",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PalahelpPalamachinePaladiumringsmallProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "PalahelpPalamachinePaladiumringmedium",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palahelp_palamachine_paladiumringmedium",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PalahelpPalamachinePaladiumringmediumProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "PalahelpPalamachinePaladiumringbig",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palahelp_palamachine_paladiumringbig",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PalahelpPalamachinePaladiumringbigProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "PalahelpPalamachineGreenPaladiumringsmall",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palahelp_palamachine_green_paladiumringsmall",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PalahelpPalamachineGreenPaladiumringsmallProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "PalahelpPalamachineGreenPaladiumringmedium",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palahelp_palamachine_green_paladiumringmedium",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PalahelpPalamachineGreenPaladiumringmediumProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "PalahelpPalamachineGreenPaladiumringbig",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palahelp_palamachine_green_paladiumringbig",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PalahelpPalamachineGreenPaladiumringbigProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "PalahelpPalamachineEndiumringsmall",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palahelp_palamachine_endiumringsmall",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PalahelpPalamachineEndiumringsmallProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "PalahelpPalamachineEndiumringmedium",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palahelp_palamachine_endiumringmedium",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PalahelpPalamachineEndiumringmediumProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "PalahelpPalamachineEndiumringbig",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palahelp_palamachine_endiumringbig",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PalahelpPalamachineEndiumringbigProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "PalahelpPalamachineGreenUnclaimFinder",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palahelp_palamachine_green_unclaim_finder",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/palamod/procedures/PalahelpPalamachineGreenUnclaimFinderProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [

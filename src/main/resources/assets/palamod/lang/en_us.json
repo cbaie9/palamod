@@ -1779,5 +1779,6 @@
   "palamod.printing_press.break": "The enchanted plate has broken, please insert a new enchanted plate to re-use the press.",
   "palamod.printing_press.noink": "There are no enough paladium ink in the printing press in order to work, the printing need at least 6 paladium ink. To insert the book, do a right click with the paladium ink in hand with the press.",
   "palamod.printing_press.nobook": "There are no enough book in the printing press in order to work, the printing need at least 3 books. To insert the book, do a right click with the book in hand with the press.",
-  "palamod.printing_press.noplate": "There is no enchated plate in the printing press, try inserting a enchated plate and try again. To obtain an enchanted plate, use the type setting machine."
+  "palamod.printing_press.noplate": "There is no enchated plate in the printing press, try inserting a enchated plate and try again. To obtain an enchanted plate, use the type setting machine.",
+  "gui.palamod.palahelpnew_palamachine.tooltip_go_to_palahelp": "Go to Palahelp"
 }

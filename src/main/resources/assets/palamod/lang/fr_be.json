@@ -1779,5 +1779,6 @@
   "gui.palamod.authsafegui.code_check": "",
   "gui.palamod.adminshopmenu.slider_suffix": "",
   "gui.palamod.golemtreec.golem_v_farmer1": "",
-  "gui.palamod.factionhomegui.label_empty": ""
+  "gui.palamod.factionhomegui.label_empty": "",
+  "gui.palamod.palahelpnew_palamachine.tooltip_go_to_palahelp": "Go to Palahelp"
 }

@@ -62,31 +62,39 @@ public record PalahelpnewPalamachineButtonMessage(int buttonID, int x, int y, in
 		}
 		if (buttonID == 3) {
 
-			PalahelpstickmodespeedProcedure.execute(entity);
+			PalahelpPalamachinePaladiumringsmallProcedure.execute(world, entity);
 		}
 		if (buttonID == 4) {
 
-			PalahelpstickmodejumpProcedure.execute(entity);
+			PalahelpPalamachinePaladiumringmediumProcedure.execute(world, entity);
 		}
 		if (buttonID == 5) {
 
-			PalahelpstickmodehyperjumpProcedure.execute(entity);
+			PalahelpPalamachinePaladiumringbigProcedure.execute(world, entity);
 		}
 		if (buttonID == 6) {
 
-			PalahelpstickmodehealProcedure.execute(entity);
+			PalahelpPalamachineGreenPaladiumringsmallProcedure.execute(world, entity);
 		}
 		if (buttonID == 7) {
 
-			PalahelpstickmodedamageProcedure.execute(entity);
+			PalahelpPalamachineGreenPaladiumringmediumProcedure.execute(world, entity);
 		}
 		if (buttonID == 8) {
 
-			PalahelpstickmodestrenghtProcedure.execute(entity);
+			PalahelpPalamachineGreenPaladiumringbigProcedure.execute(world, entity);
 		}
 		if (buttonID == 9) {
 
-			PalahelpstickmodesogProcedure.execute(entity);
+			PalahelpPalamachineEndiumringsmallProcedure.execute(world, entity);
+		}
+		if (buttonID == 10) {
+
+			PalahelpPalamachineEndiumringmediumProcedure.execute(world, entity);
+		}
+		if (buttonID == 11) {
+
+			PalahelpPalamachineEndiumringbigProcedure.execute(world, entity);
 		}
 		if (buttonID == 16) {
 
