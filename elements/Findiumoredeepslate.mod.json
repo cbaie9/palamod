@@ -157,17 +157,15 @@
     "onStartToDestroy": "Setblockstateincache",
     "onBlockPlayedBy": "Jobsminerplacetag",
     "generateFeature": true,
-    "restrictionBiomes": [
-      "#minecraft:is_overworld"
-    ],
+    "restrictionBiomes": [],
     "blocksToReplace": [
       "Blocks.DEEPSLATE",
       "Blocks.TUFF",
       "Blocks.GRAVEL"
     ],
     "generationShape": "TRIANGLE",
-    "frequencyPerChunks": 4,
-    "frequencyOnChunk": 2,
+    "frequencyPerChunks": 5,
+    "frequencyOnChunk": 4,
     "minGenerateHeight": -64,
     "maxGenerateHeight": 0
   }

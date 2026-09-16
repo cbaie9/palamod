@@ -49979,6 +49979,7 @@
       "Blocks.STONE_SLAB#2"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~Findiumoredeepslate@CUSTOM:Findiumoredeepslate",
       "~EndiumPortalAngleBlock@CUSTOM:EndiumPortalAngleBlock",
       "~CauldronCore@CUSTOM:CauldronCore",
       "~Cauldron@CUSTOM:Cauldron",
@@ -50075,7 +50076,6 @@
       "~Caveblock@CUSTOM:Caveblock",
       "~Trixiumblock@CUSTOM:Trixiumblock",
       "~Trixiumore@CUSTOM:Trixiumore",
-      "~Findiumoredeepslate@CUSTOM:Findiumoredeepslate",
       "~Endiumnuggetoredeepslate@CUSTOM:Endiumnuggetoredeepslate",
       "~Paladiumgreenoredeepslate@CUSTOM:Paladiumgreenoredeepslate",
       "~Trixiumoredeepslate@CUSTOM:Trixiumoredeepslate",
@@ -50505,6 +50505,7 @@
       "~PaladiumArmor@CUSTOM:PaladiumArmor.boots"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
+      "~Findiumoredeepslate@CUSTOM:Findiumoredeepslate",
       "~CauldronCore@CUSTOM:CauldronCore",
       "~Cauldron@CUSTOM:Cauldron",
       "~Moneyanvil@CUSTOM:Moneyanvil",
@@ -50515,7 +50516,6 @@
       "~Softenedamethystore@CUSTOM:Softenedamethystore",
       "~Exctractor@CUSTOM:Exctractor",
       "~Trixiumore@CUSTOM:Trixiumore",
-      "~Findiumoredeepslate@CUSTOM:Findiumoredeepslate",
       "~Amethystslab@CUSTOM:Amethystslab",
       "~Amethyststairs@CUSTOM:Amethyststairs",
       "~Paladiumforge@CUSTOM:Paladiumforge",
