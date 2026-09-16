@@ -96,6 +96,22 @@ public record PalahelpnewPalamachineButtonMessage(int buttonID, int x, int y, in
 
 			PalahelpPalamachineEndiumringbigProcedure.execute(world, entity);
 		}
+		if (buttonID == 12) {
+
+			PalahelpPalamachineGreenUnclaimFinderProcedure.execute(entity);
+		}
+		if (buttonID == 13) {
+
+			PalahelpPalamachineOrangeUnclaimFinderProcedure.execute(entity);
+		}
+		if (buttonID == 14) {
+
+			PalahelpPalamachineRedUnclaimFinderProcedure.execute(entity);
+		}
+		if (buttonID == 15) {
+
+			PalahelpPalamachineBlueUnclaimFinderProcedure.execute(entity);
+		}
 		if (buttonID == 16) {
 
 			OpennewstickguiProcedure.execute(world, x, y, z, entity);

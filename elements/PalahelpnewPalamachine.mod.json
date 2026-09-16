@@ -399,16 +399,6 @@
         }
       },
       {
-        "type": "image",
-        "data": {
-          "image": "arrow_new.png",
-          "use1Xscale": true,
-          "x": 345,
-          "y": 152,
-          "locked": false
-        }
-      },
-      {
         "type": "inputslot",
         "data": {
           "inputLimit": {
@@ -424,6 +414,19 @@
           "dropItemsWhenNotBound": true,
           "x": 375,
           "y": 149,
+          "locked": false
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "arrow_right_furnace_sprite.png",
+          "spritesCount": 23,
+          "spriteIndex": {
+            "fixedValue": 0.0
+          },
+          "x": 347,
+          "y": 151,
           "locked": false
         }
       },
@@ -545,7 +548,7 @@
           "image": "green_paladium_big_ring.png",
           "hoveredImage": "white_big_ring.png",
           "onClick": "PalahelpPalamachineGreenPaladiumringbig",
-          "x": 150,
+          "x": 151,
           "y": 93,
           "locked": false
         }
@@ -557,7 +560,7 @@
           "image": "endium_small_ring.png",
           "hoveredImage": "white_small_ring.png",
           "onClick": "PalahelpPalamachineEndiumringsmall",
-          "x": 169,
+          "x": 170,
           "y": 92,
           "locked": false
         }
@@ -592,15 +595,16 @@
         "data": {
           "name": "label_work_in_progress_build",
           "text": {
-            "fixedValue": "Work in Progress Build"
+            "fixedValue": "Work in Progress Build",
+            "name": "GetDescriptionPalamachinePalahelp"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
           "hasShadow": false,
-          "x": 155,
-          "y": 75,
+          "x": 18,
+          "y": 67,
           "locked": false
         }
       },
@@ -611,7 +615,7 @@
           "image": "endium_medium_ring.png",
           "hoveredImage": "white_medium_ring.png",
           "onClick": "PalahelpPalamachineEndiumringmedium",
-          "x": 187,
+          "x": 189,
           "y": 92,
           "locked": false
         }
@@ -623,8 +627,8 @@
           "image": "endium_big_ring.png",
           "hoveredImage": "white_big_ring.png",
           "onClick": "PalahelpPalamachineEndiumringbig",
-          "x": 205,
-          "y": 91,
+          "x": 208,
+          "y": 93,
           "locked": false
         }
       },
@@ -634,7 +638,8 @@
           "name": "imagebutton_unclaimfinder",
           "image": "unclaimfinder.png",
           "hoveredImage": "white_unclaim_finder.png",
-          "x": 224,
+          "onClick": "PalahelpPalamachineGreenUnclaimFinder",
+          "x": 227,
           "y": 90,
           "locked": false
         }
@@ -645,7 +650,8 @@
           "name": "imagebutton_unclaimfinder_orange",
           "image": "unclaimfinder_orange.png",
           "hoveredImage": "white_unclaim_finder.png",
-          "x": 240,
+          "onClick": "PalahelpPalamachineOrangeUnclaimFinder",
+          "x": 245,
           "y": 90,
           "locked": false
         }
@@ -656,8 +662,9 @@
           "name": "imagebutton_unclaimfinder_red",
           "image": "unclaimfinder_red.png",
           "hoveredImage": "white_unclaim_finder.png",
-          "x": 256,
-          "y": 89,
+          "onClick": "PalahelpPalamachineRedUnclaimFinder",
+          "x": 263,
+          "y": 90,
           "locked": false
         }
       },
@@ -667,8 +674,9 @@
           "name": "imagebutton_unclaimfinder_precise",
           "image": "unclaimfinder_precise.png",
           "hoveredImage": "white_unclaim_finder.png",
-          "x": 273,
-          "y": 89,
+          "onClick": "PalahelpPalamachineBlueUnclaimFinder",
+          "x": 281,
+          "y": 90,
           "locked": false
         }
       },
@@ -679,8 +687,8 @@
           "image": "heal_stick.png",
           "hoveredImage": "heal_stick_hover_poi.png",
           "onClick": "Opennewstickgui",
-          "x": 288,
-          "y": 88,
+          "x": 298,
+          "y": 90,
           "locked": false
         }
       },
@@ -691,9 +699,191 @@
           "text": {
             "fixedValue": "Go to Palahelp"
           },
-          "width": 15,
-          "height": 14,
-          "x": 289,
+          "width": 17,
+          "height": 17,
+          "x": 298,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_paladium_small_ring",
+          "text": {
+            "fixedValue": "Paladium Small Ring"
+          },
+          "width": 18,
+          "height": 12,
+          "x": 56,
+          "y": 94,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_paladium_medium_ring",
+          "text": {
+            "fixedValue": "Paladium medium ring"
+          },
+          "width": 18,
+          "height": 12,
+          "x": 75,
+          "y": 94,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_paladium_big_ring",
+          "text": {
+            "fixedValue": "Paladium big ring"
+          },
+          "width": 18,
+          "height": 12,
+          "x": 94,
+          "y": 94,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_green_paladium_small_ring",
+          "text": {
+            "fixedValue": "Green paladium small ring"
+          },
+          "width": 17,
+          "height": 12,
+          "x": 113,
+          "y": 94,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_green_paladium_medium_ring",
+          "text": {
+            "fixedValue": "Green Paladium medium ring"
+          },
+          "width": 18,
+          "height": 12,
+          "x": 131,
+          "y": 94,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_green_paladium_big_ring",
+          "text": {
+            "fixedValue": "Green paladium big ring"
+          },
+          "width": 18,
+          "height": 12,
+          "x": 150,
+          "y": 94,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_endium_small_ring",
+          "text": {
+            "fixedValue": "Endium small ring"
+          },
+          "width": 18,
+          "height": 12,
+          "x": 169,
+          "y": 94,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_endium_medium_ring",
+          "text": {
+            "fixedValue": "Endium medium ring"
+          },
+          "width": 18,
+          "height": 12,
+          "x": 188,
+          "y": 94,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_endium_big_ring",
+          "text": {
+            "fixedValue": "Endium big ring"
+          },
+          "width": 18,
+          "height": 12,
+          "x": 207,
+          "y": 94,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_green_unclaim_finder",
+          "text": {
+            "fixedValue": "Green Unclaim Finder"
+          },
+          "width": 17,
+          "height": 17,
+          "x": 226,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_orange_unclaim_finder",
+          "text": {
+            "fixedValue": "Orange unclaim finder"
+          },
+          "width": 17,
+          "height": 17,
+          "x": 244,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_red_unclaim_finder",
+          "text": {
+            "fixedValue": "Red unclaim finder"
+          },
+          "width": 17,
+          "height": 17,
+          "x": 262,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_blue_unclaim_finder",
+          "text": {
+            "fixedValue": "Blue Unclaim Finder"
+          },
+          "width": 17,
+          "height": 17,
+          "x": 280,
           "y": 89,
           "locked": false
         }

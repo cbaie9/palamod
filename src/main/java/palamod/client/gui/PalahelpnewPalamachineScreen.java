@@ -2,6 +2,7 @@ package palamod.client.gui;
 
 import palamod.world.inventory.PalahelpnewPalamachineMenu;
 
+import palamod.procedures.GetDescriptionPalamachinePalahelpProcedure;
 import palamod.procedures.ClosetheguitransProcedure;
 
 import palamod.network.PalahelpnewPalamachineButtonMessage;
@@ -52,8 +53,8 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 	private static final ResourceLocation IMAGE_2 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
 	private static final ResourceLocation IMAGE_3 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
 	private static final ResourceLocation IMAGE_4 = ResourceLocation.parse("palamod:textures/screens/right_gray_line.png");
-	private static final ResourceLocation IMAGE_5 = ResourceLocation.parse("palamod:textures/screens/arrow_new.png");
-	private static final ResourceLocation IMAGE_6 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
+	private static final ResourceLocation IMAGE_5 = ResourceLocation.parse("palamod:textures/screens/mid_gray_line.png");
+	private static final ResourceLocation SPRITE_0 = ResourceLocation.parse("palamod:textures/screens/arrow_right_furnace_sprite.png");
 
 	public PalahelpnewPalamachineScreen(PalahelpnewPalamachineMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -82,9 +83,100 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 			}
 			customTooltipShown = true;
 		}
-		if (mouseX > leftPos + 275 && mouseX < leftPos + 290 && mouseY > topPos + 81 && mouseY < topPos + 95) {
+		if (mouseX > leftPos + 284 && mouseX < leftPos + 301 && mouseY > topPos + 81 && mouseY < topPos + 98) {
 			if (Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_go_to_palahelp").getString() != null) {
 				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_go_to_palahelp").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 42 && mouseX < leftPos + 60 && mouseY > topPos + 86 && mouseY < topPos + 98) {
+			if (Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_paladium_small_ring").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_paladium_small_ring").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 61 && mouseX < leftPos + 79 && mouseY > topPos + 86 && mouseY < topPos + 98) {
+			if (Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_paladium_medium_ring").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_paladium_medium_ring").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 80 && mouseX < leftPos + 98 && mouseY > topPos + 86 && mouseY < topPos + 98) {
+			if (Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_paladium_big_ring").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_paladium_big_ring").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 99 && mouseX < leftPos + 116 && mouseY > topPos + 86 && mouseY < topPos + 98) {
+			if (Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_green_paladium_small_ring").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_green_paladium_small_ring").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 117 && mouseX < leftPos + 135 && mouseY > topPos + 86 && mouseY < topPos + 98) {
+			if (Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_green_paladium_medium_ring").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_green_paladium_medium_ring").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 136 && mouseX < leftPos + 154 && mouseY > topPos + 86 && mouseY < topPos + 98) {
+			if (Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_green_paladium_big_ring").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_green_paladium_big_ring").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 155 && mouseX < leftPos + 173 && mouseY > topPos + 86 && mouseY < topPos + 98) {
+			if (Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_endium_small_ring").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_endium_small_ring").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 174 && mouseX < leftPos + 192 && mouseY > topPos + 86 && mouseY < topPos + 98) {
+			if (Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_endium_medium_ring").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_endium_medium_ring").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 193 && mouseX < leftPos + 211 && mouseY > topPos + 86 && mouseY < topPos + 98) {
+			if (Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_endium_big_ring").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_endium_big_ring").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 212 && mouseX < leftPos + 229 && mouseY > topPos + 81 && mouseY < topPos + 98) {
+			if (Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_green_unclaim_finder").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_green_unclaim_finder").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 230 && mouseX < leftPos + 247 && mouseY > topPos + 81 && mouseY < topPos + 98) {
+			if (Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_orange_unclaim_finder").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_orange_unclaim_finder").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()),
+						mouseX, mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 248 && mouseX < leftPos + 265 && mouseY > topPos + 81 && mouseY < topPos + 98) {
+			if (Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_red_unclaim_finder").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_red_unclaim_finder").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
+						mouseY);
+			}
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 266 && mouseX < leftPos + 283 && mouseY > topPos + 81 && mouseY < topPos + 98) {
+			if (Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_blue_unclaim_finder").getString() != null) {
+				guiGraphics.renderComponentTooltip(font, Arrays.stream(Component.translatable("gui.palamod.palahelpnew_palamachine.tooltip_blue_unclaim_finder").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList()), mouseX,
 						mouseY);
 			}
 			customTooltipShown = true;
@@ -103,8 +195,8 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 		guiGraphics.blit(IMAGE_2, this.leftPos + 99, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 		guiGraphics.blit(IMAGE_3, this.leftPos + 199, this.topPos + 0, 0, 0, 100, 24, 100, 24);
 		guiGraphics.blit(IMAGE_4, this.leftPos + 300, this.topPos + 0, 0, 0, 100, 24, 100, 24);
-		guiGraphics.blit(IMAGE_5, this.leftPos + 331, this.topPos + 144, 0, 0, 24, 10, 24, 10);
-		guiGraphics.blit(IMAGE_6, this.leftPos + 260, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(IMAGE_5, this.leftPos + 260, this.topPos + 0, 0, 0, 100, 24, 100, 24);
+		guiGraphics.blit(SPRITE_0, this.leftPos + 333, this.topPos + 143, 0, 0, 22, 15, 506, 15);
 		RenderSystem.disableBlend();
 	}
 
@@ -146,8 +238,8 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		yOffset = 0;
-		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpnew_palamachine.label_work_in_progress_build").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 141, 67 + yOffset, -1, false);
+		for (Component actualComponent : Arrays.stream(GetDescriptionPalamachinePalahelpProcedure.execute(entity).split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 4, 59 + yOffset, -1, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
@@ -276,7 +368,7 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 			}
 		};
 		this.addRenderableWidget(imagebutton_damage_stick);
-		imagebutton_strenghtstick = new ImageButton(this.leftPos + 136, this.topPos + 85, 16, 16,
+		imagebutton_strenghtstick = new ImageButton(this.leftPos + 137, this.topPos + 85, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/green_paladium_big_ring.png"), ResourceLocation.parse("palamod:textures/screens/white_big_ring.png")), e -> {
 					int x = PalahelpnewPalamachineScreen.this.x;
 					int y = PalahelpnewPalamachineScreen.this.y;
@@ -291,7 +383,7 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 			}
 		};
 		this.addRenderableWidget(imagebutton_strenghtstick);
-		imagebutton_stickofgod = new ImageButton(this.leftPos + 155, this.topPos + 84, 16, 16,
+		imagebutton_stickofgod = new ImageButton(this.leftPos + 156, this.topPos + 84, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/endium_small_ring.png"), ResourceLocation.parse("palamod:textures/screens/white_small_ring.png")), e -> {
 					int x = PalahelpnewPalamachineScreen.this.x;
 					int y = PalahelpnewPalamachineScreen.this.y;
@@ -306,7 +398,7 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 			}
 		};
 		this.addRenderableWidget(imagebutton_stickofgod);
-		imagebutton_endium_medium_ring = new ImageButton(this.leftPos + 173, this.topPos + 84, 16, 16,
+		imagebutton_endium_medium_ring = new ImageButton(this.leftPos + 175, this.topPos + 84, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/endium_medium_ring.png"), ResourceLocation.parse("palamod:textures/screens/white_medium_ring.png")), e -> {
 					int x = PalahelpnewPalamachineScreen.this.x;
 					int y = PalahelpnewPalamachineScreen.this.y;
@@ -321,7 +413,7 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 			}
 		};
 		this.addRenderableWidget(imagebutton_endium_medium_ring);
-		imagebutton_endium_big_ring = new ImageButton(this.leftPos + 191, this.topPos + 83, 16, 16,
+		imagebutton_endium_big_ring = new ImageButton(this.leftPos + 194, this.topPos + 85, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/endium_big_ring.png"), ResourceLocation.parse("palamod:textures/screens/white_big_ring.png")), e -> {
 					int x = PalahelpnewPalamachineScreen.this.x;
 					int y = PalahelpnewPalamachineScreen.this.y;
@@ -336,8 +428,14 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 			}
 		};
 		this.addRenderableWidget(imagebutton_endium_big_ring);
-		imagebutton_unclaimfinder = new ImageButton(this.leftPos + 210, this.topPos + 82, 16, 16,
+		imagebutton_unclaimfinder = new ImageButton(this.leftPos + 213, this.topPos + 82, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/unclaimfinder.png"), ResourceLocation.parse("palamod:textures/screens/white_unclaim_finder.png")), e -> {
+					int x = PalahelpnewPalamachineScreen.this.x;
+					int y = PalahelpnewPalamachineScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new PalahelpnewPalamachineButtonMessage(12, x, y, z));
+						PalahelpnewPalamachineButtonMessage.handleButtonAction(entity, 12, x, y, z);
+					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
@@ -345,8 +443,14 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 			}
 		};
 		this.addRenderableWidget(imagebutton_unclaimfinder);
-		imagebutton_unclaimfinder_orange = new ImageButton(this.leftPos + 226, this.topPos + 82, 16, 16,
+		imagebutton_unclaimfinder_orange = new ImageButton(this.leftPos + 231, this.topPos + 82, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/unclaimfinder_orange.png"), ResourceLocation.parse("palamod:textures/screens/white_unclaim_finder.png")), e -> {
+					int x = PalahelpnewPalamachineScreen.this.x;
+					int y = PalahelpnewPalamachineScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new PalahelpnewPalamachineButtonMessage(13, x, y, z));
+						PalahelpnewPalamachineButtonMessage.handleButtonAction(entity, 13, x, y, z);
+					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
@@ -354,8 +458,14 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 			}
 		};
 		this.addRenderableWidget(imagebutton_unclaimfinder_orange);
-		imagebutton_unclaimfinder_red = new ImageButton(this.leftPos + 242, this.topPos + 81, 16, 16,
+		imagebutton_unclaimfinder_red = new ImageButton(this.leftPos + 249, this.topPos + 82, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/unclaimfinder_red.png"), ResourceLocation.parse("palamod:textures/screens/white_unclaim_finder.png")), e -> {
+					int x = PalahelpnewPalamachineScreen.this.x;
+					int y = PalahelpnewPalamachineScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new PalahelpnewPalamachineButtonMessage(14, x, y, z));
+						PalahelpnewPalamachineButtonMessage.handleButtonAction(entity, 14, x, y, z);
+					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
@@ -363,8 +473,14 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 			}
 		};
 		this.addRenderableWidget(imagebutton_unclaimfinder_red);
-		imagebutton_unclaimfinder_precise = new ImageButton(this.leftPos + 259, this.topPos + 81, 16, 16,
+		imagebutton_unclaimfinder_precise = new ImageButton(this.leftPos + 267, this.topPos + 82, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/unclaimfinder_precise.png"), ResourceLocation.parse("palamod:textures/screens/white_unclaim_finder.png")), e -> {
+					int x = PalahelpnewPalamachineScreen.this.x;
+					int y = PalahelpnewPalamachineScreen.this.y;
+					if (true) {
+						PacketDistributor.sendToServer(new PalahelpnewPalamachineButtonMessage(15, x, y, z));
+						PalahelpnewPalamachineButtonMessage.handleButtonAction(entity, 15, x, y, z);
+					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
@@ -372,7 +488,7 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 			}
 		};
 		this.addRenderableWidget(imagebutton_unclaimfinder_precise);
-		imagebutton_heal_stick1 = new ImageButton(this.leftPos + 274, this.topPos + 80, 16, 16,
+		imagebutton_heal_stick1 = new ImageButton(this.leftPos + 284, this.topPos + 82, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("palamod:textures/screens/heal_stick.png"), ResourceLocation.parse("palamod:textures/screens/heal_stick_hover_poi.png")), e -> {
 					int x = PalahelpnewPalamachineScreen.this.x;
 					int y = PalahelpnewPalamachineScreen.this.y;
