@@ -419,7 +419,7 @@
         "data": {
           "name": "imagebutton_jobs_xpgain_miner_break",
           "image": "base_miner.png",
-          "hoveredImage": "base_miner.png",
+          "hoveredImage": "base_miner_hover.png",
           "onClick": "LoadMinerMinePalahelpJobsXpGain",
           "displayCondition": "IsModeMinerJobsXpgain",
           "x": 72,
@@ -544,7 +544,7 @@
           "name": "imagebutton_screen_beta3_jobs_alchi",
           "image": "screen_beta3_jobs_alchi.png",
           "hoveredImage": "screen_beta3_jobs_alchi2.png",
-          "onClick": "SetModeHunterJobsXpgain",
+          "onClick": "SetModeAlchiJobsXpgain",
           "x": 296,
           "y": 10,
           "locked": false

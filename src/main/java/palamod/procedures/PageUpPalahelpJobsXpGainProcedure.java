@@ -3,16 +3,18 @@ package palamod.procedures;
 import palamod.PalamodMod;
 
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 
 public class PageUpPalahelpJobsXpGainProcedure {
-	public static void execute(Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		PalamodMod.LOGGER.debug("[PageUpPalahelpJobsXpGain] : Trying to slide index +1, may print error on border");
 		if (!(Blocks.AIR.asItem() == GetItemPalahelpJobsXpgainProcedure.execute(entity, false, 6).getItem())) {
 			entity.getPersistentData().putDouble("indexSlider", (1 + entity.getPersistentData().getDouble("indexSlider")));
 			FillSlotPalahelpXpGainProcedure.execute(entity);
+			UpdateTextItemXpgainProcedure.execute(world, entity);
 		}
 	}
 }

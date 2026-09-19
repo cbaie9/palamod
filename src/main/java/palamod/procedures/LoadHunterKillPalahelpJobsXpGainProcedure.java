@@ -2,11 +2,12 @@ package palamod.procedures;
 
 import palamod.world.inventory.PalahelpJobsxpgainMenu;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 
 public class LoadHunterKillPalahelpJobsXpGainProcedure {
-	public static void execute(Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		entity.getPersistentData().putString("jobs_mode", "hunter");
@@ -14,6 +15,7 @@ public class LoadHunterKillPalahelpJobsXpGainProcedure {
 		entity.getPersistentData().putDouble("indexSlider", 0);
 		if (entity instanceof Player _plr3 && _plr3.containerMenu instanceof PalahelpJobsxpgainMenu) {
 			FillSlotPalahelpXpGainProcedure.execute(entity);
+			UpdateTextItemXpgainProcedure.execute(world, entity);
 		}
 	}
 }

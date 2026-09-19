@@ -51,13 +51,13 @@ public class ConnectPalahelpJobsXpgainProcedure {
 			}, _bpos);
 		}
 		if (mode == 1) {
-			LoadFarmerGrowPalahelpJobsXpGainProcedure.execute(entity);
+			LoadFarmerGrowPalahelpJobsXpGainProcedure.execute(world, entity);
 		} else if (mode == 2) {
-			LoadMinerMinePalahelpJobsXpGainProcedure.execute(entity);
+			LoadMinerMinePalahelpJobsXpGainProcedure.execute(world, entity);
 		} else if (mode == 3) {
-			LoadHunterKillPalahelpJobsXpGainProcedure.execute(entity);
+			LoadHunterKillPalahelpJobsXpGainProcedure.execute(world, entity);
 		} else if (mode == 4) {
-			LoadAlchiCraftPalahelpJobsXpGainProcedure.execute(entity);
+			LoadAlchiCraftPalahelpJobsXpGainProcedure.execute(world, entity);
 		}
 	}
 }

@@ -1,12 +1,11 @@
 package palamod.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 
 public class GetTextItemName2PalahelpXpGainProcedure {
-	public static String execute(LevelAccessor world, Entity entity) {
+	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return GetTextNameGainJobsPalahelpProcedure.execute(world, entity, 2);
+		return entity.getPersistentData().getString("xpgain_getTextItemName_2");
 	}
 }

@@ -50,43 +50,43 @@ public record PalahelpJobsxpgainButtonMessage(int buttonID, int x, int y, int z)
 			return;
 		if (buttonID == 0) {
 
-			PageUpPalahelpJobsXpGainProcedure.execute(entity);
+			PageUpPalahelpJobsXpGainProcedure.execute(world, entity);
 		}
 		if (buttonID == 1) {
 
-			PageDownPalahelpJobsXpGainProcedure.execute(entity);
+			PageDownPalahelpJobsXpGainProcedure.execute(world, entity);
 		}
 		if (buttonID == 2) {
 
-			LoadFarmerGrowPalahelpJobsXpGainProcedure.execute(entity);
+			LoadFarmerGrowPalahelpJobsXpGainProcedure.execute(world, entity);
 		}
 		if (buttonID == 3) {
 
-			LoadFarmerCraftPalahelpJobsXpGainProcedure.execute(entity);
+			LoadFarmerCraftPalahelpJobsXpGainProcedure.execute(world, entity);
 		}
 		if (buttonID == 4) {
 
-			LoadMinerMinePalahelpJobsXpGainProcedure.execute(entity);
+			LoadMinerMinePalahelpJobsXpGainProcedure.execute(world, entity);
 		}
 		if (buttonID == 5) {
 
-			LoadMinerSmeltPalahelpJobsXpGainProcedure.execute(entity);
+			LoadMinerSmeltPalahelpJobsXpGainProcedure.execute(world, entity);
 		}
 		if (buttonID == 6) {
 
-			LoadHunterSmeltPalahelpJobsXpGainProcedure.execute(entity);
+			LoadHunterSmeltPalahelpJobsXpGainProcedure.execute(world, entity);
 		}
 		if (buttonID == 7) {
 
-			LoadAlchiCraftPalahelpJobsXpGainProcedure.execute(entity);
+			LoadAlchiCraftPalahelpJobsXpGainProcedure.execute(world, entity);
 		}
 		if (buttonID == 8) {
 
-			LoadAlchibreakPalahelpJobsXpGainProcedure.execute(entity);
+			LoadAlchibreakPalahelpJobsXpGainProcedure.execute(world, entity);
 		}
 		if (buttonID == 9) {
 
-			LoadHunterKillPalahelpJobsXpGainProcedure.execute(entity);
+			LoadHunterKillPalahelpJobsXpGainProcedure.execute(world, entity);
 		}
 		if (buttonID == 10) {
 
@@ -102,7 +102,7 @@ public record PalahelpJobsxpgainButtonMessage(int buttonID, int x, int y, int z)
 		}
 		if (buttonID == 13) {
 
-			SetModeHunterJobsXpgainProcedure.execute(entity);
+			SetModeAlchiJobsXpgainProcedure.execute(entity);
 		}
 	}
 
