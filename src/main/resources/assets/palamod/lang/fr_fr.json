@@ -1804,5 +1804,20 @@
   "gui.palamod.palahelpnew_palamachine.tooltip_paladium_small_ring": "Paladium Small Ring",
   "gui.palamod.palahelpnew_palamachine.tooltip_red_unclaim_finder": "Red unclaim finder",
   "gui.palamod.palahelpnew_palamachine.tooltip_green_paladium_small_ring": "Green paladium small ring",
-  "gui.palamod.palahelpnew_palamachine.tooltip_endium_medium_ring": "Endium medium ring"
+  "gui.palamod.palahelpnew_palamachine.tooltip_endium_medium_ring": "Endium medium ring",
+  "palamod.procedure.palamachine_green_unclaim_finder": "",
+  "palamod.procedure.palamachine_orange_unclaim_finder": "",
+  "palamod.procedure.palamachine_red_unclaim_finder": "",
+  "palamod.procedure.palamachine_blue_unclaim_finder": "",
+  "gui.palamod.palahelp_jobsxpgain.tooltip_breaking_crops_based_experience": "Breaking crops based experience gain",
+  "gui.palamod.palahelp_jobsxpgain.tooltip_mining_based_experience": "Mining based experience",
+  "gui.palamod.palahelp_jobsxpgain.tooltip_crafting_base_experience_gain": "Crafting base experience gain",
+  "gui.palamod.palahelp_jobsxpgain.tooltip_smelting_based_experience_gain": "Smelting based experience gain",
+  "gui.palamod.palahelp_jobsxpgain.tooltip_smelting_base_experience_gain": "Smelting base experience gain",
+  "gui.palamod.palahelp_jobsxpgain.tooltip_breaking_wood_based_experience": "Breaking wood based experience gain",
+  "gui.palamod.palahelp_jobsxpgain.tooltip_miner": "Miner",
+  "gui.palamod.palahelp_jobsxpgain.tooltip_crafting_based_experience_gain": "Crafting based experience gain",
+  "gui.palamod.palahelp_jobsxpgain.tooltip_alchimist": "Alchimist",
+  "gui.palamod.palahelp_jobsxpgain.tooltip_hunter": "Hunter",
+  "gui.palamod.palahelp_jobsxpgain.tooltip_farmer": "Farmer"
 }

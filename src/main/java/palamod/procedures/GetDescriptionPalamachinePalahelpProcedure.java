@@ -29,6 +29,14 @@ public class GetDescriptionPalamachinePalahelpProcedure {
 			item_description = translation_key_prefix + "endium_medium_ring";
 		} else if (16 == entity.getPersistentData().getDouble("mode_palamachine_craft") || 17 == entity.getPersistentData().getDouble("mode_palamachine_craft")) {
 			item_description = translation_key_prefix + "endium_big_ring";
+		} else if (18 == entity.getPersistentData().getDouble("mode_palamachine_craft")) {
+			item_description = translation_key_prefix + "green_unclaim_finder";
+		} else if (19 == entity.getPersistentData().getDouble("mode_palamachine_craft")) {
+			item_description = translation_key_prefix + "orange_unclaim_finder";
+		} else if (19 == entity.getPersistentData().getDouble("mode_palamachine_craft")) {
+			item_description = translation_key_prefix + "red_unclaim_finder";
+		} else if (20 == entity.getPersistentData().getDouble("mode_palamachine_craft")) {
+			item_description = translation_key_prefix + "blue_unclaim_finder";
 		} else {
 			item_description = translation_key_prefix + "out_of_bound";
 		}

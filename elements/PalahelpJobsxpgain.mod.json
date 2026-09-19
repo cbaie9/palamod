@@ -11,62 +11,6 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "button",
-        "data": {
-          "name": "button_farmer",
-          "text": "Farmer",
-          "isUndecorated": false,
-          "onClick": "SetModeFarmerJobsXpgain",
-          "width": 55,
-          "height": 20,
-          "x": 127,
-          "y": 17,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_miner",
-          "text": "Miner",
-          "isUndecorated": false,
-          "onClick": "SetModeMinerJobsXpgain",
-          "width": 50,
-          "height": 20,
-          "x": 182,
-          "y": 17,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_hunyer",
-          "text": "Hunter",
-          "isUndecorated": false,
-          "onClick": "SetModeHunterJobsXpgain",
-          "width": 55,
-          "height": 20,
-          "x": 232,
-          "y": 17,
-          "locked": false
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_alchimist",
-          "text": "Alchimist",
-          "isUndecorated": false,
-          "onClick": "SetModeAlchiJobsXpgain",
-          "width": 70,
-          "height": 20,
-          "x": 287,
-          "y": 17,
-          "locked": false
-        }
-      },
-      {
         "type": "inputslot",
         "data": {
           "inputLimit": {
@@ -111,7 +55,7 @@
             "name": "GetTextItemName0PalahelpXpGain"
           },
           "color": {
-            "value": -12829636,
+            "value": -65485,
             "falpha": 0.0
           },
           "hasShadow": false,
@@ -149,7 +93,7 @@
             "name": "GetTextItemName1PalahelpXpGain"
           },
           "color": {
-            "value": -12829636,
+            "value": -65485,
             "falpha": 0.0
           },
           "hasShadow": false,
@@ -187,7 +131,7 @@
             "name": "GetTextItemName2PalahelpXpGain"
           },
           "color": {
-            "value": -12829636,
+            "value": -65485,
             "falpha": 0.0
           },
           "hasShadow": false,
@@ -225,7 +169,7 @@
             "name": "GetTextItemName3PalahelpXpGain"
           },
           "color": {
-            "value": -12829636,
+            "value": -65485,
             "falpha": 0.0
           },
           "hasShadow": false,
@@ -263,7 +207,7 @@
             "name": "GetTextItemName4PalahelpXpGain"
           },
           "color": {
-            "value": -12829636,
+            "value": -65485,
             "falpha": 0.0
           },
           "hasShadow": false,
@@ -301,7 +245,7 @@
             "name": "GetTextItemName5PalahelpXpGain"
           },
           "color": {
-            "value": -12829636,
+            "value": -65485,
             "falpha": 0.0
           },
           "hasShadow": false,
@@ -448,12 +392,12 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_jobs_xpgain_farmer_break",
-          "image": "jobs_xpgain_farmer_break.png",
-          "hoveredImage": "jobs_xpgain_farmer_break_hover.png",
+          "image": "breaking_farming_recipe32_xpgain.png",
+          "hoveredImage": "breaking_farming_recipe32_xpgain_hover.png",
           "onClick": "LoadFarmerGrowPalahelpJobsXpGain",
           "displayCondition": "IsModeFarmerJobsXpgain",
-          "x": 104,
-          "y": 48,
+          "x": 72,
+          "y": 73,
           "locked": false
         }
       },
@@ -461,12 +405,12 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_jobs_xpgain_farmer_craft",
-          "image": "jobs_xpgain_farmer_craft.png",
-          "hoveredImage": "jobs_xpgain_farmer_craft_hover.png",
+          "image": "crafting_recipe_xpgain32.png",
+          "hoveredImage": "crafting_recipe_xpgain32_hover.png",
           "onClick": "LoadFarmerCraftPalahelpJobsXpGain",
           "displayCondition": "IsModeFarmerJobsXpgain",
           "x": 104,
-          "y": 72,
+          "y": 73,
           "locked": false
         }
       },
@@ -474,12 +418,12 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_jobs_xpgain_miner_break",
-          "image": "jobs_xpgain_miner_break.png",
-          "hoveredImage": "jobs_xpgain_miner_break_hover.png",
+          "image": "base_miner.png",
+          "hoveredImage": "base_miner.png",
           "onClick": "LoadMinerMinePalahelpJobsXpGain",
           "displayCondition": "IsModeMinerJobsXpgain",
-          "x": 80,
-          "y": 48,
+          "x": 72,
+          "y": 41,
           "locked": false
         }
       },
@@ -487,12 +431,12 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_jobs_xpgain_miner_smelt",
-          "image": "jobs_xpgain_miner_smelt.png",
-          "hoveredImage": "jobs_xpgain_miner_smelt_hover.png",
+          "image": "furnace_recipe32_xpgain.png",
+          "hoveredImage": "furnace_recipe32_xpgain_hover.png",
           "onClick": "LoadMinerSmeltPalahelpJobsXpGain",
           "displayCondition": "IsModeMinerJobsXpgain",
-          "x": 80,
-          "y": 72,
+          "x": 104,
+          "y": 41,
           "locked": false
         }
       },
@@ -500,12 +444,12 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_jobs_xpgain_hunter_smelt",
-          "image": "jobs_xpgain_hunter_smelt.png",
-          "hoveredImage": "jobs_xpgain_hunter_smelt_hover.png",
+          "image": "furnace_recipe32_xpgain.png",
+          "hoveredImage": "furnace_recipe32_xpgain_hover.png",
           "onClick": "LoadHunterSmeltPalahelpJobsXpGain",
           "displayCondition": "IsModeHunterJobsXpgain",
           "x": 104,
-          "y": 120,
+          "y": 105,
           "locked": false
         }
       },
@@ -513,12 +457,12 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_jobs_xpgain_alchi_craft",
-          "image": "jobs_xpgain_alchi_craft.png",
-          "hoveredImage": "jobs_xpgain_alchi_craft_hover.png",
+          "image": "crafting_recipe_xpgain32.png",
+          "hoveredImage": "crafting_recipe_xpgain32_hover.png",
           "onClick": "LoadAlchiCraftPalahelpJobsXpGain",
           "displayCondition": "IsModeAlchiJobsXpgain",
-          "x": 80,
-          "y": 120,
+          "x": 104,
+          "y": 137,
           "locked": false
         }
       },
@@ -526,12 +470,12 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_jobs_xpgain_alchi_break",
-          "image": "jobs_xpgain_alchi_break.png",
-          "hoveredImage": "jobs_xpgain_alchi_break_hover.png",
+          "image": "breaking_recipe32_xpgain.png",
+          "hoveredImage": "breaking_recipe32_xpgain_hover.png",
           "onClick": "LoadAlchibreakPalahelpJobsXpGain",
           "displayCondition": "IsModeAlchiJobsXpgain",
-          "x": 80,
-          "y": 96,
+          "x": 72,
+          "y": 137,
           "locked": false
         }
       },
@@ -539,12 +483,12 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_jobs_xpgain_hunter_kill",
-          "image": "jobs_xpgain_hunter_kill.png",
-          "hoveredImage": "jobs_xpgain_hunter_kill_hover.png",
+          "image": "killing_recipe32_xpgain.png",
+          "hoveredImage": "killing_recipe32_xpgain_hover.png",
           "onClick": "LoadHunterKillPalahelpJobsXpGain",
           "displayCondition": "IsModeHunterJobsXpgain",
-          "x": 104,
-          "y": 96,
+          "x": 72,
+          "y": 105,
           "locked": false
         }
       },
@@ -555,6 +499,208 @@
           "use1Xscale": false,
           "x": 64,
           "y": 30,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_screen_beta3_jobs_miner",
+          "image": "screen_beta3_jobs_miner.png",
+          "hoveredImage": "screen_beta3_jobs_miner2.png",
+          "onClick": "SetModeMinerJobsXpgain",
+          "x": 198,
+          "y": 9,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_screen_beta3_jobs_hunter",
+          "image": "screen_beta3_jobs_hunter.png",
+          "hoveredImage": "screen_beta3_jobs_hunter2.png",
+          "onClick": "SetModeHunterJobsXpgain",
+          "x": 247,
+          "y": 9,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_screen_beta3_famer_jobs",
+          "image": "screen_beta3_famer_jobs.png",
+          "hoveredImage": "screen_beta3_farm2.png",
+          "onClick": "SetModeFarmerJobsXpgain",
+          "x": 150,
+          "y": 9,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_screen_beta3_jobs_alchi",
+          "image": "screen_beta3_jobs_alchi.png",
+          "hoveredImage": "screen_beta3_jobs_alchi2.png",
+          "onClick": "SetModeHunterJobsXpgain",
+          "x": 296,
+          "y": 10,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_mining_based_experience",
+          "text": {
+            "fixedValue": "Mining based experience"
+          },
+          "width": 32,
+          "height": 32,
+          "x": 72,
+          "y": 41,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_smelting_base_experience_gain",
+          "text": {
+            "fixedValue": "Smelting base experience gain"
+          },
+          "width": 32,
+          "height": 32,
+          "x": 104,
+          "y": 41,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_smelting_based_experience_gain",
+          "text": {
+            "fixedValue": "Smelting based experience gain"
+          },
+          "width": 32,
+          "height": 32,
+          "x": 104,
+          "y": 105,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_crafting_base_experience_gain",
+          "text": {
+            "fixedValue": "Crafting base experience gain"
+          },
+          "width": 32,
+          "height": 32,
+          "x": 104,
+          "y": 73,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_breaking_wood_based_experience",
+          "text": {
+            "fixedValue": "Breaking wood based experience gain"
+          },
+          "width": 32,
+          "height": 32,
+          "x": 72,
+          "y": 137,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_breaking_crops_based_experience",
+          "text": {
+            "fixedValue": "Breaking crops based experience gain"
+          },
+          "width": 32,
+          "height": 32,
+          "x": 72,
+          "y": 73,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_crafting_based_experience_gain",
+          "text": {
+            "fixedValue": "Crafting based experience gain"
+          },
+          "width": 32,
+          "height": 32,
+          "x": 104,
+          "y": 137,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_farmer",
+          "text": {
+            "fixedValue": "Farmer"
+          },
+          "width": 40,
+          "height": 40,
+          "x": 150,
+          "y": 9,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_miner",
+          "text": {
+            "fixedValue": "Miner"
+          },
+          "width": 40,
+          "height": 40,
+          "x": 198,
+          "y": 9,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_hunter",
+          "text": {
+            "fixedValue": "Hunter"
+          },
+          "width": 40,
+          "height": 40,
+          "x": 247,
+          "y": 9,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_alchimist",
+          "text": {
+            "fixedValue": "Alchimist"
+          },
+          "width": 40,
+          "height": 40,
+          "x": 296,
+          "y": 10,
           "locked": false
         }
       }
