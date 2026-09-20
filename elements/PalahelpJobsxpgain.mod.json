@@ -555,7 +555,7 @@
         "data": {
           "name": "tooltip_mining_based_experience",
           "text": {
-            "fixedValue": "Mining based experience"
+            "fixedValue": "Mining based experience gain"
           },
           "width": 32,
           "height": 32,
@@ -569,7 +569,7 @@
         "data": {
           "name": "tooltip_smelting_base_experience_gain",
           "text": {
-            "fixedValue": "Smelting base experience gain"
+            "fixedValue": "Smelting based experience gain"
           },
           "width": 32,
           "height": 32,
