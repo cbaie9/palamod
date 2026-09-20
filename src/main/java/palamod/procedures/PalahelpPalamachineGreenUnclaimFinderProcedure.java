@@ -28,7 +28,7 @@ public class PalahelpPalamachineGreenUnclaimFinderProcedure {
 			ItemStack _setstack4 = new ItemStack(PalamodModItems.FINDIUM.get()).copy();
 			_setstack4.setCount(1);
 			_menu.getSlots().get(10).set(_setstack4);
-			ItemStack _setstack5 = new ItemStack(PalamodModItems.ENDIUM_BIG_RING.get()).copy();
+			ItemStack _setstack5 = new ItemStack(PalamodModItems.UNCLAIM_FINDER.get()).copy();
 			_setstack5.setCount(1);
 			_menu.getSlots().get(15).set(_setstack5);
 			_menu.getSlots().get(0).set(ItemStack.EMPTY);

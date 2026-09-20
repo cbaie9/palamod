@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "timer=1": {
+      "model": "palamod:block/temporaryspiderweb_0"
+    },
+    "timer=2": {
+      "model": "palamod:block/temporaryspiderweb_1"
+    },
+    "timer=3": {
+      "model": "palamod:block/temporaryspiderweb_2"
+    },
+    "timer=0": {
+      "model": "palamod:block/temporaryspiderweb"
+    }
+  }
+}

@@ -31,7 +31,6 @@ public class PalamodModScreens {
 		event.register(PalamodModMenus.PALAHELPTREE.get(), PalahelptreeScreen::new);
 		event.register(PalamodModMenus.PALAHELPMACHINE.get(), PalahelpmachineScreen::new);
 		event.register(PalamodModMenus.GRINDERPALAHELPGUI.get(), GrinderpalahelpguiScreen::new);
-		event.register(PalamodModMenus.PALAMACHINEPALAHELPGUI.get(), PalamachinepalahelpguiScreen::new);
 		event.register(PalamodModMenus.CRUSHERPALAHELPGUI.get(), CrusherpalahelpguiScreen::new);
 		event.register(PalamodModMenus.FORGEPALAHELPGUI.get(), ForgepalahelpguiScreen::new);
 		event.register(PalamodModMenus.ITEMMENUPALAHELP.get(), ItemmenupalahelpScreen::new);

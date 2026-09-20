@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:redstone"
+    },
+    "b": {
+      "item": "minecraft:cobweb"
+    }
+  },
+  "result": {
+    "id": "palamod:temporaryspiderweb",
+    "count": 1
+  }
+}

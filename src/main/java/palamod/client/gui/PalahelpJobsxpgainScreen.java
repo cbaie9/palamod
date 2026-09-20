@@ -245,6 +245,12 @@ public class PalahelpJobsxpgainScreen extends AbstractContainerScreen<PalahelpJo
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
+		yOffset = 0;
+		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelp_jobsxpgain.label_note_if_no_text_appear_click").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
+			guiGraphics.drawString(this.font, actualComponent, 2, 182 + yOffset, -12829636, false);
+			heightPadding = 2;
+			yOffset += this.font.lineHeight + heightPadding;
+		}
 	}
 
 	@Override

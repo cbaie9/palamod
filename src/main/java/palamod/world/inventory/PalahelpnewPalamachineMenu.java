@@ -89,7 +89,7 @@ public class PalahelpnewPalamachineMenu extends AbstractContainerMenu implements
 				}
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 12, 138) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 49, 159) {
 			private final int slot = 0;
 			private int x = PalahelpnewPalamachineMenu.this.x;
 			private int y = PalahelpnewPalamachineMenu.this.y;
@@ -104,7 +104,7 @@ public class PalahelpnewPalamachineMenu extends AbstractContainerMenu implements
 				return false;
 			}
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 44, 158) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 56, 191) {
 			private final int slot = 1;
 			private int x = PalahelpnewPalamachineMenu.this.x;
 			private int y = PalahelpnewPalamachineMenu.this.y;
@@ -119,7 +119,7 @@ public class PalahelpnewPalamachineMenu extends AbstractContainerMenu implements
 				return false;
 			}
 		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 81, 124) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 81, 138) {
 			private final int slot = 2;
 			private int x = PalahelpnewPalamachineMenu.this.x;
 			private int y = PalahelpnewPalamachineMenu.this.y;
@@ -134,7 +134,7 @@ public class PalahelpnewPalamachineMenu extends AbstractContainerMenu implements
 				return false;
 			}
 		}));
-		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 148, 138) {
+		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 113, 159) {
 			private final int slot = 3;
 			private int x = PalahelpnewPalamachineMenu.this.x;
 			private int y = PalahelpnewPalamachineMenu.this.y;
@@ -149,7 +149,7 @@ public class PalahelpnewPalamachineMenu extends AbstractContainerMenu implements
 				return false;
 			}
 		}));
-		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 117, 159) {
+		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 107, 191) {
 			private final int slot = 4;
 			private int x = PalahelpnewPalamachineMenu.this.x;
 			private int y = PalahelpnewPalamachineMenu.this.y;
@@ -164,7 +164,7 @@ public class PalahelpnewPalamachineMenu extends AbstractContainerMenu implements
 				return false;
 			}
 		}));
-		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 81, 188) {
+		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 81, 166) {
 			private final int slot = 5;
 			private int x = PalahelpnewPalamachineMenu.this.x;
 			private int y = PalahelpnewPalamachineMenu.this.y;

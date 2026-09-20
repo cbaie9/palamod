@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:fermented_spider_eye"
+    },
+    "b": {
+      "item": "palamod:temporaryspiderweb"
+    }
+  },
+  "result": {
+    "id": "palamod:poisonousweb",
+    "count": 1
+  }
+}

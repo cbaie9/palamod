@@ -702,6 +702,8 @@ public class PalamodModItems {
 	public static final DeferredItem<Item> KEY_PORTAL_BLOCK;
 	public static final DeferredItem<Item> HOOD_HELMET_ARMOR_HELMET;
 	public static final DeferredItem<Item> PALAMOD_ONBOARDING_BOOK;
+	public static final DeferredItem<Item> TEMPORARYSPIDERWEB;
+	public static final DeferredItem<Item> POISONOUSWEB;
 	static {
 		PALADIUM_INGOT = REGISTRY.register("paladium_ingot", PaladiumIngotItem::new);
 		PALADIUM_ORE = block(PalamodModBlocks.PALADIUM_ORE);
@@ -1363,6 +1365,8 @@ public class PalamodModItems {
 		KEY_PORTAL_BLOCK = block(PalamodModBlocks.KEY_PORTAL_BLOCK, new Item.Properties().stacksTo(1));
 		HOOD_HELMET_ARMOR_HELMET = REGISTRY.register("hood_helmet_armor_helmet", HoodHelmetArmorItem.Helmet::new);
 		PALAMOD_ONBOARDING_BOOK = REGISTRY.register("palamod_onboarding_book", PalamodonboardingbookItem::new);
+		TEMPORARYSPIDERWEB = block(PalamodModBlocks.TEMPORARYSPIDERWEB);
+		POISONOUSWEB = block(PalamodModBlocks.POISONOUSWEB);
 	}
 
 	// Start of user code block custom items

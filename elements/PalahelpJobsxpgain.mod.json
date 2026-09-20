@@ -703,6 +703,23 @@
           "y": 10,
           "locked": false
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_note_if_no_text_appear_click",
+          "text": {
+            "fixedValue": "Note : If no text appear, click on any button"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 66,
+          "y": 212,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {

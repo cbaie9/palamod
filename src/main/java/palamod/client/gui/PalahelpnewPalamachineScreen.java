@@ -221,19 +221,19 @@ public class PalahelpnewPalamachineScreen extends AbstractContainerScreen<Palahe
 		}
 		yOffset = 0;
 		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpnew_palamachine.label_effect_of_the_stick").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 4, 26 + yOffset, -12829636, false);
+			guiGraphics.drawString(this.font, actualComponent, 4, 26 + yOffset, -1, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		yOffset = 0;
 		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpnew_palamachine.label_palamachine").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 61, 106 + yOffset, -12829636, false);
+			guiGraphics.drawString(this.font, actualComponent, 61, 106 + yOffset, -1, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}
 		yOffset = 0;
 		for (Component actualComponent : Arrays.stream(Component.translatable("gui.palamod.palahelpnew_palamachine.label_craft").getString().split("\\\\n")).map(Component::literal).collect(Collectors.toList())) {
-			guiGraphics.drawString(this.font, actualComponent, 5, 88 + yOffset, -12829636, false);
+			guiGraphics.drawString(this.font, actualComponent, 5, 88 + yOffset, -1, false);
 			heightPadding = 2;
 			yOffset += this.font.lineHeight + heightPadding;
 		}

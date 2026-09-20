@@ -127,8 +127,8 @@
             "fixedValue": true
           },
           "dropItemsWhenNotBound": true,
-          "x": 25,
-          "y": 145,
+          "x": 62,
+          "y": 166,
           "locked": false
         }
       },
@@ -146,8 +146,8 @@
             "fixedValue": true
           },
           "dropItemsWhenNotBound": true,
-          "x": 57,
-          "y": 165,
+          "x": 69,
+          "y": 198,
           "locked": false
         }
       },
@@ -166,7 +166,7 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 94,
-          "y": 131,
+          "y": 145,
           "locked": false
         }
       },
@@ -184,8 +184,8 @@
             "fixedValue": true
           },
           "dropItemsWhenNotBound": true,
-          "x": 161,
-          "y": 145,
+          "x": 126,
+          "y": 166,
           "locked": false
         }
       },
@@ -203,8 +203,8 @@
             "fixedValue": true
           },
           "dropItemsWhenNotBound": true,
-          "x": 130,
-          "y": 166,
+          "x": 120,
+          "y": 198,
           "locked": false
         }
       },
@@ -223,7 +223,7 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 94,
-          "y": 195,
+          "y": 173,
           "locked": false
         }
       },
@@ -438,7 +438,7 @@
             "fixedValue": "The Palamachine is a block used to make all kind of item useful for craft\\nor by themself. For stick there a special page to know the effects and crafts"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
           "hasShadow": false,
@@ -455,7 +455,7 @@
             "fixedValue": "Palamachine"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
           "hasShadow": false,
@@ -472,7 +472,7 @@
             "fixedValue": "Crafts"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
           "hasShadow": false,
